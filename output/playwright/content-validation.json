@@ -1,0 +1,38 @@
+{
+  "file": "C:\\Users\\kimyo\\.codex\\ux-work\\captain-details.json",
+  "count": 141,
+  "expectedCount": 141,
+  "missing": [],
+  "extra": [],
+  "unique": 141,
+  "lengthMin": 51,
+  "lengthMax": 73,
+  "regionCounts": [
+    12,
+    18,
+    16,
+    14,
+    16,
+    22,
+    14,
+    13,
+    16
+  ],
+  "issues": [],
+  "manualReview": [
+    "141 entries reviewed against TERM_ROWS definitions and UIUX UD11 / U4B",
+    "All entries use a sea or sailing metaphor, comparison, or misconception correction",
+    "Note values are proportional; no absolute beat claims",
+    "Double dot equals 7/4; fermata is context dependent",
+    "Leading tone is a semitone below tonic, natural minor seventh excluded",
+    "PAC requires both root position chords and tonic atop final I",
+    "Accidentals distinguish staff, octave, measure, tie continuation",
+    "Melodic minor classical ascending/descending directions preserved",
+    "Form lengths are not fixed universal bar counts",
+    "No fixed universal BPM or loudness levels claimed"
+  ],
+  "sources": [
+    "https://musictheory.pugetsound.edu/mt21c/PerfectAuthenticCadence.html",
+    "https://musictheory.pugetsound.edu/mt21c/PeriodForm.html"
+  ]
+}

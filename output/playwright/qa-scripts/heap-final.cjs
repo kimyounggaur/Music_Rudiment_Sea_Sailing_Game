@@ -1,0 +1,1 @@
+async(page)=>{const before=await page.evaluate(()=>window.__OCEAN_GAME__.stabilitySnapshot());const cdp=await page.context().newCDPSession(page);await cdp.send('HeapProfiler.collectGarbage');const after=await page.evaluate(()=>window.__OCEAN_GAME__.stabilitySnapshot());return{before:before.memory,after:after.memory,app:after.app,resources:after.resources}}

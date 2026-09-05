@@ -1,0 +1,292 @@
+{
+  "source": "original-index.html",
+  "totals": {
+    "fixed": {
+      "pass": 110,
+      "fail": 0
+    },
+    "dynamic": {
+      "pass": 564,
+      "fail": 0
+    },
+    "dataset": {
+      "pass": 10,
+      "fail": 0
+    },
+    "supplemental": {
+      "pass": 8,
+      "fail": 0
+    },
+    "phase6": {
+      "pass": 25,
+      "fail": 0
+    },
+    "phase7": {
+      "pass": 48,
+      "fail": 0
+    },
+    "phase8": {
+      "pass": 31,
+      "fail": 0
+    }
+  },
+  "navigation": {
+    "index": 3,
+    "type": "navigation"
+  },
+  "count": 25,
+  "records": [
+    {
+      "state": "title",
+      "width": 375,
+      "height": 812,
+      "file": "ux_U0_title_375x812_before.png",
+      "mode": "TITLE",
+      "titleOpacity": "1",
+      "titleHidden": false,
+      "trialType": null
+    },
+    {
+      "state": "title",
+      "width": 390,
+      "height": 844,
+      "file": "ux_U0_title_390x844_before.png",
+      "mode": "TITLE",
+      "titleOpacity": "1",
+      "titleHidden": false,
+      "trialType": null
+    },
+    {
+      "state": "title",
+      "width": 844,
+      "height": 390,
+      "file": "ux_U0_title_844x390_before.png",
+      "mode": "TITLE",
+      "titleOpacity": "1",
+      "titleHidden": false,
+      "trialType": null
+    },
+    {
+      "state": "title",
+      "width": 768,
+      "height": 1024,
+      "file": "ux_U0_title_768x1024_before.png",
+      "mode": "TITLE",
+      "titleOpacity": "1",
+      "titleHidden": false,
+      "trialType": null
+    },
+    {
+      "state": "title",
+      "width": 1440,
+      "height": 900,
+      "file": "ux_U0_title_1440x900_before.png",
+      "mode": "TITLE",
+      "titleOpacity": "1",
+      "titleHidden": false,
+      "trialType": null
+    },
+    {
+      "state": "sailing",
+      "width": 375,
+      "height": 812,
+      "file": "ux_U0_sailing_375x812_before.png",
+      "mode": "SAILING",
+      "titleOpacity": "0",
+      "titleHidden": true,
+      "trialType": null
+    },
+    {
+      "state": "sailing",
+      "width": 390,
+      "height": 844,
+      "file": "ux_U0_sailing_390x844_before.png",
+      "mode": "SAILING",
+      "titleOpacity": "0",
+      "titleHidden": true,
+      "trialType": null
+    },
+    {
+      "state": "sailing",
+      "width": 844,
+      "height": 390,
+      "file": "ux_U0_sailing_844x390_before.png",
+      "mode": "SAILING",
+      "titleOpacity": "0",
+      "titleHidden": true,
+      "trialType": null
+    },
+    {
+      "state": "sailing",
+      "width": 768,
+      "height": 1024,
+      "file": "ux_U0_sailing_768x1024_before.png",
+      "mode": "SAILING",
+      "titleOpacity": "0",
+      "titleHidden": true,
+      "trialType": null
+    },
+    {
+      "state": "sailing",
+      "width": 1440,
+      "height": 900,
+      "file": "ux_U0_sailing_1440x900_before.png",
+      "mode": "SAILING",
+      "titleOpacity": "0",
+      "titleHidden": true,
+      "trialType": null
+    },
+    {
+      "state": "dialogue",
+      "width": 375,
+      "height": 812,
+      "file": "ux_U0_dialogue_375x812_before.png",
+      "mode": "DIALOG",
+      "titleOpacity": "0",
+      "titleHidden": true,
+      "trialType": null
+    },
+    {
+      "state": "dialogue",
+      "width": 390,
+      "height": 844,
+      "file": "ux_U0_dialogue_390x844_before.png",
+      "mode": "DIALOG",
+      "titleOpacity": "0",
+      "titleHidden": true,
+      "trialType": null
+    },
+    {
+      "state": "dialogue",
+      "width": 844,
+      "height": 390,
+      "file": "ux_U0_dialogue_844x390_before.png",
+      "mode": "DIALOG",
+      "titleOpacity": "0",
+      "titleHidden": true,
+      "trialType": null
+    },
+    {
+      "state": "dialogue",
+      "width": 768,
+      "height": 1024,
+      "file": "ux_U0_dialogue_768x1024_before.png",
+      "mode": "DIALOG",
+      "titleOpacity": "0",
+      "titleHidden": true,
+      "trialType": null
+    },
+    {
+      "state": "dialogue",
+      "width": 1440,
+      "height": 900,
+      "file": "ux_U0_dialogue_1440x900_before.png",
+      "mode": "DIALOG",
+      "titleOpacity": "0",
+      "titleHidden": true,
+      "trialType": null
+    },
+    {
+      "state": "codex-grid",
+      "width": 375,
+      "height": 812,
+      "file": "ux_U0_codex-grid_375x812_before.png",
+      "mode": "CODEX",
+      "titleOpacity": "0",
+      "titleHidden": true,
+      "trialType": null
+    },
+    {
+      "state": "codex-grid",
+      "width": 390,
+      "height": 844,
+      "file": "ux_U0_codex-grid_390x844_before.png",
+      "mode": "CODEX",
+      "titleOpacity": "0",
+      "titleHidden": true,
+      "trialType": null
+    },
+    {
+      "state": "codex-grid",
+      "width": 844,
+      "height": 390,
+      "file": "ux_U0_codex-grid_844x390_before.png",
+      "mode": "CODEX",
+      "titleOpacity": "0",
+      "titleHidden": true,
+      "trialType": null
+    },
+    {
+      "state": "codex-grid",
+      "width": 768,
+      "height": 1024,
+      "file": "ux_U0_codex-grid_768x1024_before.png",
+      "mode": "CODEX",
+      "titleOpacity": "0",
+      "titleHidden": true,
+      "trialType": null
+    },
+    {
+      "state": "codex-grid",
+      "width": 1440,
+      "height": 900,
+      "file": "ux_U0_codex-grid_1440x900_before.png",
+      "mode": "CODEX",
+      "titleOpacity": "0",
+      "titleHidden": true,
+      "trialType": null
+    },
+    {
+      "state": "trial-nav",
+      "width": 375,
+      "height": 812,
+      "file": "ux_U0_trial-nav_375x812_before.png",
+      "mode": "TRIAL",
+      "titleOpacity": "0",
+      "titleHidden": true,
+      "trialType": "navigation"
+    },
+    {
+      "state": "trial-nav",
+      "width": 390,
+      "height": 844,
+      "file": "ux_U0_trial-nav_390x844_before.png",
+      "mode": "TRIAL",
+      "titleOpacity": "0",
+      "titleHidden": true,
+      "trialType": "navigation"
+    },
+    {
+      "state": "trial-nav",
+      "width": 844,
+      "height": 390,
+      "file": "ux_U0_trial-nav_844x390_before.png",
+      "mode": "TRIAL",
+      "titleOpacity": "0",
+      "titleHidden": true,
+      "trialType": "navigation"
+    },
+    {
+      "state": "trial-nav",
+      "width": 768,
+      "height": 1024,
+      "file": "ux_U0_trial-nav_768x1024_before.png",
+      "mode": "TRIAL",
+      "titleOpacity": "0",
+      "titleHidden": true,
+      "trialType": "navigation"
+    },
+    {
+      "state": "trial-nav",
+      "width": 1440,
+      "height": 900,
+      "file": "ux_U0_trial-nav_1440x900_before.png",
+      "mode": "TRIAL",
+      "titleOpacity": "0",
+      "titleHidden": true,
+      "trialType": "navigation"
+    }
+  ],
+  "sourceSha256": "9D4A2A8B7162EC4BFACD8EE63C98711A998A6E443E8730685F41D586385F6169",
+  "note": "Original UI captured after 800 ms title transition; all viewport changes waited 150 ms; navigation question explicitly selected from generated trial; QA HUD hidden. State fixtures used only for original baseline screenshots."
+}

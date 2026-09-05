@@ -1,0 +1,1 @@
+{"seconds":10.004300000011922,"samples":875,"uiMs":{"mean":0.9377142853736877,"p95":1.699999988079071,"max":2.5999999940395355},"calls":57,"triangles":31731,"performance":{"samples":875,"averageFps":87.35760710042615,"onePercentLowFps":50.11135857459239,"averageFrameMs":11.44720000000002,"worstFrameMs":20}}
