@@ -1,0 +1,182 @@
+{
+  "schema": 1,
+  "generated_from": "remaster-kit/prepare_web_assets.py",
+  "art": [
+    {
+      "id": "aria_portrait",
+      "source": "remaster-kit/art/aria_portrait.png",
+      "output": "assets/remaster/art/aria_portrait.webp",
+      "mime": "image/webp",
+      "dimensions": {
+        "width": 1312,
+        "height": 1199
+      },
+      "alpha": true,
+      "usage": "transparent dialogue or UI illustration",
+      "original_bytes": 1804963,
+      "web_bytes": 337596,
+      "source_sha256": "650cbfb075caa21433a4c36d676abbb7e4ef638d59ea849273aebab3f988768e",
+      "web_sha256": "6e8667e6ccdbcbbac4689afa56ed45ce14e33bdac35e6f162dcba396e4819499"
+    },
+    {
+      "id": "chord_reef",
+      "source": "remaster-kit/art/chord_reef.png",
+      "output": "assets/remaster/art/chord_reef.webp",
+      "mime": "image/webp",
+      "dimensions": {
+        "width": 1672,
+        "height": 941
+      },
+      "alpha": false,
+      "usage": "full-bleed static background",
+      "original_bytes": 2492523,
+      "web_bytes": 304670,
+      "source_sha256": "760c4f6b876d49d8eba336c989cfa5b73db69c73eb9a903d552c05c49423bb3e",
+      "web_sha256": "cae12bb84be10c5d4f4a302146d1e1c9a003313fd59c2ce07fc3b7768ffc3e21"
+    },
+    {
+      "id": "forte_portrait",
+      "source": "remaster-kit/art/forte_portrait.png",
+      "output": "assets/remaster/art/forte_portrait.webp",
+      "mime": "image/webp",
+      "dimensions": {
+        "width": 1254,
+        "height": 1254
+      },
+      "alpha": true,
+      "usage": "transparent dialogue or UI illustration",
+      "original_bytes": 1320390,
+      "web_bytes": 307732,
+      "source_sha256": "0e9f1b8cd6ea2a5c50a55da8273237bc5b9826e757b93c706f07f0eb40f58dab",
+      "web_sha256": "63972cfa7eca0f3e1ebdfcb68c7407d534ddacdb8d13375ecc0bf8bb3a6b5af7"
+    },
+    {
+      "id": "lighthouse_illustration",
+      "source": "remaster-kit/art/lighthouse_illustration.png",
+      "output": "assets/remaster/art/lighthouse_illustration.webp",
+      "mime": "image/webp",
+      "dimensions": {
+        "width": 1254,
+        "height": 1254
+      },
+      "alpha": true,
+      "usage": "transparent dialogue or UI illustration",
+      "original_bytes": 1275364,
+      "web_bytes": 280490,
+      "source_sha256": "9f610f264b144b560fc2fecc9e4a29f596712e94db2e20065ca087d77ab79aee",
+      "web_sha256": "f4c30d93bc31e4dc9a09200d8b9975cc2f15e074aa3e0f64a67512f82c376302"
+    },
+    {
+      "id": "maestro_portrait",
+      "source": "remaster-kit/art/maestro_portrait.png",
+      "output": "assets/remaster/art/maestro_portrait.webp",
+      "mime": "image/webp",
+      "dimensions": {
+        "width": 1287,
+        "height": 1222
+      },
+      "alpha": true,
+      "usage": "transparent dialogue or UI illustration",
+      "original_bytes": 1855283,
+      "web_bytes": 325500,
+      "source_sha256": "31941f0fc25877bfa6ea40534949bf6d6126d3caf534d913d6c60ef76e4ede5a",
+      "web_sha256": "1d7713b11c023892b40a9811b07ef738dd62d39bdc1d4b6beb818730bb39e5ef"
+    },
+    {
+      "id": "rhythm_storm",
+      "source": "remaster-kit/art/rhythm_storm.png",
+      "output": "assets/remaster/art/rhythm_storm.webp",
+      "mime": "image/webp",
+      "dimensions": {
+        "width": 1672,
+        "height": 941
+      },
+      "alpha": false,
+      "usage": "full-bleed static background",
+      "original_bytes": 2232940,
+      "web_bytes": 217560,
+      "source_sha256": "7136ea12eea14994dc44558163ddfdaf758938c1a3b86f76093c272cc06b9a66",
+      "web_sha256": "056d462760b9454880892ecd30fd339bbfd5b2bfcd0680f712b50dd4a6ebce89"
+    },
+    {
+      "id": "title_vista",
+      "source": "remaster-kit/art/title_vista.png",
+      "output": "assets/remaster/art/title_vista.webp",
+      "mime": "image/webp",
+      "dimensions": {
+        "width": 1672,
+        "height": 941
+      },
+      "alpha": false,
+      "usage": "full-bleed static background",
+      "original_bytes": 2540858,
+      "web_bytes": 303446,
+      "source_sha256": "1818b16c2e68ce43a6f40aaa8584cba18176f717d389109a6af65e139ba8b121",
+      "web_sha256": "9cb0ea67bdea05679987a488a03b632fb86823e1a748115321f04b1ec513784f"
+    },
+    {
+      "id": "vessel_illustration",
+      "source": "remaster-kit/art/vessel_illustration.png",
+      "output": "assets/remaster/art/vessel_illustration.webp",
+      "mime": "image/webp",
+      "dimensions": {
+        "width": 1254,
+        "height": 1254
+      },
+      "alpha": true,
+      "usage": "transparent dialogue or UI illustration",
+      "original_bytes": 1649708,
+      "web_bytes": 379200,
+      "source_sha256": "4c6da5d7d19c02b23c1d2239cb58c638329dfe2f4ecc32bc8068553b74ec850a",
+      "web_sha256": "c1bd508a7d6d3facd8abdafafd739927e2790b40c503aa9c765173770a582aa5"
+    }
+  ],
+  "models": [
+    {
+      "id": "chord-coral",
+      "output": "assets/remaster/models/chord-coral.glb",
+      "mime": "model/gltf-binary",
+      "bytes": 110628,
+      "sha256": "1343e6c93e5ca8e8798531c976af7b4c339083f037ed06609b519fbb3bd6fb82",
+      "strategy": "Copied byte-for-byte. GLB mesh compression is deferred because it requires a matching browser decoder and loader update."
+    },
+    {
+      "id": "orchestra-lighthouse",
+      "output": "assets/remaster/models/orchestra-lighthouse.glb",
+      "mime": "model/gltf-binary",
+      "bytes": 1013500,
+      "sha256": "7a48c7bcaa0ed153ba0f7d074f80f903dc85f2da4cfa3fa6b4049daef8875157",
+      "strategy": "Copied byte-for-byte. GLB mesh compression is deferred because it requires a matching browser decoder and loader update."
+    },
+    {
+      "id": "research-vessel",
+      "output": "assets/remaster/models/research-vessel.glb",
+      "mime": "model/gltf-binary",
+      "bytes": 899404,
+      "sha256": "bf54c562cf5e6807c28a0b8abda68f3ff09bb031717b5a84aae0b25d71471480",
+      "strategy": "Copied byte-for-byte. GLB mesh compression is deferred because it requires a matching browser decoder and loader update."
+    },
+    {
+      "id": "term-bottle",
+      "output": "assets/remaster/models/term-bottle.glb",
+      "mime": "model/gltf-binary",
+      "bytes": 70956,
+      "sha256": "884358bfcea2826c560234c6f206489902a92746a669e37db87e73dcb1e51e31",
+      "strategy": "Copied byte-for-byte. GLB mesh compression is deferred because it requires a matching browser decoder and loader update."
+    },
+    {
+      "id": "trade-wind-arch",
+      "output": "assets/remaster/models/trade-wind-arch.glb",
+      "mime": "model/gltf-binary",
+      "bytes": 179536,
+      "sha256": "9fb55371eaf16b7dce76ead6b2a326daa5458ba174d9f0f035eb2a50319f55b9",
+      "strategy": "Copied byte-for-byte. GLB mesh compression is deferred because it requires a matching browser decoder and loader update."
+    }
+  ],
+  "integration_notes": [
+    "Use WebP variants in HTML/CSS/Canvas for the title, region cards, and dialogue portraits.",
+    "Retain the original PNGs as source artwork; do not use them as the default network payload.",
+    "Load GLBs lazily after initial UI interaction or when the matching world object enters range.",
+    "Do not apply DRACO or KTX2 compression without shipping its decoder and validating mobile memory use."
+  ]
+}
