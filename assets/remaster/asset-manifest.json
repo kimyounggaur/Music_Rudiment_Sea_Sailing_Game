@@ -412,5 +412,99 @@
     "Retain the original PNGs as source artwork; do not use them as the default network payload.",
     "Load GLBs lazily after initial UI interaction or when the matching world object enters range.",
     "Do not apply DRACO or KTX2 compression without shipping its decoder and validating mobile memory use."
+  ],
+  "fonts": [
+    {
+      "id": "ld-myeongjo-400",
+      "css": {
+        "family": "LD Myeongjo",
+        "weight": "400",
+        "style": "normal"
+      },
+      "output": "assets/remaster/fonts/ld-myeongjo-400.woff2",
+      "mime": "font/woff2",
+      "bytes": 94952,
+      "sha256": "259b9c7b9222d348d6800173537b83cb85930c0cd97e0435c78687686726d278",
+      "source": "Gowun Batang 400",
+      "package": "@expo-google-fonts/gowun-batang",
+      "license": "OFL-1.1",
+      "subset": {
+        "hangulSyllables": 782,
+        "jamo": 0,
+        "otherSymbols": 54,
+        "ascii": 95,
+        "glyphsKept": 905
+      }
+    },
+    {
+      "id": "ld-myeongjo-700",
+      "css": {
+        "family": "LD Myeongjo",
+        "weight": "700",
+        "style": "normal"
+      },
+      "output": "assets/remaster/fonts/ld-myeongjo-700.woff2",
+      "mime": "font/woff2",
+      "bytes": 81588,
+      "sha256": "92b8932bb0e48a1b6bb7bb5a132937e277acf1aae70fc0e041898efbee2b96ec",
+      "source": "Gowun Batang 700",
+      "package": "@expo-google-fonts/gowun-batang",
+      "license": "OFL-1.1",
+      "subset": {
+        "hangulSyllables": 782,
+        "jamo": 0,
+        "otherSymbols": 54,
+        "ascii": 95,
+        "glyphsKept": 905
+      }
+    },
+    {
+      "id": "ld-score-500i",
+      "css": {
+        "family": "LD Score",
+        "weight": "500",
+        "style": "italic"
+      },
+      "output": "assets/remaster/fonts/ld-score-500i.woff2",
+      "mime": "font/woff2",
+      "bytes": 20172,
+      "sha256": "e2a3aa444291fc289137f1300d5a9d7e37353f7a186b4c05e1f416a67147c83f",
+      "source": "Cormorant Garamond 500 Italic",
+      "package": "@expo-google-fonts/cormorant-garamond",
+      "license": "OFL-1.1",
+      "subset": {
+        "hangulSyllables": 782,
+        "jamo": 0,
+        "otherSymbols": 54,
+        "ascii": 95,
+        "glyphsKept": 118
+      }
+    },
+    {
+      "id": "ld-score-600",
+      "css": {
+        "family": "LD Score",
+        "weight": "600",
+        "style": "normal"
+      },
+      "output": "assets/remaster/fonts/ld-score-600.woff2",
+      "mime": "font/woff2",
+      "bytes": 26496,
+      "sha256": "5bb1e538ac63dbb7c6aa60906cd8d15141d60fb28671fcb4138b57098f6093cb",
+      "source": "Cormorant Garamond 600",
+      "package": "@expo-google-fonts/cormorant-garamond",
+      "license": "OFL-1.1",
+      "subset": {
+        "hangulSyllables": 782,
+        "jamo": 0,
+        "otherSymbols": 54,
+        "ascii": 95,
+        "glyphsKept": 118
+      }
+    }
+  ],
+  "fonts_licenses": [
+    "OFL-Gowun-Batang.txt",
+    "OFL-Cormorant-Garamond.txt"
   ]
 }
