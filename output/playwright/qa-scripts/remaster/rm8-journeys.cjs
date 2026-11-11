@@ -62,8 +62,8 @@ async function solveTrial(page) {
 async function runCondition(name) {
   const cond = CONDITIONS[name];
   const { browser, page, errors } = await open({ query: '?qa=1', width: cond.size[0], height: cond.size[1], touch: cond.touch });
-  const problems = [], info = { name };
-  const check = (ok, message) => { if (!ok) problems.push(message); return ok; };
+  const problems = [], info = { name, checks: 0 };
+  const check = (ok, message) => { info.checks++; if (!ok) problems.push(message); return ok; };
   try {
     await page.waitForSelector('#start-sailing:not([disabled])', { timeout: 30000 });
     await page.evaluate(() => { const g = window.__OCEAN_GAME__; g.returnToTitle(); g.openNewGameConfirmation(); g.confirmNewGame(); });

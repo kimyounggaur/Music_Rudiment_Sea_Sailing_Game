@@ -38,7 +38,7 @@ async function startAndOpenSettings(page) {
   // 일반 주소(?qa 없음). 합격 판정에 쓰는 것은 화면과 저장소뿐이다.
   const { browser, page, errors } = await open({ query: '', width: 900, height: 700 });
   const problems = [], rows = [];
-  const check = (cond, message) => { if (!cond) problems.push(message); return cond; };
+  let checks = 0; const check = (cond, message) => { checks++; if (!cond) problems.push(message); return cond; };
   try {
     await startAndOpenSettings(page);
     const fresh = await page.evaluate(READ_UI);
@@ -113,7 +113,7 @@ async function startAndOpenSettings(page) {
     const realErrors = errors.slice();
     check(realErrors.length === 0, '오류 없음: ' + realErrors.slice(0, 3).join(' | '));
     fs.mkdirSync(path.dirname(path.resolve(OUT)), { recursive: true });
-    fs.writeFileSync(OUT, JSON.stringify({ problems, errors: realErrors, rows }, null, 1));
+    fs.writeFileSync(OUT, JSON.stringify({ checks, problems, errors: realErrors, rows }, null, 1));
     console.log('문제', problems.length, '오류', realErrors.length);
     problems.slice(0, 12).forEach((m) => console.log('  -', m));
     console.log(problems.length === 0 ? 'SETTINGS PASS' : 'SETTINGS FAIL');

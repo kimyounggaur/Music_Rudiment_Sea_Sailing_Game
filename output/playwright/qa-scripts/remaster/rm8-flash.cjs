@@ -63,7 +63,7 @@ const RUN = ({ period, seconds, reduced }) => {
 (async () => {
   const { browser, page, errors } = await open({ query: '?qa=1', width: 1440, height: 900 });
   const rows = [], problems = [];
-  const check = (cond, message) => { if (!cond) problems.push(message); return cond; };
+  let checks = 0; const check = (cond, message) => { checks++; if (!cond) problems.push(message); return cond; };
   try {
     await page.waitForSelector('#start-sailing:not([disabled])', { timeout: 30000 });
     await page.click('#start-sailing');
@@ -142,7 +142,7 @@ print(json.dumps(out))
       } else { console.log('화면 비교를 못 했습니다(PIL/numpy 없음?):', (res.stderr || '').slice(0, 200)); rows.push({ pixel: null, note: 'PIL/numpy 없음' }); }
     }
     await page.evaluate(() => { const g = window.__OCEAN_GAME__; g.applyReducedMotion(false); g.startLoop(); });
-    const result = { seconds: SECONDS, region, periods: PERIODS, problems, errors, rows, shots };
+    const result = { checks, seconds: SECONDS, region, periods: PERIODS, problems, errors, rows, shots };
     fs.mkdirSync(path.dirname(path.resolve(OUT)), { recursive: true });
     fs.writeFileSync(OUT, JSON.stringify(result, null, 1));
     console.log('문제', problems.length, '오류', errors.length);

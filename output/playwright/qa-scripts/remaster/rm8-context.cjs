@@ -35,7 +35,7 @@ const SNAP = () => {
 (async () => {
   const { browser, page, errors } = await open({ query: '?qa=1', width: 640, height: 400 });
   const rows = [], problems = [];
-  const check = (cond, message) => { if (!cond) problems.push(message); return cond; };
+  let checks = 0; const check = (cond, message) => { checks++; if (!cond) problems.push(message); return cond; };
   try {
     await page.waitForSelector('#start-sailing:not([disabled])', { timeout: 30000 });
     await page.click('#start-sailing');
@@ -103,7 +103,7 @@ const SNAP = () => {
     rows.push({ tag: 'switch-while-lost', whileLost, afterSwitch });
 
     const realErrors = errors.filter((e) => !EXPECTED.test(e));
-    const result = { cycles: CYCLES, combos: COMBOS.length, problems, errors: realErrors, ignoredLogs: errors.length - realErrors.length, rows };
+    const result = { checks, cycles: CYCLES, combos: COMBOS.length, problems, errors: realErrors, ignoredLogs: errors.length - realErrors.length, rows };
     fs.mkdirSync(path.dirname(path.resolve(OUT)), { recursive: true });
     fs.writeFileSync(OUT, JSON.stringify(result, null, 1));
     rows.forEach((r) => { if (r.after) console.log(r.tag.padEnd(14), 'plan', r.after.plan, 'targets', r.base.targets, '→ 손실', r.during.targets, '→ 복구', r.after.targets, 'programs', r.after.programs, 'frames', r.after.frames); });

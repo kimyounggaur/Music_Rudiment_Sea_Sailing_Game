@@ -28,7 +28,7 @@ const PREP = () => {
 
 (async () => {
   const problems = [], rows = {};
-  const check = (cond, message) => { if (!cond) problems.push(message); return cond; };
+  let checks = 0; const check = (cond, message) => { checks++; if (!cond) problems.push(message); return cond; };
   let session = null;
   try {
     // ① 일반 QA 주소
@@ -139,7 +139,7 @@ const PREP = () => {
     const realErrors = errors.slice();
     check(realErrors.length === 0, '오류 없음: ' + realErrors.slice(0, 3).join(' | '));
     fs.mkdirSync(path.dirname(path.resolve(OUT)), { recursive: true });
-    fs.writeFileSync(OUT, JSON.stringify({ problems, errors: realErrors, rows }, null, 1));
+    fs.writeFileSync(OUT, JSON.stringify({ checks, problems, errors: realErrors, rows }, null, 1));
     console.log('문제', problems.length);
     problems.slice(0, 14).forEach((p) => console.log('  -', p));
     console.log(problems.length === 0 ? 'AUTOFX PASS' : 'AUTOFX FAIL');
