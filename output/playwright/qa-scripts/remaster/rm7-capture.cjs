@@ -272,19 +272,25 @@ async function runPaper(paper) {
       g.completeTrialRun();
     });
     await capture('trial-result');
-    await page.getByRole('button', { name: '등대 점등하기', exact: true }).click();
     // 점등 연출은 시간표로 흐른다. 찍는 순간마다 같은 장면이 되도록 시작 시각을 '지금 - 1450ms'로 묶어 둔다(동작 줄이기 시간표: 표제 1200ms 이후, 검은 띠는 1600ms까지).
+    // 느린 렌더(초당 1~4프레임)에서는 단추를 누른 뒤 값을 고치는 사이에 연출(동작 줄이기 2초)이 먼저 끝난다. 그래서 누르기 *전에*
+    // 끝나는 시각 속성을 '쓰기는 무시하고 늘 Infinity를 돌려주는' 접근자로 바꿔 두고, 12장을 찍는 동안 스스로 끝나지 않게 한다(끝에서 건너뛰기 단추로 닫는다).
     await page.evaluate(() => {
       const g = window.__OCEAN_GAME__;
-      g.lighthouseEventUntil = Infinity; // 느린 렌더에서 12장을 찍는 동안 점등 화면이 스스로 끝나지 않게 한다(끝에서 건너뛰기 단추로 닫는다)
+      Object.defineProperty(g, 'lighthouseEventUntil', { configurable: true, enumerable: true, get: () => Infinity, set: () => {} });
       // 화면 갱신은 프레임 시각(now)을 받는다. 느린 렌더에서는 now가 한참 늦으니 시각도 고정한다.
       const orig = g.updateLighthouseStage.bind(g);
       g.updateLighthouseStage = () => orig(1450);
-      g.ux.lighthouseStarted = 0;
     });
+    await page.getByRole('button', { name: '등대 점등하기', exact: true }).click();
+    await page.evaluate(() => { window.__OCEAN_GAME__.ux.lighthouseStarted = 0; });
     await frames(page, 2);
     await capture('lighthouse-event');
-    await page.evaluate(() => { const g = window.__OCEAN_GAME__; delete g.updateLighthouseStage; delete g.ux.lighthouseStarted; });
+    await page.evaluate(() => {
+      const g = window.__OCEAN_GAME__;
+      delete g.updateLighthouseStage; delete g.ux.lighthouseStarted;
+      Object.defineProperty(g, 'lighthouseEventUntil', { configurable: true, enumerable: true, writable: true, value: 0 });
+    });
     await page.getByRole('button', { name: '건너뛰기 · Enter', exact: true }).click();
     await page.evaluate(() => window.__OCEAN_GAME__.openShop());
     await capture('shop');

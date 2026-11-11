@@ -2,14 +2,19 @@
 /*
  * RM3 캡처 18장: 무드 3종(dawn r0, deep r3, aurora r7) × 의미 있는 품질·fx 6조합.
  *   node capture-rm3.cjs [--label after] [--w 1280 --h 720] [--k 1]
+ *       [--moods 0,3,7|all] [--combos low:auto,mid:off] [--json rm3-captures.json]
+ * RM9(설계서 10.4 RM-D06): --moods all --combos low:auto,mid:off 이면 9개 무드 × (low 품질, fx off) = 18장.
  * 이름: rm_RM3_{무드}_{품질}_{fx}_{w}x{h}_{label}.png  (HUD 숨김, 점등 계수 고정)
  */
 const fs = require('fs');
 const { open, frames, startSailing, teleport, POINTS, outPath } = require('./lib.cjs');
 const arg = (n, d) => { const i = process.argv.indexOf('--' + n); return i > 0 ? process.argv[i + 1] : d; };
 const label = arg('label', 'after'), W = Number(arg('w', '1280')), H = Number(arg('h', '720')), K = Number(arg('k', '1'));
-const MOODS = [{ mood: 'dawn', id: 0 }, { mood: 'deep', id: 3 }, { mood: 'aurora', id: 7 }];
-const COMBOS = [['low', 'auto'], ['low', 'off'], ['mid', 'off'], ['mid', 'lite'], ['mid', 'full'], ['high', 'full']];
+const MOOD_NAMES = ['dawn', 'golden', 'storm', 'deep', 'mist', 'bluehour', 'lagoon', 'aurora', 'starmirror'];
+const MOOD_IDS = arg('moods', '0,3,7') === 'all' ? [0, 1, 2, 3, 4, 5, 6, 7, 8] : arg('moods', '0,3,7').split(',').map(Number);
+const MOODS = MOOD_IDS.map((id) => ({ mood: MOOD_NAMES[id], id }));
+const COMBOS = arg('combos', '') ? arg('combos').split(',').map((c) => c.split(':')) : [['low', 'auto'], ['low', 'off'], ['mid', 'off'], ['mid', 'lite'], ['mid', 'full'], ['high', 'full']];
+const JSON_NAME = arg('json', 'rm3-captures.json');
 const HIDE = '#qa-hud{display:none!important} body.nohud .hud, body.nohud #control-layer, body.nohud .minimap-panel, body.nohud #world-labels, body.nohud #objective-chip, body.nohud #help-strip, body.nohud #game-toast, body.nohud #caption-strip, body.nohud #region-banner, body.nohud #remaster-region-art, body.nohud .collect-counter, body.nohud .action-cluster, body.nohud #effect-cue{display:none!important}';
 (async () => {
   const { browser, page, errors } = await open({ width: W, height: H });
@@ -32,7 +37,7 @@ const HIDE = '#qa-hud{display:none!important} body.nohud .hud, body.nohud #contr
       console.log(mood.padEnd(6), q.padEnd(4), fx.padEnd(5), 'passes', info.plan.passes, 'targets', info.targets, 'calls', JSON.stringify(info.calls), 'canvasTone', JSON.stringify(info.tone));
     }
   }
-  fs.writeFileSync(outPath('rm3-captures.json'), JSON.stringify({ viewport: [W, H], k: K, rows, files, errors: errors.slice(0, 8) }, null, 1));
+  fs.writeFileSync(outPath(JSON_NAME), JSON.stringify({ viewport: [W, H], k: K, rows, files, errors: errors.slice(0, 8) }, null, 1));
   console.log('written', files.length, 'errors', JSON.stringify(errors.slice(0, 8)));
   await browser.close();
 })();

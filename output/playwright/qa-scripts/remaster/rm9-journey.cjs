@@ -49,6 +49,7 @@ async function solveTrial(page) {
   const problems = [], rows = [];
   let checks = 0;
   const check = (cond, message) => { checks++; if (!cond) problems.push(message); return cond; };
+  fs.mkdirSync(path.join('output', 'playwright', 'rm9'), { recursive: true });
   try {
     await page.waitForSelector('#start-sailing:not([disabled])', { timeout: 30000 });
     await page.evaluate(() => { const g = window.__OCEAN_GAME__; g.returnToTitle(); g.openNewGameConfirmation(); g.confirmNewGame(); });
