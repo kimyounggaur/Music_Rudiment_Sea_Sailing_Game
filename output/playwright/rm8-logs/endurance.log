@@ -1,0 +1,35 @@
+투어(랜드마크 9곳 × 근·원경 + 시련 부표)가 올린 렌더러 자원 {"geometries":105,"textures":1,"programs":1} (전 {"geometries":124,"textures":10,"programs":25} → 후 {"geometries":229,"textures":11,"programs":26})
+[1.2분] {"codex":5,"menu":5,"trial":5,"rotation":5} obj 444 geo 229 prog 26 targets 7
+[2.2분] {"codex":9,"menu":9,"trial":9,"rotation":9} obj 444 geo 229 prog 26 targets 7
+[3.1분] {"codex":12,"menu":12,"trial":12,"rotation":12} obj 444 geo 229 prog 26 targets 7
+[4.2분] {"codex":16,"menu":16,"trial":16,"rotation":16} obj 444 geo 229 prog 26 targets 7
+[5.3분] {"codex":20,"menu":20,"trial":20,"rotation":20} obj 444 geo 229 prog 26 targets 7
+[6.1분] {"codex":23,"menu":23,"trial":20,"rotation":20} obj 444 geo 229 prog 26 targets 7
+[7.1분] {"codex":27,"menu":27,"trial":20,"rotation":20} obj 444 geo 229 prog 26 targets 7
+[8.2분] {"codex":31,"menu":31,"trial":20,"rotation":20} obj 444 geo 229 prog 26 targets 7
+[9.2분] {"codex":35,"menu":35,"trial":20,"rotation":20} obj 444 geo 229 prog 26 targets 7
+[10.3분] {"codex":39,"menu":39,"trial":20,"rotation":20} obj 444 geo 229 prog 26 targets 7
+[11.1분] {"codex":42,"menu":42,"trial":20,"rotation":20} obj 444 geo 229 prog 26 targets 7
+[12.1분] {"codex":46,"menu":46,"trial":20,"rotation":20} obj 444 geo 229 prog 26 targets 7
+[13.2분] {"codex":50,"menu":50,"trial":20,"rotation":20} obj 444 geo 229 prog 26 targets 7
+[14.3분] {"codex":50,"menu":50,"trial":20,"rotation":20} obj 444 geo 229 prog 26 targets 7
+[15.1분] {"codex":50,"menu":50,"trial":20,"rotation":20} obj 444 geo 229 prog 26 targets 7
+[16.1분] {"codex":50,"menu":50,"trial":20,"rotation":20} obj 444 geo 229 prog 26 targets 7
+[17.2분] {"codex":50,"menu":50,"trial":20,"rotation":20} obj 444 geo 229 prog 26 targets 7
+[18.2분] {"codex":50,"menu":50,"trial":20,"rotation":20} obj 444 geo 229 prog 26 targets 7
+[19.2분] {"codex":50,"menu":50,"trial":20,"rotation":20} obj 444 geo 229 prog 26 targets 7
+[20.3분] {"codex":50,"menu":50,"trial":20,"rotation":20} obj 444 geo 229 prog 26 targets 7
+[21.1분] {"codex":50,"menu":50,"trial":20,"rotation":20} obj 444 geo 229 prog 26 targets 7
+[22.1분] {"codex":50,"menu":50,"trial":20,"rotation":20} obj 444 geo 229 prog 26 targets 7
+[23.2분] {"codex":50,"menu":50,"trial":20,"rotation":20} obj 444 geo 229 prog 26 targets 7
+[24.2분] {"codex":50,"menu":50,"trial":20,"rotation":20} obj 444 geo 229 prog 26 targets 7
+[25.3분] {"codex":50,"menu":50,"trial":20,"rotation":20} obj 444 geo 229 prog 26 targets 7
+[26.1분] {"codex":50,"menu":50,"trial":20,"rotation":20} obj 444 geo 229 prog 26 targets 7
+[27.1분] {"codex":50,"menu":50,"trial":20,"rotation":20} obj 444 geo 229 prog 26 targets 7
+[28.2분] {"codex":50,"menu":50,"trial":20,"rotation":20} obj 444 geo 229 prog 26 targets 7
+[29.2분] {"codex":50,"menu":50,"trial":20,"rotation":20} obj 444 geo 229 prog 26 targets 7
+주기 {"codex":50,"menu":50,"trial":20,"rotation":20} 경과(분) 30.3
+증가(워밍업 뒤 → 끝; 오디오·타이머류는 바닥값 앞 구간 → 뒤 구간) {"geometries":0,"textures":0,"programs":0,"targets":0,"listeners":0,"canvases":0,"uiTimers":0,"countUps":0,"audioSources":0,"audioTimeouts":-1,"audioIntervals":0} 참고 {"objects":0,"domNodes":-3,"heapMB":0,"targetsCreatedMinusDisposed":7}
+끝-워밍업 차(참고) {"geometries":0,"textures":0,"programs":0,"targets":0,"listeners":0,"canvases":0,"uiTimers":-1,"countUps":0,"audioSources":-7,"audioTimeouts":0,"audioIntervals":0} 바닥값 {"uiTimers":{"early":0,"late":0,"samplesPerThird":9},"countUps":{"early":0,"late":0,"samplesPerThird":9},"audioSources":{"early":3,"late":3,"samplesPerThird":9},"audioTimeouts":{"early":1,"late":0,"samplesPerThird":9},"audioIntervals":{"early":1,"late":1,"samplesPerThird":9}}
+오류 []
+ENDURANCE PASS
