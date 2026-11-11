@@ -13,6 +13,8 @@
  *   TEXT_SCALE=1.3 node boot-sweep.cjs                                          저장된 글자 배율 1.3으로 접속(① 실제 주소에서만 적용된다. ② ?qa=1은 메모리 저장소라 배율 1로 열린다)
  * 한 화면마다 두 번 접속한다: ① 실제 주소(검사 인자 없음) — "항해 시작"이 켜지는가 ② ?qa=1 — 실패한 검사의 이름
  * 통과 조건: ①·② 모두 단추가 켜지고, 실패한 검사는 모두 화면 배치 검사(O-38~O-41)이며, 콘솔 오류가 없다.
+ *   TEXT_SCALE을 지정했으면 하나 더: 접속한 화면의 글자 배율(html[data-text-scale])이 저장해 둔 값과 같고 저장 키가 남아 있다(저장이 실제로 읽혔다).
+ *   RM8 전에는 이 확인이 없어서, 저장이 접속마다 지워지는 동안에도 "시작됨"만 보고 통과했다.
  * 배치 검사 실패는 시작을 막지 않지만 결과 파일에 화면별로 남긴다(알려진 한계 목록이 된다).
  */
 const fs = require('fs');
@@ -47,6 +49,10 @@ async function startEnabled(page, ms) {
       const first = await open({ query: '', width: W, height: H, touch, before: seed });
       row.productionStarts = await startEnabled(first.page, 40000);
       row.productionStatus = await first.page.evaluate(() => { const s = document.getElementById('phase-status'); return s ? s.textContent : null; }).catch(() => null);
+      // 글자 배율을 저장해 두고 접속했다면 그 저장이 실제로 읽혔는지(RM0~RM7 빌드는 저장이 있으면 접속 때마다 지웠다) 화면의 배율과 저장 키로 확인한다
+      row.productionScale = await first.page.evaluate(() => document.documentElement.dataset.textScale || null).catch(() => null);
+      row.saveKept = await first.page.evaluate((key) => { try { return localStorage.getItem(key) !== null; } catch (e) { return null; } }, 'lesson_designer_ocean_v1').catch(() => null);
+      row.scaleOk = !TEXT_SCALE || (row.productionScale === String(TEXT_SCALE) && row.saveKept === true);
       row.productionErrors = first.errors.slice(0, 5);
       // ② ?qa=1 : 검사 결과
       await first.page.goto((process.env.BASE_URL || 'http://127.0.0.1:8765') + '/?qa=1', { waitUntil: 'load' });
@@ -56,9 +62,9 @@ async function startEnabled(page, ms) {
       row.layoutFailed = row.failed.filter((f) => isLayout(f.name)).map((f) => f.name.split(' ')[0] + ' ' + f.error);
       row.otherFailed = row.failed.filter((f) => !isLayout(f.name)).map((f) => f.name + ' ' + f.error);
       row.errors = first.errors.slice(0, 5);
-      row.ok = row.productionStarts && row.qaStarts && results !== null && row.otherFailed.length === 0 && row.errors.length === 0 && row.productionErrors.length === 0;
+      row.ok = row.productionStarts && row.qaStarts && results !== null && row.otherFailed.length === 0 && row.errors.length === 0 && row.productionErrors.length === 0 && row.scaleOk;
       rows.push(row);
-      console.log(`${touch ? '터치  ' : '비터치'} ${String(W + 'x' + H).padEnd(10)} 실제 주소 ${row.productionStarts ? '시작됨' : '✗ 시작 안 됨'} · ?qa=1 ${row.qaStarts ? '시작됨' : '✗ 시작 안 됨'} · 배치 검사 실패 ${row.layoutFailed.length}${row.layoutFailed.length ? ' (' + row.layoutFailed.join(' | ').slice(0, 90) + ')' : ''}${row.otherFailed.length ? ' · ✗ 다른 검사 실패 ' + row.otherFailed.join(' | ') : ''}${row.errors.length || row.productionErrors.length ? ' · ✗ 콘솔 오류 ' + (row.errors.concat(row.productionErrors)).join(' | ') : ''}`);
+      console.log(`${touch ? '터치  ' : '비터치'} ${String(W + 'x' + H).padEnd(10)} 실제 주소 ${row.productionStarts ? '시작됨' : '✗ 시작 안 됨'} · ?qa=1 ${row.qaStarts ? '시작됨' : '✗ 시작 안 됨'} · 배치 검사 실패 ${row.layoutFailed.length}${row.layoutFailed.length ? ' (' + row.layoutFailed.join(' | ').slice(0, 90) + ')' : ''}${row.otherFailed.length ? ' · ✗ 다른 검사 실패 ' + row.otherFailed.join(' | ') : ''}${row.errors.length || row.productionErrors.length ? ' · ✗ 콘솔 오류 ' + (row.errors.concat(row.productionErrors)).join(' | ') : ''}${TEXT_SCALE ? ' · 글자 배율 ' + row.productionScale + (row.scaleOk ? ' (저장 읽힘)' : ' ✗ 저장이 읽히지 않았다(저장 키 ' + (row.saveKept ? '있음' : '없음') + ')') : ''}`);
       await first.browser.close();
     }
   }
