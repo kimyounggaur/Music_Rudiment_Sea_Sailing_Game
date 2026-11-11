@@ -1,0 +1,1350 @@
+{
+ "viewport": [
+  640,
+  360
+ ],
+ "range": 60,
+ "cone": 30,
+ "gate": true,
+ "totals": {
+  "points": 9,
+  "uncollectedInView": 6,
+  "buoysInView": 7,
+  "fullyUncollected": 0,
+  "fullyAll": 0
+ },
+ "wedge": {
+  "new": [
+   {
+    "d": 12,
+    "deg": 0
+   },
+   {
+    "d": 20,
+    "deg": 0
+   },
+   {
+    "d": 30,
+    "deg": 2.3
+   },
+   {
+    "d": 40,
+    "deg": 11.7
+   },
+   {
+    "d": 50,
+    "deg": 9
+   },
+   {
+    "d": 60,
+    "deg": 9.3
+   }
+  ],
+  "legacy": [
+   {
+    "d": 12,
+    "deg": 0
+   },
+   {
+    "d": 20,
+    "deg": 18
+   },
+   {
+    "d": 30,
+    "deg": 27
+   },
+   {
+    "d": 40,
+    "deg": 24
+   },
+   {
+    "d": 50,
+    "deg": 24
+   },
+   {
+    "d": 60,
+    "deg": 24
+   }
+  ]
+ },
+ "summary": [
+  {
+   "id": 0,
+   "name": "r0-harbor",
+   "mode": "steer",
+   "buoys": 0,
+   "fullyAll": 0,
+   "uncollected": 0,
+   "fullyUncollected": 0,
+   "deadBearings": [
+    {
+     "d": 12,
+     "fully": []
+    },
+    {
+     "d": 20,
+     "fully": []
+    },
+    {
+     "d": 30,
+     "fully": []
+    },
+    {
+     "d": 40,
+     "fully": [
+      0,
+      3,
+      6,
+      9
+     ]
+    },
+    {
+     "d": 50,
+     "fully": [
+      0,
+      3,
+      6
+     ]
+    },
+    {
+     "d": 60,
+     "fully": [
+      0,
+      3,
+      6
+     ]
+    }
+   ],
+   "legacyDead": [
+    {
+     "d": 12,
+     "fully": []
+    },
+    {
+     "d": 20,
+     "fully": [
+      -3,
+      0,
+      3,
+      6,
+      9,
+      12,
+      15
+     ]
+    },
+    {
+     "d": 30,
+     "fully": [
+      -9,
+      -6,
+      -3,
+      0,
+      3,
+      6,
+      9,
+      12,
+      15
+     ]
+    },
+    {
+     "d": 40,
+     "fully": [
+      -9,
+      -6,
+      -3,
+      0,
+      3,
+      6,
+      9,
+      12
+     ]
+    },
+    {
+     "d": 50,
+     "fully": [
+      -9,
+      -6,
+      -3,
+      0,
+      3,
+      6,
+      9,
+      12
+     ]
+    },
+    {
+     "d": 60,
+     "fully": [
+      -9,
+      -6,
+      -3,
+      0,
+      3,
+      6,
+      9,
+      12
+     ]
+    }
+   ],
+   "legacyAll": {
+    "count": 0,
+    "fully": 0
+   }
+  },
+  {
+   "id": 1,
+   "name": "r1-arch",
+   "mode": "steer",
+   "buoys": 1,
+   "fullyAll": 0,
+   "uncollected": 0,
+   "fullyUncollected": 0,
+   "deadBearings": [
+    {
+     "d": 12,
+     "fully": []
+    },
+    {
+     "d": 20,
+     "fully": []
+    },
+    {
+     "d": 30,
+     "fully": []
+    },
+    {
+     "d": 40,
+     "fully": [
+      0,
+      3,
+      6,
+      9
+     ]
+    },
+    {
+     "d": 50,
+     "fully": [
+      0,
+      3,
+      6
+     ]
+    },
+    {
+     "d": 60,
+     "fully": [
+      0,
+      3,
+      6
+     ]
+    }
+   ],
+   "legacyDead": [
+    {
+     "d": 12,
+     "fully": []
+    },
+    {
+     "d": 20,
+     "fully": [
+      0,
+      3,
+      6,
+      9,
+      12,
+      15
+     ]
+    },
+    {
+     "d": 30,
+     "fully": [
+      -9,
+      -6,
+      -3,
+      0,
+      3,
+      6,
+      9,
+      12,
+      15
+     ]
+    },
+    {
+     "d": 40,
+     "fully": [
+      -9,
+      -6,
+      -3,
+      0,
+      3,
+      6,
+      9,
+      12
+     ]
+    },
+    {
+     "d": 50,
+     "fully": [
+      -9,
+      -6,
+      -3,
+      0,
+      3,
+      6,
+      9,
+      12
+     ]
+    },
+    {
+     "d": 60,
+     "fully": [
+      -9,
+      -6,
+      -3,
+      0,
+      3,
+      6,
+      9,
+      12
+     ]
+    }
+   ],
+   "legacyAll": {
+    "count": 1,
+    "fully": 1
+   }
+  },
+  {
+   "id": 2,
+   "name": "r2-storm",
+   "mode": "steer",
+   "buoys": 0,
+   "fullyAll": 0,
+   "uncollected": 0,
+   "fullyUncollected": 0,
+   "deadBearings": [
+    {
+     "d": 12,
+     "fully": []
+    },
+    {
+     "d": 20,
+     "fully": []
+    },
+    {
+     "d": 30,
+     "fully": [
+      0,
+      3,
+      6,
+      9
+     ]
+    },
+    {
+     "d": 40,
+     "fully": [
+      0,
+      3,
+      6,
+      9
+     ]
+    },
+    {
+     "d": 50,
+     "fully": [
+      0,
+      3,
+      6
+     ]
+    },
+    {
+     "d": 60,
+     "fully": [
+      0,
+      3,
+      6
+     ]
+    }
+   ],
+   "legacyDead": [
+    {
+     "d": 12,
+     "fully": []
+    },
+    {
+     "d": 20,
+     "fully": [
+      0,
+      3,
+      6,
+      9,
+      12,
+      15
+     ]
+    },
+    {
+     "d": 30,
+     "fully": [
+      -9,
+      -6,
+      -3,
+      0,
+      3,
+      6,
+      9,
+      12,
+      15
+     ]
+    },
+    {
+     "d": 40,
+     "fully": [
+      -9,
+      -6,
+      -3,
+      0,
+      3,
+      6,
+      9,
+      12
+     ]
+    },
+    {
+     "d": 50,
+     "fully": [
+      -9,
+      -6,
+      -3,
+      0,
+      3,
+      6,
+      9,
+      12
+     ]
+    },
+    {
+     "d": 60,
+     "fully": [
+      -9,
+      -6,
+      -3,
+      0,
+      3,
+      6,
+      9,
+      12
+     ]
+    }
+   ],
+   "legacyAll": {
+    "count": 0,
+    "fully": 0
+   }
+  },
+  {
+   "id": 3,
+   "name": "r3-canyon",
+   "mode": "steer",
+   "buoys": 1,
+   "fullyAll": 0,
+   "uncollected": 1,
+   "fullyUncollected": 0,
+   "deadBearings": [
+    {
+     "d": 12,
+     "fully": []
+    },
+    {
+     "d": 20,
+     "fully": []
+    },
+    {
+     "d": 30,
+     "fully": [
+      0
+     ]
+    },
+    {
+     "d": 40,
+     "fully": [
+      3,
+      6,
+      9
+     ]
+    },
+    {
+     "d": 50,
+     "fully": [
+      3,
+      6,
+      9
+     ]
+    },
+    {
+     "d": 60,
+     "fully": [
+      0,
+      3,
+      6,
+      9
+     ]
+    }
+   ],
+   "legacyDead": [
+    {
+     "d": 12,
+     "fully": []
+    },
+    {
+     "d": 20,
+     "fully": [
+      0,
+      6,
+      9,
+      12,
+      15
+     ]
+    },
+    {
+     "d": 30,
+     "fully": [
+      -9,
+      -6,
+      -3,
+      0,
+      3,
+      6,
+      9,
+      12,
+      15
+     ]
+    },
+    {
+     "d": 40,
+     "fully": [
+      -9,
+      -6,
+      -3,
+      0,
+      3,
+      6,
+      9,
+      12
+     ]
+    },
+    {
+     "d": 50,
+     "fully": [
+      -9,
+      -6,
+      -3,
+      0,
+      3,
+      6,
+      9,
+      12
+     ]
+    },
+    {
+     "d": 60,
+     "fully": [
+      -9,
+      -6,
+      -3,
+      0,
+      3,
+      6,
+      9,
+      12
+     ]
+    }
+   ],
+   "legacyAll": {
+    "count": 1,
+    "fully": 1
+   }
+  },
+  {
+   "id": 4,
+   "name": "r4-islands",
+   "mode": "steer",
+   "buoys": 0,
+   "fullyAll": 0,
+   "uncollected": 0,
+   "fullyUncollected": 0,
+   "deadBearings": [
+    {
+     "d": 12,
+     "fully": []
+    },
+    {
+     "d": 20,
+     "fully": []
+    },
+    {
+     "d": 30,
+     "fully": []
+    },
+    {
+     "d": 40,
+     "fully": [
+      0,
+      3,
+      6,
+      9
+     ]
+    },
+    {
+     "d": 50,
+     "fully": [
+      0,
+      3,
+      6
+     ]
+    },
+    {
+     "d": 60,
+     "fully": [
+      0,
+      3,
+      6
+     ]
+    }
+   ],
+   "legacyDead": [
+    {
+     "d": 12,
+     "fully": []
+    },
+    {
+     "d": 20,
+     "fully": [
+      0,
+      3,
+      6,
+      9,
+      12,
+      15
+     ]
+    },
+    {
+     "d": 30,
+     "fully": [
+      -9,
+      -6,
+      -3,
+      0,
+      3,
+      6,
+      9,
+      12,
+      15
+     ]
+    },
+    {
+     "d": 40,
+     "fully": [
+      -9,
+      -6,
+      -3,
+      0,
+      3,
+      6,
+      9,
+      12
+     ]
+    },
+    {
+     "d": 50,
+     "fully": [
+      -9,
+      -6,
+      -3,
+      0,
+      3,
+      6,
+      9,
+      12
+     ]
+    },
+    {
+     "d": 60,
+     "fully": [
+      -9,
+      -6,
+      -3,
+      0,
+      3,
+      6,
+      9,
+      12
+     ]
+    }
+   ],
+   "legacyAll": {
+    "count": 0,
+    "fully": 0
+   }
+  },
+  {
+   "id": 5,
+   "name": "r5-strait",
+   "mode": "steer",
+   "buoys": 1,
+   "fullyAll": 0,
+   "uncollected": 1,
+   "fullyUncollected": 0,
+   "deadBearings": [
+    {
+     "d": 12,
+     "fully": []
+    },
+    {
+     "d": 20,
+     "fully": []
+    },
+    {
+     "d": 30,
+     "fully": [
+      0
+     ]
+    },
+    {
+     "d": 40,
+     "fully": [
+      0,
+      3,
+      6,
+      9
+     ]
+    },
+    {
+     "d": 50,
+     "fully": [
+      0,
+      3,
+      6
+     ]
+    },
+    {
+     "d": 60,
+     "fully": [
+      0,
+      3,
+      6
+     ]
+    }
+   ],
+   "legacyDead": [
+    {
+     "d": 12,
+     "fully": []
+    },
+    {
+     "d": 20,
+     "fully": [
+      0,
+      3,
+      6,
+      9,
+      12,
+      15
+     ]
+    },
+    {
+     "d": 30,
+     "fully": [
+      -9,
+      -6,
+      -3,
+      0,
+      3,
+      6,
+      9,
+      12,
+      15
+     ]
+    },
+    {
+     "d": 40,
+     "fully": [
+      -9,
+      -6,
+      -3,
+      0,
+      3,
+      6,
+      9,
+      12
+     ]
+    },
+    {
+     "d": 50,
+     "fully": [
+      -9,
+      -6,
+      -3,
+      0,
+      3,
+      6,
+      9,
+      12
+     ]
+    },
+    {
+     "d": 60,
+     "fully": [
+      -9,
+      -6,
+      -3,
+      0,
+      3,
+      6,
+      9,
+      12
+     ]
+    }
+   ],
+   "legacyAll": {
+    "count": 1,
+    "fully": 0
+   }
+  },
+  {
+   "id": 6,
+   "name": "r6-coral",
+   "mode": "steer",
+   "buoys": 2,
+   "fullyAll": 0,
+   "uncollected": 2,
+   "fullyUncollected": 0,
+   "deadBearings": [
+    {
+     "d": 12,
+     "fully": []
+    },
+    {
+     "d": 20,
+     "fully": []
+    },
+    {
+     "d": 30,
+     "fully": [
+      0
+     ]
+    },
+    {
+     "d": 40,
+     "fully": [
+      0,
+      3,
+      6,
+      9
+     ]
+    },
+    {
+     "d": 50,
+     "fully": [
+      0,
+      3,
+      6
+     ]
+    },
+    {
+     "d": 60,
+     "fully": [
+      0,
+      3,
+      6
+     ]
+    }
+   ],
+   "legacyDead": [
+    {
+     "d": 12,
+     "fully": []
+    },
+    {
+     "d": 20,
+     "fully": [
+      0,
+      3,
+      6,
+      9,
+      12,
+      15
+     ]
+    },
+    {
+     "d": 30,
+     "fully": [
+      -9,
+      -6,
+      -3,
+      0,
+      3,
+      6,
+      9,
+      12,
+      15
+     ]
+    },
+    {
+     "d": 40,
+     "fully": [
+      -9,
+      -6,
+      -3,
+      0,
+      3,
+      6,
+      9,
+      12
+     ]
+    },
+    {
+     "d": 50,
+     "fully": [
+      -9,
+      -6,
+      -3,
+      0,
+      3,
+      6,
+      9,
+      12
+     ]
+    },
+    {
+     "d": 60,
+     "fully": [
+      -9,
+      -6,
+      -3,
+      0,
+      3,
+      6,
+      9,
+      12
+     ]
+    }
+   ],
+   "legacyAll": {
+    "count": 2,
+    "fully": 1
+   }
+  },
+  {
+   "id": 7,
+   "name": "r7-fifths",
+   "mode": "steer",
+   "buoys": 0,
+   "fullyAll": 0,
+   "uncollected": 0,
+   "fullyUncollected": 0,
+   "deadBearings": [
+    {
+     "d": 12,
+     "fully": []
+    },
+    {
+     "d": 20,
+     "fully": []
+    },
+    {
+     "d": 30,
+     "fully": []
+    },
+    {
+     "d": 40,
+     "fully": [
+      0,
+      3,
+      6,
+      9
+     ]
+    },
+    {
+     "d": 50,
+     "fully": [
+      0,
+      3,
+      6
+     ]
+    },
+    {
+     "d": 60,
+     "fully": [
+      0,
+      3,
+      6
+     ]
+    }
+   ],
+   "legacyDead": [
+    {
+     "d": 12,
+     "fully": []
+    },
+    {
+     "d": 20,
+     "fully": [
+      0,
+      3,
+      6,
+      9,
+      12,
+      15
+     ]
+    },
+    {
+     "d": 30,
+     "fully": [
+      -9,
+      -6,
+      -3,
+      0,
+      3,
+      6,
+      9,
+      12,
+      15
+     ]
+    },
+    {
+     "d": 40,
+     "fully": [
+      -9,
+      -6,
+      -3,
+      0,
+      3,
+      6,
+      9,
+      12
+     ]
+    },
+    {
+     "d": 50,
+     "fully": [
+      -9,
+      -6,
+      -3,
+      0,
+      3,
+      6,
+      9,
+      12
+     ]
+    },
+    {
+     "d": 60,
+     "fully": [
+      -9,
+      -6,
+      -3,
+      0,
+      3,
+      6,
+      9,
+      12
+     ]
+    }
+   ],
+   "legacyAll": {
+    "count": 0,
+    "fully": 0
+   }
+  },
+  {
+   "id": 8,
+   "name": "r8-maelstrom",
+   "mode": "steer",
+   "buoys": 2,
+   "fullyAll": 0,
+   "uncollected": 2,
+   "fullyUncollected": 0,
+   "deadBearings": [
+    {
+     "d": 12,
+     "fully": []
+    },
+    {
+     "d": 20,
+     "fully": []
+    },
+    {
+     "d": 30,
+     "fully": []
+    },
+    {
+     "d": 40,
+     "fully": [
+      0,
+      3,
+      6,
+      9
+     ]
+    },
+    {
+     "d": 50,
+     "fully": [
+      0,
+      3,
+      6
+     ]
+    },
+    {
+     "d": 60,
+     "fully": [
+      0,
+      3,
+      6
+     ]
+    }
+   ],
+   "legacyDead": [
+    {
+     "d": 12,
+     "fully": []
+    },
+    {
+     "d": 20,
+     "fully": [
+      0,
+      3,
+      6,
+      9,
+      12,
+      15
+     ]
+    },
+    {
+     "d": 30,
+     "fully": [
+      -9,
+      -6,
+      -3,
+      0,
+      3,
+      6,
+      9,
+      12,
+      15
+     ]
+    },
+    {
+     "d": 40,
+     "fully": [
+      -9,
+      -6,
+      -3,
+      0,
+      3,
+      6,
+      9,
+      12
+     ]
+    },
+    {
+     "d": 50,
+     "fully": [
+      -9,
+      -6,
+      -3,
+      0,
+      3,
+      6,
+      9,
+      12
+     ]
+    },
+    {
+     "d": 60,
+     "fully": [
+      -9,
+      -6,
+      -3,
+      0,
+      3,
+      6,
+      9,
+      12
+     ]
+    }
+   ],
+   "legacyAll": {
+    "count": 2,
+    "fully": 1
+   }
+  }
+ ],
+ "rows": [
+  {
+   "id": 0,
+   "real": [],
+   "all": []
+  },
+  {
+   "id": 1,
+   "real": [],
+   "all": [
+    {
+     "id": "r1_moderato",
+     "distance": 28.3,
+     "bearingDeg": 14.9,
+     "blocked": 1,
+     "samples": 9,
+     "fully": false
+    }
+   ]
+  },
+  {
+   "id": 2,
+   "real": [],
+   "all": []
+  },
+  {
+   "id": 3,
+   "real": [
+    {
+     "id": "r3_dynamics",
+     "distance": 31.4,
+     "bearingDeg": -5.9,
+     "blocked": 0,
+     "samples": 9,
+     "fully": false
+    }
+   ],
+   "all": [
+    {
+     "id": "r3_dynamics",
+     "distance": 31.4,
+     "bearingDeg": -5.9,
+     "blocked": 0,
+     "samples": 9,
+     "fully": false
+    }
+   ]
+  },
+  {
+   "id": 4,
+   "real": [],
+   "all": []
+  },
+  {
+   "id": 5,
+   "real": [
+    {
+     "id": "r5_natural_minor",
+     "distance": 34.2,
+     "bearingDeg": -12.9,
+     "blocked": 0,
+     "samples": 9,
+     "fully": false
+    }
+   ],
+   "all": [
+    {
+     "id": "r5_natural_minor",
+     "distance": 34.2,
+     "bearingDeg": -12.9,
+     "blocked": 0,
+     "samples": 9,
+     "fully": false
+    }
+   ]
+  },
+  {
+   "id": 6,
+   "real": [
+    {
+     "id": "r6_chord",
+     "distance": 39.5,
+     "bearingDeg": -4.3,
+     "blocked": 3,
+     "samples": 9,
+     "fully": false
+    },
+    {
+     "id": "r6_root",
+     "distance": 20.1,
+     "bearingDeg": -20.4,
+     "blocked": 0,
+     "samples": 9,
+     "fully": false
+    }
+   ],
+   "all": [
+    {
+     "id": "r6_chord",
+     "distance": 39.5,
+     "bearingDeg": -4.3,
+     "blocked": 3,
+     "samples": 9,
+     "fully": false
+    },
+    {
+     "id": "r6_root",
+     "distance": 20.1,
+     "bearingDeg": -20.4,
+     "blocked": 0,
+     "samples": 9,
+     "fully": false
+    }
+   ]
+  },
+  {
+   "id": 7,
+   "real": [],
+   "all": []
+  },
+  {
+   "id": 8,
+   "real": [
+    {
+     "id": "r8_dal_segno",
+     "distance": 40.6,
+     "bearingDeg": -22.3,
+     "blocked": 0,
+     "samples": 9,
+     "fully": false
+    },
+    {
+     "id": "r8_period",
+     "distance": 44.7,
+     "bearingDeg": 0.2,
+     "blocked": 7,
+     "samples": 9,
+     "fully": false
+    }
+   ],
+   "all": [
+    {
+     "id": "r8_dal_segno",
+     "distance": 40.6,
+     "bearingDeg": -22.3,
+     "blocked": 0,
+     "samples": 9,
+     "fully": false
+    },
+    {
+     "id": "r8_period",
+     "distance": 44.7,
+     "bearingDeg": 0.2,
+     "blocked": 7,
+     "samples": 9,
+     "fully": false
+    }
+   ]
+  }
+ ],
+ "sailMeshes": [
+  "wind-filled-curved-sail",
+  "Sail_jib",
+  "Sail_main_billowed",
+  "Static_Sail_ivory",
+  "Static_Sail_turquoise_seam",
+  "Turquoise_pennant"
+ ],
+ "errors": []
+}

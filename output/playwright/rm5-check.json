@@ -1,0 +1,501 @@
+{
+ "A": {
+  "lanterns": {
+   "buoy": {
+    "instances": 128,
+    "bodyTriangles": 90,
+    "glowTriangles": 4,
+    "parts": 2,
+    "castShadow": false,
+    "lit": 128,
+    "through": 0,
+    "sailRays": 0,
+    "glowAlpha": 0.25
+   },
+   "bottle": {
+    "instances": 18,
+    "bodyTriangles": 110,
+    "glowTriangles": 4,
+    "castShadow": false,
+    "lit": 18
+   },
+   "gate": {
+    "count": 4,
+    "triangles": [
+     178,
+     178,
+     178,
+     178
+    ]
+   },
+   "shipLantern": {
+    "intensity": 0.687,
+    "base": 0.664,
+    "flicker": 1.0342,
+    "windowMaterials": 1
+   },
+   "pointLights": 2,
+   "shadowCasters": 134
+  },
+  "toon": {
+   "meshes": 163,
+   "materials": 74,
+   "fixedVertexColors": 1,
+   "calls": 6
+  }
+ },
+ "checks": [
+  {
+   "name": "A1 부표 삼각형 ≤ 96 · 부품 2",
+   "ok": true,
+   "detail": [
+    90,
+    4,
+    2
+   ]
+  },
+  {
+   "name": "A2 부표 128개 한 번 그리기(인스턴스)",
+   "ok": true,
+   "detail": 128
+  },
+  {
+   "name": "A3 부표·병은 그림자를 드리우지 않음",
+   "ok": true
+  },
+  {
+   "name": "A4 점광원 ≤ 2",
+   "ok": true,
+   "detail": 2
+  },
+  {
+   "name": "A5 시련 문 한 개 ≤ 200 삼각형",
+   "ok": true,
+   "detail": [
+    178,
+    178,
+    178,
+    178
+   ]
+  },
+  {
+   "name": "A6 툰 치환: 머티리얼 변환됨",
+   "ok": true,
+   "detail": {
+    "meshes": 163,
+    "materials": 74,
+    "fixedVertexColors": 1,
+    "calls": 6
+   }
+  },
+  {
+   "name": "B1 품질별 EVENT_RINGS 정의가 품질표와 같다",
+   "ok": true,
+   "detail": [
+    [
+     "low",
+     2,
+     2
+    ],
+    [
+     "mid",
+     4,
+     4
+    ],
+    [
+     "high",
+     8,
+     8
+    ],
+    [
+     "mid",
+     4,
+     4
+    ]
+   ]
+  },
+  {
+   "name": "B2 고리 은행 칸이 품질표와 같다",
+   "ok": true,
+   "detail": [
+    [
+     "low",
+     2
+    ],
+    [
+     "mid",
+     4
+    ],
+    [
+     "high",
+     8
+    ],
+    [
+     "mid",
+     4
+    ]
+   ]
+  },
+  {
+   "name": "B3 풀 상한이 품질표와 같다",
+   "ok": true,
+   "detail": [
+    [
+     "low",
+     800
+    ],
+    [
+     "mid",
+     1400
+    ],
+    [
+     "high",
+     2000
+    ],
+    [
+     "mid",
+     1400
+    ]
+   ]
+  },
+  {
+   "name": "B4 셰이더 배열은 항상 8칸",
+   "ok": true
+  },
+  {
+   "name": "B5 품질 전환 중 콘솔 오류 0",
+   "ok": true,
+   "detail": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  {
+   "name": "B6 점광원 ≤ 2 (모든 품질)",
+   "ok": true
+  },
+  {
+   "name": "C1 동작 줄이기 풀 상한 ≤ 500",
+   "ok": true,
+   "detail": 500
+  },
+  {
+   "name": "C2 무드 입자 양이 보통의 약 40%",
+   "ok": true,
+   "detail": {
+    "normal": 2400,
+    "reduced": 1008,
+    "ratio": 0.42
+   }
+  },
+  {
+   "name": "C3 꽃잎 회전·반딧불 깜박임 시계가 멈춘다(uMotion 0)",
+   "ok": true,
+   "detail": [
+    1,
+    0
+   ]
+  },
+  {
+   "name": "C4 배 등불 흔들림 고정",
+   "ok": true,
+   "detail": [
+    1,
+    1,
+    1,
+    1,
+    1
+   ]
+  },
+  {
+   "name": "C5 빛 덩이: 퍼지지 않고(크기 8 고정) 불투명도 ≤ 0.25",
+   "ok": true,
+   "detail": {
+    "scale": 8,
+    "opacity": 0.2
+   }
+  },
+  {
+   "name": "C6 동작 줄이기 번개: 섬광 ≤ 0.12 · 화면 덮개 0",
+   "ok": true,
+   "detail": {
+    "strength": 0.9279999999999999,
+    "flash": 0.111,
+    "overlay": 0,
+    "light": 0.557
+   }
+  },
+  {
+   "name": "D1 효과 60회 반복 뒤 자원 증가 0",
+   "ok": true,
+   "detail": {
+    "objects": 0,
+    "geometries": 0,
+    "materials": 0,
+    "textures": 0
+   }
+  },
+  {
+   "name": "D2 같은 시각에 10번 번개 → 섬광 3회만 허용",
+   "ok": true,
+   "detail": {
+    "allowed": 3,
+    "suppressed": 7
+   }
+  },
+  {
+   "name": "D3 섬광 세기 ≤ 0.35 · 화면 덮개 0",
+   "ok": true,
+   "detail": {
+    "first": {
+     "allowed": 3,
+     "suppressed": 7
+    },
+    "maxFlash": 0.35,
+    "overlay": 0
+   }
+  },
+  {
+   "name": "D4 풀 사용량이 상한 안",
+   "ok": true,
+   "detail": {
+    "active": 366,
+    "capacity": 1400,
+    "maxCapacity": 2000,
+    "emitters": 13,
+    "emitterCalls": 1512,
+    "exhausted": 634,
+    "shapes": [
+     0,
+     366,
+     0,
+     0,
+     0
+    ],
+    "normalAlpha": 366
+   }
+  },
+  {
+   "name": "E1 해역2 강박 → 큰 고리 + 비",
+   "ok": true,
+   "detail": [
+    "beat"
+   ]
+  },
+  {
+   "name": "E2 해역2 엇박 → 하늘 섬광",
+   "ok": true
+  },
+  {
+   "name": "E3 해역3 셈여림(dynamic 1.0) → 수면 발광 1.0",
+   "ok": true,
+   "detail": 1
+  },
+  {
+   "name": "E4 해역4 gate 0.2 → 점 고리 · 0.9 → 물결",
+   "ok": true,
+   "detail": [
+    [
+     "dots"
+    ],
+    [
+     "wave"
+    ]
+   ]
+  },
+  {
+   "name": "E5 해역5 계이름 5 전달",
+   "ok": true
+  },
+  {
+   "name": "E6 해역6 화음 구성음 3 → 진주 3 · 세 겹 고리",
+   "ok": true,
+   "detail": [
+    3,
+    [
+     "triple"
+    ]
+   ]
+  },
+  {
+   "name": "E7 해역7 조성 G → 오로라 색상 π/6",
+   "ok": true,
+   "detail": 0.5235987755982988
+  },
+  {
+   "name": "E8 해역8 다 카포: 4번째 마디는 A",
+   "ok": true,
+   "detail": "A"
+  },
+  {
+   "name": "E9 연속 경로가 매 프레임 계획을 만든다",
+   "ok": true,
+   "detail": {
+    "glow": 0.6682203389830508
+   }
+  },
+  {
+   "name": "E10 해역1 연속 경로: bpm → 메트로놈 주기",
+   "ok": true,
+   "detail": 0.5769230769230769
+  },
+  {
+   "name": "F1 용어 발견 빛 덩이(스프라이트)가 있다",
+   "ok": true
+  },
+  {
+   "name": "F2 용어 발견 원통 빛기둥은 없다",
+   "ok": true,
+   "detail": []
+  },
+  {
+   "name": "Z 전체 콘솔 오류·경고 0",
+   "ok": true,
+   "detail": []
+  }
+ ],
+ "B": [
+  {
+   "q": "low",
+   "eventRingsProfile": 2,
+   "defineEventRings": 2,
+   "slots": 2,
+   "uRingsLength": 8,
+   "particlesProfile": 800,
+   "capacity": 800,
+   "pointLights": 2,
+   "programs": 32,
+   "newErrors": 0
+  },
+  {
+   "q": "mid",
+   "eventRingsProfile": 4,
+   "defineEventRings": 4,
+   "slots": 4,
+   "uRingsLength": 8,
+   "particlesProfile": 1400,
+   "capacity": 1400,
+   "pointLights": 2,
+   "programs": 32,
+   "newErrors": 0
+  },
+  {
+   "q": "high",
+   "eventRingsProfile": 8,
+   "defineEventRings": 8,
+   "slots": 8,
+   "uRingsLength": 8,
+   "particlesProfile": 2000,
+   "capacity": 2000,
+   "pointLights": 2,
+   "programs": 34,
+   "newErrors": 0
+  },
+  {
+   "q": "mid",
+   "eventRingsProfile": 4,
+   "defineEventRings": 4,
+   "slots": 4,
+   "uRingsLength": 8,
+   "particlesProfile": 1400,
+   "capacity": 1400,
+   "pointLights": 2,
+   "programs": 34,
+   "newErrors": 0
+  }
+ ],
+ "C": {
+  "normal": {
+   "emitted": 2400,
+   "capacity": 1400,
+   "uMotion": 1,
+   "rateWanted": 130
+  },
+  "reduced": {
+   "emitted": 1008,
+   "capacity": 500,
+   "uMotion": 0,
+   "rateWanted": 52
+  },
+  "orb": {
+   "scale": 8,
+   "opacity": 0.2
+  },
+  "flick": [
+   1,
+   1,
+   1,
+   1,
+   1
+  ],
+  "flash": {
+   "strength": 0.9279999999999999,
+   "flash": 0.111,
+   "overlay": 0,
+   "light": 0.557
+  }
+ },
+ "D": {
+  "growth": {
+   "objects": 0,
+   "geometries": 0,
+   "materials": 0,
+   "textures": 0
+  },
+  "flash": {
+   "first": {
+    "allowed": 3,
+    "suppressed": 7
+   },
+   "maxFlash": 0.35,
+   "overlay": 0
+  }
+ },
+ "E": {
+  "stormBeat": {
+   "rings": [
+    "beat"
+   ],
+   "rain": true,
+   "flash": false,
+   "glow": null,
+   "auroraHue": null,
+   "scaleDegree": null,
+   "pearls": 0,
+   "metronome": null,
+   "form": null,
+   "at": 3.649999999999995,
+   "region": 2
+  },
+  "live": {
+   "live": {
+    "rings": [],
+    "rain": false,
+    "flash": false,
+    "glow": 0.6682203389830508,
+    "auroraHue": null,
+    "scaleDegree": null,
+    "pearls": 0,
+    "metronome": null,
+    "form": null
+   },
+   "atmosphere": {
+    "glow": 0.772,
+    "hue": 0.15,
+    "glowGoal": 0.6682203389830508,
+    "hueGoal": 0
+   }
+  }
+ },
+ "F": {
+  "orb": "term-light-orb",
+  "orbBlending": 2,
+  "cylinders": []
+ },
+ "summary": {
+  "total": 35,
+  "failed": 0
+ }
+}

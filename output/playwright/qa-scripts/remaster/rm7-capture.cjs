@@ -45,6 +45,18 @@ const resume = arg('resume', '0') === '1';
 const measureOnly = new Set(arg('measure-only', '').split(',').filter(Boolean)); // 이 장면들은 그림을 다시 찍지 않고 측정만 한다(이미 찍은 그림을 그대로 둘 때)
 const rowsFile = path.resolve(outDir, tag + '-rows.jsonl');
 const resumed = new Map(); // "종이|장면" -> 측정 줄 배열
+// 빌드 지문: 측정한 index.html(과 거기서 부르는 글꼴 파일)의 해시. 줄마다 남기고, 이어하기는 같은 지문인 줄만 쓴다.
+// 보고서 도구는 낮·밤 측정이 같은 지문인지 확인한다 — 잰 빌드와 내보낸 빌드가 같다는 증거다.
+const crypto = require('crypto');
+const BUILD_BASE = process.env.BASE_URL || 'http://127.0.0.1:8765';
+async function buildFingerprint() {
+  const html = await (await fetch(BUILD_BASE + '/')).text();
+  const h = crypto.createHash('sha256').update(html);
+  const fonts = Array.from(new Set(html.match(/assets\/remaster\/fonts\/[^"'()\s]+\.woff2/g) || [])).sort();
+  for (const f of fonts) h.update(Buffer.from(await (await fetch(BUILD_BASE + '/' + f)).arrayBuffer()));
+  return h.digest('hex').slice(0, 16);
+}
+let buildHash = '';
 
 // 페이지 안에서 장마다 재는 값
 const MEASURE = (state) => {
@@ -179,7 +191,7 @@ async function runPaper(paper) {
       // 진행 중에도 위반을 볼 수 있게 장면 하나가 끝날 때마다 한 줄로 알린다
       const rows = out.filter((r) => r.state === state), keyOf = (r) => [r.center && r.center.violations.length && 'center:' + r.center.violations.join('+'), r.touch && r.touch.length && 'touch', r.contrast.violations.length && 'contrast', r.copy && r.copy.length && 'copy', r.overflow && 'overflow', r.overlaps && r.overlaps.length && 'overlap:' + r.overlaps[0], r.clipped && r.clipped.length && 'clipped:' + r.clipped[0]].filter(Boolean);
       const badRows = rows.filter((r) => keyOf(r).length);
-      fs.appendFileSync(rowsFile, JSON.stringify({ paper, state, rows: out.slice(firstRow) }) + '\n');
+      fs.appendFileSync(rowsFile, JSON.stringify({ build: buildHash, paper, state, rows: out.slice(firstRow) }) + '\n');
       log('done', state, `(${rows.length}장, 위반 ${badRows.length})`);
       badRows.slice(0, 4).forEach((r) => log('   ', r.file, keyOf(r).join(' | ')));
     };
@@ -301,12 +313,22 @@ async function runPaper(paper) {
 (async () => {
   fs.mkdirSync(outPath('rm7'), { recursive: true });
   fs.mkdirSync(path.dirname(rowsFile), { recursive: true });
+  buildHash = await buildFingerprint();
+  console.log(`[빌드] ${BUILD_BASE} 지문 ${buildHash}`);
   if (resume && fs.existsSync(rowsFile)) {
+    let stale = 0;
     for (const line of fs.readFileSync(rowsFile, 'utf8').split('\n')) {
       if (!line.trim()) continue;
-      try { const o = JSON.parse(line); resumed.set(o.paper + '|' + o.state, o.rows); } catch (e) { /* 끊기면서 반쯤 쓰인 마지막 줄은 버린다 */ }
+      try {
+        const o = JSON.parse(line);
+        if (o.build === buildHash) resumed.set(o.paper + '|' + o.state, o.rows); else stale++;
+      } catch (e) { /* 끊기면서 반쯤 쓰인 마지막 줄은 버린다 */ }
     }
-    console.log(`[이어하기] 끝난 장면 ${resumed.size}개를 건너뜁니다: ` + Array.from(resumed.keys()).join(', '));
+    console.log(`[이어하기] 끝난 장면 ${resumed.size}개를 건너뜁니다: ` + Array.from(resumed.keys()).join(', ') + (stale ? ` (다른 빌드에서 잰 ${stale}줄은 쓰지 않고 다시 잰다)` : ''));
+    // 다시 잴 장면의 묵은 줄이 남지 않게, 이번 지문의 줄만 남기고 파일을 다시 쓴다
+    const keep = [];
+    for (const [k, rows] of resumed) { const [p, s] = k.split('|'); keep.push(JSON.stringify({ build: buildHash, paper: p, state: s, rows })); }
+    fs.writeFileSync(rowsFile, keep.length ? keep.join('\n') + '\n' : '');
   } else fs.writeFileSync(rowsFile, '');
   const all = [], errs = [];
   for (const paper of papers) {
@@ -315,7 +337,7 @@ async function runPaper(paper) {
     errs.push(...errors.map((e) => `[${paper}] ${e}`));
   }
   fs.mkdirSync(path.dirname(path.resolve(jsonOut)), { recursive: true });
-  fs.writeFileSync(jsonOut, JSON.stringify({ count: all.length, errors: errs, rows: all }, null, 1));
+  fs.writeFileSync(jsonOut, JSON.stringify({ build: buildHash, count: all.length, errors: errs, rows: all }, null, 1));
   // 요약
   const bad = (f) => all.filter(f);
   const summary = {

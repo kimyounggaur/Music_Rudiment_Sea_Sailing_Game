@@ -1,0 +1,1231 @@
+{
+ "gate": "PASS",
+ "regions": [
+  0,
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8
+ ],
+ "seconds": 253,
+ "checks": [
+  {
+   "name": "r0 근경이 올라와 보임(대기 1초)",
+   "ok": true,
+   "detail": {
+    "ok": true,
+    "stage": "near",
+    "far": "ready",
+    "near": "ready",
+    "waitedMs": 602
+   }
+  },
+  {
+   "name": "r0 음악 목표 노드가 모델에 모두 있다(2개)",
+   "ok": true,
+   "detail": {
+    "missing": [],
+    "bound": [
+     "Glow_clef",
+     "Lantern_notes"
+    ]
+   }
+  },
+  {
+   "name": "r0 모델의 음악 노드(Beat_·Glow_·Lantern_·Sway_)는 모두 음악 목표가 있다",
+   "ok": true,
+   "detail": {
+    "orphan": []
+   }
+  },
+  {
+   "name": "r0 원경 대역의 발광 노드는 쉬는 값 0.4로 고정(2개)",
+   "ok": true,
+   "detail": [
+    0.4,
+    0.4
+   ]
+  },
+  {
+   "name": "r0 높은음자리표·음표 등불이 숨 쉰다(0.35~0.95)",
+   "ok": true,
+   "detail": {
+    "normal": {
+     "clef": 0.9471,
+     "notes": 0.3931
+    },
+    "reducedA": {
+     "clef": 0.8,
+     "notes": 0.8
+    },
+    "reducedB": {
+     "clef": 0.8,
+     "notes": 0.8
+    }
+   }
+  },
+  {
+   "name": "r0 감소된 모션이면 0.8로 고정(시간이 지나도 변하지 않음)",
+   "ok": true,
+   "detail": {
+    "normal": {
+     "clef": 0.9471,
+     "notes": 0.3931
+    },
+    "reducedA": {
+     "clef": 0.8,
+     "notes": 0.8
+    },
+    "reducedB": {
+     "clef": 0.8,
+     "notes": 0.8
+    }
+   }
+  },
+  {
+   "name": "r1 근경이 올라와 보임(대기 1초)",
+   "ok": true,
+   "detail": {
+    "ok": true,
+    "stage": "near",
+    "far": "ready",
+    "near": "ready",
+    "waitedMs": 587
+   }
+  },
+  {
+   "name": "r1 음악 목표 노드가 모델에 모두 있다(2개)",
+   "ok": true,
+   "detail": {
+    "missing": [],
+    "bound": [
+     "Beat_pendulum",
+     "Lantern_tempo"
+    ]
+   }
+  },
+  {
+   "name": "r1 모델의 음악 노드(Beat_·Glow_·Lantern_·Sway_)는 모두 음악 목표가 있다",
+   "ok": true,
+   "detail": {
+    "orphan": []
+   }
+  },
+  {
+   "name": "r1 원경 대역의 발광 노드는 쉬는 값 0.4로 고정(1개)",
+   "ok": true,
+   "detail": [
+    0.4
+   ]
+  },
+  {
+   "name": "r1 진자가 ±0.5 rad 안에서 흔들린다(한 주기 동안 폭 ≥ 0.5)",
+   "ok": true,
+   "detail": {
+    "lo": -0.4862,
+    "hi": 0.4862
+   }
+  },
+  {
+   "name": "r1 케이스 등이 한쪽 끝에서만 반짝인다(최대 > 0.8, 최소 < 0.5)",
+   "ok": true,
+   "detail": [
+    0.35,
+    0.35,
+    0.35,
+    0.35,
+    0.35,
+    0.35,
+    0.355,
+    0.8272,
+    1.0697,
+    0.3786,
+    0.35,
+    0.35
+   ]
+  },
+  {
+   "name": "r1 감소된 모션이면 진자 정지(각 0)·등 0.7",
+   "ok": true,
+   "detail": {
+    "angle": 0,
+    "lamp": 0.7
+   }
+  },
+  {
+   "name": "r1 메트로놈 주기 = 60/bpm(10초 동안 bpm/60×10 주기, 40~180 bpm)",
+   "ok": true,
+   "detail": [
+    {
+     "bpm": 40,
+     "seconds": 10,
+     "expected": 6.667,
+     "measured": 6.667,
+     "period": 1.5
+    },
+    {
+     "bpm": 60,
+     "seconds": 10,
+     "expected": 10,
+     "measured": 10,
+     "period": 1
+    },
+    {
+     "bpm": 96,
+     "seconds": 10,
+     "expected": 16,
+     "measured": 16,
+     "period": 0.625
+    },
+    {
+     "bpm": 120,
+     "seconds": 10,
+     "expected": 20,
+     "measured": 20,
+     "period": 0.5
+    },
+    {
+     "bpm": 180,
+     "seconds": 10,
+     "expected": 30,
+     "measured": 30,
+     "period": 0.3333
+    }
+   ]
+  },
+  {
+   "name": "r1 박 큐가 진자 위상을 0.25(오른쪽 끝)로 끌어당긴다(8박 뒤 ±0.02)",
+   "ok": true,
+   "detail": {
+    "start": 0.6,
+    "seq": [
+     0.6,
+     0.4775,
+     0.3979,
+     0.3461,
+     0.3125,
+     0.2906,
+     0.2764,
+     0.2672,
+     0.2612
+    ],
+    "locks": 8
+   }
+  },
+  {
+   "name": "r1 위상 보정은 가까운 쪽으로 돈다(0.76 → 0.9315 앞으로, 0.74 → 0.5685 뒤로)",
+   "ok": true,
+   "detail": [
+    {
+     "start": 0.76,
+     "end": 0.9315
+    },
+    {
+     "start": 0.74,
+     "end": 0.5685
+    }
+   ]
+  },
+  {
+   "name": "r2 근경이 올라와 보임(대기 1초)",
+   "ok": true,
+   "detail": {
+    "ok": true,
+    "stage": "near",
+    "far": "ready",
+    "near": "ready",
+    "waitedMs": 551
+   }
+  },
+  {
+   "name": "r2 음악 목표 노드가 모델에 모두 있다(3개)",
+   "ok": true,
+   "detail": {
+    "missing": [],
+    "bound": [
+     "Beat_head",
+     "Glow_arc",
+     "Glow_rim"
+    ]
+   }
+  },
+  {
+   "name": "r2 모델의 음악 노드(Beat_·Glow_·Lantern_·Sway_)는 모두 음악 목표가 있다",
+   "ok": true,
+   "detail": {
+    "orphan": []
+   }
+  },
+  {
+   "name": "r2 원경 대역의 발광 노드는 쉬는 값 0.4로 고정(1개)",
+   "ok": true,
+   "detail": [
+    0.4
+   ]
+  },
+  {
+   "name": "r2 쉬는 값: 가죽 안 눌림 · 테 0.2 · 피뢰침 0.3",
+   "ok": true,
+   "detail": {
+    "drop": 0,
+    "rim": 0.2,
+    "arc": 0.3
+   }
+  },
+  {
+   "name": "r2 강박 큐 직후 가죽이 눌리고(≥ 0.5 m) 테가 밝아진다(≥ 1.0)",
+   "ok": true,
+   "detail": {
+    "drop": 0.6321,
+    "rim": 1.2272,
+    "arc": 0.3
+   }
+  },
+  {
+   "name": "r2 강박 0.65초 뒤 원래대로(가죽 0 · 테 0.2)",
+   "ok": true,
+   "detail": {
+    "drop": 0,
+    "rim": 0.2
+   }
+  },
+  {
+   "name": "r2 엇박 번개 큐에 피뢰침 끝이 번쩍이고(≥ 1.0) 가죽은 그대로",
+   "ok": true,
+   "detail": {
+    "bolt": {
+     "arc": 1.3744,
+     "drop": 0
+    },
+    "after": {
+     "arc": 0.3
+    }
+   }
+  },
+  {
+   "name": "r2 감소된 모션이면 가죽이 눌리지 않고 번쩍임이 약하다(피뢰침 ≤ 0.8)",
+   "ok": true,
+   "detail": {
+    "drop": 0,
+    "arc": 0.7132
+   }
+  },
+  {
+   "name": "r3 근경이 올라와 보임(대기 1초)",
+   "ok": true,
+   "detail": {
+    "ok": true,
+    "stage": "near",
+    "far": "ready",
+    "near": "ready",
+    "waitedMs": 625
+   }
+  },
+  {
+   "name": "r3 음악 목표 노드가 모델에 모두 있다(4개)",
+   "ok": true,
+   "detail": {
+    "missing": [],
+    "bound": [
+     "Glow_level1",
+     "Glow_level2",
+     "Glow_level3",
+     "Glow_level4"
+    ]
+   }
+  },
+  {
+   "name": "r3 모델의 음악 노드(Beat_·Glow_·Lantern_·Sway_)는 모두 음악 목표가 있다",
+   "ok": true,
+   "detail": {
+    "orphan": []
+   }
+  },
+  {
+   "name": "r3 원경 대역의 발광 노드는 쉬는 값 0.4로 고정(1개)",
+   "ok": true,
+   "detail": [
+    0.4
+   ]
+  },
+  {
+   "name": "r3 셈여림 0.1~1.0에서 켜진 단이 늘기만 한다(1 → 4단)",
+   "ok": true,
+   "detail": [
+    {
+     "dynamic": 0.1,
+     "levels": [
+      1,
+      0.14,
+      0.14,
+      0.14
+     ],
+     "level": 1
+    },
+    {
+     "dynamic": 0.35,
+     "levels": [
+      1,
+      1,
+      0.14,
+      0.14
+     ],
+     "level": 2
+    },
+    {
+     "dynamic": 0.55,
+     "levels": [
+      1,
+      1,
+      1,
+      0.14
+     ],
+     "level": 3
+    },
+    {
+     "dynamic": 0.8,
+     "levels": [
+      1,
+      1,
+      1,
+      1
+     ],
+     "level": 4
+    },
+    {
+     "dynamic": 1,
+     "levels": [
+      1,
+      1,
+      1,
+      1
+     ],
+     "level": 4
+    },
+    {
+     "dynamic": null,
+     "levels": [
+      0.3,
+      0.3,
+      0.3,
+      0.3
+     ],
+     "level": 0
+    }
+   ]
+  },
+  {
+   "name": "r3 켜진 단은 아래부터 연속이고 꺼진 단은 0.14",
+   "ok": true,
+   "detail": [
+    {
+     "dynamic": 0.1,
+     "levels": [
+      1,
+      0.14,
+      0.14,
+      0.14
+     ],
+     "level": 1
+    },
+    {
+     "dynamic": 0.35,
+     "levels": [
+      1,
+      1,
+      0.14,
+      0.14
+     ],
+     "level": 2
+    },
+    {
+     "dynamic": 0.55,
+     "levels": [
+      1,
+      1,
+      1,
+      0.14
+     ],
+     "level": 3
+    },
+    {
+     "dynamic": 0.8,
+     "levels": [
+      1,
+      1,
+      1,
+      1
+     ],
+     "level": 4
+    },
+    {
+     "dynamic": 1,
+     "levels": [
+      1,
+      1,
+      1,
+      1
+     ],
+     "level": 4
+    },
+    {
+     "dynamic": null,
+     "levels": [
+      0.3,
+      0.3,
+      0.3,
+      0.3
+     ],
+     "level": 0
+    }
+   ]
+  },
+  {
+   "name": "r3 값이 없으면 모든 단이 쉬는 값 0.3",
+   "ok": true,
+   "detail": {
+    "dynamic": null,
+    "levels": [
+     0.3,
+     0.3,
+     0.3,
+     0.3
+    ],
+    "level": 0
+   }
+  },
+  {
+   "name": "r4 근경이 올라와 보임(대기 1초)",
+   "ok": true,
+   "detail": {
+    "ok": true,
+    "stage": "near",
+    "far": "ready",
+    "near": "ready",
+    "waitedMs": 537
+   }
+  },
+  {
+   "name": "r4 음악 목표 노드가 모델에 모두 있다(2개)",
+   "ok": true,
+   "detail": {
+    "missing": [],
+    "bound": [
+     "Glow_hold",
+     "Lantern_dots"
+    ]
+   }
+  },
+  {
+   "name": "r4 모델의 음악 노드(Beat_·Glow_·Lantern_·Sway_)는 모두 음악 목표가 있다",
+   "ok": true,
+   "detail": {
+    "orphan": []
+   }
+  },
+  {
+   "name": "r4 원경 대역의 발광 노드는 쉬는 값 0.4로 고정(2개)",
+   "ok": true,
+   "detail": [
+    0.4,
+    0.4
+   ]
+  },
+  {
+   "name": "r4 쉬는 값: 점 0.25 · 페르마타 진주 0.25",
+   "ok": true,
+   "detail": {
+    "dots": 0.25,
+    "hold": 0.25
+   }
+  },
+  {
+   "name": "r4 legato는 길게 이어지고 staccato는 짧게 끊긴다(0.3초 뒤 legato ≥ 0.6 · staccato = 0.25)",
+   "ok": true,
+   "detail": {
+    "rest": {
+     "dots": 0.25,
+     "hold": 0.25
+    },
+    "legato": 1.3204,
+    "legato03": 0.6981,
+    "staccato": 0.8759,
+    "staccato03": 0.25,
+    "fermata": 1.3
+   }
+  },
+  {
+   "name": "r4 페르마타 곁에서 아치 아래 진주가 환하다(1.3)",
+   "ok": true,
+   "detail": 1.3
+  },
+  {
+   "name": "r5 근경이 올라와 보임(대기 1초)",
+   "ok": true,
+   "detail": {
+    "ok": true,
+    "stage": "near",
+    "far": "ready",
+    "near": "ready",
+    "waitedMs": 580
+   }
+  },
+  {
+   "name": "r5 음악 목표 노드가 모델에 모두 있다(7개)",
+   "ok": true,
+   "detail": {
+    "missing": [],
+    "bound": [
+     "Lantern_deg1",
+     "Lantern_deg2",
+     "Lantern_deg3",
+     "Lantern_deg4",
+     "Lantern_deg5",
+     "Lantern_deg6",
+     "Lantern_deg7"
+    ]
+   }
+  },
+  {
+   "name": "r5 모델의 음악 노드(Beat_·Glow_·Lantern_·Sway_)는 모두 음악 목표가 있다",
+   "ok": true,
+   "detail": {
+    "orphan": []
+   }
+  },
+  {
+   "name": "r5 원경 대역의 발광 노드는 쉬는 값 0.4로 고정(1개)",
+   "ok": true,
+   "detail": [
+    0.4
+   ]
+  },
+  {
+   "name": "r5 가까운 등대(계이름 k+1)만 1.0으로 켜지고 나머지는 0.3",
+   "ok": true,
+   "detail": [
+    {
+     "k": 0,
+     "ratios": [
+      1,
+      0.3,
+      0.3,
+      0.3,
+      0.3,
+      0.3,
+      0.3
+     ]
+    },
+    {
+     "k": 3,
+     "ratios": [
+      0.3,
+      0.3,
+      0.3,
+      1,
+      0.3,
+      0.3,
+      0.3
+     ]
+    },
+    {
+     "k": 6,
+     "ratios": [
+      0.3,
+      0.3,
+      0.3,
+      0.3,
+      0.3,
+      0.3,
+      1
+     ]
+    }
+   ]
+  },
+  {
+   "name": "r5 계이름이 바뀐 순간 그 등대가 한 번 더 번쩍인다(> 1.3) → 1.3초 뒤 1.0",
+   "ok": true,
+   "detail": {
+    "flare": [
+     0.3,
+     0.3,
+     1.551,
+     0.3
+    ],
+    "after": [
+     0.3,
+     0.3,
+     1,
+     0.3
+    ]
+   }
+  },
+  {
+   "name": "r5 등대에서 멀면(scaleNearby = false) 일곱 모두 0.3",
+   "ok": true,
+   "detail": [
+    0.3,
+    0.3,
+    0.3,
+    0.3,
+    0.3,
+    0.3,
+    0.3
+   ]
+  },
+  {
+   "name": "r6 근경이 올라와 보임(대기 1초)",
+   "ok": true,
+   "detail": {
+    "ok": true,
+    "stage": "near",
+    "far": "ready",
+    "near": "ready",
+    "waitedMs": 560
+   }
+  },
+  {
+   "name": "r6 음악 목표 노드가 모델에 모두 있다(3개)",
+   "ok": true,
+   "detail": {
+    "missing": [],
+    "bound": [
+     "Glow_pearls1",
+     "Glow_pearls2",
+     "Glow_pearls3"
+    ]
+   }
+  },
+  {
+   "name": "r6 모델의 음악 노드(Beat_·Glow_·Lantern_·Sway_)는 모두 음악 목표가 있다",
+   "ok": true,
+   "detail": {
+    "orphan": []
+   }
+  },
+  {
+   "name": "r6 원경 대역의 발광 노드는 쉬는 값 0.4로 고정(1개)",
+   "ok": true,
+   "detail": [
+    0.4
+   ]
+  },
+  {
+   "name": "r6 산호에서 멀면 진주 셋 모두 0.25",
+   "ok": true,
+   "detail": [
+    0.25,
+    0.25,
+    0.25
+   ]
+  },
+  {
+   "name": "r6 산호 곁이면 진주 셋 모두 켜진다(1.0)",
+   "ok": true,
+   "detail": [
+    1,
+    1,
+    1
+   ]
+  },
+  {
+   "name": "r6 화음 큐에서 근음 → 3음 → 5음 차례로 번쩍인다(0.05초: 1단만, 0.25초: 2단 이상) → 1.7초 뒤 1.0",
+   "ok": true,
+   "detail": {
+    "far": [
+     0.25,
+     0.25,
+     0.25
+    ],
+    "near": [
+     1,
+     1,
+     1
+    ],
+    "cue0": [
+     1.551,
+     1,
+     1
+    ],
+    "cue1": [
+     1.376,
+     1.477,
+     1.59
+    ],
+    "after": [
+     1,
+     1,
+     1
+    ]
+   }
+  },
+  {
+   "name": "r7 근경이 올라와 보임(대기 1초)",
+   "ok": true,
+   "detail": {
+    "ok": true,
+    "stage": "near",
+    "far": "ready",
+    "near": "ready",
+    "waitedMs": 688
+   }
+  },
+  {
+   "name": "r7 음악 목표 노드가 모델에 모두 있다(14개)",
+   "ok": true,
+   "detail": {
+    "missing": [],
+    "bound": [
+     "Glow_core",
+     "Lantern_key1",
+     "Lantern_key10",
+     "Lantern_key11",
+     "Lantern_key2",
+     "Lantern_key3",
+     "Lantern_key4",
+     "Lantern_key5",
+     "Lantern_key6a",
+     "Lantern_key6b",
+     "Lantern_key7",
+     "Lantern_key8",
+     "Lantern_key9",
+     "Sway_rings"
+    ]
+   }
+  },
+  {
+   "name": "r7 모델의 음악 노드(Beat_·Glow_·Lantern_·Sway_)는 모두 음악 목표가 있다",
+   "ok": true,
+   "detail": {
+    "orphan": []
+   }
+  },
+  {
+   "name": "r7 원경 대역의 발광 노드는 쉬는 값 0.4로 고정(3개)",
+   "ok": true,
+   "detail": [
+    0.4,
+    0.4,
+    0.4
+   ]
+  },
+  {
+   "name": "r7 조표 띠: 음악의 조(5도권 번호)만 1.4로 켜지고 나머지는 0.3(F♯/G♭는 두 막대 모두)",
+   "ok": true,
+   "detail": [
+    {
+     "idx": 0,
+     "lit": [],
+     "idle": [
+      0.3,
+      0.3,
+      0.3,
+      0.3,
+      0.3,
+      0.3,
+      0.3,
+      0.3,
+      0.3,
+      0.3,
+      0.3,
+      0.3
+     ],
+     "core": 1.3
+    },
+    {
+     "idx": 1,
+     "lit": [
+      1.4
+     ],
+     "idle": [
+      0.3,
+      0.3,
+      0.3,
+      0.3,
+      0.3,
+      0.3,
+      0.3,
+      0.3,
+      0.3,
+      0.3,
+      0.3
+     ],
+     "core": 0.7368
+    },
+    {
+     "idx": 6,
+     "lit": [
+      1.4,
+      1.4
+     ],
+     "idle": [
+      0.3,
+      0.3,
+      0.3,
+      0.3,
+      0.3,
+      0.3,
+      0.3,
+      0.3,
+      0.3,
+      0.3
+     ],
+     "core": 0.7595
+    },
+    {
+     "idx": 7,
+     "lit": [
+      1.4
+     ],
+     "idle": [
+      0.3,
+      0.3,
+      0.3,
+      0.3,
+      0.3,
+      0.3,
+      0.3,
+      0.3,
+      0.3,
+      0.3,
+      0.3
+     ],
+     "core": 0.7815
+    },
+    {
+     "idx": 11,
+     "lit": [
+      1.4
+     ],
+     "idle": [
+      0.3,
+      0.3,
+      0.3,
+      0.3,
+      0.3,
+      0.3,
+      0.3,
+      0.3,
+      0.3,
+      0.3,
+      0.3
+     ],
+     "core": 0.8026
+    }
+   ]
+  },
+  {
+   "name": "r7 C(5도권 0)는 조표가 없어 가운데 진주가 1.3으로 켜진다",
+   "ok": true,
+   "detail": [
+    1.3,
+    0.7368,
+    0.7595,
+    0.7815,
+    0.8026
+   ]
+  },
+  {
+   "name": "r7 혼천의 고리가 천천히 돈다(1초에 약 0.14 rad) · 감소된 모션이면 멈춘다",
+   "ok": true,
+   "detail": {
+    "moved": 0.1400000000000017,
+    "reducedMoved": 0
+   }
+  },
+  {
+   "name": "r8 근경이 올라와 보임(대기 1초)",
+   "ok": true,
+   "detail": {
+    "ok": true,
+    "stage": "near",
+    "far": "ready",
+    "near": "ready",
+    "waitedMs": 540
+   }
+  },
+  {
+   "name": "r8 음악 목표 노드가 모델에 모두 있다(3개)",
+   "ok": true,
+   "detail": {
+    "missing": [],
+    "bound": [
+     "Glow_coda",
+     "Lantern_dotsEnd",
+     "Lantern_dotsStart"
+    ]
+   }
+  },
+  {
+   "name": "r8 모델의 음악 노드(Beat_·Glow_·Lantern_·Sway_)는 모두 음악 목표가 있다",
+   "ok": true,
+   "detail": {
+    "orphan": []
+   }
+  },
+  {
+   "name": "r8 원경 대역의 발광 노드는 쉬는 값 0.4로 고정(2개)",
+   "ok": true,
+   "detail": [
+    0.4,
+    0.4
+   ]
+  },
+  {
+   "name": "r8 쉬는 값은 셋 모두 0.3",
+   "ok": true,
+   "detail": [
+    0.3,
+    0.3,
+    0.3
+   ]
+  },
+  {
+   "name": "r8 마디 0(A 처음)에는 시작 도돌이 점, 3(A 끝)에는 끝 도돌이 점, 2(B)에는 코다 구만 켜진다",
+   "ok": true,
+   "detail": {
+    "bar4": [
+     1.2385,
+     0.3,
+     0.3
+    ],
+    "bar7": [
+     0.3,
+     1.2385,
+     0.3
+    ],
+    "bar6": [
+     0.3,
+     0.3,
+     1.2385
+    ]
+   }
+  },
+  {
+   "name": "r8 마디 1(A 둘째)에는 아무것도 번쩍이지 않고, 1.8초 뒤 모두 쉬는 값",
+   "ok": true,
+   "detail": {
+    "bar5": [
+     0.3,
+     0.3,
+     0.3
+    ],
+    "after": [
+     0.3,
+     0.3,
+     0.3
+    ]
+   }
+  },
+  {
+   "name": "r5 등대 발자국 일곱 = REMASTER_SCALE_LIGHTS = 훅 단계 수",
+   "ok": true,
+   "detail": {
+    "lights": [
+     [
+      -54,
+      -8
+     ],
+     [
+      -35,
+      6
+     ],
+     [
+      -16,
+      -8
+     ],
+     [
+      -6,
+      0
+     ],
+     [
+      15,
+      -8
+     ],
+     [
+      32,
+      -12
+     ],
+     [
+      51,
+      -24
+     ]
+    ],
+    "spec": [
+     [
+      -54,
+      -8
+     ],
+     [
+      -35,
+      6
+     ],
+     [
+      -16,
+      -8
+     ],
+     [
+      -6,
+      0
+     ],
+     [
+      15,
+      -8
+     ],
+     [
+      32,
+      -12
+     ],
+     [
+      51,
+      -24
+     ]
+    ]
+   }
+  },
+  {
+   "name": "r5 배가 등대 곁(4 m)에 서면 오디오의 가장 가까운 등대가 그 등대(계이름 일치)",
+   "ok": true,
+   "detail": [
+    {
+     "k": 0,
+     "region": 5,
+     "scaleNearby": true,
+     "scaleStep": 0,
+     "dist": 6.68
+    },
+    {
+     "k": 2,
+     "region": 5,
+     "scaleNearby": true,
+     "scaleStep": 2,
+     "dist": 6.68
+    },
+    {
+     "k": 3,
+     "region": 5,
+     "scaleNearby": true,
+     "scaleStep": 3,
+     "dist": 6.68
+    },
+    {
+     "k": 6,
+     "region": 5,
+     "scaleNearby": true,
+     "scaleStep": 6,
+     "dist": 6.32
+    }
+   ]
+  },
+  {
+   "name": "r5 원시 비콘(옛 도형) 일곱도 등대와 같은 자리(지역 좌표)",
+   "ok": true,
+   "detail": {
+    "beacons": [
+     [
+      -54,
+      -8
+     ],
+     [
+      -35,
+      6
+     ],
+     [
+      -16,
+      -8
+     ],
+     [
+      -6,
+      0
+     ],
+     [
+      15,
+      -8
+     ],
+     [
+      32,
+      -12
+     ],
+     [
+      51,
+      -24
+     ]
+    ],
+    "lights": [
+     [
+      -54,
+      -8
+     ],
+     [
+      -35,
+      6
+     ],
+     [
+      -16,
+      -8
+     ],
+     [
+      -6,
+      0
+     ],
+     [
+      15,
+      -8
+     ],
+     [
+      32,
+      -12
+     ],
+     [
+      51,
+      -24
+     ]
+    ]
+   }
+  },
+  {
+   "name": "먼 거리(근경이 안 보일 때)에는 구동기 적용이 늘지 않는다(update는 계속, applied는 그대로)",
+   "ok": true,
+   "detail": {
+    "a": {
+     "u": 357,
+     "ap": 395
+    },
+    "b": {
+     "u": 366,
+     "ap": 395
+    }
+   }
+  },
+  {
+   "name": "큐 처리(consumeMusic)가 랜드마크 구동기에 계이름·마디를 알린다",
+   "ok": true,
+   "detail": {
+    "before": {
+     "degree": 7,
+     "bar": 98
+    },
+    "after": {
+     "degree": 4,
+     "bar": 6,
+     "degreeAt": 21.825000000000173,
+     "time": 21.825000000000173
+    }
+   }
+  },
+  {
+   "name": "콘솔 오류·경고 없음",
+   "ok": true,
+   "detail": []
+  },
+  {
+   "name": "외부 요청 없음(three CDN 대신 로컬 응답만)",
+   "ok": true,
+   "detail": []
+  }
+ ]
+}

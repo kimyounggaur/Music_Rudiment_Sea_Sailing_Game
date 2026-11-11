@@ -1,0 +1,342 @@
+{
+ "report": {
+  "buoys": {
+   "r0": {
+    "picked": [
+     "r0_staff",
+     "r0_ledger_line",
+     "r0_pitch_name",
+     "r0_g_clef",
+     "r0_measure"
+    ],
+    "lanterns": {
+     "instances": 128,
+     "bodyTriangles": 90,
+     "glowTriangles": 4,
+     "parts": 2,
+     "castShadow": false,
+     "lit": 109,
+     "through": 0,
+     "sailRays": 0,
+     "glowAlpha": 0.25
+    },
+    "file": "/home/claude/remaster/game/output/playwright/rm_RM5_buoys_r0_1280x720_after.png",
+    "closeFile": "/home/claude/remaster/game/output/playwright/rm_RM5_buoys_r0_close_1280x720_after.png"
+   },
+   "r5": {
+    "picked": [
+     "r5_supertonic",
+     "r5_dominant",
+     "r5_flat",
+     "r5_leading_tone",
+     "r5_natural_minor"
+    ],
+    "lanterns": {
+     "instances": 128,
+     "bodyTriangles": 90,
+     "glowTriangles": 4,
+     "parts": 2,
+     "castShadow": false,
+     "lit": 125,
+     "through": 0,
+     "sailRays": 4,
+     "glowAlpha": 0.25
+    },
+    "file": "/home/claude/remaster/game/output/playwright/rm_RM5_buoys_r5_1280x720_after.png",
+    "closeFile": "/home/claude/remaster/game/output/playwright/rm_RM5_buoys_r5_close_1280x720_after.png"
+   }
+  },
+  "bottles": {
+   "bottles": [
+    {
+     "id": "bottle_r0_1",
+     "x": 30.165,
+     "z": -486.445
+    },
+    {
+     "id": "bottle_r0_2",
+     "x": 30.165,
+     "z": -373.555
+    },
+    {
+     "id": "bottle_r1_1",
+     "x": 39.28,
+     "z": -310.528
+    }
+   ],
+   "lanterns": {
+    "instances": 18,
+    "bodyTriangles": 110,
+    "glowTriangles": 4,
+    "castShadow": false,
+    "lit": 18
+   },
+   "file": "/home/claude/remaster/game/output/playwright/rm_RM5_bottles_1280x720_after.png"
+  },
+  "gates": {
+   "started": {
+    "index": 1,
+    "type": "navigation",
+    "choices": 4
+   },
+   "info": [
+    {
+     "id": "r1_allegro",
+     "vis": true,
+     "x": 78.2,
+     "z": -235.8,
+     "ry": 0.25,
+     "eliminated": false
+    },
+    {
+     "id": "r1_adagio",
+     "vis": true,
+     "x": 96.2,
+     "z": -266.2,
+     "ry": 1.82,
+     "eliminated": false
+    },
+    {
+     "id": "r1_grave",
+     "vis": true,
+     "x": 65.8,
+     "z": -284.2,
+     "ry": 3.39,
+     "eliminated": false
+    },
+    {
+     "id": "r1_allegretto",
+     "vis": true,
+     "x": 47.8,
+     "z": -253.8,
+     "ry": 4.96,
+     "eliminated": false
+    }
+   ],
+   "hinted": "r1_adagio",
+   "after": [
+    {
+     "id": "r1_allegro",
+     "eliminated": false,
+     "sink": 0,
+     "y": 1.02
+    },
+    {
+     "id": "r1_adagio",
+     "eliminated": true,
+     "sink": 0.99,
+     "y": -2.73
+    },
+    {
+     "id": "r1_grave",
+     "eliminated": false,
+     "sink": 0,
+     "y": 1.2
+    },
+    {
+     "id": "r1_allegretto",
+     "eliminated": false,
+     "sink": 0,
+     "y": 1.13
+    }
+   ],
+   "gate": {
+    "count": 4,
+    "triangles": [
+     178,
+     178,
+     178,
+     178
+    ]
+   },
+   "file": "/home/claude/remaster/game/output/playwright/rm_RM5_gates_1280x720_after.png",
+   "file2": "/home/claude/remaster/game/output/playwright/rm_RM5_gates_hint_1280x720_after.png"
+  },
+  "ship": {
+   "r5": {
+    "ship": {
+     "intensity": 0.662,
+     "base": 0.664,
+     "flicker": 0.9968,
+     "windowMaterials": 1
+    },
+    "pointLights": 2,
+    "file": "/home/claude/remaster/game/output/playwright/rm_RM5_ship_r5_1280x720_after.png"
+   },
+   "r3": {
+    "ship": {
+     "intensity": 0.7,
+     "base": 0.664,
+     "flicker": 1.0538,
+     "windowMaterials": 1
+    },
+    "pointLights": 2,
+    "file": "/home/claude/remaster/game/output/playwright/rm_RM5_ship_r3_1280x720_after.png"
+   },
+   "reducedFlicker": [
+    1,
+    1,
+    1,
+    1
+   ]
+  },
+  "rings": {
+   "placed": [
+    [
+     "beat",
+     true
+    ],
+    [
+     "discover",
+     true
+    ],
+    [
+     "dots",
+     true
+    ],
+    [
+     "wave",
+     true
+    ],
+    [
+     "triple",
+     true
+    ]
+   ],
+   "ringSlots": 8,
+   "rings": [
+    {
+     "kind": "beat",
+     "x": -122,
+     "z": 186,
+     "age": 1.02
+    },
+    {
+     "kind": "discover",
+     "x": -109,
+     "z": 186,
+     "age": 0.84
+    },
+    {
+     "kind": "dots",
+     "x": -96,
+     "z": 186,
+     "age": 0.78
+    },
+    {
+     "kind": "wave",
+     "x": -83,
+     "z": 186,
+     "age": 0.96
+    },
+    {
+     "kind": "triple",
+     "x": -70,
+     "z": 186,
+     "age": 1.08
+    }
+   ],
+   "file": "/home/claude/remaster/game/output/playwright/rm_RM5_rings_high_1280x720_after.png"
+  },
+  "particles": {
+   "r0": {
+    "steady": {
+     "peak": 77,
+     "active": 70,
+     "capacity": 1400,
+     "shapes": [
+      0,
+      0,
+      0,
+      0,
+      70
+     ],
+     "normalAlpha": 0,
+     "exhaustedDelta": 0,
+     "share": 0.05
+    },
+    "file": "/home/claude/remaster/game/output/playwright/rm_RM5_particles_r0_1280x720_after.png"
+   },
+   "r1": {
+    "steady": {
+     "peak": 90,
+     "active": 89,
+     "capacity": 1400,
+     "shapes": [
+      0,
+      0,
+      0,
+      0,
+      89
+     ],
+     "normalAlpha": 0,
+     "exhaustedDelta": 0,
+     "share": 0.064
+    },
+    "file": "/home/claude/remaster/game/output/playwright/rm_RM5_particles_r1_1280x720_after.png"
+   },
+   "r2": {
+    "steady": {
+     "peak": 118,
+     "active": 114,
+     "capacity": 1400,
+     "shapes": [
+      0,
+      114,
+      0,
+      0,
+      0
+     ],
+     "normalAlpha": 114,
+     "exhaustedDelta": 0,
+     "share": 0.081
+    },
+    "file": "/home/claude/remaster/game/output/playwright/rm_RM5_particles_r2_1280x720_after.png"
+   },
+   "r3": {
+    "steady": {
+     "peak": 55,
+     "active": 46,
+     "capacity": 1400,
+     "shapes": [
+      0,
+      46,
+      0,
+      0,
+      0
+     ],
+     "normalAlpha": 46,
+     "exhaustedDelta": 0,
+     "share": 0.033
+    },
+    "file": "/home/claude/remaster/game/output/playwright/rm_RM5_particles_r3_1280x720_after.png"
+   },
+   "r4": {
+    "steady": {
+     "peak": 61,
+     "active": 56,
+     "capacity": 1400,
+     "shapes": [
+      0,
+      0,
+      56,
+      0,
+      0
+     ],
+     "normalAlpha": 56,
+     "exhaustedDelta": 0,
+     "share": 0.04
+    },
+    "file": "/home/claude/remaster/game/output/playwright/rm_RM5_particles_r4_1280x720_after.png"
+   }
+  },
+  "orb": {
+   "orb": {
+    "visible": true,
+    "opacity": 0.25
+   },
+   "file": "/home/claude/remaster/game/output/playwright/rm_RM5_orb_1280x720_after.png"
+  }
+ },
+ "errors": []
+}

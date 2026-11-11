@@ -1,0 +1,515 @@
+{
+ "result": [
+  {
+   "region": 0,
+   "shadow": {
+    "total": {
+     "calls": 38,
+     "tris": 20228
+    },
+    "top": [
+     {
+      "k": "Mesh<region-7",
+      "calls": 5,
+      "tris": 11088
+     },
+     {
+      "k": "Mesh<region-1",
+      "calls": 5,
+      "tris": 1932
+     },
+     {
+      "k": "Mesh<region-0",
+      "calls": 5,
+      "tris": 1828
+     },
+     {
+      "k": "Static_Warm_limestone<Trade-wind_resonance_arch_•_ground_pivot_export<remaster-trade-wind-arch",
+      "calls": 1,
+      "tris": 956
+     },
+     {
+      "k": "Static_Limestone_shadow<Trade-wind_resonance_arch_•_ground_pivot_export<remaster-trade-wind-arch",
+      "calls": 1,
+      "tris": 864
+     },
+     {
+      "k": "Static_Limestone_light<Trade-wind_resonance_arch_•_ground_pivot_export<remaster-trade-wind-arch",
+      "calls": 1,
+      "tris": 824
+     },
+     {
+      "k": "Mesh<region-2",
+      "calls": 2,
+      "tris": 608
+     },
+     {
+      "k": "Static_Sail_ivory<Term_collectible_bottle_•_ground_pivot_export<remaster-harbor-term-bottle",
+      "calls": 1,
+      "tris": 480
+     },
+     {
+      "k": "Static_Sea_glass_highlight<Term_collectible_bottle_•_ground_pivot_export<remaster-harbor-term-bottle",
+      "calls": 1,
+      "tris": 304
+     },
+     {
+      "k": "lighthouse-lod-shadow<remaster-orchestra-lighthouse",
+      "calls": 1,
+      "tris": 268
+     },
+     {
+      "k": "Static_Bottle_glass_stylized<Term_collectible_bottle_•_ground_pivot_export<remaster-harbor-term-bottle",
+      "calls": 1,
+      "tris": 132
+     },
+     {
+      "k": "ship-lod-shadow<remaster-research-vessel<lesson-designer-ship",
+      "calls": 1,
+      "tris": 116
+     },
+     {
+      "k": "Static_Aged_brass<Term_collectible_bottle_•_ground_pivot_export<remaster-harbor-term-bottle",
+      "calls": 1,
+      "tris": 108
+     },
+     {
+      "k": "Static_Parchment<Term_collectible_bottle_•_ground_pivot_export<remaster-harbor-term-bottle",
+      "calls": 1,
+      "tris": 108
+     },
+     {
+      "k": "Static_Aged_brass<Trade-wind_resonance_arch_•_ground_pivot_export<remaster-trade-wind-arch",
+      "calls": 1,
+      "tris": 108
+     },
+     {
+      "k": "Static_Sail_ivory<Trade-wind_resonance_arch_•_ground_pivot_export<remaster-trade-wind-arch",
+      "calls": 1,
+      "tris": 100
+     }
+    ]
+   },
+   "reflection": {
+    "total": {
+     "calls": 27,
+     "tris": 16906
+    },
+    "top": [
+     {
+      "k": "Mesh<region-7",
+      "calls": 5,
+      "tris": 11088
+     },
+     {
+      "k": "Mesh<region-1",
+      "calls": 5,
+      "tris": 1932
+     },
+     {
+      "k": "Mesh<region-0",
+      "calls": 5,
+      "tris": 1828
+     },
+     {
+      "k": "Mesh",
+      "calls": 3,
+      "tris": 888
+     },
+     {
+      "k": "Mesh<region-2",
+      "calls": 2,
+      "tris": 608
+     },
+     {
+      "k": "lighthouse-lod-reflect<remaster-orchestra-lighthouse",
+      "calls": 1,
+      "tris": 268
+     },
+     {
+      "k": "Mesh<ship-lantern<lesson-designer-ship",
+      "calls": 3,
+      "tris": 142
+     },
+     {
+      "k": "ship-lod-reflect<remaster-research-vessel<lesson-designer-ship",
+      "calls": 1,
+      "tris": 116
+     },
+     {
+      "k": "lighthouse-lod-glow<remaster-orchestra-lighthouse",
+      "calls": 1,
+      "tris": 24
+     },
+     {
+      "k": "ship-lod-glow<remaster-research-vessel<lesson-designer-ship",
+      "calls": 1,
+      "tris": 12
+     }
+    ]
+   },
+   "point": "r0-harbor"
+  },
+  {
+   "region": 7,
+   "shadow": {
+    "total": {
+     "calls": 66,
+     "tris": 27543
+    },
+    "top": [
+     {
+      "k": "Mesh<region-7",
+      "calls": 5,
+      "tris": 11088
+     },
+     {
+      "k": "Mesh<region-6",
+      "calls": 5,
+      "tris": 2850
+     },
+     {
+      "k": "Mesh<region-1",
+      "calls": 5,
+      "tris": 1932
+     },
+     {
+      "k": "Mesh<region-0",
+      "calls": 5,
+      "tris": 1828
+     },
+     {
+      "k": "Static_Warm_limestone<Trade-wind_resonance_arch_•_ground_pivot_export<remaster-trade-wind-arch",
+      "calls": 1,
+      "tris": 956
+     },
+     {
+      "k": "Static_Limestone_shadow<Trade-wind_resonance_arch_•_ground_pivot_export<remaster-trade-wind-arch",
+      "calls": 1,
+      "tris": 864
+     },
+     {
+      "k": "Static_Limestone_light<Trade-wind_resonance_arch_•_ground_pivot_export<remaster-trade-wind-arch",
+      "calls": 1,
+      "tris": 824
+     },
+     {
+      "k": "Static_Sail_ivory<Term_collectible_bottle_•_ground_pivot_export<remaster-harbor-term-bottle",
+      "calls": 1,
+      "tris": 480
+     },
+     {
+      "k": "Static_Coral_amber<Chord_coral_triad_•_seabed_pivot_export<remaster-chord-coral-1",
+      "calls": 1,
+      "tris": 352
+     },
+     {
+      "k": "Static_Coral_lilac<Chord_coral_triad_•_seabed_pivot_export<remaster-chord-coral-1",
+      "calls": 1,
+      "tris": 352
+     },
+     {
+      "k": "Static_Coral_salmon<Chord_coral_triad_•_seabed_pivot_export<remaster-chord-coral-1",
+      "calls": 1,
+      "tris": 352
+     },
+     {
+      "k": "Static_Coral_amber<Chord_coral_triad_•_seabed_pivot_export<remaster-chord-coral-2",
+      "calls": 1,
+      "tris": 352
+     },
+     {
+      "k": "Static_Coral_lilac<Chord_coral_triad_•_seabed_pivot_export<remaster-chord-coral-2",
+      "calls": 1,
+      "tris": 352
+     },
+     {
+      "k": "Static_Coral_salmon<Chord_coral_triad_•_seabed_pivot_export<remaster-chord-coral-2",
+      "calls": 1,
+      "tris": 352
+     },
+     {
+      "k": "Static_Coral_amber<Chord_coral_triad_•_seabed_pivot_export<remaster-chord-coral-3",
+      "calls": 1,
+      "tris": 352
+     },
+     {
+      "k": "Static_Coral_lilac<Chord_coral_triad_•_seabed_pivot_export<remaster-chord-coral-3",
+      "calls": 1,
+      "tris": 352
+     }
+    ]
+   },
+   "reflection": {
+    "total": {
+     "calls": 74,
+     "tris": 28609
+    },
+    "top": [
+     {
+      "k": "Mesh<region-7",
+      "calls": 5,
+      "tris": 11088
+     },
+     {
+      "k": "Mesh<region-6",
+      "calls": 5,
+      "tris": 2850
+     },
+     {
+      "k": "Mesh<region-1",
+      "calls": 5,
+      "tris": 1932
+     },
+     {
+      "k": "Mesh<region-0",
+      "calls": 5,
+      "tris": 1828
+     },
+     {
+      "k": "Static_Warm_limestone<Trade-wind_resonance_arch_•_ground_pivot_export<remaster-trade-wind-arch",
+      "calls": 1,
+      "tris": 956
+     },
+     {
+      "k": "Mesh",
+      "calls": 3,
+      "tris": 888
+     },
+     {
+      "k": "Static_Limestone_shadow<Trade-wind_resonance_arch_•_ground_pivot_export<remaster-trade-wind-arch",
+      "calls": 1,
+      "tris": 864
+     },
+     {
+      "k": "Static_Limestone_light<Trade-wind_resonance_arch_•_ground_pivot_export<remaster-trade-wind-arch",
+      "calls": 1,
+      "tris": 824
+     },
+     {
+      "k": "Static_Sail_ivory<Term_collectible_bottle_•_ground_pivot_export<remaster-harbor-term-bottle",
+      "calls": 1,
+      "tris": 480
+     },
+     {
+      "k": "Static_Coral_amber<Chord_coral_triad_•_seabed_pivot_export<remaster-chord-coral-1",
+      "calls": 1,
+      "tris": 352
+     },
+     {
+      "k": "Static_Coral_lilac<Chord_coral_triad_•_seabed_pivot_export<remaster-chord-coral-1",
+      "calls": 1,
+      "tris": 352
+     },
+     {
+      "k": "Static_Coral_salmon<Chord_coral_triad_•_seabed_pivot_export<remaster-chord-coral-1",
+      "calls": 1,
+      "tris": 352
+     },
+     {
+      "k": "Static_Coral_amber<Chord_coral_triad_•_seabed_pivot_export<remaster-chord-coral-2",
+      "calls": 1,
+      "tris": 352
+     },
+     {
+      "k": "Static_Coral_lilac<Chord_coral_triad_•_seabed_pivot_export<remaster-chord-coral-2",
+      "calls": 1,
+      "tris": 352
+     },
+     {
+      "k": "Static_Coral_salmon<Chord_coral_triad_•_seabed_pivot_export<remaster-chord-coral-2",
+      "calls": 1,
+      "tris": 352
+     },
+     {
+      "k": "Static_Coral_amber<Chord_coral_triad_•_seabed_pivot_export<remaster-chord-coral-3",
+      "calls": 1,
+      "tris": 352
+     }
+    ]
+   },
+   "point": "r7-fifths"
+  },
+  {
+   "region": 8,
+   "shadow": {
+    "total": {
+     "calls": 78,
+     "tris": 33879
+    },
+    "top": [
+     {
+      "k": "Mesh<region-7",
+      "calls": 5,
+      "tris": 11088
+     },
+     {
+      "k": "Mesh<region-4",
+      "calls": 5,
+      "tris": 2856
+     },
+     {
+      "k": "Mesh<region-6",
+      "calls": 5,
+      "tris": 2850
+     },
+     {
+      "k": "Mesh<region-5",
+      "calls": 5,
+      "tris": 1988
+     },
+     {
+      "k": "Mesh<region-1",
+      "calls": 5,
+      "tris": 1932
+     },
+     {
+      "k": "Mesh<region-0",
+      "calls": 5,
+      "tris": 1828
+     },
+     {
+      "k": "Mesh<region-3",
+      "calls": 1,
+      "tris": 1152
+     },
+     {
+      "k": "Static_Warm_limestone<Trade-wind_resonance_arch_•_ground_pivot_export<remaster-trade-wind-arch",
+      "calls": 1,
+      "tris": 956
+     },
+     {
+      "k": "Static_Limestone_shadow<Trade-wind_resonance_arch_•_ground_pivot_export<remaster-trade-wind-arch",
+      "calls": 1,
+      "tris": 864
+     },
+     {
+      "k": "Static_Limestone_light<Trade-wind_resonance_arch_•_ground_pivot_export<remaster-trade-wind-arch",
+      "calls": 1,
+      "tris": 824
+     },
+     {
+      "k": "Mesh<region-2",
+      "calls": 2,
+      "tris": 608
+     },
+     {
+      "k": "Static_Sail_ivory<Term_collectible_bottle_•_ground_pivot_export<remaster-harbor-term-bottle",
+      "calls": 1,
+      "tris": 480
+     },
+     {
+      "k": "Static_Coral_amber<Chord_coral_triad_•_seabed_pivot_export<remaster-chord-coral-1",
+      "calls": 1,
+      "tris": 352
+     },
+     {
+      "k": "Static_Coral_lilac<Chord_coral_triad_•_seabed_pivot_export<remaster-chord-coral-1",
+      "calls": 1,
+      "tris": 352
+     },
+     {
+      "k": "Static_Coral_salmon<Chord_coral_triad_•_seabed_pivot_export<remaster-chord-coral-1",
+      "calls": 1,
+      "tris": 352
+     },
+     {
+      "k": "Static_Coral_amber<Chord_coral_triad_•_seabed_pivot_export<remaster-chord-coral-2",
+      "calls": 1,
+      "tris": 352
+     }
+    ]
+   },
+   "reflection": {
+    "total": {
+     "calls": 85,
+     "tris": 34921
+    },
+    "top": [
+     {
+      "k": "Mesh<region-7",
+      "calls": 5,
+      "tris": 11088
+     },
+     {
+      "k": "Mesh<region-4",
+      "calls": 5,
+      "tris": 2856
+     },
+     {
+      "k": "Mesh<region-6",
+      "calls": 5,
+      "tris": 2850
+     },
+     {
+      "k": "Mesh<region-5",
+      "calls": 5,
+      "tris": 1988
+     },
+     {
+      "k": "Mesh<region-1",
+      "calls": 5,
+      "tris": 1932
+     },
+     {
+      "k": "Mesh<region-0",
+      "calls": 5,
+      "tris": 1828
+     },
+     {
+      "k": "Mesh<region-3",
+      "calls": 1,
+      "tris": 1152
+     },
+     {
+      "k": "Static_Warm_limestone<Trade-wind_resonance_arch_•_ground_pivot_export<remaster-trade-wind-arch",
+      "calls": 1,
+      "tris": 956
+     },
+     {
+      "k": "Mesh",
+      "calls": 3,
+      "tris": 888
+     },
+     {
+      "k": "Static_Limestone_shadow<Trade-wind_resonance_arch_•_ground_pivot_export<remaster-trade-wind-arch",
+      "calls": 1,
+      "tris": 864
+     },
+     {
+      "k": "Static_Limestone_light<Trade-wind_resonance_arch_•_ground_pivot_export<remaster-trade-wind-arch",
+      "calls": 1,
+      "tris": 824
+     },
+     {
+      "k": "Mesh<region-2",
+      "calls": 2,
+      "tris": 608
+     },
+     {
+      "k": "Static_Sail_ivory<Term_collectible_bottle_•_ground_pivot_export<remaster-harbor-term-bottle",
+      "calls": 1,
+      "tris": 480
+     },
+     {
+      "k": "Static_Coral_amber<Chord_coral_triad_•_seabed_pivot_export<remaster-chord-coral-1",
+      "calls": 1,
+      "tris": 352
+     },
+     {
+      "k": "Static_Coral_lilac<Chord_coral_triad_•_seabed_pivot_export<remaster-chord-coral-1",
+      "calls": 1,
+      "tris": 352
+     },
+     {
+      "k": "Static_Coral_salmon<Chord_coral_triad_•_seabed_pivot_export<remaster-chord-coral-1",
+      "calls": 1,
+      "tris": 352
+     }
+    ]
+   },
+   "point": "r8-maelstrom"
+  }
+ ],
+ "errors": []
+}

@@ -1,0 +1,751 @@
+{
+ "gate": true,
+ "fullyCases": [
+  {
+   "tag": "r5",
+   "d": 40,
+   "through": 1
+  },
+  {
+   "tag": "r5",
+   "d": 50,
+   "through": 1
+  },
+  {
+   "tag": "r5",
+   "d": 60,
+   "through": 1
+  },
+  {
+   "tag": "r6",
+   "d": 40,
+   "through": 1
+  },
+  {
+   "tag": "r6",
+   "d": 50,
+   "through": 1
+  },
+  {
+   "tag": "r3",
+   "d": 50,
+   "through": 1
+  },
+  {
+   "tag": "r3",
+   "d": 60,
+   "through": 1
+  }
+ ],
+ "rows": [
+  {
+   "tag": "r5",
+   "setup": {
+    "ok": true,
+    "id": "r5_whole_step",
+    "index": 69,
+    "approach": 0,
+    "candidates": 20
+   },
+   "wedge": {
+    "40": [
+     0,
+     3,
+     6,
+     9
+    ],
+    "50": [
+     0,
+     3,
+     6
+    ],
+    "60": [
+     0,
+     3,
+     6
+    ]
+   },
+   "cases": [
+    {
+     "d": 40,
+     "beta": 3,
+     "on": {
+      "px": 619,
+      "py": 338,
+      "inFront": true,
+      "through": 1,
+      "lit": 1,
+      "sailRays": 6,
+      "throughTotal": 2,
+      "blocked": [
+       9,
+       9
+      ],
+      "bearing": 3,
+      "shipDistance": 40,
+      "cameraDistance": 71,
+      "ship": [
+       -124.98,
+       246.85,
+       -0.052
+      ]
+     },
+     "off": {
+      "px": 624,
+      "py": 336,
+      "inFront": true,
+      "through": 0,
+      "lit": 1,
+      "sailRays": 6,
+      "throughTotal": 0,
+      "blocked": [
+       8,
+       9
+      ],
+      "bearing": 3,
+      "shipDistance": 40,
+      "cameraDistance": 71.9,
+      "ship": [
+       -124.98,
+       246.85,
+       -0.052
+      ]
+     },
+     "control": {
+      "px": 420,
+      "py": 342,
+      "inFront": true,
+      "through": 0,
+      "lit": 1,
+      "sailRays": 5,
+      "throughTotal": 1,
+      "blocked": [
+       0,
+       9
+      ],
+      "bearing": 30,
+      "shipDistance": 40,
+      "cameraDistance": 68.6,
+      "ship": [
+       -124.98,
+       246.85,
+       -0.524
+      ]
+     },
+     "fileOn": "/home/claude/remaster/game/output/playwright/rm_RM5_sail_r5_d40_through_on_1280x720_after.png",
+     "fileOff": "/home/claude/remaster/game/output/playwright/rm_RM5_sail_r5_d40_through_off_1280x720_after.png"
+    },
+    {
+     "d": 50,
+     "beta": 3,
+     "on": {
+      "px": 617,
+      "py": 335,
+      "inFront": true,
+      "through": 1,
+      "lit": 1,
+      "sailRays": 6,
+      "throughTotal": 2,
+      "blocked": [
+       9,
+       9
+      ],
+      "bearing": 3,
+      "shipDistance": 50,
+      "cameraDistance": 81,
+      "ship": [
+       -124.98,
+       236.85,
+       -0.052
+      ]
+     },
+     "off": {
+      "px": 628,
+      "py": 333,
+      "inFront": true,
+      "through": 0,
+      "lit": 1,
+      "sailRays": 6,
+      "throughTotal": 0,
+      "blocked": [
+       8,
+       9
+      ],
+      "bearing": 3,
+      "shipDistance": 50,
+      "cameraDistance": 81.8,
+      "ship": [
+       -124.98,
+       236.85,
+       -0.052
+      ]
+     },
+     "control": {
+      "px": 397,
+      "py": 338,
+      "inFront": true,
+      "through": 0,
+      "lit": 1,
+      "sailRays": 4,
+      "throughTotal": 1,
+      "blocked": [
+       0,
+       9
+      ],
+      "bearing": 30,
+      "shipDistance": 50,
+      "cameraDistance": 78.4,
+      "ship": [
+       -124.98,
+       236.85,
+       -0.524
+      ]
+     },
+     "fileOn": "/home/claude/remaster/game/output/playwright/rm_RM5_sail_r5_d50_through_on_1280x720_after.png",
+     "fileOff": "/home/claude/remaster/game/output/playwright/rm_RM5_sail_r5_d50_through_off_1280x720_after.png"
+    },
+    {
+     "d": 60,
+     "beta": 3,
+     "on": {
+      "px": 615,
+      "py": 332,
+      "inFront": true,
+      "through": 1,
+      "lit": 1,
+      "sailRays": 4,
+      "throughTotal": 2,
+      "blocked": [
+       9,
+       9
+      ],
+      "bearing": 3,
+      "shipDistance": 60,
+      "cameraDistance": 91,
+      "ship": [
+       -124.98,
+       226.85,
+       -0.052
+      ]
+     },
+     "off": {
+      "px": 631,
+      "py": 330,
+      "inFront": true,
+      "through": 0,
+      "lit": 1,
+      "sailRays": 4,
+      "throughTotal": 0,
+      "blocked": [
+       7,
+       9
+      ],
+      "bearing": 3,
+      "shipDistance": 60,
+      "cameraDistance": 91.6,
+      "ship": [
+       -124.98,
+       226.85,
+       -0.052
+      ]
+     },
+     "control": {
+      "px": 379,
+      "py": 334,
+      "inFront": true,
+      "through": 0,
+      "lit": 1,
+      "sailRays": 3,
+      "throughTotal": 0,
+      "blocked": [
+       0,
+       9
+      ],
+      "bearing": 30,
+      "shipDistance": 60,
+      "cameraDistance": 88.2,
+      "ship": [
+       -124.98,
+       226.85,
+       -0.524
+      ]
+     },
+     "fileOn": "/home/claude/remaster/game/output/playwright/rm_RM5_sail_r5_d60_through_on_1280x720_after.png",
+     "fileOff": "/home/claude/remaster/game/output/playwright/rm_RM5_sail_r5_d60_through_off_1280x720_after.png"
+    }
+   ]
+  },
+  {
+   "tag": "r6",
+   "setup": {
+    "ok": true,
+    "id": "r6_chord",
+    "index": 89,
+    "approach": 1.9634954084936207,
+    "candidates": 12
+   },
+   "wedge": {
+    "40": [
+     0,
+     3,
+     6,
+     9
+    ],
+    "50": [
+     0,
+     3,
+     6
+    ],
+    "60": [
+     0,
+     3,
+     6
+    ]
+   },
+   "cases": [
+    {
+     "d": 40,
+     "beta": 3,
+     "on": {
+      "px": 565,
+      "py": 335,
+      "inFront": true,
+      "through": 1,
+      "lit": 1,
+      "sailRays": 3,
+      "throughTotal": 1,
+      "blocked": [
+       9,
+       9
+      ],
+      "bearing": 3,
+      "shipDistance": 40,
+      "cameraDistance": 70.7,
+      "ship": [
+       -242.85,
+       109.9,
+       1.911
+      ]
+     },
+     "off": {
+      "px": 555,
+      "py": 335,
+      "inFront": true,
+      "through": 0,
+      "lit": 1,
+      "sailRays": 4,
+      "throughTotal": 0,
+      "blocked": [
+       6,
+       9
+      ],
+      "bearing": 3,
+      "shipDistance": 40,
+      "cameraDistance": 70.7,
+      "ship": [
+       -242.85,
+       109.9,
+       1.911
+      ]
+     },
+     "control": {
+      "px": 418,
+      "py": 340,
+      "inFront": true,
+      "through": 0,
+      "lit": 1,
+      "sailRays": 3,
+      "throughTotal": 0,
+      "blocked": [
+       0,
+       9
+      ],
+      "bearing": 30,
+      "shipDistance": 40,
+      "cameraDistance": 68.6,
+      "ship": [
+       -242.85,
+       109.9,
+       1.44
+      ]
+     },
+     "fileOn": "/home/claude/remaster/game/output/playwright/rm_RM5_sail_r6_d40_through_on_1280x720_after.png",
+     "fileOff": "/home/claude/remaster/game/output/playwright/rm_RM5_sail_r6_d40_through_off_1280x720_after.png"
+    },
+    {
+     "d": 50,
+     "beta": 3,
+     "on": {
+      "px": 617,
+      "py": 335,
+      "inFront": true,
+      "through": 1,
+      "lit": 1,
+      "sailRays": 3,
+      "throughTotal": 1,
+      "blocked": [
+       9,
+       9
+      ],
+      "bearing": 3,
+      "shipDistance": 50,
+      "cameraDistance": 81,
+      "ship": [
+       -252.08,
+       113.73,
+       1.911
+      ]
+     },
+     "off": {
+      "px": 649,
+      "py": 334,
+      "inFront": true,
+      "through": 0,
+      "lit": 1,
+      "sailRays": 3,
+      "throughTotal": 0,
+      "blocked": [
+       6,
+       9
+      ],
+      "bearing": 3,
+      "shipDistance": 50,
+      "cameraDistance": 82,
+      "ship": [
+       -252.08,
+       113.73,
+       1.911
+      ]
+     },
+     "control": {
+      "px": 397,
+      "py": 341,
+      "inFront": true,
+      "through": 0,
+      "lit": 1,
+      "sailRays": 2,
+      "throughTotal": 0,
+      "blocked": [
+       0,
+       9
+      ],
+      "bearing": 30,
+      "shipDistance": 50,
+      "cameraDistance": 78.4,
+      "ship": [
+       -252.08,
+       113.73,
+       1.44
+      ]
+     },
+     "fileOn": "/home/claude/remaster/game/output/playwright/rm_RM5_sail_r6_d50_through_on_1280x720_after.png",
+     "fileOff": "/home/claude/remaster/game/output/playwright/rm_RM5_sail_r6_d50_through_off_1280x720_after.png"
+    },
+    {
+     "d": 60,
+     "beta": 3,
+     "on": {
+      "px": 552,
+      "py": 333,
+      "inFront": true,
+      "through": 1,
+      "lit": 1,
+      "sailRays": 4,
+      "throughTotal": 1,
+      "blocked": [
+       7,
+       9
+      ],
+      "bearing": 3,
+      "shipDistance": 60,
+      "cameraDistance": 90.7,
+      "ship": [
+       -261.32,
+       117.55,
+       1.911
+      ]
+     },
+     "off": {
+      "px": 540,
+      "py": 331,
+      "inFront": true,
+      "through": 0,
+      "lit": 1,
+      "sailRays": 4,
+      "throughTotal": 0,
+      "blocked": [
+       2,
+       9
+      ],
+      "bearing": 3,
+      "shipDistance": 60,
+      "cameraDistance": 90.6,
+      "ship": [
+       -261.32,
+       117.55,
+       1.911
+      ]
+     },
+     "control": {
+      "px": 377,
+      "py": 331,
+      "inFront": true,
+      "through": 0,
+      "lit": 1,
+      "sailRays": 2,
+      "throughTotal": 0,
+      "blocked": [
+       0,
+       9
+      ],
+      "bearing": 30,
+      "shipDistance": 60,
+      "cameraDistance": 88.2,
+      "ship": [
+       -261.32,
+       117.55,
+       1.44
+      ]
+     },
+     "fileOn": "/home/claude/remaster/game/output/playwright/rm_RM5_sail_r6_d60_through_on_1280x720_after.png",
+     "fileOff": "/home/claude/remaster/game/output/playwright/rm_RM5_sail_r6_d60_through_off_1280x720_after.png"
+    }
+   ]
+  },
+  {
+   "tag": "r3",
+   "setup": {
+    "ok": true,
+    "id": "r3_dynamics",
+    "index": 44,
+    "approach": 0,
+    "candidates": 12
+   },
+   "wedge": {
+    "40": [
+     3,
+     6,
+     9
+    ],
+    "50": [
+     3,
+     6
+    ],
+    "60": [
+     3,
+     6
+    ]
+   },
+   "cases": [
+    {
+     "d": 40,
+     "beta": 3,
+     "on": {
+      "px": 669,
+      "py": 339,
+      "inFront": true,
+      "through": 1,
+      "lit": 1,
+      "sailRays": 1,
+      "throughTotal": 1,
+      "blocked": [
+       7,
+       9
+      ],
+      "bearing": 3,
+      "shipDistance": 40,
+      "cameraDistance": 70.9,
+      "ship": [
+       249.79,
+       -8.81,
+       -0.052
+      ]
+     },
+     "off": {
+      "px": 679,
+      "py": 340,
+      "inFront": true,
+      "through": 0,
+      "lit": 1,
+      "sailRays": 1,
+      "throughTotal": 0,
+      "blocked": [
+       5,
+       9
+      ],
+      "bearing": 3,
+      "shipDistance": 40,
+      "cameraDistance": 70.9,
+      "ship": [
+       249.79,
+       -8.81,
+       -0.052
+      ]
+     },
+     "control": {
+      "px": 418,
+      "py": 344,
+      "inFront": true,
+      "through": 0,
+      "lit": 1,
+      "sailRays": 2,
+      "throughTotal": 0,
+      "blocked": [
+       0,
+       9
+      ],
+      "bearing": 30,
+      "shipDistance": 40,
+      "cameraDistance": 68.6,
+      "ship": [
+       249.79,
+       -8.81,
+       -0.524
+      ]
+     },
+     "fileOn": "/home/claude/remaster/game/output/playwright/rm_RM5_sail_r3_d40_through_on_1280x720_after.png",
+     "fileOff": "/home/claude/remaster/game/output/playwright/rm_RM5_sail_r3_d40_through_off_1280x720_after.png"
+    },
+    {
+     "d": 50,
+     "beta": 3,
+     "on": {
+      "px": 617,
+      "py": 336,
+      "inFront": true,
+      "through": 1,
+      "lit": 1,
+      "sailRays": 3,
+      "throughTotal": 1,
+      "blocked": [
+       9,
+       9
+      ],
+      "bearing": 3,
+      "shipDistance": 50,
+      "cameraDistance": 81,
+      "ship": [
+       249.79,
+       -18.81,
+       -0.052
+      ]
+     },
+     "off": {
+      "px": 625,
+      "py": 333,
+      "inFront": true,
+      "through": 0,
+      "lit": 1,
+      "sailRays": 3,
+      "throughTotal": 0,
+      "blocked": [
+       8,
+       9
+      ],
+      "bearing": 3,
+      "shipDistance": 50,
+      "cameraDistance": 82.9,
+      "ship": [
+       249.79,
+       -18.81,
+       -0.052
+      ]
+     },
+     "control": {
+      "px": 397,
+      "py": 335,
+      "inFront": true,
+      "through": 0,
+      "lit": 1,
+      "sailRays": 2,
+      "throughTotal": 0,
+      "blocked": [
+       0,
+       9
+      ],
+      "bearing": 30,
+      "shipDistance": 50,
+      "cameraDistance": 78.4,
+      "ship": [
+       249.79,
+       -18.81,
+       -0.524
+      ]
+     },
+     "fileOn": "/home/claude/remaster/game/output/playwright/rm_RM5_sail_r3_d50_through_on_1280x720_after.png",
+     "fileOff": "/home/claude/remaster/game/output/playwright/rm_RM5_sail_r3_d50_through_off_1280x720_after.png"
+    },
+    {
+     "d": 60,
+     "beta": 3,
+     "on": {
+      "px": 615,
+      "py": 329,
+      "inFront": true,
+      "through": 1,
+      "lit": 1,
+      "sailRays": 3,
+      "throughTotal": 1,
+      "blocked": [
+       9,
+       9
+      ],
+      "bearing": 3,
+      "shipDistance": 60,
+      "cameraDistance": 91,
+      "ship": [
+       249.79,
+       -28.81,
+       -0.052
+      ]
+     },
+     "off": {
+      "px": 611,
+      "py": 332,
+      "inFront": true,
+      "through": 0,
+      "lit": 1,
+      "sailRays": 3,
+      "throughTotal": 0,
+      "blocked": [
+       9,
+       9
+      ],
+      "bearing": 3,
+      "shipDistance": 60,
+      "cameraDistance": 92.9,
+      "ship": [
+       249.79,
+       -28.81,
+       -0.052
+      ]
+     },
+     "control": {
+      "px": 379,
+      "py": 337,
+      "inFront": true,
+      "through": 0,
+      "lit": 1,
+      "sailRays": 2,
+      "throughTotal": 0,
+      "blocked": [
+       0,
+       9
+      ],
+      "bearing": 30,
+      "shipDistance": 60,
+      "cameraDistance": 88.2,
+      "ship": [
+       249.79,
+       -28.81,
+       -0.524
+      ]
+     },
+     "fileOn": "/home/claude/remaster/game/output/playwright/rm_RM5_sail_r3_d60_through_on_1280x720_after.png",
+     "fileOff": "/home/claude/remaster/game/output/playwright/rm_RM5_sail_r3_d60_through_off_1280x720_after.png"
+    }
+   ]
+  }
+ ],
+ "errors": []
+}

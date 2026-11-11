@@ -1,0 +1,120 @@
+{
+ "targets": {
+  "buoy": {
+   "i": 0,
+   "x": 25.80500030517578,
+   "z": -424.3500061035156,
+   "d": 26.416291787085353
+  },
+  "bottle": {
+   "i": 0,
+   "x": 30.165000915527344,
+   "z": -486.44500732421875,
+   "d": 63.99973540620987
+  }
+ },
+ "rows": [
+  {
+   "sea": 0.08,
+   "kind": "buoy",
+   "amplitude": 0.08,
+   "y": 0.469,
+   "waterAtTarget": -0.071,
+   "diff": 0.54,
+   "sim": 2.7,
+   "termOpen": false
+  },
+  {
+   "sea": 0.08,
+   "kind": "bottle",
+   "amplitude": 0.08,
+   "y": 1.129,
+   "waterAtTarget": -0.077,
+   "diff": 1.206,
+   "sim": 4.75,
+   "termOpen": false
+  },
+  {
+   "sea": 0.08,
+   "kind": "ship",
+   "amplitude": 0.08,
+   "y": 0.903,
+   "waterAtTarget": -0.017,
+   "diff": 0.92,
+   "sim": 6.8,
+   "termOpen": false
+  },
+  {
+   "sea": 0.3,
+   "kind": "buoy",
+   "amplitude": 0.3,
+   "y": 0.459,
+   "waterAtTarget": -0.081,
+   "diff": 0.54,
+   "sim": 8.85,
+   "termOpen": false
+  },
+  {
+   "sea": 0.3,
+   "kind": "bottle",
+   "amplitude": 0.3,
+   "y": 0.752,
+   "waterAtTarget": -0.248,
+   "diff": 1,
+   "sim": 10.9,
+   "termOpen": false
+  },
+  {
+   "sea": 0.3,
+   "kind": "ship",
+   "amplitude": 0.3,
+   "y": 1.119,
+   "waterAtTarget": 0.185,
+   "diff": 0.934,
+   "sim": 12.95,
+   "termOpen": false
+  },
+  {
+   "sea": 0.85,
+   "kind": "buoy",
+   "amplitude": 0.85,
+   "y": 1.544,
+   "waterAtTarget": 1.004,
+   "diff": 0.54,
+   "sim": 15,
+   "termOpen": false
+  },
+  {
+   "sea": 0.85,
+   "kind": "bottle",
+   "amplitude": 0.85,
+   "y": 0.065,
+   "waterAtTarget": -0.881,
+   "diff": 0.946,
+   "sim": 17.05,
+   "termOpen": false
+  },
+  {
+   "sea": 0.85,
+   "kind": "ship",
+   "amplitude": 0.85,
+   "y": 2.053,
+   "waterAtTarget": 1.145,
+   "diff": 0.909,
+   "sim": 19.1,
+   "termOpen": false
+  }
+ ],
+ "errors": [],
+ "files": [
+  "/home/claude/remaster/game/output/playwright/rm_RM2_side_buoy_sea0.08_after.png",
+  "/home/claude/remaster/game/output/playwright/rm_RM2_side_bottle_sea0.08_after.png",
+  "/home/claude/remaster/game/output/playwright/rm_RM2_side_ship_sea0.08_after.png",
+  "/home/claude/remaster/game/output/playwright/rm_RM2_side_buoy_sea0.3_after.png",
+  "/home/claude/remaster/game/output/playwright/rm_RM2_side_bottle_sea0.3_after.png",
+  "/home/claude/remaster/game/output/playwright/rm_RM2_side_ship_sea0.3_after.png",
+  "/home/claude/remaster/game/output/playwright/rm_RM2_side_buoy_sea0.85_after.png",
+  "/home/claude/remaster/game/output/playwright/rm_RM2_side_bottle_sea0.85_after.png",
+  "/home/claude/remaster/game/output/playwright/rm_RM2_side_ship_sea0.85_after.png"
+ ]
+}

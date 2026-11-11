@@ -1,0 +1,504 @@
+{
+ "A": {
+  "firstLive": {
+   "ms": 2,
+   "frame": 4,
+   "mode": "title"
+  },
+  "timelineHead": [
+   {
+    "ms": 2,
+    "frame": 4,
+    "mode": "title",
+    "live": true,
+    "titleLive": true,
+    "state": null
+   },
+   {
+    "ms": 578,
+    "frame": 5,
+    "mode": "title",
+    "live": true,
+    "titleLive": true,
+    "state": null
+   },
+   {
+    "ms": 1138,
+    "frame": 6,
+    "mode": "title",
+    "live": true,
+    "titleLive": true,
+    "state": null
+   },
+   {
+    "ms": 1672,
+    "frame": 7,
+    "mode": "title",
+    "live": true,
+    "titleLive": true,
+    "state": null
+   },
+   {
+    "ms": 2211,
+    "frame": 8,
+    "mode": "title",
+    "live": true,
+    "titleLive": true,
+    "state": null
+   }
+  ],
+  "live": {
+   "snap": {
+    "mode": "title",
+    "previous": "steer",
+    "sinceMs": 7870,
+    "idleMs": 7898,
+    "speedFrac": 0,
+    "anchored": false,
+    "tutorialActive": true,
+    "scenicEligible": false,
+    "rate": 1.2,
+    "changes": 1,
+    "focus": null,
+    "fov": 53,
+    "position": [
+     -0.29,
+     10.05,
+     -474
+    ],
+    "look": [
+     0,
+     4.27,
+     -430
+    ]
+   },
+   "mirror": {
+    "ariaHidden": "true",
+    "opacity": "0.28",
+    "text": "음악이론의바다"
+   },
+   "rel": {
+    "dist": 43.99841229126277,
+    "up": 8.915374890465996
+   },
+   "overlayBg": "rgba(0, 0, 0, 0)",
+   "overlayTransition": "opacity, visibility, background-color 0.45s, 0s, 0.9s",
+   "buttons": [
+    "title-settings",
+    "start-sailing",
+    "run-tests",
+    "new-game-button"
+   ]
+  },
+  "orbit": [
+   {
+    "sim": 1.35,
+    "dist": 43.99,
+    "up": 9.02,
+    "bearingDeg": 1.93
+   },
+   {
+    "sim": 1.45,
+    "dist": 43.99,
+    "up": 9.03,
+    "bearingDeg": 2.15
+   },
+   {
+    "sim": 1.55,
+    "dist": 43.99,
+    "up": 9.04,
+    "bearingDeg": 2.38
+   },
+   {
+    "sim": 1.65,
+    "dist": 43.98,
+    "up": 9.05,
+    "bearingDeg": 2.62
+   }
+  ],
+  "reduced": {
+   "dx": 0,
+   "dy": 0.0018,
+   "dz": 0,
+   "shipYSpread": 0.0212,
+   "mode": "title"
+  },
+  "ok": true,
+  "errors": []
+ },
+ "B": {
+  "phases": {
+   "wait": null,
+   "in": {
+    "at": 2070,
+    "sinceCard": 23,
+    "opacity": 0
+   },
+   "hold": {
+    "at": 3123,
+    "sinceCard": 1077,
+    "opacity": 0.99
+   },
+   "out": {
+    "at": 5596,
+    "sinceCard": 3549,
+    "opacity": 1
+   }
+  },
+  "startedAt": 2070,
+  "doneAt": {
+   "at": 6620,
+   "sinceCard": null
+  },
+  "lastHold": {
+   "sinceCard": 3312
+  },
+  "firstOut": {
+   "sinceCard": 3549
+  },
+  "peakOpacity": 1,
+  "copy": {
+   "title": "도돌이 항구",
+   "line": "기보 기초의 바다",
+   "mirror": "true"
+  },
+  "camModes": [
+   "title",
+   "steer"
+  ],
+  "camStart": {
+   "mode": "steer",
+   "previous": "title",
+   "sinceMs": 8687,
+   "idleMs": 8741,
+   "speedFrac": 0,
+   "anchored": false,
+   "tutorialActive": true,
+   "scenicEligible": false,
+   "rate": 4.4,
+   "changes": 2,
+   "focus": null,
+   "fov": 53,
+   "position": [
+    0,
+    7.51,
+    -461.02
+   ],
+   "look": [
+    0,
+    4.2,
+    -418
+   ]
+  },
+  "sampleCount": 41,
+  "frameGapMs": 247.7,
+  "ok": true,
+  "errors": []
+ },
+ "C": {
+  "rows": [
+   {
+    "label": "16:9",
+    "aspect": 1.7778,
+    "fov": 52.88,
+    "mode": "steer",
+    "horizon": 0.4224,
+    "hullWidth": 0.1048,
+    "hullCenterX": 0.4987,
+    "hullTop": 0.5278,
+    "hullBottom": 0.6716,
+    "shipTop": 0.1111,
+    "back": 30.98,
+    "up": 6.64,
+    "design": {
+     "horizon": 0.42303748793889806,
+     "shipWidth": 0.10372165527589489
+    }
+   },
+   {
+    "label": "390x844",
+    "aspect": 0.4621,
+    "fov": 53,
+    "mode": "steer",
+    "horizon": 0.4229,
+    "hullWidth": 0.4018,
+    "hullCenterX": 0.4985,
+    "hullTop": 0.5263,
+    "hullBottom": 0.6708,
+    "shipTop": 0.1109,
+    "back": 31,
+    "up": 6.61,
+    "design": {
+     "horizon": 0.42303748793889806,
+     "shipWidth": 0.39904764468538023
+    }
+   },
+   {
+    "label": "844x390",
+    "aspect": 2.1641,
+    "fov": 53,
+    "mode": "steer",
+    "horizon": 0.4236,
+    "hullWidth": 0.0857,
+    "hullCenterX": 0.4998,
+    "hullTop": 0.5271,
+    "hullBottom": 0.668,
+    "shipTop": 0.1099,
+    "back": 31,
+    "up": 6.55,
+    "design": {
+     "horizon": 0.42303748793889806,
+     "shipWidth": 0.08520578316503213
+    }
+   },
+   {
+    "label": "768x1024",
+    "aspect": 0.75,
+    "fov": 53,
+    "mode": "steer",
+    "horizon": 0.4228,
+    "hullWidth": 0.2475,
+    "hullCenterX": 0.5009,
+    "hullTop": 0.5282,
+    "hullBottom": 0.6708,
+    "shipTop": 0.1115,
+    "back": 31,
+    "up": 6.63,
+    "design": {
+     "horizon": 0.42303748793889806,
+     "shipWidth": 0.24585873843175085
+    }
+   }
+  ],
+  "checks": {
+   "horizon16x9": true,
+   "horizonPortrait": true,
+   "hullWidthPortrait": true,
+   "hullWidthPortraitBand": true,
+   "cameraBack": true,
+   "cameraUp": true,
+   "fov": true,
+   "steerMode": true
+  },
+  "errors": [],
+  "ok": true
+ },
+ "D": {
+  "steer0": {
+   "sim": 1.85,
+   "mode": "steer",
+   "previous": "discover",
+   "rate": 4.4,
+   "fov": 52.07,
+   "dist": 30.93,
+   "up": 6.64,
+   "bearingDeg": 2.54,
+   "scenicEligible": false
+  },
+  "scenic": [
+   {
+    "sim": 2.1,
+    "mode": "scenic",
+    "previous": "steer",
+    "rate": 1.6,
+    "fov": 52.78,
+    "dist": 34.42,
+    "up": 7.29,
+    "bearingDeg": 5.15,
+    "scenicEligible": true
+   },
+   {
+    "sim": 2.7,
+    "mode": "scenic",
+    "previous": "steer",
+    "rate": 1.6,
+    "fov": 52.99,
+    "dist": 40.24,
+    "up": 8.34,
+    "bearingDeg": 10.6,
+    "scenicEligible": true
+   },
+   {
+    "sim": 3.3,
+    "mode": "scenic",
+    "previous": "steer",
+    "rate": 1.6,
+    "fov": 53,
+    "dist": 42.51,
+    "up": 8.66,
+    "bearingDeg": 14.2,
+    "scenicEligible": true
+   },
+   {
+    "sim": 3.9,
+    "mode": "scenic",
+    "previous": "steer",
+    "rate": 1.6,
+    "fov": 53,
+    "dist": 43.39,
+    "up": 8.68,
+    "bearingDeg": 17.25,
+    "scenicEligible": true
+   },
+   {
+    "sim": 4.5,
+    "mode": "scenic",
+    "previous": "steer",
+    "rate": 1.6,
+    "fov": 53,
+    "dist": 43.73,
+    "up": 8.56,
+    "bearingDeg": 20.05,
+    "scenicEligible": true
+   },
+   {
+    "sim": 5.1,
+    "mode": "scenic",
+    "previous": "steer",
+    "rate": 1.6,
+    "fov": 53,
+    "dist": 43.87,
+    "up": 8.39,
+    "bearingDeg": 22.64,
+    "scenicEligible": true
+   }
+  ],
+  "scenicEnd": {
+   "sim": 5.5,
+   "mode": "scenic",
+   "previous": "steer",
+   "rate": 1.6,
+   "fov": 53,
+   "dist": 43.91,
+   "up": 8.29,
+   "bearingDeg": 24.25,
+   "scenicEligible": true
+  },
+  "afterInput": {
+   "sim": 6,
+   "mode": "steer",
+   "previous": "scenic",
+   "rate": 4.875,
+   "fov": 53,
+   "dist": 36.32,
+   "up": 7.36,
+   "bearingDeg": 14.57,
+   "scenicEligible": false
+  },
+  "maxStep": 2.97,
+  "backEnd": {
+   "sim": 6.9,
+   "mode": "steer",
+   "previous": "scenic",
+   "rate": 4.4,
+   "fov": 53,
+   "dist": 31.08,
+   "up": 6.62,
+   "bearingDeg": 0.31,
+   "scenicEligible": false
+  },
+  "discover": {
+   "term": "r2_whole_note",
+   "spawn": {
+    "term": {
+     "id": "r2_whole_note",
+     "region": 2,
+     "term_orig": "온음표",
+     "reading": null,
+     "meaning": "4분음표 길이의 4배",
+     "category": "리듬·박자",
+     "demo": {
+      "type": "rhythmPattern",
+      "variant": 0
+     },
+     "rarity": "common",
+     "symbol": "𝅝",
+     "detail": "4분음표 네 개를 한 배에 실은 길이라네. 언제나 네 박인 것은 아니며 한 박의 기준에 따라 셈이 달라진다네."
+    },
+    "x": 227.232,
+    "z": -172.478,
+    "index": 29,
+    "region": 2,
+    "spawnId": "buoy_r2_whole_note"
+   },
+   "popup": true,
+   "offDeg": 20
+  },
+  "focus": {
+   "x": 227.232,
+   "z": -172.478,
+   "at": 35932.300000000745
+  },
+  "discEnd": {
+   "sim": 9.35,
+   "mode": "discover",
+   "previous": "steer",
+   "rate": 4.4,
+   "fov": 49,
+   "dist": 31,
+   "up": 6.64,
+   "bearingDeg": 8,
+   "scenicEligible": false
+  },
+  "yawDeg": 8,
+  "closedEnd": {
+   "sim": 11.05,
+   "mode": "steer",
+   "previous": "discover",
+   "rate": 4.4,
+   "fov": 53,
+   "dist": 31.54,
+   "up": 6.73,
+   "bearingDeg": 0.25,
+   "scenicEligible": false
+  },
+  "checks": {
+   "steerFirst": true,
+   "scenicEntered": true,
+   "scenicDistance": true,
+   "scenicHeight": true,
+   "returnedToSteer": true,
+   "returnDistance": true,
+   "noJump": true,
+   "discoverMode": true,
+   "discoverFov": true,
+   "discoverYaw": true,
+   "closedFov": true
+  },
+  "errors": [],
+  "ok": true
+ },
+ "E": {
+  "auto": {
+   "modes": [
+    "steer"
+   ],
+   "eligible": [
+    false
+   ],
+   "spreadX": 0,
+   "spreadY": 0.0291,
+   "spreadZ": 0,
+   "spreadFov": 0
+  },
+  "card": {
+   "phasesSeen": [
+    "hold",
+    "done"
+   ],
+   "holdFirstAt": 10,
+   "doneAt": 2732,
+   "maxOpacityBeforeHold": null,
+   "mapSeen": true
+  },
+  "checks": {
+   "neverScenic": true,
+   "cameraStill": true,
+   "noInOutPhase": true,
+   "holdImmediate": true,
+   "leavesAfterHold": true
+  },
+  "errors": [],
+  "ok": true
+ }
+}

@@ -1,0 +1,157 @@
+{
+ "analytic": [
+  {
+   "pair": "0-1",
+   "length": 170,
+   "maxStepFracOfRange": 0.0169,
+   "field": "hemiSky2",
+   "at": 82
+  },
+  {
+   "pair": "1-2",
+   "length": 225,
+   "maxStepFracOfRange": 0.0213,
+   "field": "sun1",
+   "at": 112
+  },
+  {
+   "pair": "2-3",
+   "length": 226,
+   "maxStepFracOfRange": 0.0126,
+   "field": "sun0",
+   "at": 111
+  },
+  {
+   "pair": "3-4",
+   "length": 225,
+   "maxStepFracOfRange": 0.0224,
+   "field": "top0",
+   "at": 114
+  },
+  {
+   "pair": "4-5",
+   "length": 226,
+   "maxStepFracOfRange": 0.0224,
+   "field": "top0",
+   "at": 112
+  },
+  {
+   "pair": "5-6",
+   "length": 225,
+   "maxStepFracOfRange": 0.0217,
+   "field": "mid0",
+   "at": 114
+  },
+  {
+   "pair": "6-7",
+   "length": 226,
+   "maxStepFracOfRange": 0.0233,
+   "field": "sun1",
+   "at": 108
+  },
+  {
+   "pair": "7-1",
+   "length": 225,
+   "maxStepFracOfRange": 0.1057,
+   "field": "sun1",
+   "at": 117
+  },
+  {
+   "pair": "1-8",
+   "length": 260,
+   "maxStepFracOfRange": 0.0928,
+   "field": "sun1",
+   "at": 159
+  },
+  {
+   "pair": "5-8",
+   "length": 260,
+   "maxStepFracOfRange": 0.0273,
+   "field": "k0",
+   "at": 161
+  }
+ ],
+ "sailing": [
+  {
+   "pair": "0-1",
+   "frames": 850,
+   "maxFrameStepFracOfRange": 0.003,
+   "field": "hemiSky2",
+   "maxSunDegPerFrame": 0.014,
+   "maxSunDegPerSec": 0.9
+  },
+  {
+   "pair": "1-2",
+   "frames": 1128,
+   "maxFrameStepFracOfRange": 0.0035,
+   "field": "sun1",
+   "maxSunDegPerFrame": 0.134,
+   "maxSunDegPerSec": 8
+  },
+  {
+   "pair": "2-3",
+   "frames": 1129,
+   "maxFrameStepFracOfRange": 0.0021,
+   "field": "sun0",
+   "maxSunDegPerFrame": 0.236,
+   "maxSunDegPerSec": 14.2
+  },
+  {
+   "pair": "3-4",
+   "frames": 1125,
+   "maxFrameStepFracOfRange": 0.0037,
+   "field": "sunCol1",
+   "maxSunDegPerFrame": 0.396,
+   "maxSunDegPerSec": 23.8
+  },
+  {
+   "pair": "4-5",
+   "frames": 1130,
+   "maxFrameStepFracOfRange": 0.0038,
+   "field": "top0",
+   "maxSunDegPerFrame": 0.18,
+   "maxSunDegPerSec": 10.8
+  },
+  {
+   "pair": "5-6",
+   "frames": 1125,
+   "maxFrameStepFracOfRange": 0.0036,
+   "field": "mid0",
+   "maxSunDegPerFrame": 0.209,
+   "maxSunDegPerSec": 12.5
+  },
+  {
+   "pair": "6-7",
+   "frames": 1129,
+   "maxFrameStepFracOfRange": 0.0039,
+   "field": "sun1",
+   "maxSunDegPerFrame": 0.37,
+   "maxSunDegPerSec": 22.2
+  },
+  {
+   "pair": "7-1",
+   "frames": 1128,
+   "maxFrameStepFracOfRange": 0.0096,
+   "field": "sun1",
+   "maxSunDegPerFrame": 0.43,
+   "maxSunDegPerSec": 25.8
+  },
+  {
+   "pair": "1-8",
+   "frames": 1300,
+   "maxFrameStepFracOfRange": 0.0112,
+   "field": "sun1",
+   "maxSunDegPerFrame": 0.43,
+   "maxSunDegPerSec": 25.8
+  },
+  {
+   "pair": "5-8",
+   "frames": 1300,
+   "maxFrameStepFracOfRange": 0.0055,
+   "field": "k0",
+   "maxSunDegPerFrame": 0.099,
+   "maxSunDegPerSec": 5.9
+  }
+ ],
+ "errors": []
+}
