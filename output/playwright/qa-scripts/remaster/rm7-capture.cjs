@@ -97,8 +97,7 @@ const MEASURE = (state) => {
     for (let i = 0; i < items.length; i++) for (let j = i + 1; j < items.length; j++) {
       const a = items[i].r, b = items[j].r;
       const w = Math.min(a.right, b.right) - Math.max(a.left, b.left), h = Math.min(a.bottom, b.bottom) - Math.max(a.top, b.top);
-      const mapVsLabel = (items[i].name === '.minimap-panel' && items[j].name.startsWith('label:')) || (items[j].name === '.minimap-panel' && items[i].name.startsWith('label:'));
-      if (w > 2 && h > 2 && !mapVsLabel) overlaps.push(items[i].name + ' × ' + items[j].name + ' (' + Math.round(w) + '×' + Math.round(h) + ')');
+      if (w > 2 && h > 2) overlaps.push(items[i].name + ' × ' + items[j].name + ' (' + Math.round(w) + '×' + Math.round(h) + ')');
     }
   }
   // 잘린 글자: 늘 다 보여야 하는 상자가 안쪽 내용을 다 담지 못해 스크롤·숨김으로 가려질 때(스크롤이 의도된 목록·서랍은 뺀다)
