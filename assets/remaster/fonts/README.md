@@ -4,8 +4,8 @@
 
 | 파일 | 원본 | 크기(바이트) | 담은 글자 |
 |---|---|---|---|
-| `ld-myeongjo-400.woff2` | Gowun Batang 400 | 96352 | 919 |
-| `ld-myeongjo-700.woff2` | Gowun Batang 700 | 82912 | 919 |
+| `ld-myeongjo-400.woff2` | Gowun Batang 400 | 96808 | 922 |
+| `ld-myeongjo-700.woff2` | Gowun Batang 700 | 82976 | 922 |
 | `ld-score-500i.woff2` | Cormorant Garamond 500 Italic | 20308 | 119 |
 | `ld-score-600.woff2` | Cormorant Garamond 600 | 26564 | 119 |
 

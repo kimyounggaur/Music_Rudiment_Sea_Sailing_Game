@@ -17,6 +17,7 @@ const { open, frames } = require('./lib.cjs');
 const arg = (name, fallback) => { const i = process.argv.indexOf('--' + name); return i > 0 && process.argv[i + 1] !== undefined ? process.argv[i + 1] : fallback; };
 const OUT = arg('out', path.join('output', 'playwright', 'rm9-journey.json'));
 const ONLY = arg('only', 'trials,normal,hidden').split(',');
+const REGIONS = arg('regions', '0,1,2,3,4,5,6,7').split(',').map(Number); // 점검용: 일부 해역만 돌 때 (증거는 전부 돈다)
 
 // 한 문제씩 풀고 결과 글자를 돌려준다(rm8-journeys.cjs · 기존 journey-final.cjs 와 같은 방식: 첫 짝맞추기는 드래그, 뒤에는 클릭)
 async function solveTrial(page) {
@@ -58,7 +59,7 @@ async function solveTrial(page) {
     await page.evaluate(() => { const g = window.__OCEAN_GAME__; g.audio.setMuted(true); g.applyReducedMotion(true); const q = document.getElementById('qa-hud'); if (q) q.style.display = 'none'; });
 
     if (ONLY.includes('trials')) {
-      for (let region = 0; region <= 7; region++) {
+      for (const region of REGIONS) {
         const t0 = Date.now();
         await page.evaluate((r) => { const a = window.__OCEAN_API__, g = window.__OCEAN_GAME__; a.questQa.prepare(r); g.audio.setMuted(true); g.applyReducedMotion(true); g.startRegionTrial(r); }, region);
         await frames(page, 3);
@@ -66,8 +67,8 @@ async function solveTrial(page) {
         check(started.mode === 'TRIAL' || started.questions > 0, `해역 ${region}: 시련이 시작된다 (${JSON.stringify(started)})`);
         const solved = await solveTrial(page);
         check(solved.result.length > 0, `해역 ${region}: 결과 글자가 있다`);
-        const saved = await page.evaluate((r) => { const s = window.__OCEAN_API__.journeyQa.snapshot().save.progress; return { passed: s.trialsPassed.includes(r), lit: s.lighthousesLit.includes(r) }; }, region);
-        check(saved.passed, `해역 ${region}: 시련 통과가 저장된다`);
+        check(solved.result.includes('등대를 밝힐 준비가 됐어요'), `해역 ${region}: 결과 화면이 "등대를 밝힐 준비가 됐어요"다 (${solved.result.slice(0, 40).replace(/\s+/g, ' ')})`);
+        // 시련 통과 기록(trialsPassed)은 결과 화면의 첫 단추("등대 점등하기")를 눌러 점등할 때 등대 점등 기록과 함께 저장된다(applyLighthouseLighting).
         await page.locator('.result-actions button').first().click();
         // 점등 기록(lighthousesLit)이 먼저 남고 장면이 뜬다. 장면은 6초(동작 줄이기 2초) 뒤 저절로 끝난다. 헤드리스(2~4fps)에서는 Playwright의
         // 클릭 대기("요소가 안정될 때까지")가 장면보다 길어질 수 있어 "#lighthouse-skip is not visible"로 시간 초과한다. 그래서 기록을 기다린 뒤
@@ -76,11 +77,13 @@ async function solveTrial(page) {
         await page.evaluate(() => { if (window.__OCEAN_GAME__.stabilitySnapshot().mode === 'LIGHTHOUSE_EVENT') document.getElementById('lighthouse-skip').click(); });
         await page.waitForFunction(() => window.__OCEAN_GAME__.stabilitySnapshot().mode === 'SAILING', null, { timeout: 30000 });
         await frames(page, 3);
-        const lit = await page.evaluate((r) => { const g = window.__OCEAN_GAME__; return { lit: window.__OCEAN_API__.journeyQa.snapshot().save.progress.lighthousesLit.includes(r), mode: g.stabilitySnapshot().mode }; }, region);
+        const lit = await page.evaluate((r) => { const g = window.__OCEAN_GAME__, s = window.__OCEAN_API__.journeyQa.snapshot().save.progress; return { lit: s.lighthousesLit.includes(r), passed: s.trialsPassed.includes(r), mode: g.stabilitySnapshot().mode }; }, region);
+        const saved = { passed: lit.passed, lit: lit.lit };
+        check(saved.passed, `해역 ${region}: 시련 통과가 저장된다`);
         check(lit.lit, `해역 ${region}: 등대 점등이 저장된다`);
         check(lit.mode === 'SAILING', `해역 ${region}: 점등 뒤 항해로 돌아온다 (${lit.mode})`);
         rows.push({ step: 'trial', region, questions: started.questions, types: started.types, solveSteps: solved.steps, dragged: solved.drag, result: solved.result.slice(0, 80).replace(/\s+/g, ' '), passed: saved.passed, lit: lit.lit, sec: Math.round((Date.now() - t0) / 1000) });
-        console.log(`시련 ${region}: ${saved.passed && lit.lit ? '통과·점등' : '실패'} (문항 ${started.questions}, ${Math.round((Date.now() - t0) / 1000)}초)`);
+        console.log(`시련 ${region}: ${saved.passed && lit.lit ? '통과·점등' : '실패'} (문항 ${started.questions}, ${Math.round((Date.now() - t0) / 1000)}초)` + (saved.passed && lit.lit ? '' : ` 저장 ${JSON.stringify(saved)} 점등 ${JSON.stringify(lit)} 결과 "${solved.result.slice(0, 70).replace(/\s+/g, ' ')}"`));
       }
     }
 

@@ -17,9 +17,15 @@ for i in range(9):
     mood, tl, ts = TARGET[i]
     dl, ds = round(lum - tl, 3), round(sat - ts, 3)
     worst = max(worst, abs(dl), abs(ds))
-    k0 = sorted(glob.glob(f'{prefix}_r{i}-*_k0_1440x900_after.png'))
+    # 미점등 화면: 방문했지만 점등하지 않은 해역의 점등 계수 0.35(k0.35)를 먼저 찾고, 없으면 잠긴 상태 0(k0)을 쓴다. 어느 쪽인지 줄 끝에 적는다.
+    k0, klabel = [], ''
+    for kk in ('0.35', '0'):
+        k0 = sorted(glob.glob(f'{prefix}_r{i}-*_k{kk}_1440x900_after.png'))
+        if k0:
+            klabel = 'k' + kk
+            break
     k0s = tone(k0[0]) if k0 else None
-    rows.append([i, mood, tl, ts, lum, sat, dl, ds] + (list(k0s) if k0s else []))
+    rows.append([i, mood, tl, ts, lum, sat, dl, ds] + (list(k0s) + [klabel] if k0s else []))
     print(f'{i} {mood:10s} 기준 {tl:.2f}/{ts:.2f}  측정 {lum:.3f}/{sat:.3f}  오차 {dl:+.3f}·{ds:+.3f}  {"OK" if abs(dl) <= 0.08 and abs(ds) <= 0.08 else "초과"}')
 print('최대 편차', round(worst, 3), '→', 'PASS' if worst <= 0.08 else 'FAIL')
 if '--json' in sys.argv:

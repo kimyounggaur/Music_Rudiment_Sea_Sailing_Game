@@ -1,5 +1,5 @@
 {
-  "schema": 1,
+  "schema": 2,
   "generated_from": "remaster-kit/prepare_web_assets.py",
   "art": [
     {
@@ -423,17 +423,17 @@
       },
       "output": "assets/remaster/fonts/ld-myeongjo-400.woff2",
       "mime": "font/woff2",
-      "bytes": 96352,
-      "sha256": "93edf03916014bc6a4f3676e0b5e756903cbe826ba45da27430d6bbe234ed780",
+      "bytes": 96808,
+      "sha256": "9a65412b5c6acc62653f2c15d5bda5da3c7b6bd6e23e663ecd2f07a9ef39e63d",
       "source": "Gowun Batang 400",
       "package": "@expo-google-fonts/gowun-batang",
       "license": "OFL-1.1",
       "subset": {
-        "hangulSyllables": 792,
+        "hangulSyllables": 795,
         "jamo": 0,
         "otherSymbols": 58,
         "ascii": 95,
-        "glyphsKept": 919
+        "glyphsKept": 922
       }
     },
     {
@@ -445,17 +445,17 @@
       },
       "output": "assets/remaster/fonts/ld-myeongjo-700.woff2",
       "mime": "font/woff2",
-      "bytes": 82912,
-      "sha256": "c3720a9db4044104604266ac3eec17e34ad8da7ead41aaf7eef6ab089b28e0bb",
+      "bytes": 82976,
+      "sha256": "23e173234706c388862eba6a8458fff0e5e46e79e76346cb702b2ee7c8504aa2",
       "source": "Gowun Batang 700",
       "package": "@expo-google-fonts/gowun-batang",
       "license": "OFL-1.1",
       "subset": {
-        "hangulSyllables": 792,
+        "hangulSyllables": 795,
         "jamo": 0,
         "otherSymbols": 58,
         "ascii": 95,
-        "glyphsKept": 919
+        "glyphsKept": 922
       }
     },
     {
@@ -473,7 +473,7 @@
       "package": "@expo-google-fonts/cormorant-garamond",
       "license": "OFL-1.1",
       "subset": {
-        "hangulSyllables": 792,
+        "hangulSyllables": 795,
         "jamo": 0,
         "otherSymbols": 58,
         "ascii": 95,
@@ -495,7 +495,7 @@
       "package": "@expo-google-fonts/cormorant-garamond",
       "license": "OFL-1.1",
       "subset": {
-        "hangulSyllables": 792,
+        "hangulSyllables": 795,
         "jamo": 0,
         "otherSymbols": 58,
         "ascii": 95,
@@ -506,5 +506,529 @@
   "fonts_licenses": [
     "OFL-Gowun-Batang.txt",
     "OFL-Cormorant-Garamond.txt"
-  ]
+  ],
+  "files": [
+    {
+      "path": "assets/remaster/art/aria_portrait.webp",
+      "bytes": 337596,
+      "sha256": "6e8667e6ccdbcbbac4689afa56ed45ce14e33bdac35e6f162dcba396e4819499",
+      "triangles": null,
+      "source": "remaster-kit/art/aria_portrait.png → WebP",
+      "license": "미표기 (프로젝트가 제공한 원본 키트. 라이선스 파일이 함께 오지 않았다 — 소유자 확인 필요)",
+      "kind": "art",
+      "dimensions": {
+        "width": 1312,
+        "height": 1199
+      }
+    },
+    {
+      "path": "assets/remaster/art/chord_reef.webp",
+      "bytes": 304670,
+      "sha256": "cae12bb84be10c5d4f4a302146d1e1c9a003313fd59c2ce07fc3b7768ffc3e21",
+      "triangles": null,
+      "source": "remaster-kit/art/chord_reef.png → WebP",
+      "license": "미표기 (프로젝트가 제공한 원본 키트. 라이선스 파일이 함께 오지 않았다 — 소유자 확인 필요)",
+      "kind": "art",
+      "dimensions": {
+        "width": 1672,
+        "height": 941
+      }
+    },
+    {
+      "path": "assets/remaster/art/forte_portrait.webp",
+      "bytes": 307732,
+      "sha256": "63972cfa7eca0f3e1ebdfcb68c7407d534ddacdb8d13375ecc0bf8bb3a6b5af7",
+      "triangles": null,
+      "source": "remaster-kit/art/forte_portrait.png → WebP",
+      "license": "미표기 (프로젝트가 제공한 원본 키트. 라이선스 파일이 함께 오지 않았다 — 소유자 확인 필요)",
+      "kind": "art",
+      "dimensions": {
+        "width": 1254,
+        "height": 1254
+      }
+    },
+    {
+      "path": "assets/remaster/art/lighthouse_illustration.webp",
+      "bytes": 280490,
+      "sha256": "f4c30d93bc31e4dc9a09200d8b9975cc2f15e074aa3e0f64a67512f82c376302",
+      "triangles": null,
+      "source": "remaster-kit/art/lighthouse_illustration.png → WebP",
+      "license": "미표기 (프로젝트가 제공한 원본 키트. 라이선스 파일이 함께 오지 않았다 — 소유자 확인 필요)",
+      "kind": "art",
+      "dimensions": {
+        "width": 1254,
+        "height": 1254
+      }
+    },
+    {
+      "path": "assets/remaster/art/maestro_portrait.webp",
+      "bytes": 325500,
+      "sha256": "1d7713b11c023892b40a9811b07ef738dd62d39bdc1d4b6beb818730bb39e5ef",
+      "triangles": null,
+      "source": "remaster-kit/art/maestro_portrait.png → WebP",
+      "license": "미표기 (프로젝트가 제공한 원본 키트. 라이선스 파일이 함께 오지 않았다 — 소유자 확인 필요)",
+      "kind": "art",
+      "dimensions": {
+        "width": 1287,
+        "height": 1222
+      }
+    },
+    {
+      "path": "assets/remaster/art/rhythm_storm.webp",
+      "bytes": 217560,
+      "sha256": "056d462760b9454880892ecd30fd339bbfd5b2bfcd0680f712b50dd4a6ebce89",
+      "triangles": null,
+      "source": "remaster-kit/art/rhythm_storm.png → WebP",
+      "license": "미표기 (프로젝트가 제공한 원본 키트. 라이선스 파일이 함께 오지 않았다 — 소유자 확인 필요)",
+      "kind": "art",
+      "dimensions": {
+        "width": 1672,
+        "height": 941
+      }
+    },
+    {
+      "path": "assets/remaster/art/title_vista.webp",
+      "bytes": 303446,
+      "sha256": "9cb0ea67bdea05679987a488a03b632fb86823e1a748115321f04b1ec513784f",
+      "triangles": null,
+      "source": "remaster-kit/art/title_vista.png → WebP",
+      "license": "미표기 (프로젝트가 제공한 원본 키트. 라이선스 파일이 함께 오지 않았다 — 소유자 확인 필요)",
+      "kind": "art",
+      "dimensions": {
+        "width": 1672,
+        "height": 941
+      }
+    },
+    {
+      "path": "assets/remaster/art/vessel_illustration.webp",
+      "bytes": 379200,
+      "sha256": "c1bd508a7d6d3facd8abdafafd739927e2790b40c503aa9c765173770a582aa5",
+      "triangles": null,
+      "source": "remaster-kit/art/vessel_illustration.png → WebP",
+      "license": "미표기 (프로젝트가 제공한 원본 키트. 라이선스 파일이 함께 오지 않았다 — 소유자 확인 필요)",
+      "kind": "art",
+      "dimensions": {
+        "width": 1254,
+        "height": 1254
+      }
+    },
+    {
+      "path": "assets/remaster/fonts/OFL-Cormorant-Garamond.txt",
+      "bytes": 4387,
+      "sha256": "60700d351cac4650c51f3f9db318d2a420f8b45052dba2715eb5fec41f0f6956",
+      "triangles": null,
+      "source": "서체 원본 패키지가 함께 준 SIL Open Font License 전문",
+      "license": "OFL-1.1",
+      "kind": "license"
+    },
+    {
+      "path": "assets/remaster/fonts/OFL-Gowun-Batang.txt",
+      "bytes": 4397,
+      "sha256": "49a57cc769fa9affd6eefb9070a61e3d3f6b757c97cafb15848bc6d1c81acc78",
+      "triangles": null,
+      "source": "서체 원본 패키지가 함께 준 SIL Open Font License 전문",
+      "license": "OFL-1.1",
+      "kind": "license"
+    },
+    {
+      "path": "assets/remaster/fonts/README.md",
+      "bytes": 859,
+      "sha256": "ca3ed282627368f8d53964f29ca55ef76cfba9e9f8e235dad2b9535231636427",
+      "triangles": null,
+      "source": "tools/build-fonts.py 가 쓴 서체 안내",
+      "license": "CC0-1.0",
+      "kind": "doc"
+    },
+    {
+      "path": "assets/remaster/fonts/ld-myeongjo-400.woff2",
+      "bytes": 96808,
+      "sha256": "9a65412b5c6acc62653f2c15d5bda5da3c7b6bd6e23e663ecd2f07a9ef39e63d",
+      "triangles": null,
+      "source": "서브셋: tools/build-fonts.py · 원본 Gowun Batang 400 (패키지 @expo-google-fonts/gowun-batang)",
+      "license": "OFL-1.1",
+      "kind": "font",
+      "subset": {
+        "hangulSyllables": 795,
+        "jamo": 0,
+        "otherSymbols": 58,
+        "ascii": 95,
+        "glyphsKept": 922
+      }
+    },
+    {
+      "path": "assets/remaster/fonts/ld-myeongjo-700.woff2",
+      "bytes": 82976,
+      "sha256": "23e173234706c388862eba6a8458fff0e5e46e79e76346cb702b2ee7c8504aa2",
+      "triangles": null,
+      "source": "서브셋: tools/build-fonts.py · 원본 Gowun Batang 700 (패키지 @expo-google-fonts/gowun-batang)",
+      "license": "OFL-1.1",
+      "kind": "font",
+      "subset": {
+        "hangulSyllables": 795,
+        "jamo": 0,
+        "otherSymbols": 58,
+        "ascii": 95,
+        "glyphsKept": 922
+      }
+    },
+    {
+      "path": "assets/remaster/fonts/ld-score-500i.woff2",
+      "bytes": 20308,
+      "sha256": "ef56f627787a2f164a7aa6ce3a5384cc0e9c87cfebf3813d1369645b008c3031",
+      "triangles": null,
+      "source": "서브셋: tools/build-fonts.py · 원본 Cormorant Garamond 500 Italic (패키지 @expo-google-fonts/cormorant-garamond)",
+      "license": "OFL-1.1",
+      "kind": "font",
+      "subset": {
+        "hangulSyllables": 795,
+        "jamo": 0,
+        "otherSymbols": 58,
+        "ascii": 95,
+        "glyphsKept": 119
+      }
+    },
+    {
+      "path": "assets/remaster/fonts/ld-score-600.woff2",
+      "bytes": 26564,
+      "sha256": "ee6469b4cf86b81227d8a0916033ed3bce6989db55e797dd278b1a0941b42824",
+      "triangles": null,
+      "source": "서브셋: tools/build-fonts.py · 원본 Cormorant Garamond 600 (패키지 @expo-google-fonts/cormorant-garamond)",
+      "license": "OFL-1.1",
+      "kind": "font",
+      "subset": {
+        "hangulSyllables": 795,
+        "jamo": 0,
+        "otherSymbols": 58,
+        "ascii": 95,
+        "glyphsKept": 119
+      }
+    },
+    {
+      "path": "assets/remaster/models/chord-coral.glb",
+      "bytes": 110628,
+      "sha256": "1343e6c93e5ca8e8798531c976af7b4c339083f037ed06609b519fbb3bd6fb82",
+      "triangles": 1676,
+      "source": "remaster-kit 원본 모델(프로젝트 제공, 바이트 그대로 복사); 생성기 Khronos glTF Blender I/O v4.3.47",
+      "license": "미표기 (프로젝트가 제공한 원본 키트. 라이선스 파일이 함께 오지 않았다 — 소유자 확인 필요)",
+      "kind": "model",
+      "meshes": 8,
+      "materials": 6,
+      "generator": "Khronos glTF Blender I/O v4.3.47"
+    },
+    {
+      "path": "assets/remaster/models/landmark-r0-staff-gate-far.glb",
+      "bytes": 34860,
+      "sha256": "52782a78d4d7e8ee763a45b1f3647a2329c93ac428a3287a5ad0b6e5ae8249d1",
+      "triangles": 944,
+      "source": "tools/build-landmarks.cjs · tools/glb-kit.cjs",
+      "license": "CC0-1.0 (원작: 이 저장소의 tools/build-landmarks.cjs가 절차적으로 만든 모델)",
+      "kind": "model",
+      "meshes": 3,
+      "materials": 3,
+      "generator": "Lesson Designer remaster procedural GLB kit (RM6)"
+    },
+    {
+      "path": "assets/remaster/models/landmark-r0-staff-gate.glb",
+      "bytes": 201868,
+      "sha256": "d46ebd8b98ad1825879465efc599fa34db1ce699fb3e55fcb6369e4804786974",
+      "triangles": 6690,
+      "source": "tools/build-landmarks.cjs · tools/glb-kit.cjs",
+      "license": "CC0-1.0 (원작: 이 저장소의 tools/build-landmarks.cjs가 절차적으로 만든 모델)",
+      "kind": "model",
+      "meshes": 6,
+      "materials": 6,
+      "generator": "Lesson Designer remaster procedural GLB kit (RM6)"
+    },
+    {
+      "path": "assets/remaster/models/landmark-r1-tempo-tower-far.glb",
+      "bytes": 34804,
+      "sha256": "7e5fc578ff8356a5c8efce0091b5e033c541e4b2887cdf89bf35045ba454fdcf",
+      "triangles": 640,
+      "source": "tools/build-landmarks.cjs · tools/glb-kit.cjs",
+      "license": "CC0-1.0 (원작: 이 저장소의 tools/build-landmarks.cjs가 절차적으로 만든 모델)",
+      "kind": "model",
+      "meshes": 2,
+      "materials": 2,
+      "generator": "Lesson Designer remaster procedural GLB kit (RM6)"
+    },
+    {
+      "path": "assets/remaster/models/landmark-r1-tempo-tower.glb",
+      "bytes": 183132,
+      "sha256": "33066b9e5795beb5e77ceb423a5019ab4e9dda42bbd3884e7712c80278b8ba53",
+      "triangles": 5920,
+      "source": "tools/build-landmarks.cjs · tools/glb-kit.cjs",
+      "license": "CC0-1.0 (원작: 이 저장소의 tools/build-landmarks.cjs가 절차적으로 만든 모델)",
+      "kind": "model",
+      "meshes": 7,
+      "materials": 6,
+      "generator": "Lesson Designer remaster procedural GLB kit (RM6)"
+    },
+    {
+      "path": "assets/remaster/models/landmark-r2-storm-drum-far.glb",
+      "bytes": 30408,
+      "sha256": "85fd759af180386f92707b437fbd546410f5e761a05c48dd65c0326ae345fb57",
+      "triangles": 654,
+      "source": "tools/build-landmarks.cjs · tools/glb-kit.cjs",
+      "license": "CC0-1.0 (원작: 이 저장소의 tools/build-landmarks.cjs가 절차적으로 만든 모델)",
+      "kind": "model",
+      "meshes": 2,
+      "materials": 2,
+      "generator": "Lesson Designer remaster procedural GLB kit (RM6)"
+    },
+    {
+      "path": "assets/remaster/models/landmark-r2-storm-drum.glb",
+      "bytes": 348708,
+      "sha256": "033c8d5d6777323c6d3eecd84bf3547664822a994aabce8e15bbe8b89f7b2ac0",
+      "triangles": 10496,
+      "source": "tools/build-landmarks.cjs · tools/glb-kit.cjs",
+      "license": "CC0-1.0 (원작: 이 저장소의 tools/build-landmarks.cjs가 절차적으로 만든 모델)",
+      "kind": "model",
+      "meshes": 11,
+      "materials": 10,
+      "generator": "Lesson Designer remaster procedural GLB kit (RM6)"
+    },
+    {
+      "path": "assets/remaster/models/landmark-r3-dynamics-canyon-far.glb",
+      "bytes": 32028,
+      "sha256": "d090d3b1dfea873434dad7a8e17849e32d077d6df37b0ad91e8eba6217174423",
+      "triangles": 496,
+      "source": "tools/build-landmarks.cjs · tools/glb-kit.cjs",
+      "license": "CC0-1.0 (원작: 이 저장소의 tools/build-landmarks.cjs가 절차적으로 만든 모델)",
+      "kind": "model",
+      "meshes": 2,
+      "materials": 2,
+      "generator": "Lesson Designer remaster procedural GLB kit (RM6)"
+    },
+    {
+      "path": "assets/remaster/models/landmark-r3-dynamics-canyon.glb",
+      "bytes": 177292,
+      "sha256": "6f4b5de951e1615f028398de7928b0f4fd5825d94f92730438280251f1fb4ec2",
+      "triangles": 3760,
+      "source": "tools/build-landmarks.cjs · tools/glb-kit.cjs",
+      "license": "CC0-1.0 (원작: 이 저장소의 tools/build-landmarks.cjs가 절차적으로 만든 모델)",
+      "kind": "model",
+      "meshes": 7,
+      "materials": 4,
+      "generator": "Lesson Designer remaster procedural GLB kit (RM6)"
+    },
+    {
+      "path": "assets/remaster/models/landmark-r4-fermata-bridge-far.glb",
+      "bytes": 27956,
+      "sha256": "a5e6fda860f385cbd7a21a6cb1d776170e4a58a0fa9eb2dd4368259ab8329f99",
+      "triangles": 660,
+      "source": "tools/build-landmarks.cjs · tools/glb-kit.cjs",
+      "license": "CC0-1.0 (원작: 이 저장소의 tools/build-landmarks.cjs가 절차적으로 만든 모델)",
+      "kind": "model",
+      "meshes": 3,
+      "materials": 3,
+      "generator": "Lesson Designer remaster procedural GLB kit (RM6)"
+    },
+    {
+      "path": "assets/remaster/models/landmark-r4-fermata-bridge.glb",
+      "bytes": 203040,
+      "sha256": "026c6711f752f3f3b3a4745c54186dd37a724747f02fed9da1c9e07a9e8a294f",
+      "triangles": 7206,
+      "source": "tools/build-landmarks.cjs · tools/glb-kit.cjs",
+      "license": "CC0-1.0 (원작: 이 저장소의 tools/build-landmarks.cjs가 절차적으로 만든 모델)",
+      "kind": "model",
+      "meshes": 5,
+      "materials": 5,
+      "generator": "Lesson Designer remaster procedural GLB kit (RM6)"
+    },
+    {
+      "path": "assets/remaster/models/landmark-r5-scale-lights-far.glb",
+      "bytes": 40628,
+      "sha256": "b7eada60732f43ca7b2547dc0cf86241c4eb1599c37869ad10e2cd678523aff9",
+      "triangles": 952,
+      "source": "tools/build-landmarks.cjs · tools/glb-kit.cjs",
+      "license": "CC0-1.0 (원작: 이 저장소의 tools/build-landmarks.cjs가 절차적으로 만든 모델)",
+      "kind": "model",
+      "meshes": 2,
+      "materials": 2,
+      "generator": "Lesson Designer remaster procedural GLB kit (RM6)"
+    },
+    {
+      "path": "assets/remaster/models/landmark-r5-scale-lights.glb",
+      "bytes": 339472,
+      "sha256": "2defe3a9471ba650446c7443a6e4c274304738d73b03af462309219c88c18a6f",
+      "triangles": 9492,
+      "source": "tools/build-landmarks.cjs · tools/glb-kit.cjs",
+      "license": "CC0-1.0 (원작: 이 저장소의 tools/build-landmarks.cjs가 절차적으로 만든 모델)",
+      "kind": "model",
+      "meshes": 12,
+      "materials": 6,
+      "generator": "Lesson Designer remaster procedural GLB kit (RM6)"
+    },
+    {
+      "path": "assets/remaster/models/landmark-r6-chord-spires-far.glb",
+      "bytes": 20524,
+      "sha256": "303c2c049abf7ee6a9fd7877fc675b8308f495bc40bb5e0fd4e75dc93b30598e",
+      "triangles": 450,
+      "source": "tools/build-landmarks.cjs · tools/glb-kit.cjs",
+      "license": "CC0-1.0 (원작: 이 저장소의 tools/build-landmarks.cjs가 절차적으로 만든 모델)",
+      "kind": "model",
+      "meshes": 2,
+      "materials": 2,
+      "generator": "Lesson Designer remaster procedural GLB kit (RM6)"
+    },
+    {
+      "path": "assets/remaster/models/landmark-r6-chord-spires.glb",
+      "bytes": 212460,
+      "sha256": "c3feb05c2c00251dbd140a3be698057b373f4348f4deed1ec8cc61515eb42ba3",
+      "triangles": 6240,
+      "source": "tools/build-landmarks.cjs · tools/glb-kit.cjs",
+      "license": "CC0-1.0 (원작: 이 저장소의 tools/build-landmarks.cjs가 절차적으로 만든 모델)",
+      "kind": "model",
+      "meshes": 7,
+      "materials": 5,
+      "generator": "Lesson Designer remaster procedural GLB kit (RM6)"
+    },
+    {
+      "path": "assets/remaster/models/landmark-r7-key-ring-far.glb",
+      "bytes": 49696,
+      "sha256": "3e6d14ecccc605388ea762af5b054d4dbfb0f84d69588cc981bfaddecc2895b2",
+      "triangles": 1250,
+      "source": "tools/build-landmarks.cjs · tools/glb-kit.cjs",
+      "license": "CC0-1.0 (원작: 이 저장소의 tools/build-landmarks.cjs가 절차적으로 만든 모델)",
+      "kind": "model",
+      "meshes": 4,
+      "materials": 4,
+      "generator": "Lesson Designer remaster procedural GLB kit (RM6)"
+    },
+    {
+      "path": "assets/remaster/models/landmark-r7-key-ring.glb",
+      "bytes": 231388,
+      "sha256": "6c41fbdd345b8fefca959a4dad957898fdefe0a38ae5c17ee3e022de66ff01aa",
+      "triangles": 7312,
+      "source": "tools/build-landmarks.cjs · tools/glb-kit.cjs",
+      "license": "CC0-1.0 (원작: 이 저장소의 tools/build-landmarks.cjs가 절차적으로 만든 모델)",
+      "kind": "model",
+      "meshes": 20,
+      "materials": 9,
+      "generator": "Lesson Designer remaster procedural GLB kit (RM6)"
+    },
+    {
+      "path": "assets/remaster/models/landmark-r8-repeat-gate-far.glb",
+      "bytes": 25220,
+      "sha256": "9c6e5a6e8c0135bd221cb63aabd7041de44ead3b15dc6203a53cf94a7044bd42",
+      "triangles": 570,
+      "source": "tools/build-landmarks.cjs · tools/glb-kit.cjs",
+      "license": "CC0-1.0 (원작: 이 저장소의 tools/build-landmarks.cjs가 절차적으로 만든 모델)",
+      "kind": "model",
+      "meshes": 3,
+      "materials": 3,
+      "generator": "Lesson Designer remaster procedural GLB kit (RM6)"
+    },
+    {
+      "path": "assets/remaster/models/landmark-r8-repeat-gate.glb",
+      "bytes": 148688,
+      "sha256": "5d3727d7db4711f678bd66d67b1d13de2823b124439b0712cc1f7f2eedf1125b",
+      "triangles": 5184,
+      "source": "tools/build-landmarks.cjs · tools/glb-kit.cjs",
+      "license": "CC0-1.0 (원작: 이 저장소의 tools/build-landmarks.cjs가 절차적으로 만든 모델)",
+      "kind": "model",
+      "meshes": 6,
+      "materials": 5,
+      "generator": "Lesson Designer remaster procedural GLB kit (RM6)"
+    },
+    {
+      "path": "assets/remaster/models/orchestra-lighthouse.glb",
+      "bytes": 1013500,
+      "sha256": "7a48c7bcaa0ed153ba0f7d074f80f903dc85f2da4cfa3fa6b4049daef8875157",
+      "triangles": 18824,
+      "source": "remaster-kit 원본 모델(프로젝트 제공, 바이트 그대로 복사); 생성기 Khronos glTF Blender I/O v4.3.47",
+      "license": "미표기 (프로젝트가 제공한 원본 키트. 라이선스 파일이 함께 오지 않았다 — 소유자 확인 필요)",
+      "kind": "model",
+      "meshes": 8,
+      "materials": 8,
+      "generator": "Khronos glTF Blender I/O v4.3.47"
+    },
+    {
+      "path": "assets/remaster/models/research-vessel.glb",
+      "bytes": 899404,
+      "sha256": "bf54c562cf5e6807c28a0b8abda68f3ff09bb031717b5a84aae0b25d71471480",
+      "triangles": 18591,
+      "source": "remaster-kit 원본 모델(프로젝트 제공, 바이트 그대로 복사); 생성기 Khronos glTF Blender I/O v4.3.47",
+      "license": "미표기 (프로젝트가 제공한 원본 키트. 라이선스 파일이 함께 오지 않았다 — 소유자 확인 필요)",
+      "kind": "model",
+      "meshes": 11,
+      "materials": 8,
+      "generator": "Khronos glTF Blender I/O v4.3.47"
+    },
+    {
+      "path": "assets/remaster/models/term-bottle.glb",
+      "bytes": 70956,
+      "sha256": "884358bfcea2826c560234c6f206489902a92746a669e37db87e73dcb1e51e31",
+      "triangles": 1256,
+      "source": "remaster-kit 원본 모델(프로젝트 제공, 바이트 그대로 복사); 생성기 Khronos glTF Blender I/O v4.3.47",
+      "license": "미표기 (프로젝트가 제공한 원본 키트. 라이선스 파일이 함께 오지 않았다 — 소유자 확인 필요)",
+      "kind": "model",
+      "meshes": 7,
+      "materials": 7,
+      "generator": "Khronos glTF Blender I/O v4.3.47"
+    },
+    {
+      "path": "assets/remaster/models/trade-wind-arch.glb",
+      "bytes": 179536,
+      "sha256": "9fb55371eaf16b7dce76ead6b2a326daa5458ba174d9f0f035eb2a50319f55b9",
+      "triangles": 3132,
+      "source": "remaster-kit 원본 모델(프로젝트 제공, 바이트 그대로 복사); 생성기 Khronos glTF Blender I/O v4.3.47",
+      "license": "미표기 (프로젝트가 제공한 원본 키트. 라이선스 파일이 함께 오지 않았다 — 소유자 확인 필요)",
+      "kind": "model",
+      "meshes": 12,
+      "materials": 7,
+      "generator": "Khronos glTF Blender I/O v4.3.47"
+    },
+    {
+      "path": "assets/remaster/vendor/GLTFLoader-r128.js",
+      "bytes": 96550,
+      "sha256": "5c15967ba830918a9caea6338712c994c354bccd4edc4569bde411c3ec06a3e6",
+      "triangles": null,
+      "source": "three.js r128 examples/js/loaders/GLTFLoader.js (그대로 복사)",
+      "license": "MIT",
+      "kind": "script"
+    },
+    {
+      "path": "assets/remaster/vendor/THREE-LICENSE.txt",
+      "bytes": 1081,
+      "sha256": "7dddf7c5b8fd10ee654db8857d75d104b5557889aa5a91fc4ca545ea7c07062f",
+      "triangles": null,
+      "source": "three.js r128 저장소의 LICENSE",
+      "license": "MIT",
+      "kind": "license"
+    }
+  ],
+  "summary": {
+    "files": 40,
+    "total_bytes": 7406320,
+    "by_kind": {
+      "art": {
+        "files": 8,
+        "bytes": 2456194
+      },
+      "license": {
+        "files": 3,
+        "bytes": 9865
+      },
+      "doc": {
+        "files": 1,
+        "bytes": 859
+      },
+      "font": {
+        "files": 4,
+        "bytes": 226656
+      },
+      "model": {
+        "files": 23,
+        "bytes": 4616196
+      },
+      "script": {
+        "files": 1,
+        "bytes": 96550
+      }
+    },
+    "model_triangles_total": 112395,
+    "unstated_license_files": 13,
+    "note": "triangles 는 GLB 노드가 메시를 가리키는 횟수만큼 센 값이다. '미표기'는 라이선스 파일이 없다는 뜻이며 사용 허락을 뜻하지 않는다."
+  }
 }

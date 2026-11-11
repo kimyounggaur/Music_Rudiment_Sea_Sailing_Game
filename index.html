@@ -32,10 +32,11 @@ ux_endurance: 1800014ms / errors 0 (UI v7); v12 repeat audit PASS; v13 render-ca
 ux_physical_device_checks: NOT_RUN
 ux_report: UX_GATE_REPORT.md
 ux_handoff: UX_HANDOFF.md
-remaster_track: RM8 COMPLETE (accessibility and performance, design spec v1.0)
-remaster_last_gate: GRM8 PASS
-remaster_tests: 45/45 (suite O, RM0-RM8)
-remaster_regression: 856/856
+remaster_track: RM9 COMPLETE (cleanup and handoff, design spec v1.0)
+remaster_last_gate: GRM9 PASS
+remaster_tests: 46/46 (suite O, RM0-RM9)
+remaster_regression: 857/857
+remaster_physical_device_checks: NOT_RUN
 remaster_report: REMASTER_GATE_REPORT.md
 remaster_handoff: REMASTER_HANDOFF.md
 -->
@@ -8137,12 +8138,10 @@ remaster_handoff: REMASTER_HANDOFF.md
         qualityProfiles: Object.freeze({
           low: Object.freeze({
             oceanSegments: 48,
-            stars: 260,
             particles: 800,
             shadow: false,
             shadowSize: 512,
             dpr: 1.15,
-            normalEvery: 5,
             skyOctaves: 2,
             reflect: "sky",
             reflectScale: 0,
@@ -8154,12 +8153,10 @@ remaster_handoff: REMASTER_HANDOFF.md
           }),
           mid: Object.freeze({
             oceanSegments: 72,
-            stars: 520,
             particles: 1400,
             shadow: true,
             shadowSize: 1024,
             dpr: 1.5,
-            normalEvery: 3,
             skyOctaves: 4,
             reflect: "planar",
             reflectScale: 0.5,
@@ -8172,12 +8169,10 @@ remaster_handoff: REMASTER_HANDOFF.md
           }),
           high: Object.freeze({
             oceanSegments: 96,
-            stars: 800,
             particles: 2000,
             shadow: true,
             shadowSize: 2048,
             dpr: 2,
-            normalEvery: 2,
             skyOctaves: 5,
             reflect: "planar",
             reflectScale: 0.75,
@@ -15619,7 +15614,6 @@ remaster_handoff: REMASTER_HANDOFF.md
         assertEqual(normalCalls, 0);
         assert(writes > 0);
         assertEqual(position.needsUpdate, true);
-        for (const name of ["low", "mid", "high"]) assert(Number.isFinite(CONFIG.qualityProfiles[name].normalEvery));
       });
       test(suiteRemaster, "O-18 품질 단계 행렬 (low는 하늘 비춤 + CSS, mid·high는 평면 반사)", () => {
         const q = CONFIG.qualityProfiles;
@@ -17344,6 +17338,43 @@ remaster_handoff: REMASTER_HANDOFF.md
           declaredAt = source.indexOf("const REMASTER_FX_" + "VALUES"),
           firstLoadAt = source.indexOf("SAVE = load" + "Save();");
         assert(declaredAt > 0 && firstLoadAt > 0 && declaredAt < firstLoadAt, "REMASTER_FX_VALUES 선언(" + declaredAt + ")이 첫 loadSave() 호출(" + firstLoadAt + ")보다 앞선다");
+      });
+      test(suiteRemaster, "O-46 옛 하늘·낮밤·바다·안개벽 경로 제거 (?legacy=1은 연출만 끈다)", () => {
+        const source = Array.from(document.scripts).map((script) => script.textContent).join("\n"),
+          // 지운 이름은 쪼개어 쓴다(이 검사 자신이 소스에 남아 스스로 걸리지 않게)
+          absent = (...parts) => !source.includes(parts.join(""));
+        assert(absent("update", "DayNight"), "옛 낮밤 갱신 함수가 없다");
+        assert(absent("create", "ToySky"), "옛 하늘 만들기 함수가 없다");
+        assert(absent("world.", "palette"), "옛 하늘 팔레트가 없다");
+        assert(absent("procedural", "-clouds") && absent("procedural", "-stars"), "구름·별 메시 이름이 없다");
+        assert(absent("fog", "Walls") && absent("fog", "Target"), "색 원통 안개벽과 옛 안개 밀도 계산이 없다");
+        assert(absent("cloud", "Material"), "구름 재질이 없다");
+        assert(absent("world.sun", ".visible") && absent("world.moon", ".visible"), "해·달 메시를 만지는 곳이 없다");
+        assert(!/new THREE\.MeshPhongMaterial\(\{\s*color: 0x0b88a1/.test(source), "옛 퐁 바다 재질이 없다");
+        assert(!/isMeshPhongMaterial\s*&&\s*frame/.test(source), "옛 퐁 바다의 법선 재계산 분기가 없다");
+        // 옛 경로에만 쓰던 품질표 칸이 없다
+        for (const name of ["low", "mid", "high"]) {
+          const profile = CONFIG.qualityProfiles[name];
+          assert(!("stars" in profile) && !("normalEvery" in profile), name + ": 옛 별·법선 칸이 없다");
+          assert(Number.isFinite(profile.skyOctaves), name + ": 하늘 셰이더 옥타브는 있다");
+        }
+        // 하늘 돔을 만드는 함수는 남아 있고, 대기 감독은 ?legacy=1에서도 늘 만든다
+        assertEqual(typeof createSkyDome, "function");
+        assert(/this\.atmosphere = new AtmosphereDirector\(this\.world, this\)/.test(source), "대기 감독은 늘 만든다");
+        assert(!/renderPath\.legacy\s*\?\s*null\s*:\s*new AtmosphereDirector/.test(source), "대기 감독을 끄는 갈래가 없다");
+        // 스위치는 QA·검사 주소 전용으로 남는다(O-23이 해석 규칙을 검사한다): 일반 주소에서는 켜지지 않는다
+        assertEqual(resolveRenderPath(new URLSearchParams("legacy=1"), {}, false).legacy, false);
+        // 살아 있는 게임이 있으면(2차 실행) 세계 객체에서도 확인한다
+        const game = typeof window !== "undefined" ? window.__OCEAN_GAME__ : null;
+        if (game && game.world) {
+          const world = game.world;
+          for (const key of ["sun", "moon", "clouds", "stars", "palette", "cloud" + "Material", "fog" + "Walls", "fog" + "Target"])
+            assert(!(key in world), "세계 객체에 " + key + " 가 없다");
+          assert(world.sky && world.sky.material && world.sky.material.isShaderMaterial, "하늘은 셰이더 재질이다");
+          assert(!("color" in world.sky.material), "하늘 재질에 더미 color가 없다");
+          assert(world.ocean.material.isShaderMaterial, "수면은 셰이더 재질이다");
+          assert(world.scene.children.every((child) => child.name !== "procedural" + "-clouds" && child.name !== "procedural" + "-stars"), "장면에 구름·별 메시가 없다");
+        }
       });
       function runAllTests() {
         const results = {
@@ -20024,7 +20055,7 @@ remaster_handoff: REMASTER_HANDOFF.md
             this.announce(id, "✧", "밤 반딧불 군집", 1.2);
           } else if (id === "unlit_fog_wall") {
             this.burst(id, origin, 46, 0xaacbd2, "haze");
-            this.announce(id, "▧", "미점등 해역 · 원통 안개 장벽", 1.8);
+            this.announce(id, "▧", "미점등 해역 · 옅은 안개 기운", 1.8);
           } else if (id === "rainbow") {
             this.rainbow.position.set(origin.x - 15, origin.y + 10, origin.z);
             this.rainbow.visible = true;
@@ -20281,7 +20312,7 @@ remaster_handoff: REMASTER_HANDOFF.md
           if (
             this.world.daylight < 0.28 &&
             MODE.current === "SAILING" &&
-            this.game.currentRegion === (this.game.atmosphere ? 5 : 4)
+            this.game.currentRegion === 5
           ) {
             this.fireflyClock += dt;
             if (this.fireflyClock > (SAVE.settings.reducedMotion ? 2.4 : 1.1)) {
@@ -20568,101 +20599,15 @@ remaster_handoff: REMASTER_HANDOFF.md
         texture.needsUpdate = true;
         return texture;
       }
-      function createToySky(scene) {
+      // 하늘 돔. 재질은 대기 감독(AtmosphereDirector)이 하늘 셰이더로 바꿔 끼운다. 해·달·구름·별은 셰이더가 그린다(RM1·RM9).
+      function createSkyDome(scene) {
         const sky = new THREE.Mesh(
           new THREE.SphereGeometry(760, 20, 12),
-          new THREE.MeshBasicMaterial({
-            color: 0x8ed4df,
-            side: THREE.BackSide,
-            fog: false,
-          }),
+          new THREE.MeshBasicMaterial({ color: 0x8ed4df, side: THREE.BackSide, fog: false }),
         );
         sky.geometry.scale(1, 0.72, 1);
         scene.add(sky);
-        const sun = new THREE.Mesh(
-          new THREE.SphereGeometry(22, 12, 8),
-          new THREE.MeshBasicMaterial({ color: 0xffdf7b, fog: false }),
-        );
-        sun.position.set(-170, 145, -280);
-        scene.add(sun);
-        const moon = new THREE.Mesh(
-          new THREE.SphereGeometry(12, 10, 7),
-          new THREE.MeshBasicMaterial({
-            color: 0xe8fbff,
-            fog: false,
-            transparent: true,
-            opacity: 0.72,
-          }),
-        );
-        moon.position.set(210, 120, 180);
-        scene.add(moon);
-        const cloudMaterial = new THREE.MeshLambertMaterial({
-          color: 0xf3fcf8,
-          transparent: true,
-          opacity: 0.78,
-          fog: false,
-        });
-        cloudMaterial.flatShading = true;
-        cloudMaterial.needsUpdate = true;
-        const rng = createSeededRng(7319),
-          clouds = new THREE.Group();
-        clouds.name = "procedural-clouds";
-        scene.add(clouds);
-        for (let i = 0; i < 10; i++) {
-          const cloud = new THREE.Group();
-          const puffs = 3 + Math.floor(rng() * 3);
-          for (let p = 0; p < puffs; p++) {
-            const puff = new THREE.Mesh(
-              new THREE.IcosahedronGeometry(8 + rng() * 8, 1),
-              cloudMaterial,
-            );
-            puff.scale.set(1.7 + rng(), 0.65 + rng() * 0.2, 1);
-            puff.position.set((p - (puffs - 1) / 2) * 12, rng() * 4, rng() * 7);
-            cloud.add(puff);
-          }
-          const angle = rng() * Math.PI * 2,
-            radius = 250 + rng() * 250;
-          cloud.position.set(
-            Math.cos(angle) * radius,
-            74 + rng() * 62,
-            Math.sin(angle) * radius,
-          );
-          cloud.rotation.y = -angle;
-          clouds.add(cloud);
-        }
-        const starPositions = new Float32Array(800 * 3);
-        for (let index = 0; index < 800; index++) {
-          const azimuth = rng() * Math.PI * 2,
-            elevation = 0.18 + rng() * 1.25,
-            radius = 560 + rng() * 85;
-          starPositions[index * 3] =
-            Math.cos(azimuth) * Math.cos(elevation) * radius;
-          starPositions[index * 3 + 1] = Math.sin(elevation) * radius * 0.72;
-          starPositions[index * 3 + 2] =
-            Math.sin(azimuth) * Math.cos(elevation) * radius;
-        }
-        const starGeometry = new THREE.BufferGeometry();
-        starGeometry.setAttribute(
-          "position",
-          new THREE.BufferAttribute(starPositions, 3),
-        );
-        starGeometry.setDrawRange(0, CONFIG.qualityProfiles.mid.stars);
-        const stars = new THREE.Points(
-          starGeometry,
-          new THREE.PointsMaterial({
-            color: 0xe9f8ff,
-            size: 2.2,
-            transparent: true,
-            opacity: 0,
-            depthWrite: false,
-            fog: false,
-            blending: THREE.AdditiveBlending,
-          }),
-        );
-        stars.name = "procedural-stars";
-        stars.frustumCulled = false;
-        scene.add(stars);
-        return { sky, sun, moon, clouds, cloudMaterial, stars };
+        return { sky };
       }
       function buildOceanGeometry(segments) {
         const geometry = new THREE.PlaneGeometry(600, 600, segments, segments);
@@ -20691,7 +20636,6 @@ remaster_handoff: REMASTER_HANDOFF.md
         ocean.geometry = geometry;
         ocean.userData.baseXZ = geometry.userData.baseXZ;
         ocean.userData.grid = geometry.userData.grid;
-        ocean.userData.lastNormalFrame = 0;
         ocean.userData.segments = segments;
         if (previous && previous !== geometry) previous.dispose();
       }
@@ -20699,21 +20643,15 @@ remaster_handoff: REMASTER_HANDOFF.md
         const geometry = buildOceanGeometry(
           CONFIG.qualityProfiles[SAVE.settings.quality].oceanSegments,
         );
-        const material = new THREE.MeshPhongMaterial({
+        // 수면 셰이더 재질은 대기 감독이 만들어 끼운다(installWater). 그 전까지의 자리표시 재질만 둔다.
+        const material = new THREE.MeshBasicMaterial({
           color: 0x0b88a1,
-          emissive: 0x063b52,
-          specular: 0xa8fbef,
-          shininess: 78,
-          flatShading: true,
-          transparent: true,
-          opacity: 0.96,
           side: THREE.DoubleSide,
         });
         const ocean = new THREE.Mesh(geometry, material);
         ocean.frustumCulled = false;
         ocean.receiveShadow = true;
         ocean.userData.baseXZ = geometry.userData.baseXZ;
-        ocean.userData.lastNormalFrame = 0;
         ocean.userData.grid = geometry.userData.grid;
         ocean.userData.segments = geometry.parameters.widthSegments;
         ocean.userData.visualAmplitude = waterVisualAmplitude();
@@ -20758,17 +20696,6 @@ remaster_handoff: REMASTER_HANDOFF.md
         }
         position.needsUpdate = true;
         // 수면 셰이더는 메시 법선을 쓰지 않으므로 computeVertexNormals()를 부르지 않는다(검사 O-17).
-        // 옛 경로(?legacy=1)의 퐁 재질만 법선이 필요하다.
-        if (
-          ocean.material &&
-          ocean.material.isMeshPhongMaterial &&
-          frame - ocean.userData.lastNormalFrame >=
-            CONFIG.qualityProfiles[SAVE.settings.quality].normalEvery
-        ) {
-          ocean.geometry.computeVertexNormals();
-          ocean.geometry.attributes.normal.needsUpdate = true;
-          ocean.userData.lastNormalFrame = frame;
-        }
       }
       function sampleOceanMeshHeight(ocean, worldX, worldZ) {
         const grid = ocean.userData.grid,
@@ -21494,7 +21421,6 @@ remaster_handoff: REMASTER_HANDOFF.md
       }
       function createWorldSkeleton(scene) {
         const regionGroups = [],
-          fogWalls = [],
           colliders = [];
         const islandGeometry = createIrregularIslandGeometry(17, 20);
         const islandShelfGeometry = createIrregularIslandGeometry(29, 20);
@@ -21786,28 +21712,6 @@ remaster_handoff: REMASTER_HANDOFF.md
               tag = landmarkFallbackTag(region.id, kind);
             if (tag) child.userData.landmarkFallback = tag;
           });
-          const wallMaterial = new THREE.MeshBasicMaterial({
-            color: baseColor,
-            transparent: true,
-            opacity: 0.09,
-            depthWrite: false,
-            side: THREE.DoubleSide,
-          });
-          const wall = new THREE.Mesh(
-            new THREE.CylinderGeometry(
-              region.radius,
-              region.radius,
-              30,
-              32,
-              1,
-              true,
-            ),
-            wallMaterial,
-          );
-          wall.position.set(region.center[0], 15, region.center[1]);
-          wall.userData.regionId = region.id;
-          scene.add(wall);
-          fogWalls.push(wall);
         });
 
         const lighthouseTower = new THREE.InstancedMesh(
@@ -21869,13 +21773,11 @@ remaster_handoff: REMASTER_HANDOFF.md
           shadowGate,
           reflectionGate,
           regionGroups,
-          fogWalls,
           colliders,
           lighthouseTower,
           lighthouseRoof,
           lighthouseBeam,
           culledRegions: 0,
-          fogTarget: 0.003,
         };
         syncLighthouseVisuals(skeleton);
         return skeleton;
@@ -21943,98 +21845,16 @@ remaster_handoff: REMASTER_HANDOFF.md
           world.shadowGate.update(boatX, boatZ);
         if (world.reflectionGate && world.atmosphereActive)
           world.reflectionGate.update(boatX, boatZ);
-        world.fogWalls.forEach((wall) => {
-          if (world.atmosphereActive) {
-            wall.visible = false;
-            return;
-          }
-          const region = CONFIG.world.regions[wall.userData.regionId],
-            visited = SAVE.progress.regionsVisited.includes(region.id);
-          const lit =
-            region.id < 8 && SAVE.progress.lighthousesLit.includes(region.id);
-          const locked = region.id === 8 && !outerLighthousesUnlocked();
-          wall.visible =
-            distanceToRegion(region, boatX, boatZ) < 370 ||
-            region.id === currentRegion;
-          const targetOpacity = locked
-            ? 0.2
-            : lit
-              ? 0.025
-              : visited
-                ? 0.075
-                : 0.13;
-          wall.material.opacity +=
-            (targetOpacity - wall.material.opacity) * Math.min(1, dt * 2.4);
-        });
-        if (world.atmosphereActive) {
-          // 안개 밀도는 AtmosphereDirector가 쓴다(V4). 여기서는 해역 가시성만 계산한다.
-          world.culledRegions = culled;
-          return culled;
-        }
-        const regionLit =
-          currentRegion < 8 &&
-          SAVE.progress.lighthousesLit.includes(currentRegion);
-        const baseFog =
-          currentRegion === 8 && !outerLighthousesUnlocked()
-            ? 0.006
-            : regionLit
-              ? 0.00215
-              : 0.00345;
-        const nightFactor = lerp(1.24, 0.9, world.daylight ?? 1),
-          lighthouseRelief = simTime < (world.fogReliefUntil || 0) ? 0.5 : 1;
-        world.fogTarget = baseFog * nightFactor * lighthouseRelief;
-        world.scene.fog.density +=
-          (world.fogTarget - world.scene.fog.density) * Math.min(1, dt * 1.4);
+        // 안개 밀도·색은 대기 감독이 쓴다(V4). 여기서는 해역 가시성만 계산한다.
+        // 옛 색 원통 안개벽과 옛 안개 밀도 계산은 RM9에서 지웠다.
         world.culledRegions = culled;
         return culled;
-      }
-      function updateDayNight(world, simTime, dt = 1) {
-        const phase =
-          world.qaDayPhase !== null
-            ? world.qaDayPhase
-            : SAVE.settings.fixedDay
-              ? 0.25
-              : mod(simTime / CONFIG.dayCycleSeconds + 0.22, 1);
-        const sunWave = Math.sin(phase * Math.PI * 2),
-          daylight = clamp((sunWave + 0.28) / 1.18, 0, 1),
-          twilight = 1 - Math.min(1, Math.abs(sunWave) * 2.8);
-        world.dayPhase = phase;
-        world.daylight = daylight;
-        const skyColor = world.palette.night
-          .clone()
-          .lerp(world.palette.day, daylight)
-          .lerp(world.palette.dusk, twilight * 0.28);
-        world.sky.material.color.lerp(skyColor, Math.min(1, dt * 2.2));
-        world.scene.background.lerp(skyColor, Math.min(1, dt * 2.2));
-        const fogColor = world.palette.nightFog
-          .clone()
-          .lerp(world.palette.dayFog, daylight)
-          .lerp(world.palette.dusk, twilight * 0.18);
-        world.scene.fog.color.lerp(fogColor, Math.min(1, dt * 2));
-        const angle = phase * Math.PI * 2 - Math.PI / 2,
-          radius = 330;
-        world.sun.position.set(
-          Math.cos(angle) * radius,
-          Math.sin(angle) * 190,
-          Math.sin(angle * 0.73) * radius,
-        );
-        world.moon.position.copy(world.sun.position).multiplyScalar(-1);
-        world.sun.visible = daylight > 0.04;
-        world.moon.visible = daylight < 0.76;
-        world.sun.material.opacity = daylight;
-        world.moon.material.opacity = clamp(1 - daylight + 0.18, 0, 1);
-        world.sunlight.intensity = lerp(0.08, 1.18, daylight);
-        world.hemisphere.intensity = lerp(0.25, 1.15, daylight);
-        world.cloudMaterial.opacity = lerp(0.2, 0.78, daylight);
-        world.stars.visible = daylight < 0.72;
-        world.stars.material.opacity = Math.pow(1 - daylight, 1.7) * 0.92;
-        world.stars.rotation.y = phase * Math.PI * 2 * 0.18;
       }
       function createProceduralScene() {
         const scene = new THREE.Scene();
         scene.background = new THREE.Color(0x82cbd7);
         scene.fog = new THREE.FogExp2(0x8fcbd0, 0.0029);
-        const environment = createToySky(scene);
+        const environment = createSkyDome(scene);
         const hemisphere = new THREE.HemisphereLight(0xd9ffff, 0x16435b, 1.15);
         scene.add(hemisphere);
         const sunlight = new THREE.DirectionalLight(0xfff2c7, 1.15);
@@ -22080,15 +21900,7 @@ remaster_handoff: REMASTER_HANDOFF.md
           daylight: 1,
           qaDayPhase: null,
           fogReliefUntil: 0,
-          palette: {
-            day: new THREE.Color(0x82cbd7),
-            dusk: new THREE.Color(0xe09083),
-            night: new THREE.Color(0x06182e),
-            dayFog: new THREE.Color(0x8fcbd0),
-            nightFog: new THREE.Color(0x102a48),
-          },
         };
-        updateDayNight(world, 0, 1);
         return world;
       }
 
@@ -22838,13 +22650,10 @@ remaster_handoff: REMASTER_HANDOFF.md
         installSky() {
           const world = this.world;
           this.skyMaterial = createSkyMaterial(CONFIG.qualityProfiles[SAVE.settings.quality].skyOctaves, SAVE.settings.quality === "low");
+          const previous = world.sky.material;
           world.sky.material = this.skyMaterial;
           world.sky.renderOrder = -10;
-          // 옛 해·달·구름·별은 RM9에서 제거한다. 그때까지 숨긴다.
-          world.sun.visible = false;
-          world.moon.visible = false;
-          world.clouds.visible = false;
-          world.stars.visible = false;
+          if (previous && previous.dispose) previous.dispose(); // 자리표시 재질(createSkyDome)을 버린다. 옛 해·달·구름·별 메시는 RM9에서 지웠다
         }
         // 수면 셰이더 재질(하늘 유니폼 공유)과 원경 수면 판을 설치한다. 옛 퐁 재질은 버린다.
         installWater() {
@@ -23125,13 +22934,6 @@ remaster_handoff: REMASTER_HANDOFF.md
             wu.uGlowCol.value.copy(this.graded(colors.glow, sat));
             wu.uBoat.value.set(this.boatX, this.boatZ, 0);
           }
-          // 수면 셰이더가 없는 경로(옛 퐁 재질)의 임시 색: 무드의 물빛에 맞춘다
-          const ocean = world.ocean.material;
-          if (ocean && ocean.isMeshPhongMaterial) {
-            ocean.color.copy(this.graded(colors.deep, sat));
-            ocean.emissive.copy(this.graded(colors.deep, sat)).multiplyScalar(0.55);
-            ocean.specular.copy(this.graded(colors.sun, sat)).multiplyScalar(0.55);
-          }
         }
         // 주광을 배 둘레에 놓는다. 낮은 해에서도 그림자가 너무 길어지지 않게 고도를 제한한다.
         placeSun(x, z) {
@@ -23249,7 +23051,6 @@ remaster_handoff: REMASTER_HANDOFF.md
           fragmentShader: `varying vec3 vDir; ${GLSL_NOISE} ${GLSL_SKY}
             void main(){ vec3 c = skyColor(normalize(vDir)); gl_FragColor = linearToOutputTexel(vec4(c, 1.0)); }`,
         });
-        material.color = new THREE.Color(); // 옛 낮밤 경로(updateDayNight)가 만지는 더미. RM9에서 호출부와 함께 지운다.
         return material;
       }
 
@@ -27464,9 +27265,8 @@ remaster_handoff: REMASTER_HANDOFF.md
           this.host.replaceChildren(this.renderer.domElement);
           this.camera = new THREE.PerspectiveCamera(53, 1, 0.1, 1100);
           this.world = createProceduralScene();
-          this.atmosphere = this.renderPath.legacy
-            ? null
-            : new AtmosphereDirector(this.world, this);
+          // 하늘과 수면은 대기 감독이 늘 만든다(옛 하늘·바다는 RM9에서 지웠다). ?legacy=1은 파이프라인 등 연출만 끈다.
+          this.atmosphere = new AtmosphereDirector(this.world, this);
           this.cameraDirector = this.renderPath.legacy
             ? null
             : new CameraDirector(this);
@@ -30557,8 +30357,7 @@ remaster_handoff: REMASTER_HANDOFF.md
           }
           if (this.world.ocean.userData.segments !== profile.oceanSegments)
             installOceanGeometry(this.world.ocean, profile.oceanSegments);
-          this.world.stars.geometry.setDrawRange(0, profile.stars);
-          this.atmosphere?.setQuality(profile);
+          this.atmosphere.setQuality(profile);
           this.renderer.shadowMap.enabled = profile.shadow;
           this.world.sunlight.castShadow = profile.shadow;
           if (this.world.sunlight.shadow.map) {
@@ -30627,9 +30426,7 @@ remaster_handoff: REMASTER_HANDOFF.md
             updateSettings({ fixedDay: Boolean(enabled) });
           else SAVE.settings.fixedDay = Boolean(enabled);
           this.world.qaDayPhase = null;
-          if (this.atmosphere)
-            this.atmosphere.refresh(this.simTime, this.motion.x, this.motion.z);
-          else updateDayNight(this.world, this.simTime, 1);
+          this.atmosphere.refresh(this.simTime, this.motion.x, this.motion.z);
           this.updateVisualSettingsUi();
           return this.visualStats();
         }
@@ -30656,7 +30453,6 @@ remaster_handoff: REMASTER_HANDOFF.md
             audioVisualSync: { ...this.audioVisualSync },
             oceanSegments: this.world.ocean.userData.segments,
             oceanAmplitude: this.world.ocean.userData.visualAmplitude,
-            stars: this.world.stars.geometry.drawRange.count,
             dpr: this.renderer.getPixelRatio(),
             shadows: this.renderer.shadowMap.enabled,
           };
@@ -32421,9 +32217,21 @@ remaster_handoff: REMASTER_HANDOFF.md
             .getElementById("compass")
             .setAttribute("aria-expanded", String(this.ux.mapOpen));
           if (this.ux.mapOpen) {
+            this.endRegionCard(); // 지도를 열면 표제 카드는 먼저 걷는다
             this.drawMinimap();
             if (this.quietHud) this.quietHud.wake("map");
           }
+        }
+        // 표제 카드를 바로 끝낸다(시간표와 무관하게). 카드가 없으면 아무것도 하지 않는다.
+        endRegionCard() {
+          const u = this.ux,
+            banner = document.getElementById("region-banner");
+          if (!u || u.cardStart === undefined || u.cardStart === null) return;
+          u.cardStart = null;
+          u.cardPhase = "done";
+          banner.dataset.phase = "done";
+          banner.hidden = true;
+          document.documentElement.dataset.regionCard = "off";
         }
         // RM7: 조용한 HUD 입력 연결(7.3절). 조타(키보드 조타·조이스틱·카메라 끌기)는 깨우지 않는다.
         initializeQuietHud() {
@@ -32663,6 +32471,11 @@ remaster_handoff: REMASTER_HANDOFF.md
         }
         // RM4: 해역 표제 카드(8.5절). 시간표는 regionCardAt()이 정하고 여기서는 data-phase만 바꾼다.
         showRegionCard(region, now, firstVisit) {
+          // 지도가 열려 있으면 카드를 띄우지 않는다(지도는 플레이어의 도구, 카드는 장식이다). 떠 있던 카드가 있으면 걷는다.
+          if (this.ux.mapOpen) {
+            this.endRegionCard();
+            return;
+          }
           const u = this.ux,
             banner = document.getElementById("region-banner"),
             copy = regionCardCopy(region.name, REGION_META[region.id][1], firstVisit);
@@ -33511,27 +33324,18 @@ remaster_handoff: REMASTER_HANDOFF.md
               SAVE.settings.quality +
               " · wave " +
               visual.oceanSegments +
-              " · stars " +
-              visual.stars +
               " · shadow " +
               (visual.shadows ? "ON" : "OFF") +
               " · reduced " +
               (SAVE.settings.reducedMotion ? "ON" : "OFF"),
-            this.atmosphere
-              ? "mood " +
-                this.atmosphere.mood +
-                " · k " +
-                this.atmosphere.k.toFixed(2) +
-                " · light " +
-                this.world.daylight.toFixed(2) +
-                " · hold " +
-                (SAVE.settings.fixedDay ? "ON" : "OFF")
-              : "day " +
-                (this.world.dayPhase * 720).toFixed(1) +
-                "s/720s · light " +
-                this.world.daylight.toFixed(2) +
-                " · fixed " +
-                (SAVE.settings.fixedDay ? "DAY" : "CYCLE"),
+            "mood " +
+              this.atmosphere.mood +
+              " · k " +
+              this.atmosphere.k.toFixed(2) +
+              " · light " +
+              this.world.daylight.toFixed(2) +
+              " · hold " +
+              (SAVE.settings.fixedDay ? "ON" : "OFF"),
             "region " +
               this.currentRegion +
               " " +
@@ -33583,9 +33387,7 @@ remaster_handoff: REMASTER_HANDOFF.md
           this.simTime += gameDt;
           this.frame++;
           this.updatePhase6Runtime(now);
-          if (this.atmosphere)
-            this.atmosphere.update(dt, this.simTime, this.motion.x, this.motion.z);
-          else updateDayNight(this.world, this.simTime, dt);
+          this.atmosphere.update(dt, this.simTime, this.motion.x, this.motion.z);
           this.updatePhysics(gameDt);
           this.audio.updateFromGame({
             region: this.currentRegion,
@@ -33858,21 +33660,8 @@ remaster_handoff: REMASTER_HANDOFF.md
               },
               lowerOnce: () => (PHASE_ONE_GAME.pipeline ? PHASE_ONE_GAME.pipeline.lowerAuto() : false),
               resetAuto: () => (PHASE_ONE_GAME.pipeline ? PHASE_ONE_GAME.pipeline.resetAuto(true) : null),
-              // WEBGL_lose_context 확장으로 실제 컨텍스트 손실·복구를 일으킨다(없으면 null)
-              loseContext: () => {
-                const gl = PHASE_ONE_GAME.renderer.getContext(),
-                  ext = gl.getExtension("WEBGL_lose_context");
-                if (!ext) return null;
-                ext.loseContext();
-                return true;
-              },
-              restoreContext: () => {
-                const gl = PHASE_ONE_GAME.renderer.getContext(),
-                  ext = gl.getExtension("WEBGL_lose_context");
-                if (!ext) return null;
-                ext.restoreContext();
-                return true;
-              },
+              // 실제 컨텍스트 손실·복구는 phase8Qa.loseContext/restoreContext가 한다(접속 때 확장 핸들을 쥐어 둔다).
+              // 여기 있던 같은 이름의 함수는 손실된 컨텍스트에서 getExtension()이 null을 돌려줘 복구를 일으키지 못해 RM9에서 지웠다.
             });
             window.__OCEAN_API__.hudQa = Object.freeze({
               snapshot: () => {
@@ -33999,14 +33788,11 @@ remaster_handoff: REMASTER_HANDOFF.md
                   phase === null
                     ? null
                     : clamp(Number(phase) || 0, 0, 0.999999);
-                if (PHASE_ONE_GAME.atmosphere)
-                  PHASE_ONE_GAME.atmosphere.refresh(
-                    PHASE_ONE_GAME.simTime,
-                    PHASE_ONE_GAME.motion.x,
-                    PHASE_ONE_GAME.motion.z,
-                  );
-                else
-                  updateDayNight(PHASE_ONE_GAME.world, PHASE_ONE_GAME.simTime, 1);
+                PHASE_ONE_GAME.atmosphere.refresh(
+                  PHASE_ONE_GAME.simTime,
+                  PHASE_ONE_GAME.motion.x,
+                  PHASE_ONE_GAME.motion.z,
+                );
                 return PHASE_ONE_GAME.visualStats();
               },
               setQuality: (name) =>

@@ -9,7 +9,11 @@
  *     랜드마크 부품·시련 부표 표지(스프라이트)는 "처음 화면에 그려질 때" 렌더러에 한 번 올라가는 유한한 자원이다. 배가 원을 도는 동안 몇십 분 뒤에야
  *     처음 보이면 그때 개수가 늘어 누수처럼 보인다(처음 돌린 30분에서 지오메트리 +7·텍스처 +1·프로그램 +1이 그렇게 잡혔고, 장면 쪽 개수는 늘지 않았다).
  *     투어가 올린 양은 결과 JSON(tour)에 그대로 적고, 그 뒤 30분의 증가가 0이어야 통과한다. 누수라면 투어 뒤에도 계속 는다.
- *   활동에 따라 오르내리는 개수(오디오 소스·타임아웃·UI 타이머·카운트업)는 끝 표본과 워밍업 표본의 차이가 우연에 좌우되므로 바닥값(구간 최솟값)이 오르는지로 본다.
+ *   활동에 따라 오르내리는 개수(오디오 소스·인터벌·UI 타이머·카운트업)는 끝 표본과 워밍업 표본의 차이가 우연에 좌우되므로 바닥값(구간 최솟값)이 오르는지로 본다.
+ *   오디오 타임아웃은 바닥값으로 보지 않는다(RM9에서 바꿈). 대기 중 개수가 음악 문구에 따라 1~23을 오가서(문구 사이엔 1, 문구 중엔 4~23) 바닥값은 "그 구간에 쉬는 순간이 있었는가"를 잰다.
+ *     RM9의 첫 30분은 앞 구간 표본 9개 중 7개가 쉬는 순간(1)이고 뒤 구간은 한 번도 쉬지 않아(최솟값 4) 바닥이 1→4로 올라 실패했다. 그 결과는 rm9-endurance-run1-floors.json 에 그대로 있다.
+ *     누수를 직접 보려고 **오래 남은 타임아웃**을 센다: 소유 타임아웃은 예약 시각에 실행되며 스스로 사라지므로, 예약 시각을 15초 넘기고도 남아 있다면(설치 전부터 있던 것은 60초) 실행되지 못한 것이다.
+ *     모든 표본에서 그 수가 0이어야 통과한다. 바닥값은 참고로 결과 JSON(floors)에 남는다.
  *
  * 사용: BASE_URL=http://127.0.0.1:8766 node rm8-endurance.cjs [--minutes 30] [--out output/playwright/rm8-endurance.json] [--query "?qa=1"]
  *   --minutes 2 로 짧게 점검할 수 있다. 결과 JSON과 요약을 쓰고, 증가가 있으면 종료 코드 1.
@@ -36,8 +40,37 @@ function tourSpot(region, dist) {
 }
 const WARMUP_MS = Math.min(180000, MINUTES * 60000 * 0.15); // 처음 15%(최대 3분)는 워밍업: 지연 생성되는 자원을 센 뒤부터 증가를 본다
 
+// 오디오 타임아웃 감사(QA 전용): 오디오 엔진의 ownTimeout을 감싸 만든 시각을 적어 두고, 예약 시각을 한참 넘겨 남아 있는 것을 센다.
+const AUDIT_INSTALL = () => {
+  const g = window.__OCEAN_GAME__, audio = g.audio, a = { created: new Map(), pre: new Map() };
+  const t0 = performance.now();
+  for (const [id] of audio.ownedTimeouts) a.pre.set(id, t0);
+  const orig = audio.ownTimeout.bind(audio);
+  audio.ownTimeout = (callback, delay, label) => {
+    const id = orig(callback, delay, label);
+    a.created.set(id, { at: performance.now(), delay: Math.max(0, delay) });
+    return id;
+  };
+  a.measure = () => {
+    const now = performance.now();
+    for (const id of [...a.created.keys()]) if (!audio.ownedTimeouts.has(id)) a.created.delete(id);
+    for (const id of [...a.pre.keys()]) if (!audio.ownedTimeouts.has(id)) a.pre.delete(id);
+    let overdue = 0, maxLate = 0, pending = 0;
+    for (const [id] of audio.ownedTimeouts) {
+      pending++;
+      const c = a.created.get(id), p = a.pre.get(id);
+      const late = c ? now - c.at - c.delay : p !== undefined ? now - p : 0; // 예약 시각을 넘긴 시간(설치 전부터 있던 것은 설치 뒤 경과)
+      maxLate = Math.max(maxLate, late);
+      if (late > (c ? 15000 : 60000)) overdue++;
+    }
+    return { overdue, maxLate: Math.round(maxLate), pending };
+  };
+  window.__RM9_AUDIT__ = a;
+};
+
 const SNAP = () => {
   const g = window.__OCEAN_GAME__, s = g.stabilitySnapshot('sample'), p = g.pipeline ? g.pipeline.snapshot() : null;
+  const au = window.__RM9_AUDIT__ ? window.__RM9_AUDIT__.measure() : null;
   return {
     at: Date.now(), mode: s.mode, frame: s.frame,
     objects: s.resources.objects, geometries: s.resources.rendererGeometries, textures: s.resources.rendererTextures, programs: s.resources.rendererPrograms,
@@ -46,6 +79,7 @@ const SNAP = () => {
     pipelineFailed: p ? p.failed : null, plan: p && p.plan ? p.plan.fx + '/' + p.plan.reflect + '/' + p.plan.post : null,
     listeners: s.app.listeners, domNodes: s.app.domNodes, canvases: s.app.canvases, uiTimers: s.app.uiTimers, activeTimers: s.app.activeTimers, countUps: s.app.countUps,
     audioSources: s.audio.activeSources, audioTimeouts: s.audio.timeouts, audioIntervals: s.audio.intervals,
+    audioOverdue: au ? au.overdue : null, audioMaxLateMs: au ? au.maxLate : null,
     particles: s.effects.particles, heap: s.memory.usedJSHeapSize,
     fpsAvg: s.performance && s.performance.averageFps, uiAvgMs: g.ux && g.ux.uiSamples ? g.ux.uiTotal / g.ux.uiSamples : null,
   };
@@ -99,6 +133,7 @@ const SNAP = () => {
       window.addEventListener('error', (e) => window.__RM8__.errors.push(e.message));
       window.addEventListener('unhandledrejection', (e) => window.__RM8__.errors.push(String(e.reason)));
     });
+    await page.evaluate(AUDIT_INSTALL);
     samples.push({ label: 'start', ...(await page.evaluate(SNAP)) });
     let nextSample = Date.now() + SAMPLE_MS, rotations = 0;
     const sizes = [{ width: 844, height: 390 }, { width: 1440, height: 900 }];
@@ -140,19 +175,23 @@ const SNAP = () => {
     const third = Math.max(1, Math.floor(afterWarm.length / 3)), early = afterWarm.slice(0, third), late = afterWarm.slice(-third);
     const floorOf = (list, k) => Math.min(...list.map((sm) => sm[k] ?? 0));
     const growth = {}, growthEndVsWarm = {}, floors = {};
+    const overdueMax = Math.max(0, ...samples.map((sm) => sm.audioOverdue ?? 0)), maxLateMs = Math.max(0, ...samples.map((sm) => sm.audioMaxLateMs ?? 0));
     for (const k of keys) {
       growthEndVsWarm[k] = (last[k] ?? 0) - (warm[k] ?? 0);
       if (ACTIVITY.includes(k)) { floors[k] = { early: floorOf(early, k), late: floorOf(late, k), samplesPerThird: third }; growth[k] = floors[k].late - floors[k].early; }
       else growth[k] = growthEndVsWarm[k];
+      if (k === 'audioTimeouts') { growth.audioTimeoutsOverdue = overdueMax; delete growth[k]; } // 바닥값 대신 오래 남은 타임아웃 수(위 머리말)
     }
+    const legacyFloorBad = Object.entries(floors).filter(([, v]) => v.late - v.early > 0).map(([k, v]) => `${k} +${v.late - v.early}`);
     const soft = { objects: last.objects - warm.objects, domNodes: last.domNodes - warm.domNodes, heapMB: warm.heap && last.heap ? Math.round((last.heap - warm.heap) / 1048576 * 10) / 10 : null, targetsCreatedMinusDisposed: last.targetsCreated - last.targetsDisposed };
     const bad = Object.entries(growth).filter(([, v]) => v > 0).map(([k, v]) => `${k} +${v}`);
     if (soft.domNodes > 40) bad.push(`domNodes +${soft.domNodes}`);
-    const result = { minutes: MINUTES, elapsedMs: Date.now() - t0, cycles, warmupAt: warm.label, tour, growth, growthEndVsWarm, floors, soft, bad, errors: errors.concat(pageErrors), delta, samples };
+    const result = { minutes: MINUTES, elapsedMs: Date.now() - t0, criterion: 'overdue-timeouts', cycles, warmupAt: warm.label, tour, growth, growthEndVsWarm, floors, legacyFloorBad, audioMaxLateMs: maxLateMs, soft, bad, errors: errors.concat(pageErrors), delta, samples };
     fs.mkdirSync(path.dirname(path.resolve(OUT)), { recursive: true });
     fs.writeFileSync(OUT, JSON.stringify(result, null, 1));
     console.log('주기', JSON.stringify(cycles), '경과(분)', (result.elapsedMs / 60000).toFixed(1));
     console.log('증가(워밍업 뒤 → 끝; 오디오·타이머류는 바닥값 앞 구간 → 뒤 구간)', JSON.stringify(growth), '참고', JSON.stringify(soft));
+    console.log('오디오 타임아웃: 오래 남은 것 최대', overdueMax, '개 · 예약 시각을 넘긴 시간 최대', maxLateMs, 'ms · 구간 바닥값 방식(참고)의 판정:', legacyFloorBad.length ? legacyFloorBad.join(', ') : '증가 없음');
     console.log('끝-워밍업 차(참고)', JSON.stringify(growthEndVsWarm), '바닥값', JSON.stringify(floors));
     console.log('오류', JSON.stringify(result.errors.slice(0, 4)));
     const ok = !bad.length && !result.errors.length && cycles.codex >= Math.min(50, MINUTES >= 10 ? 50 : 1) && last.pipelineFailed !== true;
