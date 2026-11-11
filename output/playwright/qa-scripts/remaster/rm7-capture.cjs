@@ -42,6 +42,8 @@ const jsonOut = arg('json', path.join(outDir, tag + '-measure.json'));
 // 이어하기: 장면 하나가 끝날 때마다 측정 줄을 <tag>-rows.jsonl 에 덧붙인다. 작업 환경이 끊겨도 --resume 1 로 이미 끝낸 장면을 건너뛰고 잇는다.
 // (빌드가 바뀌었으면 --resume 없이 새로 돌린다: 그때는 이 파일을 비우고 시작한다.)
 const resume = arg('resume', '0') === '1';
+const stopAfter = arg('stop-after', ''); // 점검용: 이 장면을 잰 뒤 바로 끝낸다(--states 와 함께). 행렬 전체에는 쓰지 않는다.
+class StopAfter extends Error {}
 const measureOnly = new Set(arg('measure-only', '').split(',').filter(Boolean)); // 이 장면들은 그림을 다시 찍지 않고 측정만 한다(이미 찍은 그림을 그대로 둘 때)
 const rowsFile = path.resolve(outDir, tag + '-rows.jsonl');
 const resumed = new Map(); // "종이|장면" -> 측정 줄 배열
@@ -196,6 +198,7 @@ async function runPaper(paper) {
       fs.appendFileSync(rowsFile, JSON.stringify({ build: buildHash, paper, state, rows: out.slice(firstRow) }) + '\n');
       log('done', state, `(${rows.length}장, 위반 ${badRows.length})`);
       badRows.slice(0, 4).forEach((r) => log('   ', r.file, keyOf(r).join(' | ')));
+      if (state === stopAfter) throw new StopAfter();
     };
 
     // 항해 두 가지
@@ -306,6 +309,8 @@ async function runPaper(paper) {
     }
     await page.evaluate(() => window.__OCEAN_GAME__.returnToTitle());
     await capture('title');
+  } catch (e) {
+    if (!(e instanceof StopAfter)) throw e;
   } finally {
     await browser.close();
   }

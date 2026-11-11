@@ -28,7 +28,7 @@ async function startAndOpenSettings(page) {
   await page.waitForSelector('#start-sailing:not([disabled])', { timeout: 30000 });
   await page.click('#start-sailing');
   await page.waitForTimeout(1500);
-  await page.keyboard.press('Escape');
+  await page.click('#menu-button'); // 키보드 Escape 는 단추에 초점이 있으면 무시된다(게임의 isInteractiveKeyboardTarget). 화면의 메뉴 단추를 누른다.
   await page.waitForTimeout(500);
   await page.click('[data-tab="settings"]');
   await page.waitForTimeout(300);
@@ -75,7 +75,7 @@ async function startAndOpenSettings(page) {
     const hudOff = await page.evaluate(() => document.documentElement.dataset.hud);
     rows.push({ step: 'quiet off → hud after 9s', hud: hudOff });
     check(hudOff === 'awake', '조용한 화면을 끄면 9초 뒤에도 안내가 떠 있다 (data-hud=' + hudOff + ')');
-    await page.keyboard.press('Escape');
+    await page.click('#menu-button');
     await page.waitForTimeout(400);
     await page.click('[data-tab="settings"]');
     await page.click('#hud-quiet-toggle');
@@ -89,7 +89,7 @@ async function startAndOpenSettings(page) {
     check(hudOn === 'quiet', '조용한 화면을 켜면 9초 뒤 안내가 가라앉는다 (data-hud=' + hudOn + ')');
 
     // 감상 카메라: 끄기 → 저장 → 새로고침 → 꺼짐 표시
-    await page.keyboard.press('Escape');
+    await page.click('#menu-button');
     await page.waitForTimeout(400);
     await page.click('[data-tab="settings"]');
     await page.click('#scenic-cam-toggle');
