@@ -1,0 +1,61 @@
+{
+ "problems": [],
+ "rows": [
+  {
+   "step": "raw index.html",
+   "absoluteStrings": 1,
+   "line": "\"https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js\";"
+  },
+  {
+   "step": "(일반)",
+   "requests": 18,
+   "origins": {
+    "http://127.0.0.1:8768": 17,
+    "https://cdnjs.cloudflare.com": 1
+   },
+   "external": [
+    "https://cdnjs.cloudflare.com"
+   ],
+   "domAbsoluteStrings": 3,
+   "domKinds": {
+    "cdn": 2,
+    "sameOrigin": 1,
+    "other": 0
+   },
+   "errors": 0
+  },
+  {
+   "step": "?qa=1",
+   "requests": 18,
+   "origins": {
+    "http://127.0.0.1:8768": 17,
+    "https://cdnjs.cloudflare.com": 1
+   },
+   "external": [
+    "https://cdnjs.cloudflare.com"
+   ],
+   "domAbsoluteStrings": 3,
+   "domKinds": {
+    "cdn": 2,
+    "sameOrigin": 1,
+    "other": 0
+   },
+   "errors": 0
+  },
+  {
+   "step": "?test=1",
+   "requests": 6,
+   "origins": {
+    "http://127.0.0.1:8768": 6
+   },
+   "external": [],
+   "domAbsoluteStrings": 1,
+   "domKinds": {
+    "cdn": 1,
+    "sameOrigin": 0,
+    "other": 0
+   },
+   "errors": 0
+  }
+ ]
+}

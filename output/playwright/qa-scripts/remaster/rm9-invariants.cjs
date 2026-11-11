@@ -10,7 +10,7 @@
  *      - 일반 주소(저장이 실제로 일어나는 경로)에서 설정을 하나 바꿔 저장한 뒤에도 진행이 보존되고 version 이 1이다
  *
  * 사용: BASELINE_URL=http://127.0.0.1:8769 BASE_URL=http://127.0.0.1:8767 node rm9-invariants.cjs
- *        [--baseline-html /home/claude/remaster/baseline/index.html] [--game-html /home/claude/remaster/game/index.html] [--out output/playwright/rm9-invariants.json]
+ *        [--baseline-html /home/claude/remaster/baseline/index.html] [--game-html /home/claude/remaster/game/index.html] [--out output/playwright/rm9-invariants.json] [--viewport 640x400]
  */
 const fs = require('fs');
 const path = require('path');
@@ -23,6 +23,8 @@ const GAME_HTML = arg('game-html', '/home/claude/remaster/game/index.html');
 const BASELINE_URL = process.env.BASELINE_URL || 'http://127.0.0.1:8769';
 const GAME_URL = process.env.BASE_URL || 'http://127.0.0.1:8765';
 const SAVE_KEY = 'lesson_designer_ocean_v1';
+// 창 크기(기본 640×400). RM7 빌드는 이 작은 창에서 시작 단추가 켜지지 않아(RM8 알아 둘 것 ②) 대조 실행은 --viewport 1440x900 으로 돈다.
+const VP = arg('viewport', '640x400').split('x').map(Number);
 
 const problems = [], report = { A: {}, B: {}, C: {} };
 const check = (cond, message) => { if (!cond) problems.push(message); return cond; };
@@ -93,7 +95,7 @@ const READ = () => {
   };
 };
 async function readRuntime(base, label) {
-  const session = await open({ query: '?qa=1', width: 640, height: 400, base });
+  const session = await open({ query: '?qa=1', width: VP[0], height: VP[1], base });
   try {
     await session.page.waitForSelector('#start-sailing:not([disabled])', { timeout: 40000 });
     await session.page.click('#start-sailing');
@@ -128,7 +130,7 @@ function compareRuntime(base, game) {
 
 // ---- C. 리마스터 이전 세이브 ----
 async function makeOldSaves() {
-  const session = await open({ query: '?qa=1', width: 640, height: 400, base: BASELINE_URL });
+  const session = await open({ query: '?qa=1', width: VP[0], height: VP[1], base: BASELINE_URL });
   try {
     await session.page.waitForSelector('#start-sailing:not([disabled])', { timeout: 40000 });
     await session.page.click('#start-sailing');
@@ -152,7 +154,7 @@ async function makeOldSaves() {
 const NEW_SETTINGS = ['fx', 'hudQuiet', 'scenicCam'];
 async function openWithSave(save, query) {
   const browser = await chromium.launch({ args: GL_ARGS });
-  const context = await browser.newContext({ viewport: { width: 640, height: 400 } });
+  const context = await browser.newContext({ viewport: { width: VP[0], height: VP[1] } });
   const page = await context.newPage();
   const errors = [];
   page.on('pageerror', (e) => errors.push('pageerror: ' + String(e)));
@@ -174,10 +176,11 @@ async function checkOldSaves() {
     try {
       await page.waitForSelector('#start-sailing:not([disabled])', { timeout: 40000 });
       await page.waitForTimeout(500);
+      // 게임은 접속 직후에도 배 위치·방문 해역을 갱신한다(원본 V9도 똑같다: 0.5초 사이에 z가 6쯤 움직이고 regionsVisited에 이웃 해역이 붙는다).
+      // 그래서 지금 값(snapshot)이 아니라 접속 때 저장소에서 읽어 정리한 값(QA 진입 스냅샷 = restoreSnapshot의 반환값)을 옛 세이브와 비교한다.
       const loaded = await page.evaluate(() => ({
-        save: JSON.parse(JSON.stringify(window.__OCEAN_API__.journeyQa.snapshot().save)),
+        save: JSON.parse(JSON.stringify(window.__OCEAN_API__.journeyQa.restoreSnapshot())),
         banner: !document.getElementById('storage-banner').hidden,
-        realUnchanged: window.__OCEAN_API__.journeyQa.snapshot().realStorageUnchanged,
       }));
       const s = loaded.save;
       const row = { label, version: s.version, banner: loaded.banner, newSettings: Object.fromEntries(NEW_SETTINGS.map((k) => [k, s.settings ? s.settings[k] : undefined])) };

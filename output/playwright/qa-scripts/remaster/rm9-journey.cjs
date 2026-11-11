@@ -69,8 +69,12 @@ async function solveTrial(page) {
         const saved = await page.evaluate((r) => { const s = window.__OCEAN_API__.journeyQa.snapshot().save.progress; return { passed: s.trialsPassed.includes(r), lit: s.lighthousesLit.includes(r) }; }, region);
         check(saved.passed, `해역 ${region}: 시련 통과가 저장된다`);
         await page.locator('.result-actions button').first().click();
-        await page.waitForTimeout(300);
-        await page.locator('#lighthouse-skip').click();
+        // 점등 기록(lighthousesLit)이 먼저 남고 장면이 뜬다. 장면은 6초(동작 줄이기 2초) 뒤 저절로 끝난다. 헤드리스(2~4fps)에서는 Playwright의
+        // 클릭 대기("요소가 안정될 때까지")가 장면보다 길어질 수 있어 "#lighthouse-skip is not visible"로 시간 초과한다. 그래서 기록을 기다린 뒤
+        // DOM 단추를 직접 누르고 항해로 돌아올 때까지 기다린다(rm8-journeys.cjs 와 같은 방식).
+        await page.waitForFunction((r) => window.__OCEAN_API__.journeyQa.snapshot().save.progress.lighthousesLit.includes(r), region, { timeout: 30000 });
+        await page.evaluate(() => { if (window.__OCEAN_GAME__.stabilitySnapshot().mode === 'LIGHTHOUSE_EVENT') document.getElementById('lighthouse-skip').click(); });
+        await page.waitForFunction(() => window.__OCEAN_GAME__.stabilitySnapshot().mode === 'SAILING', null, { timeout: 30000 });
         await frames(page, 3);
         const lit = await page.evaluate((r) => { const g = window.__OCEAN_GAME__; return { lit: window.__OCEAN_API__.journeyQa.snapshot().save.progress.lighthousesLit.includes(r), mode: g.stabilitySnapshot().mode }; }, region);
         check(lit.lit, `해역 ${region}: 등대 점등이 저장된다`);

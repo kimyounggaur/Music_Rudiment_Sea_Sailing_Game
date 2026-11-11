@@ -8,7 +8,7 @@
  *
  *   손실·복구는 phase8Qa.loseContext/restoreContext(RM3 이전부터 있던 QA 함수)로 일으킨다. 이 함수들은 확장(WEBGL_lose_context)을 접속 때 한 번 받아 두고 쓴다.
  *   손실된 컨텍스트에서는 getExtension()이 null을 돌려주므로(현재 Chromium), 매번 getExtension을 부르는 fxQa.restoreContext는 복구를 일으키지 못한다
- *   (RM8 빌드의 fxQa.loseContext·restoreContext는 쓰지 않는다. RM9에서 지우거나 고친다).
+ *   (RM8 빌드에 있던 fxQa.loseContext·restoreContext는 이 때문에 동작하지 않았고 RM9 빌드에서 지웠다. 이 시험은 처음부터 phase8Qa 쪽만 쓴다.)
  *
  * 사용: BASE_URL=http://127.0.0.1:8767 node rm8-context.cjs [--out output/playwright/rm8-context.json] [--cycles 2]
  */
