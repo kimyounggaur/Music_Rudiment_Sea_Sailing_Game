@@ -1,0 +1,69 @@
+{
+ "reviewer": "작성자(Claude). 사람 사용자 시험이 아니다.",
+ "how": "접촉 시트 2장(3×3, 컷당 560px 너비)을 보고 판정했고, aurora·deep·dawn의 mid/off는 원본 크기(1280×720)로도 봤다. 판정 기준 셋: (1) 무드를 알아볼 수 있다(색 계열·하늘·수면) (2) 수면이 하늘을 비춰 면으로 읽힌다(평면 반사 없이도) (3) 깨진 화면(검은·흰 면, 이음매, 색 튐)이 없다.",
+ "sheets": [
+  "rm9/sheet-lowoff-low-auto.jpg",
+  "rm9/sheet-lowoff-mid-off.jpg"
+ ],
+ "sheet_order": [
+  "dawn",
+  "golden",
+  "storm",
+  "deep",
+  "mist",
+  "bluehour",
+  "lagoon",
+  "aurora",
+  "starmirror"
+ ],
+ "verdict": {
+  "dawn": {
+   "low/auto": "성립",
+   "mid/off": "성립"
+  },
+  "golden": {
+   "low/auto": "성립",
+   "mid/off": "성립"
+  },
+  "storm": {
+   "low/auto": "성립",
+   "mid/off": "성립"
+  },
+  "deep": {
+   "low/auto": "성립",
+   "mid/off": "성립"
+  },
+  "mist": {
+   "low/auto": "성립",
+   "mid/off": "성립"
+  },
+  "bluehour": {
+   "low/auto": "성립",
+   "mid/off": "성립"
+  },
+  "lagoon": {
+   "low/auto": "성립",
+   "mid/off": "성립"
+  },
+  "aurora": {
+   "low/auto": "성립",
+   "mid/off": "성립"
+  },
+  "starmirror": {
+   "low/auto": "성립",
+   "mid/off": "성립"
+  }
+ },
+ "notes": {
+  "dawn": "연보라 하늘과 분홍 지평선이 수면에 비친다. 음표 아치와 등대가 보인다. low/auto는 물결이 부드럽고 mid/off는 잔물결이 더 잘다.",
+  "golden": "주황 하늘과 해, 수면에 해의 반사 줄기.",
+  "storm": "회청색 하늘과 비 줄기, 수면에 흰 파문 고리.",
+  "deep": "짙은 남색 협곡 벽과 수면의 청록 파문 고리.",
+  "mist": "옅은 청록빛 하늘과 수면, 지평선이 안개에 녹는다.",
+  "bluehour": "분홍빛 지평선과 남보라 수면, 등대 무리.",
+  "lagoon": "분홍·노랑 하늘과 수면, 붉은 산호 섬.",
+  "aurora": "별이 있는 남색 밤하늘과 초록 오로라 띠. 띠의 모양·세기는 품질 단계(SKY_LITE 변형)와 장면 시각·시선에 따라 다르다(low/auto는 뚜렷, mid/off는 옅다). 효과 끔이 오로라를 끄는 것은 아니다(코드: 오로라 세기는 무드 값과 점등 계수에만 곱해진다).",
+  "starmirror": "보라 하늘과 별, 아치. 수면이 보랏빛으로 하늘을 비춘다."
+ },
+ "limits": "눈으로 본 판정은 한 사람(작성자)의 판단이고 소프트웨어 렌더 화면이다. 실제 GPU·화면에서의 보임은 말하지 못한다."
+}

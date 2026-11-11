@@ -1,0 +1,63 @@
+{
+ "checks": 23,
+ "problems": [],
+ "errors": [],
+ "rows": {
+  "qaDefault": {
+   "enabled": false,
+   "cap": null,
+   "steps": 0,
+   "signals": 0,
+   "meanMs": 0,
+   "notified": false,
+   "plan": "auto/planar/full",
+   "failed": false
+  },
+  "start": {
+   "enabled": true,
+   "cap": null,
+   "steps": 0,
+   "signals": 0,
+   "meanMs": 0,
+   "notified": false,
+   "plan": "auto/planar/full",
+   "failed": false
+  },
+  "afterStep1": {
+   "enabled": true,
+   "cap": "lite",
+   "steps": 1,
+   "signals": 1,
+   "meanMs": 0,
+   "notified": true,
+   "plan": "lite/sky/composite",
+   "failed": false
+  },
+  "afterStep2": {
+   "enabled": true,
+   "cap": "off",
+   "steps": 2,
+   "signals": 2,
+   "meanMs": 0,
+   "notified": true,
+   "plan": "off/sky/none",
+   "failed": false
+  },
+  "settings": {
+   "text": "높음 품질 · 하늘이 천천히 흔들려요 · 화면 효과를 가볍게 낮춰 두었어요",
+   "auto": "true",
+   "full": "false"
+  },
+  "real": {
+   "enabled": true,
+   "cap": "lite",
+   "steps": 4,
+   "signals": 6,
+   "meanMs": 0,
+   "notified": true,
+   "plan": "lite/sky/composite",
+   "failed": false,
+   "waitedSec": 44
+  }
+ }
+}

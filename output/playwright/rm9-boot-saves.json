@@ -1,0 +1,1955 @@
+{
+ "rows": [
+  {
+   "save": "fresh",
+   "kind": "fresh-then-kept",
+   "W": 1440,
+   "H": 900,
+   "starts": true,
+   "starts2": true,
+   "first": {
+    "startText": "항해 시작",
+    "newGameShown": false,
+    "progressShown": false,
+    "progress": null,
+    "banner": null,
+    "bannerNotes": [],
+    "toastNotes": [],
+    "stored": null,
+    "ui": {
+     "textScale": "1",
+     "quality": "mid",
+     "fx": "auto",
+     "hudQuiet": "true",
+     "scenicCam": "true"
+    }
+   },
+   "written": {
+    "chars": 712,
+    "parsable": true,
+    "version": 1,
+    "terms": 0,
+    "lit": 0,
+    "settings": {
+     "textScale": 1.3,
+     "quality": "mid",
+     "fx": "lite",
+     "hudQuiet": true,
+     "scenicCam": true
+    }
+   },
+   "second": {
+    "startText": "항해 시작",
+    "newGameShown": false,
+    "progressShown": false,
+    "progress": null,
+    "banner": null,
+    "bannerNotes": [],
+    "toastNotes": [],
+    "stored": {
+     "chars": 712,
+     "parsable": true,
+     "version": 1,
+     "terms": 0,
+     "lit": 0,
+     "settings": {
+      "textScale": 1.3,
+      "quality": "mid",
+      "fx": "lite",
+      "hudQuiet": true,
+      "scenicCam": true
+     }
+    },
+    "ui": {
+     "textScale": "1.3",
+     "quality": "mid",
+     "fx": "lite",
+     "hudQuiet": "true",
+     "scenicCam": "true"
+    }
+   },
+   "why": [],
+   "errors": [],
+   "ok": true
+  },
+  {
+   "save": "fresh",
+   "kind": "fresh-then-kept",
+   "W": 844,
+   "H": 390,
+   "starts": true,
+   "starts2": true,
+   "first": {
+    "startText": "항해 시작",
+    "newGameShown": false,
+    "progressShown": false,
+    "progress": null,
+    "banner": null,
+    "bannerNotes": [],
+    "toastNotes": [],
+    "stored": null,
+    "ui": {
+     "textScale": "1",
+     "quality": "mid",
+     "fx": "auto",
+     "hudQuiet": "true",
+     "scenicCam": "true"
+    }
+   },
+   "written": {
+    "chars": 712,
+    "parsable": true,
+    "version": 1,
+    "terms": 0,
+    "lit": 0,
+    "settings": {
+     "textScale": 1.3,
+     "quality": "mid",
+     "fx": "lite",
+     "hudQuiet": true,
+     "scenicCam": true
+    }
+   },
+   "second": {
+    "startText": "항해 시작",
+    "newGameShown": false,
+    "progressShown": false,
+    "progress": null,
+    "banner": null,
+    "bannerNotes": [],
+    "toastNotes": [],
+    "stored": {
+     "chars": 712,
+     "parsable": true,
+     "version": 1,
+     "terms": 0,
+     "lit": 0,
+     "settings": {
+      "textScale": 1.3,
+      "quality": "mid",
+      "fx": "lite",
+      "hudQuiet": true,
+      "scenicCam": true
+     }
+    },
+    "ui": {
+     "textScale": "1.3",
+     "quality": "mid",
+     "fx": "lite",
+     "hudQuiet": "true",
+     "scenicCam": "true"
+    }
+   },
+   "why": [],
+   "errors": [],
+   "ok": true
+  },
+  {
+   "save": "fresh",
+   "kind": "fresh-then-kept",
+   "W": 375,
+   "H": 667,
+   "starts": true,
+   "starts2": true,
+   "first": {
+    "startText": "항해 시작",
+    "newGameShown": false,
+    "progressShown": false,
+    "progress": null,
+    "banner": null,
+    "bannerNotes": [],
+    "toastNotes": [],
+    "stored": null,
+    "ui": {
+     "textScale": "1",
+     "quality": "mid",
+     "fx": "auto",
+     "hudQuiet": "true",
+     "scenicCam": "true"
+    }
+   },
+   "written": {
+    "chars": 712,
+    "parsable": true,
+    "version": 1,
+    "terms": 0,
+    "lit": 0,
+    "settings": {
+     "textScale": 1.3,
+     "quality": "mid",
+     "fx": "lite",
+     "hudQuiet": true,
+     "scenicCam": true
+    }
+   },
+   "second": {
+    "startText": "항해 시작",
+    "newGameShown": false,
+    "progressShown": false,
+    "progress": null,
+    "banner": null,
+    "bannerNotes": [],
+    "toastNotes": [],
+    "stored": {
+     "chars": 712,
+     "parsable": true,
+     "version": 1,
+     "terms": 0,
+     "lit": 0,
+     "settings": {
+      "textScale": 1.3,
+      "quality": "mid",
+      "fx": "lite",
+      "hudQuiet": true,
+      "scenicCam": true
+     }
+    },
+    "ui": {
+     "textScale": "1.3",
+     "quality": "mid",
+     "fx": "lite",
+     "hudQuiet": "true",
+     "scenicCam": "true"
+    }
+   },
+   "why": [],
+   "errors": [],
+   "ok": true
+  },
+  {
+   "save": "late",
+   "kind": "kept",
+   "W": 1440,
+   "H": 900,
+   "starts": true,
+   "starts2": true,
+   "first": {
+    "startText": "이어하기",
+    "newGameShown": true,
+    "progressShown": true,
+    "progress": "도돌이 항구 · 도감 141/141 · 등대 7/7",
+    "banner": null,
+    "bannerNotes": [],
+    "toastNotes": [],
+    "stored": {
+     "chars": 5088,
+     "parsable": true,
+     "version": 1,
+     "terms": 141,
+     "lit": 7,
+     "settings": {
+      "textScale": 1,
+      "quality": "mid",
+      "fx": "auto",
+      "hudQuiet": true,
+      "scenicCam": true
+     }
+    },
+    "ui": {
+     "textScale": "1",
+     "quality": "mid",
+     "fx": "auto",
+     "hudQuiet": "true",
+     "scenicCam": "true"
+    }
+   },
+   "written": {
+    "chars": 5094,
+    "parsable": true,
+    "version": 1,
+    "terms": 141,
+    "lit": 7,
+    "settings": {
+     "textScale": 1,
+     "quality": "mid",
+     "fx": "auto",
+     "hudQuiet": true,
+     "scenicCam": true
+    }
+   },
+   "second": {
+    "startText": "이어하기",
+    "newGameShown": true,
+    "progressShown": true,
+    "progress": "도돌이 항구 · 도감 141/141 · 등대 7/7",
+    "banner": null,
+    "bannerNotes": [],
+    "toastNotes": [],
+    "stored": {
+     "chars": 5094,
+     "parsable": true,
+     "version": 1,
+     "terms": 141,
+     "lit": 7,
+     "settings": {
+      "textScale": 1,
+      "quality": "mid",
+      "fx": "auto",
+      "hudQuiet": true,
+      "scenicCam": true
+     }
+    },
+    "ui": {
+     "textScale": "1",
+     "quality": "mid",
+     "fx": "auto",
+     "hudQuiet": "true",
+     "scenicCam": "true"
+    }
+   },
+   "why": [],
+   "errors": [],
+   "ok": true
+  },
+  {
+   "save": "late",
+   "kind": "kept",
+   "W": 844,
+   "H": 390,
+   "starts": true,
+   "starts2": true,
+   "first": {
+    "startText": "이어하기",
+    "newGameShown": true,
+    "progressShown": true,
+    "progress": "도돌이 항구 · 도감 141/141 · 등대 7/7",
+    "banner": null,
+    "bannerNotes": [],
+    "toastNotes": [],
+    "stored": {
+     "chars": 5088,
+     "parsable": true,
+     "version": 1,
+     "terms": 141,
+     "lit": 7,
+     "settings": {
+      "textScale": 1,
+      "quality": "mid",
+      "fx": "auto",
+      "hudQuiet": true,
+      "scenicCam": true
+     }
+    },
+    "ui": {
+     "textScale": "1",
+     "quality": "mid",
+     "fx": "auto",
+     "hudQuiet": "true",
+     "scenicCam": "true"
+    }
+   },
+   "written": {
+    "chars": 5094,
+    "parsable": true,
+    "version": 1,
+    "terms": 141,
+    "lit": 7,
+    "settings": {
+     "textScale": 1,
+     "quality": "mid",
+     "fx": "auto",
+     "hudQuiet": true,
+     "scenicCam": true
+    }
+   },
+   "second": {
+    "startText": "이어하기",
+    "newGameShown": true,
+    "progressShown": true,
+    "progress": "도돌이 항구 · 도감 141/141 · 등대 7/7",
+    "banner": null,
+    "bannerNotes": [],
+    "toastNotes": [],
+    "stored": {
+     "chars": 5094,
+     "parsable": true,
+     "version": 1,
+     "terms": 141,
+     "lit": 7,
+     "settings": {
+      "textScale": 1,
+      "quality": "mid",
+      "fx": "auto",
+      "hudQuiet": true,
+      "scenicCam": true
+     }
+    },
+    "ui": {
+     "textScale": "1",
+     "quality": "mid",
+     "fx": "auto",
+     "hudQuiet": "true",
+     "scenicCam": "true"
+    }
+   },
+   "why": [],
+   "errors": [],
+   "ok": true
+  },
+  {
+   "save": "late",
+   "kind": "kept",
+   "W": 375,
+   "H": 667,
+   "starts": true,
+   "starts2": true,
+   "first": {
+    "startText": "이어하기",
+    "newGameShown": true,
+    "progressShown": true,
+    "progress": "도돌이 항구 · 도감 141/141 · 등대 7/7",
+    "banner": null,
+    "bannerNotes": [],
+    "toastNotes": [],
+    "stored": {
+     "chars": 5088,
+     "parsable": true,
+     "version": 1,
+     "terms": 141,
+     "lit": 7,
+     "settings": {
+      "textScale": 1,
+      "quality": "mid",
+      "fx": "auto",
+      "hudQuiet": true,
+      "scenicCam": true
+     }
+    },
+    "ui": {
+     "textScale": "1",
+     "quality": "mid",
+     "fx": "auto",
+     "hudQuiet": "true",
+     "scenicCam": "true"
+    }
+   },
+   "written": {
+    "chars": 5096,
+    "parsable": true,
+    "version": 1,
+    "terms": 141,
+    "lit": 7,
+    "settings": {
+     "textScale": 1,
+     "quality": "mid",
+     "fx": "auto",
+     "hudQuiet": true,
+     "scenicCam": true
+    }
+   },
+   "second": {
+    "startText": "이어하기",
+    "newGameShown": true,
+    "progressShown": true,
+    "progress": "도돌이 항구 · 도감 141/141 · 등대 7/7",
+    "banner": null,
+    "bannerNotes": [],
+    "toastNotes": [],
+    "stored": {
+     "chars": 5096,
+     "parsable": true,
+     "version": 1,
+     "terms": 141,
+     "lit": 7,
+     "settings": {
+      "textScale": 1,
+      "quality": "mid",
+      "fx": "auto",
+      "hudQuiet": true,
+      "scenicCam": true
+     }
+    },
+    "ui": {
+     "textScale": "1",
+     "quality": "mid",
+     "fx": "auto",
+     "hudQuiet": "true",
+     "scenicCam": "true"
+    }
+   },
+   "why": [],
+   "errors": [],
+   "ok": true
+  },
+  {
+   "save": "settings-max",
+   "kind": "kept",
+   "W": 1440,
+   "H": 900,
+   "starts": true,
+   "starts2": true,
+   "first": {
+    "startText": "이어하기",
+    "newGameShown": true,
+    "progressShown": true,
+    "progress": "도돌이 항구 · 도감 12/141 · 등대 0/7",
+    "banner": null,
+    "bannerNotes": [],
+    "toastNotes": [],
+    "stored": {
+     "chars": 879,
+     "parsable": true,
+     "version": 1,
+     "terms": 12,
+     "lit": 0,
+     "settings": {
+      "textScale": 1.3,
+      "quality": "low",
+      "fx": "lite",
+      "hudQuiet": false,
+      "scenicCam": false
+     }
+    },
+    "ui": {
+     "textScale": "1.3",
+     "quality": "low",
+     "fx": "lite",
+     "hudQuiet": "false",
+     "scenicCam": "false"
+    }
+   },
+   "written": {
+    "chars": 884,
+    "parsable": true,
+    "version": 1,
+    "terms": 12,
+    "lit": 0,
+    "settings": {
+     "textScale": 1.3,
+     "quality": "low",
+     "fx": "off",
+     "hudQuiet": false,
+     "scenicCam": false
+    }
+   },
+   "second": {
+    "startText": "이어하기",
+    "newGameShown": true,
+    "progressShown": true,
+    "progress": "도돌이 항구 · 도감 12/141 · 등대 0/7",
+    "banner": null,
+    "bannerNotes": [],
+    "toastNotes": [],
+    "stored": {
+     "chars": 884,
+     "parsable": true,
+     "version": 1,
+     "terms": 12,
+     "lit": 0,
+     "settings": {
+      "textScale": 1.3,
+      "quality": "low",
+      "fx": "off",
+      "hudQuiet": false,
+      "scenicCam": false
+     }
+    },
+    "ui": {
+     "textScale": "1.3",
+     "quality": "low",
+     "fx": "off",
+     "hudQuiet": "false",
+     "scenicCam": "false"
+    }
+   },
+   "why": [],
+   "errors": [],
+   "ok": true
+  },
+  {
+   "save": "settings-max",
+   "kind": "kept",
+   "W": 844,
+   "H": 390,
+   "starts": true,
+   "starts2": true,
+   "first": {
+    "startText": "이어하기",
+    "newGameShown": true,
+    "progressShown": true,
+    "progress": "도돌이 항구 · 도감 12/141 · 등대 0/7",
+    "banner": null,
+    "bannerNotes": [],
+    "toastNotes": [],
+    "stored": {
+     "chars": 879,
+     "parsable": true,
+     "version": 1,
+     "terms": 12,
+     "lit": 0,
+     "settings": {
+      "textScale": 1.3,
+      "quality": "low",
+      "fx": "lite",
+      "hudQuiet": false,
+      "scenicCam": false
+     }
+    },
+    "ui": {
+     "textScale": "1.3",
+     "quality": "low",
+     "fx": "lite",
+     "hudQuiet": "false",
+     "scenicCam": "false"
+    }
+   },
+   "written": {
+    "chars": 884,
+    "parsable": true,
+    "version": 1,
+    "terms": 12,
+    "lit": 0,
+    "settings": {
+     "textScale": 1.3,
+     "quality": "low",
+     "fx": "off",
+     "hudQuiet": false,
+     "scenicCam": false
+    }
+   },
+   "second": {
+    "startText": "이어하기",
+    "newGameShown": true,
+    "progressShown": true,
+    "progress": "도돌이 항구 · 도감 12/141 · 등대 0/7",
+    "banner": null,
+    "bannerNotes": [],
+    "toastNotes": [],
+    "stored": {
+     "chars": 884,
+     "parsable": true,
+     "version": 1,
+     "terms": 12,
+     "lit": 0,
+     "settings": {
+      "textScale": 1.3,
+      "quality": "low",
+      "fx": "off",
+      "hudQuiet": false,
+      "scenicCam": false
+     }
+    },
+    "ui": {
+     "textScale": "1.3",
+     "quality": "low",
+     "fx": "off",
+     "hudQuiet": "false",
+     "scenicCam": "false"
+    }
+   },
+   "why": [],
+   "errors": [],
+   "ok": true
+  },
+  {
+   "save": "settings-max",
+   "kind": "kept",
+   "W": 375,
+   "H": 667,
+   "starts": true,
+   "starts2": true,
+   "first": {
+    "startText": "이어하기",
+    "newGameShown": true,
+    "progressShown": true,
+    "progress": "도돌이 항구 · 도감 12/141 · 등대 0/7",
+    "banner": null,
+    "bannerNotes": [],
+    "toastNotes": [],
+    "stored": {
+     "chars": 879,
+     "parsable": true,
+     "version": 1,
+     "terms": 12,
+     "lit": 0,
+     "settings": {
+      "textScale": 1.3,
+      "quality": "low",
+      "fx": "lite",
+      "hudQuiet": false,
+      "scenicCam": false
+     }
+    },
+    "ui": {
+     "textScale": "1.3",
+     "quality": "low",
+     "fx": "lite",
+     "hudQuiet": "false",
+     "scenicCam": "false"
+    }
+   },
+   "written": {
+    "chars": 886,
+    "parsable": true,
+    "version": 1,
+    "terms": 12,
+    "lit": 0,
+    "settings": {
+     "textScale": 1.3,
+     "quality": "low",
+     "fx": "off",
+     "hudQuiet": false,
+     "scenicCam": false
+    }
+   },
+   "second": {
+    "startText": "이어하기",
+    "newGameShown": true,
+    "progressShown": true,
+    "progress": "도돌이 항구 · 도감 12/141 · 등대 0/7",
+    "banner": null,
+    "bannerNotes": [],
+    "toastNotes": [],
+    "stored": {
+     "chars": 886,
+     "parsable": true,
+     "version": 1,
+     "terms": 12,
+     "lit": 0,
+     "settings": {
+      "textScale": 1.3,
+      "quality": "low",
+      "fx": "off",
+      "hudQuiet": false,
+      "scenicCam": false
+     }
+    },
+    "ui": {
+     "textScale": "1.3",
+     "quality": "low",
+     "fx": "off",
+     "hudQuiet": "false",
+     "scenicCam": "false"
+    }
+   },
+   "why": [],
+   "errors": [],
+   "ok": true
+  },
+  {
+   "save": "settings-off",
+   "kind": "kept",
+   "W": 1440,
+   "H": 900,
+   "starts": true,
+   "starts2": true,
+   "first": {
+    "startText": "이어하기",
+    "newGameShown": true,
+    "progressShown": true,
+    "progress": "도돌이 항구 · 도감 12/141 · 등대 0/7",
+    "banner": null,
+    "bannerNotes": [],
+    "toastNotes": [],
+    "stored": {
+     "chars": 878,
+     "parsable": true,
+     "version": 1,
+     "terms": 12,
+     "lit": 0,
+     "settings": {
+      "textScale": 1.15,
+      "quality": "high",
+      "fx": "off",
+      "hudQuiet": true,
+      "scenicCam": true
+     }
+    },
+    "ui": {
+     "textScale": "1.15",
+     "quality": "high",
+     "fx": "off",
+     "hudQuiet": "true",
+     "scenicCam": "true"
+    }
+   },
+   "written": {
+    "chars": 884,
+    "parsable": true,
+    "version": 1,
+    "terms": 12,
+    "lit": 0,
+    "settings": {
+     "textScale": 1.15,
+     "quality": "high",
+     "fx": "off",
+     "hudQuiet": true,
+     "scenicCam": true
+    }
+   },
+   "second": {
+    "startText": "이어하기",
+    "newGameShown": true,
+    "progressShown": true,
+    "progress": "도돌이 항구 · 도감 12/141 · 등대 0/7",
+    "banner": null,
+    "bannerNotes": [],
+    "toastNotes": [],
+    "stored": {
+     "chars": 884,
+     "parsable": true,
+     "version": 1,
+     "terms": 12,
+     "lit": 0,
+     "settings": {
+      "textScale": 1.15,
+      "quality": "high",
+      "fx": "off",
+      "hudQuiet": true,
+      "scenicCam": true
+     }
+    },
+    "ui": {
+     "textScale": "1.15",
+     "quality": "high",
+     "fx": "off",
+     "hudQuiet": "true",
+     "scenicCam": "true"
+    }
+   },
+   "why": [],
+   "errors": [],
+   "ok": true
+  },
+  {
+   "save": "settings-off",
+   "kind": "kept",
+   "W": 844,
+   "H": 390,
+   "starts": true,
+   "starts2": true,
+   "first": {
+    "startText": "이어하기",
+    "newGameShown": true,
+    "progressShown": true,
+    "progress": "도돌이 항구 · 도감 12/141 · 등대 0/7",
+    "banner": null,
+    "bannerNotes": [],
+    "toastNotes": [],
+    "stored": {
+     "chars": 878,
+     "parsable": true,
+     "version": 1,
+     "terms": 12,
+     "lit": 0,
+     "settings": {
+      "textScale": 1.15,
+      "quality": "high",
+      "fx": "off",
+      "hudQuiet": true,
+      "scenicCam": true
+     }
+    },
+    "ui": {
+     "textScale": "1.15",
+     "quality": "high",
+     "fx": "off",
+     "hudQuiet": "true",
+     "scenicCam": "true"
+    }
+   },
+   "written": {
+    "chars": 884,
+    "parsable": true,
+    "version": 1,
+    "terms": 12,
+    "lit": 0,
+    "settings": {
+     "textScale": 1.15,
+     "quality": "high",
+     "fx": "off",
+     "hudQuiet": true,
+     "scenicCam": true
+    }
+   },
+   "second": {
+    "startText": "이어하기",
+    "newGameShown": true,
+    "progressShown": true,
+    "progress": "도돌이 항구 · 도감 12/141 · 등대 0/7",
+    "banner": null,
+    "bannerNotes": [],
+    "toastNotes": [],
+    "stored": {
+     "chars": 884,
+     "parsable": true,
+     "version": 1,
+     "terms": 12,
+     "lit": 0,
+     "settings": {
+      "textScale": 1.15,
+      "quality": "high",
+      "fx": "off",
+      "hudQuiet": true,
+      "scenicCam": true
+     }
+    },
+    "ui": {
+     "textScale": "1.15",
+     "quality": "high",
+     "fx": "off",
+     "hudQuiet": "true",
+     "scenicCam": "true"
+    }
+   },
+   "why": [],
+   "errors": [],
+   "ok": true
+  },
+  {
+   "save": "settings-off",
+   "kind": "kept",
+   "W": 375,
+   "H": 667,
+   "starts": true,
+   "starts2": true,
+   "first": {
+    "startText": "이어하기",
+    "newGameShown": true,
+    "progressShown": true,
+    "progress": "도돌이 항구 · 도감 12/141 · 등대 0/7",
+    "banner": null,
+    "bannerNotes": [],
+    "toastNotes": [],
+    "stored": {
+     "chars": 878,
+     "parsable": true,
+     "version": 1,
+     "terms": 12,
+     "lit": 0,
+     "settings": {
+      "textScale": 1.15,
+      "quality": "high",
+      "fx": "off",
+      "hudQuiet": true,
+      "scenicCam": true
+     }
+    },
+    "ui": {
+     "textScale": "1.15",
+     "quality": "high",
+     "fx": "off",
+     "hudQuiet": "true",
+     "scenicCam": "true"
+    }
+   },
+   "written": {
+    "chars": 886,
+    "parsable": true,
+    "version": 1,
+    "terms": 12,
+    "lit": 0,
+    "settings": {
+     "textScale": 1.15,
+     "quality": "high",
+     "fx": "off",
+     "hudQuiet": true,
+     "scenicCam": true
+    }
+   },
+   "second": {
+    "startText": "이어하기",
+    "newGameShown": true,
+    "progressShown": true,
+    "progress": "도돌이 항구 · 도감 12/141 · 등대 0/7",
+    "banner": null,
+    "bannerNotes": [],
+    "toastNotes": [],
+    "stored": {
+     "chars": 886,
+     "parsable": true,
+     "version": 1,
+     "terms": 12,
+     "lit": 0,
+     "settings": {
+      "textScale": 1.15,
+      "quality": "high",
+      "fx": "off",
+      "hudQuiet": true,
+      "scenicCam": true
+     }
+    },
+    "ui": {
+     "textScale": "1.15",
+     "quality": "high",
+     "fx": "off",
+     "hudQuiet": "true",
+     "scenicCam": "true"
+    }
+   },
+   "why": [],
+   "errors": [],
+   "ok": true
+  },
+  {
+   "save": "partial",
+   "kind": "kept",
+   "W": 1440,
+   "H": 900,
+   "starts": true,
+   "starts2": true,
+   "first": {
+    "startText": "항해 시작",
+    "newGameShown": false,
+    "progressShown": false,
+    "progress": null,
+    "banner": null,
+    "bannerNotes": [],
+    "toastNotes": [],
+    "stored": {
+     "chars": 55,
+     "parsable": true,
+     "version": 1,
+     "terms": 0,
+     "lit": 0,
+     "settings": {
+      "textScale": 1.15,
+      "fx": "full"
+     }
+    },
+    "ui": {
+     "textScale": "1.15",
+     "quality": "mid",
+     "fx": "full",
+     "hudQuiet": "true",
+     "scenicCam": "true"
+    }
+   },
+   "written": {
+    "chars": 713,
+    "parsable": true,
+    "version": 1,
+    "terms": 0,
+    "lit": 0,
+    "settings": {
+     "textScale": 1.15,
+     "quality": "mid",
+     "fx": "full",
+     "hudQuiet": true,
+     "scenicCam": true
+    }
+   },
+   "second": {
+    "startText": "항해 시작",
+    "newGameShown": false,
+    "progressShown": false,
+    "progress": null,
+    "banner": null,
+    "bannerNotes": [],
+    "toastNotes": [],
+    "stored": {
+     "chars": 713,
+     "parsable": true,
+     "version": 1,
+     "terms": 0,
+     "lit": 0,
+     "settings": {
+      "textScale": 1.15,
+      "quality": "mid",
+      "fx": "full",
+      "hudQuiet": true,
+      "scenicCam": true
+     }
+    },
+    "ui": {
+     "textScale": "1.15",
+     "quality": "mid",
+     "fx": "full",
+     "hudQuiet": "true",
+     "scenicCam": "true"
+    }
+   },
+   "why": [],
+   "errors": [],
+   "ok": true
+  },
+  {
+   "save": "partial",
+   "kind": "kept",
+   "W": 844,
+   "H": 390,
+   "starts": true,
+   "starts2": true,
+   "first": {
+    "startText": "항해 시작",
+    "newGameShown": false,
+    "progressShown": false,
+    "progress": null,
+    "banner": null,
+    "bannerNotes": [],
+    "toastNotes": [],
+    "stored": {
+     "chars": 55,
+     "parsable": true,
+     "version": 1,
+     "terms": 0,
+     "lit": 0,
+     "settings": {
+      "textScale": 1.15,
+      "fx": "full"
+     }
+    },
+    "ui": {
+     "textScale": "1.15",
+     "quality": "mid",
+     "fx": "full",
+     "hudQuiet": "true",
+     "scenicCam": "true"
+    }
+   },
+   "written": {
+    "chars": 713,
+    "parsable": true,
+    "version": 1,
+    "terms": 0,
+    "lit": 0,
+    "settings": {
+     "textScale": 1.15,
+     "quality": "mid",
+     "fx": "full",
+     "hudQuiet": true,
+     "scenicCam": true
+    }
+   },
+   "second": {
+    "startText": "항해 시작",
+    "newGameShown": false,
+    "progressShown": false,
+    "progress": null,
+    "banner": null,
+    "bannerNotes": [],
+    "toastNotes": [],
+    "stored": {
+     "chars": 713,
+     "parsable": true,
+     "version": 1,
+     "terms": 0,
+     "lit": 0,
+     "settings": {
+      "textScale": 1.15,
+      "quality": "mid",
+      "fx": "full",
+      "hudQuiet": true,
+      "scenicCam": true
+     }
+    },
+    "ui": {
+     "textScale": "1.15",
+     "quality": "mid",
+     "fx": "full",
+     "hudQuiet": "true",
+     "scenicCam": "true"
+    }
+   },
+   "why": [],
+   "errors": [],
+   "ok": true
+  },
+  {
+   "save": "partial",
+   "kind": "kept",
+   "W": 375,
+   "H": 667,
+   "starts": true,
+   "starts2": true,
+   "first": {
+    "startText": "항해 시작",
+    "newGameShown": false,
+    "progressShown": false,
+    "progress": null,
+    "banner": null,
+    "bannerNotes": [],
+    "toastNotes": [],
+    "stored": {
+     "chars": 55,
+     "parsable": true,
+     "version": 1,
+     "terms": 0,
+     "lit": 0,
+     "settings": {
+      "textScale": 1.15,
+      "fx": "full"
+     }
+    },
+    "ui": {
+     "textScale": "1.15",
+     "quality": "mid",
+     "fx": "full",
+     "hudQuiet": "true",
+     "scenicCam": "true"
+    }
+   },
+   "written": {
+    "chars": 713,
+    "parsable": true,
+    "version": 1,
+    "terms": 0,
+    "lit": 0,
+    "settings": {
+     "textScale": 1.15,
+     "quality": "mid",
+     "fx": "full",
+     "hudQuiet": true,
+     "scenicCam": true
+    }
+   },
+   "second": {
+    "startText": "항해 시작",
+    "newGameShown": false,
+    "progressShown": false,
+    "progress": null,
+    "banner": null,
+    "bannerNotes": [],
+    "toastNotes": [],
+    "stored": {
+     "chars": 713,
+     "parsable": true,
+     "version": 1,
+     "terms": 0,
+     "lit": 0,
+     "settings": {
+      "textScale": 1.15,
+      "quality": "mid",
+      "fx": "full",
+      "hudQuiet": true,
+      "scenicCam": true
+     }
+    },
+    "ui": {
+     "textScale": "1.15",
+     "quality": "mid",
+     "fx": "full",
+     "hudQuiet": "true",
+     "scenicCam": "true"
+    }
+   },
+   "why": [],
+   "errors": [],
+   "ok": true
+  },
+  {
+   "save": "unversioned",
+   "kind": "kept",
+   "W": 1440,
+   "H": 900,
+   "starts": true,
+   "starts2": true,
+   "first": {
+    "startText": "항해 시작",
+    "newGameShown": false,
+    "progressShown": false,
+    "progress": null,
+    "banner": null,
+    "bannerNotes": [],
+    "toastNotes": [],
+    "stored": {
+     "chars": 46,
+     "parsable": true,
+     "version": null,
+     "terms": 0,
+     "lit": 0,
+     "settings": {
+      "textScale": 1.3,
+      "quality": "low"
+     }
+    },
+    "ui": {
+     "textScale": "1.3",
+     "quality": "low",
+     "fx": "auto",
+     "hudQuiet": "true",
+     "scenicCam": "true"
+    }
+   },
+   "written": {
+    "chars": 712,
+    "parsable": true,
+    "version": 1,
+    "terms": 0,
+    "lit": 0,
+    "settings": {
+     "textScale": 1.3,
+     "quality": "low",
+     "fx": "auto",
+     "hudQuiet": true,
+     "scenicCam": true
+    }
+   },
+   "second": {
+    "startText": "항해 시작",
+    "newGameShown": false,
+    "progressShown": false,
+    "progress": null,
+    "banner": null,
+    "bannerNotes": [],
+    "toastNotes": [],
+    "stored": {
+     "chars": 712,
+     "parsable": true,
+     "version": 1,
+     "terms": 0,
+     "lit": 0,
+     "settings": {
+      "textScale": 1.3,
+      "quality": "low",
+      "fx": "auto",
+      "hudQuiet": true,
+      "scenicCam": true
+     }
+    },
+    "ui": {
+     "textScale": "1.3",
+     "quality": "low",
+     "fx": "auto",
+     "hudQuiet": "true",
+     "scenicCam": "true"
+    }
+   },
+   "why": [],
+   "errors": [],
+   "ok": true
+  },
+  {
+   "save": "unversioned",
+   "kind": "kept",
+   "W": 844,
+   "H": 390,
+   "starts": true,
+   "starts2": true,
+   "first": {
+    "startText": "항해 시작",
+    "newGameShown": false,
+    "progressShown": false,
+    "progress": null,
+    "banner": null,
+    "bannerNotes": [],
+    "toastNotes": [],
+    "stored": {
+     "chars": 46,
+     "parsable": true,
+     "version": null,
+     "terms": 0,
+     "lit": 0,
+     "settings": {
+      "textScale": 1.3,
+      "quality": "low"
+     }
+    },
+    "ui": {
+     "textScale": "1.3",
+     "quality": "low",
+     "fx": "auto",
+     "hudQuiet": "true",
+     "scenicCam": "true"
+    }
+   },
+   "written": {
+    "chars": 712,
+    "parsable": true,
+    "version": 1,
+    "terms": 0,
+    "lit": 0,
+    "settings": {
+     "textScale": 1.3,
+     "quality": "low",
+     "fx": "auto",
+     "hudQuiet": true,
+     "scenicCam": true
+    }
+   },
+   "second": {
+    "startText": "항해 시작",
+    "newGameShown": false,
+    "progressShown": false,
+    "progress": null,
+    "banner": null,
+    "bannerNotes": [],
+    "toastNotes": [],
+    "stored": {
+     "chars": 712,
+     "parsable": true,
+     "version": 1,
+     "terms": 0,
+     "lit": 0,
+     "settings": {
+      "textScale": 1.3,
+      "quality": "low",
+      "fx": "auto",
+      "hudQuiet": true,
+      "scenicCam": true
+     }
+    },
+    "ui": {
+     "textScale": "1.3",
+     "quality": "low",
+     "fx": "auto",
+     "hudQuiet": "true",
+     "scenicCam": "true"
+    }
+   },
+   "why": [],
+   "errors": [],
+   "ok": true
+  },
+  {
+   "save": "unversioned",
+   "kind": "kept",
+   "W": 375,
+   "H": 667,
+   "starts": true,
+   "starts2": true,
+   "first": {
+    "startText": "항해 시작",
+    "newGameShown": false,
+    "progressShown": false,
+    "progress": null,
+    "banner": null,
+    "bannerNotes": [],
+    "toastNotes": [],
+    "stored": {
+     "chars": 46,
+     "parsable": true,
+     "version": null,
+     "terms": 0,
+     "lit": 0,
+     "settings": {
+      "textScale": 1.3,
+      "quality": "low"
+     }
+    },
+    "ui": {
+     "textScale": "1.3",
+     "quality": "low",
+     "fx": "auto",
+     "hudQuiet": "true",
+     "scenicCam": "true"
+    }
+   },
+   "written": {
+    "chars": 712,
+    "parsable": true,
+    "version": 1,
+    "terms": 0,
+    "lit": 0,
+    "settings": {
+     "textScale": 1.3,
+     "quality": "low",
+     "fx": "auto",
+     "hudQuiet": true,
+     "scenicCam": true
+    }
+   },
+   "second": {
+    "startText": "항해 시작",
+    "newGameShown": false,
+    "progressShown": false,
+    "progress": null,
+    "banner": null,
+    "bannerNotes": [],
+    "toastNotes": [],
+    "stored": {
+     "chars": 712,
+     "parsable": true,
+     "version": 1,
+     "terms": 0,
+     "lit": 0,
+     "settings": {
+      "textScale": 1.3,
+      "quality": "low",
+      "fx": "auto",
+      "hudQuiet": true,
+      "scenicCam": true
+     }
+    },
+    "ui": {
+     "textScale": "1.3",
+     "quality": "low",
+     "fx": "auto",
+     "hudQuiet": "true",
+     "scenicCam": "true"
+    }
+   },
+   "why": [],
+   "errors": [],
+   "ok": true
+  },
+  {
+   "save": "corrupt",
+   "kind": "recovered",
+   "W": 1440,
+   "H": 900,
+   "starts": true,
+   "starts2": true,
+   "first": {
+    "startText": "항해 시작",
+    "newGameShown": false,
+    "progressShown": false,
+    "progress": null,
+    "banner": null,
+    "bannerNotes": [
+     "이전 저장 기록을 안전한 새 항해로 복구했습니다. Expected property name or '}' in JSON at position 1 ",
+     "이전 저장 기록을 안전한 새 항해로 복구했습니다. Expected property name or '}' in JSON at position 1 ",
+     "이전 저장 기록을 안전한 새 항해로 복구했습니다. Expected property name or '}' in JSON at position 1 ",
+     "이전 저장 기록을 안전한 새 항해로 복구했습니다. Expected property name or '}' in JSON at position 1 "
+    ],
+    "toastNotes": [
+     "이전 저장 기록을 읽지 못해 새 항해로 시작했어요",
+     ""
+    ],
+    "stored": null,
+    "ui": {
+     "textScale": "1",
+     "quality": "mid",
+     "fx": "auto",
+     "hudQuiet": "true",
+     "scenicCam": "true"
+    }
+   },
+   "written": {
+    "chars": 710,
+    "parsable": true,
+    "version": 1,
+    "terms": 0,
+    "lit": 0,
+    "settings": {
+     "textScale": 1,
+     "quality": "mid",
+     "fx": "auto",
+     "hudQuiet": true,
+     "scenicCam": true
+    }
+   },
+   "second": {
+    "startText": "항해 시작",
+    "newGameShown": false,
+    "progressShown": false,
+    "progress": null,
+    "banner": null,
+    "bannerNotes": [],
+    "toastNotes": [],
+    "stored": {
+     "chars": 710,
+     "parsable": true,
+     "version": 1,
+     "terms": 0,
+     "lit": 0,
+     "settings": {
+      "textScale": 1,
+      "quality": "mid",
+      "fx": "auto",
+      "hudQuiet": true,
+      "scenicCam": true
+     }
+    },
+    "ui": {
+     "textScale": "1",
+     "quality": "mid",
+     "fx": "auto",
+     "hudQuiet": "true",
+     "scenicCam": "true"
+    }
+   },
+   "why": [],
+   "errors": [],
+   "ok": true
+  },
+  {
+   "save": "corrupt",
+   "kind": "recovered",
+   "W": 844,
+   "H": 390,
+   "starts": true,
+   "starts2": true,
+   "first": {
+    "startText": "항해 시작",
+    "newGameShown": false,
+    "progressShown": false,
+    "progress": null,
+    "banner": null,
+    "bannerNotes": [
+     "이전 저장 기록을 안전한 새 항해로 복구했습니다. Expected property name or '}' in JSON at position 1 ",
+     "이전 저장 기록을 안전한 새 항해로 복구했습니다. Expected property name or '}' in JSON at position 1 ",
+     "이전 저장 기록을 안전한 새 항해로 복구했습니다. Expected property name or '}' in JSON at position 1 ",
+     "이전 저장 기록을 안전한 새 항해로 복구했습니다. Expected property name or '}' in JSON at position 1 "
+    ],
+    "toastNotes": [
+     "이전 저장 기록을 읽지 못해 새 항해로 시작했어요"
+    ],
+    "stored": null,
+    "ui": {
+     "textScale": "1",
+     "quality": "mid",
+     "fx": "auto",
+     "hudQuiet": "true",
+     "scenicCam": "true"
+    }
+   },
+   "written": {
+    "chars": 710,
+    "parsable": true,
+    "version": 1,
+    "terms": 0,
+    "lit": 0,
+    "settings": {
+     "textScale": 1,
+     "quality": "mid",
+     "fx": "auto",
+     "hudQuiet": true,
+     "scenicCam": true
+    }
+   },
+   "second": {
+    "startText": "항해 시작",
+    "newGameShown": false,
+    "progressShown": false,
+    "progress": null,
+    "banner": null,
+    "bannerNotes": [],
+    "toastNotes": [],
+    "stored": {
+     "chars": 710,
+     "parsable": true,
+     "version": 1,
+     "terms": 0,
+     "lit": 0,
+     "settings": {
+      "textScale": 1,
+      "quality": "mid",
+      "fx": "auto",
+      "hudQuiet": true,
+      "scenicCam": true
+     }
+    },
+    "ui": {
+     "textScale": "1",
+     "quality": "mid",
+     "fx": "auto",
+     "hudQuiet": "true",
+     "scenicCam": "true"
+    }
+   },
+   "why": [],
+   "errors": [],
+   "ok": true
+  },
+  {
+   "save": "corrupt",
+   "kind": "recovered",
+   "W": 375,
+   "H": 667,
+   "starts": true,
+   "starts2": true,
+   "first": {
+    "startText": "항해 시작",
+    "newGameShown": false,
+    "progressShown": false,
+    "progress": null,
+    "banner": null,
+    "bannerNotes": [
+     "이전 저장 기록을 안전한 새 항해로 복구했습니다. Expected property name or '}' in JSON at position 1 ",
+     "이전 저장 기록을 안전한 새 항해로 복구했습니다. Expected property name or '}' in JSON at position 1 ",
+     "이전 저장 기록을 안전한 새 항해로 복구했습니다. Expected property name or '}' in JSON at position 1 ",
+     "이전 저장 기록을 안전한 새 항해로 복구했습니다. Expected property name or '}' in JSON at position 1 "
+    ],
+    "toastNotes": [
+     "이전 저장 기록을 읽지 못해 새 항해로 시작했어요"
+    ],
+    "stored": null,
+    "ui": {
+     "textScale": "1",
+     "quality": "mid",
+     "fx": "auto",
+     "hudQuiet": "true",
+     "scenicCam": "true"
+    }
+   },
+   "written": {
+    "chars": 710,
+    "parsable": true,
+    "version": 1,
+    "terms": 0,
+    "lit": 0,
+    "settings": {
+     "textScale": 1,
+     "quality": "mid",
+     "fx": "auto",
+     "hudQuiet": true,
+     "scenicCam": true
+    }
+   },
+   "second": {
+    "startText": "항해 시작",
+    "newGameShown": false,
+    "progressShown": false,
+    "progress": null,
+    "banner": null,
+    "bannerNotes": [],
+    "toastNotes": [],
+    "stored": {
+     "chars": 710,
+     "parsable": true,
+     "version": 1,
+     "terms": 0,
+     "lit": 0,
+     "settings": {
+      "textScale": 1,
+      "quality": "mid",
+      "fx": "auto",
+      "hudQuiet": true,
+      "scenicCam": true
+     }
+    },
+    "ui": {
+     "textScale": "1",
+     "quality": "mid",
+     "fx": "auto",
+     "hudQuiet": "true",
+     "scenicCam": "true"
+    }
+   },
+   "why": [],
+   "errors": [],
+   "ok": true
+  },
+  {
+   "save": "future",
+   "kind": "recovered",
+   "W": 1440,
+   "H": 900,
+   "starts": true,
+   "starts2": true,
+   "first": {
+    "startText": "항해 시작",
+    "newGameShown": false,
+    "progressShown": false,
+    "progress": null,
+    "banner": null,
+    "bannerNotes": [
+     "이전 저장 기록을 안전한 새 항해로 복구했습니다. 지원하지 않는 저장 데이터입니다.",
+     "이전 저장 기록을 안전한 새 항해로 복구했습니다. 지원하지 않는 저장 데이터입니다.",
+     "이전 저장 기록을 안전한 새 항해로 복구했습니다. 지원하지 않는 저장 데이터입니다.",
+     "이전 저장 기록을 안전한 새 항해로 복구했습니다. 지원하지 않는 저장 데이터입니다."
+    ],
+    "toastNotes": [
+     "이전 저장 기록을 읽지 못해 새 항해로 시작했어요",
+     ""
+    ],
+    "stored": null,
+    "ui": {
+     "textScale": "1",
+     "quality": "mid",
+     "fx": "auto",
+     "hudQuiet": "true",
+     "scenicCam": "true"
+    }
+   },
+   "written": {
+    "chars": 710,
+    "parsable": true,
+    "version": 1,
+    "terms": 0,
+    "lit": 0,
+    "settings": {
+     "textScale": 1,
+     "quality": "mid",
+     "fx": "auto",
+     "hudQuiet": true,
+     "scenicCam": true
+    }
+   },
+   "second": {
+    "startText": "항해 시작",
+    "newGameShown": false,
+    "progressShown": false,
+    "progress": null,
+    "banner": null,
+    "bannerNotes": [],
+    "toastNotes": [],
+    "stored": {
+     "chars": 710,
+     "parsable": true,
+     "version": 1,
+     "terms": 0,
+     "lit": 0,
+     "settings": {
+      "textScale": 1,
+      "quality": "mid",
+      "fx": "auto",
+      "hudQuiet": true,
+      "scenicCam": true
+     }
+    },
+    "ui": {
+     "textScale": "1",
+     "quality": "mid",
+     "fx": "auto",
+     "hudQuiet": "true",
+     "scenicCam": "true"
+    }
+   },
+   "why": [],
+   "errors": [],
+   "ok": true
+  },
+  {
+   "save": "future",
+   "kind": "recovered",
+   "W": 844,
+   "H": 390,
+   "starts": true,
+   "starts2": true,
+   "first": {
+    "startText": "항해 시작",
+    "newGameShown": false,
+    "progressShown": false,
+    "progress": null,
+    "banner": null,
+    "bannerNotes": [
+     "이전 저장 기록을 안전한 새 항해로 복구했습니다. 지원하지 않는 저장 데이터입니다.",
+     "이전 저장 기록을 안전한 새 항해로 복구했습니다. 지원하지 않는 저장 데이터입니다.",
+     "이전 저장 기록을 안전한 새 항해로 복구했습니다. 지원하지 않는 저장 데이터입니다.",
+     "이전 저장 기록을 안전한 새 항해로 복구했습니다. 지원하지 않는 저장 데이터입니다."
+    ],
+    "toastNotes": [
+     "이전 저장 기록을 읽지 못해 새 항해로 시작했어요"
+    ],
+    "stored": null,
+    "ui": {
+     "textScale": "1",
+     "quality": "mid",
+     "fx": "auto",
+     "hudQuiet": "true",
+     "scenicCam": "true"
+    }
+   },
+   "written": {
+    "chars": 710,
+    "parsable": true,
+    "version": 1,
+    "terms": 0,
+    "lit": 0,
+    "settings": {
+     "textScale": 1,
+     "quality": "mid",
+     "fx": "auto",
+     "hudQuiet": true,
+     "scenicCam": true
+    }
+   },
+   "second": {
+    "startText": "항해 시작",
+    "newGameShown": false,
+    "progressShown": false,
+    "progress": null,
+    "banner": null,
+    "bannerNotes": [],
+    "toastNotes": [],
+    "stored": {
+     "chars": 710,
+     "parsable": true,
+     "version": 1,
+     "terms": 0,
+     "lit": 0,
+     "settings": {
+      "textScale": 1,
+      "quality": "mid",
+      "fx": "auto",
+      "hudQuiet": true,
+      "scenicCam": true
+     }
+    },
+    "ui": {
+     "textScale": "1",
+     "quality": "mid",
+     "fx": "auto",
+     "hudQuiet": "true",
+     "scenicCam": "true"
+    }
+   },
+   "why": [],
+   "errors": [],
+   "ok": true
+  },
+  {
+   "save": "future",
+   "kind": "recovered",
+   "W": 375,
+   "H": 667,
+   "starts": true,
+   "starts2": true,
+   "first": {
+    "startText": "항해 시작",
+    "newGameShown": false,
+    "progressShown": false,
+    "progress": null,
+    "banner": null,
+    "bannerNotes": [
+     "이전 저장 기록을 안전한 새 항해로 복구했습니다. 지원하지 않는 저장 데이터입니다.",
+     "이전 저장 기록을 안전한 새 항해로 복구했습니다. 지원하지 않는 저장 데이터입니다.",
+     "이전 저장 기록을 안전한 새 항해로 복구했습니다. 지원하지 않는 저장 데이터입니다.",
+     "이전 저장 기록을 안전한 새 항해로 복구했습니다. 지원하지 않는 저장 데이터입니다."
+    ],
+    "toastNotes": [
+     "이전 저장 기록을 읽지 못해 새 항해로 시작했어요"
+    ],
+    "stored": null,
+    "ui": {
+     "textScale": "1",
+     "quality": "mid",
+     "fx": "auto",
+     "hudQuiet": "true",
+     "scenicCam": "true"
+    }
+   },
+   "written": {
+    "chars": 710,
+    "parsable": true,
+    "version": 1,
+    "terms": 0,
+    "lit": 0,
+    "settings": {
+     "textScale": 1,
+     "quality": "mid",
+     "fx": "auto",
+     "hudQuiet": true,
+     "scenicCam": true
+    }
+   },
+   "second": {
+    "startText": "항해 시작",
+    "newGameShown": false,
+    "progressShown": false,
+    "progress": null,
+    "banner": null,
+    "bannerNotes": [],
+    "toastNotes": [],
+    "stored": {
+     "chars": 710,
+     "parsable": true,
+     "version": 1,
+     "terms": 0,
+     "lit": 0,
+     "settings": {
+      "textScale": 1,
+      "quality": "mid",
+      "fx": "auto",
+      "hudQuiet": true,
+      "scenicCam": true
+     }
+    },
+    "ui": {
+     "textScale": "1",
+     "quality": "mid",
+     "fx": "auto",
+     "hudQuiet": "true",
+     "scenicCam": "true"
+    }
+   },
+   "why": [],
+   "errors": [],
+   "ok": true
+  }
+ ],
+ "pass": true,
+ "loaded": true
+}

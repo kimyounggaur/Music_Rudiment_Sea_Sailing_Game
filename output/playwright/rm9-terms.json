@@ -1,0 +1,109 @@
+{
+ "before": {
+  "found": 0,
+  "terms": 141,
+  "lanterns": {
+   "buoy": {
+    "instances": 128,
+    "bodyTriangles": 90,
+    "glowTriangles": 4,
+    "parts": 2,
+    "castShadow": false,
+    "lit": 128,
+    "through": 0,
+    "sailRays": 3,
+    "glowAlpha": 0.25
+   },
+   "bottle": {
+    "instances": 18,
+    "bodyTriangles": 110,
+    "glowTriangles": 4,
+    "castShadow": false,
+    "lit": 18
+   },
+   "gate": {
+    "count": 4,
+    "triangles": [
+     178,
+     178,
+     178,
+     178
+    ]
+   },
+   "shipLantern": {
+    "intensity": 0.617,
+    "base": 0.6,
+    "flicker": 1.0282,
+    "windowMaterials": 1
+   },
+   "pointLights": 2,
+   "shadowCasters": 55
+  }
+ },
+ "run": {
+  "total": 141,
+  "normalTotal": 128,
+  "rareTotal": 13,
+  "normalCollected": 128,
+  "bottlesTotal": 18,
+  "bottlesOpened": 18,
+  "rareBottles": 13,
+  "storyBottles": 5,
+  "termsFound": 141,
+  "missed": [],
+  "byRegion": [
+   "12/12",
+   "17/17",
+   "15/15",
+   "12/12",
+   "13/13",
+   "20/20",
+   "12/12",
+   "12/12",
+   "15/15"
+  ],
+  "state": "SAILING"
+ },
+ "after": {
+  "found": 141,
+  "lanterns": {
+   "buoy": {
+    "instances": 128,
+    "bodyTriangles": 90,
+    "glowTriangles": 4,
+    "parts": 2,
+    "castShadow": false,
+    "lit": 0,
+    "through": 0,
+    "sailRays": 0,
+    "glowAlpha": 0.25
+   },
+   "bottle": {
+    "instances": 18,
+    "bodyTriangles": 110,
+    "glowTriangles": 4,
+    "castShadow": false,
+    "lit": 0
+   },
+   "gate": {
+    "count": 4,
+    "triangles": [
+     178,
+     178,
+     178,
+     178
+    ]
+   },
+   "shipLantern": {
+    "intensity": 1.116,
+    "base": 1.1,
+    "flicker": 1.015,
+    "windowMaterials": 1
+   },
+   "pointLights": 2,
+   "shadowCasters": 44
+  },
+  "bottlesLit": 0
+ },
+ "errors": []
+}

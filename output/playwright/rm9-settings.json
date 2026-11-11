@@ -1,0 +1,87 @@
+{
+ "checks": 23,
+ "problems": [],
+ "errors": [],
+ "rows": [
+  {
+   "step": "fresh",
+   "ui": {
+    "fx": [
+     "auto"
+    ],
+    "quiet": "true",
+    "quietText": "필요할 때만 안내 표시",
+    "scenic": "true",
+    "scenicText": "멈춰 있을 때 천천히 둘러보기",
+    "live": "중간 품질 · 하늘이 천천히 흔들려요"
+   }
+  },
+  {
+   "step": "fx lite",
+   "saved": "lite",
+   "after": [
+    "lite"
+   ]
+  },
+  {
+   "step": "fx off",
+   "saved": "off",
+   "after": [
+    "off"
+   ]
+  },
+  {
+   "step": "fx full",
+   "saved": "full",
+   "after": [
+    "full"
+   ]
+  },
+  {
+   "step": "fx auto",
+   "saved": "auto",
+   "after": [
+    "auto"
+   ]
+  },
+  {
+   "step": "quiet off → hud after 9s",
+   "hud": "awake"
+  },
+  {
+   "step": "quiet on → hud after 9s",
+   "hud": "quiet"
+  },
+  {
+   "step": "scenic off after reload",
+   "ui": {
+    "fx": [
+     "auto"
+    ],
+    "quiet": "true",
+    "quietText": "필요할 때만 안내 표시",
+    "scenic": "false",
+    "scenicText": "카메라 가만히 두기",
+    "live": "중간 품질 · 하늘이 천천히 흔들려요"
+   }
+  },
+  {
+   "step": "final settings",
+   "settings": {
+    "volBgm": 0.8,
+    "volSfx": 0.9,
+    "volAmb": 0.7,
+    "muted": false,
+    "quality": "mid",
+    "reducedMotion": false,
+    "fixedDay": false,
+    "fx": "lite",
+    "hudQuiet": true,
+    "scenicCam": false,
+    "textScale": 1,
+    "haptics": false,
+    "captions": true
+   }
+  }
+ ]
+}
