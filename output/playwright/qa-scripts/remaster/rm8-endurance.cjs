@@ -5,18 +5,35 @@
  *   일정 간격으로 자원 수를 재서, 렌더 타깃·셰이더 프로그램·지오메트리·텍스처·리스너·DOM 노드가 늘지 않는지 본다.
  *   헤드리스 SwiftShader라 프레임 속도는 의미가 없다. 이 시험은 "개수가 늘지 않는가"만 본다.
  *
+ *   워밍업 투어(--tour 1, 기본): 재기 전에 해역 9곳의 랜드마크 근경·원경 자리로 한 번씩 순간이동해 화면에 그리고, 시련 부표를 한 번 띄운다.
+ *     랜드마크 부품·시련 부표 표지(스프라이트)는 "처음 화면에 그려질 때" 렌더러에 한 번 올라가는 유한한 자원이다. 배가 원을 도는 동안 몇십 분 뒤에야
+ *     처음 보이면 그때 개수가 늘어 누수처럼 보인다(처음 돌린 30분에서 지오메트리 +7·텍스처 +1·프로그램 +1이 그렇게 잡혔고, 장면 쪽 개수는 늘지 않았다).
+ *     투어가 올린 양은 결과 JSON(tour)에 그대로 적고, 그 뒤 30분의 증가가 0이어야 통과한다. 누수라면 투어 뒤에도 계속 는다.
+ *   활동에 따라 오르내리는 개수(오디오 소스·타임아웃·UI 타이머·카운트업)는 끝 표본과 워밍업 표본의 차이가 우연에 좌우되므로 바닥값(구간 최솟값)이 오르는지로 본다.
+ *
  * 사용: BASE_URL=http://127.0.0.1:8766 node rm8-endurance.cjs [--minutes 30] [--out output/playwright/rm8-endurance.json] [--query "?qa=1"]
  *   --minutes 2 로 짧게 점검할 수 있다. 결과 JSON과 요약을 쓰고, 증가가 있으면 종료 코드 1.
  */
 const fs = require('fs');
 const path = require('path');
-const { open, outPath } = require('./lib.cjs');
+const { open, frames, teleport, outPath } = require('./lib.cjs');
 
 const arg = (name, fallback) => { const i = process.argv.indexOf('--' + name); return i > 0 && process.argv[i + 1] !== undefined ? process.argv[i + 1] : fallback; };
 const MINUTES = Number(arg('minutes', 30));
 const SAMPLE_MS = Number(arg('sample', 60000));
 const QUERY = arg('query', '?qa=1');
 const OUT = arg('out', path.join('output', 'playwright', 'rm8-endurance.json'));
+const TOUR = arg('tour', '1') === '1';
+// 랜드마크 근경(겨냥점에서 바깥으로 95 m)·원경(200 m) 자리. 값은 rm6-landmark.cjs의 촬영 지점 표와 같다.
+const CENTERS = [[0, -430], [0, -260], [203, -162], [253, 58], [113, 234], [-113, 234], [-253, 58], [-203, -162], [0, 0]];
+const AIM = { 1: [5, -35], 2: [-1, 0], 3: [1, -1], 4: [-3.5, 4.4], 5: [-1.5, -9], 6: [0, 0], 7: [0, 0], 8: [0, 12.9] };
+const OUT_DIR = { 1: [-0.8, -0.6], 8: [0.434, -0.901] };
+function tourSpot(region, dist) {
+  if (region === 0) return dist < 100 ? { x: 0, z: -370, h: 0 } : { x: 0, z: -262, h: Math.PI }; // 항구(rm6-landmark.cjs의 close·farN)
+  const c = CENTERS[region], a = AIM[region] || [0, 0], len = Math.hypot(c[0], c[1]);
+  const d = OUT_DIR[region] || (len > 1 ? [c[0] / len, c[1] / len] : [0, -1]);
+  return { x: c[0] + a[0] + d[0] * dist, z: c[1] + a[1] + d[1] * dist, h: Math.atan2(-d[0], -d[1]) };
+}
 const WARMUP_MS = Math.min(180000, MINUTES * 60000 * 0.15); // 처음 15%(최대 3분)는 워밍업: 지연 생성되는 자원을 센 뒤부터 증가를 본다
 
 const SNAP = () => {
@@ -36,8 +53,10 @@ const SNAP = () => {
 
 (async () => {
   const { browser, page, errors } = await open({ query: QUERY, width: 1440, height: 900 });
-  const t0 = Date.now(), targetMs = MINUTES * 60000;
+  let t0 = Date.now();
+  const targetMs = MINUTES * 60000;
   const samples = [], cycles = { codex: 0, menu: 0, trial: 0, rotation: 0 };
+  let tour = null;
   try {
     await page.waitForSelector('#start-sailing:not([disabled])', { timeout: 30000 });
     await page.click('#start-sailing');
@@ -46,6 +65,35 @@ const SNAP = () => {
       const a = window.__OCEAN_API__, g = window.__OCEAN_GAME__;
       a.questQa.prepare(1); g.audio.setMuted(true);
       const q = document.getElementById('qa-hud'); if (q) q.style.display = 'none';
+    });
+    if (TOUR) {
+      const counts = () => page.evaluate(() => { const i = window.__OCEAN_GAME__.renderer.info; return { geometries: i.memory.geometries, textures: i.memory.textures, programs: i.programs.length }; });
+      const home = await page.evaluate(() => { const g = window.__OCEAN_GAME__; return { x: g.motion.x, z: g.motion.z, h: g.motion.heading }; });
+      const before = await counts(), stops = [];
+      for (let region = 0; region < 9; region++) {
+        for (const [kind, dist] of [['근경', 95], ['원경', 200]]) {
+          await teleport(page, tourSpot(region, dist), { settle: 6 });
+          // 랜드마크 모델은 거리에 따라 늦게 불러온다: 불러올 때까지(최대 20초) 기다렸다가 몇 프레임 더 그린다
+          const ready = await page.waitForFunction((r) => { const e = window.__OCEAN_GAME__.remaster.landmarks.entries.find((x) => x.spec.region === r); return !e || Boolean(e.error) || (e.far.status === 'ready' && (e.near.status === 'ready' || e.near.status === 'failed')); }, region, { timeout: 20000 }).then(() => true, () => false);
+          await frames(page, 6);
+          stops.push({ region, kind, ready, ...(await counts()) });
+        }
+      }
+      // 시련 부표(스프라이트 표지 포함)를 한 번 화면에 그린다
+      await teleport(page, home, { settle: 6 });
+      await page.evaluate(() => window.__OCEAN_GAME__.startRegionTrial(1));
+      await frames(page, 6);
+      await page.evaluate(() => window.__OCEAN_GAME__.exitTrial());
+      await frames(page, 6);
+      await page.evaluate(() => { const g = window.__OCEAN_GAME__; if (window.__OCEAN_API__.cameraQa) window.__OCEAN_API__.cameraQa.snap(); g.keys.clear(); });
+      await teleport(page, home, { settle: 8 });
+      const after = await counts();
+      tour = { before, after, added: { geometries: after.geometries - before.geometries, textures: after.textures - before.textures, programs: after.programs - before.programs }, stops };
+      console.log('투어(랜드마크 9곳 × 근·원경 + 시련 부표)가 올린 렌더러 자원', JSON.stringify(tour.added), '(전', JSON.stringify(before), '→ 후', JSON.stringify(after) + ')');
+      t0 = Date.now(); // 재는 30분은 투어가 끝난 뒤부터
+    }
+    await page.evaluate(() => {
+      const a = window.__OCEAN_API__, g = window.__OCEAN_GAME__;
       g.setStabilityBaseline('rm8-endurance'); g.startEndurance(); g.keys.add('w'); g.keys.add('d');
       window.__RM8__ = { errors: [] };
       window.addEventListener('error', (e) => window.__RM8__.errors.push(e.message));
@@ -84,16 +132,28 @@ const SNAP = () => {
     // 판정: 워밍업 뒤 첫 표본과 마지막 표본을 비교한다. 늘면 위반(힙은 참고만).
     const warm = samples.find((s) => s.at - t0 >= WARMUP_MS) || samples[0], last = samples[samples.length - 1];
     const keys = ['geometries', 'textures', 'programs', 'targets', 'listeners', 'canvases', 'uiTimers', 'countUps', 'audioSources', 'audioTimeouts', 'audioIntervals'];
-    const growth = {};
-    for (const k of keys) growth[k] = (last[k] ?? 0) - (warm[k] ?? 0);
+    // 활동에 따라 오르내리는 개수(오디오 소스·타임아웃·UI 타이머·카운트업)는 두 시점의 차이가 우연(그 순간 소리가 나고 있었는가)에 좌우된다.
+    // 첫 30분 시험에서 오디오 소스가 3~37 사이를 오갔고 끝 표본이 우연히 낮아 통과처럼 보였다. 그래서 이 개수들은 "바닥값"(구간 최솟값)이 오르는지로 본다:
+    // 워밍업 뒤 표본을 셋으로 나눠 앞 구간의 최솟값과 뒤 구간의 최솟값을 비교한다(누수라면 바닥이 오른다). 나머지(지오메트리·텍스처·프로그램·렌더 타깃·리스너·캔버스)는 끝-워밍업을 그대로 본다.
+    const ACTIVITY = ['audioSources', 'audioTimeouts', 'audioIntervals', 'uiTimers', 'countUps'];
+    const afterWarm = samples.filter((sm) => sm.at - t0 >= WARMUP_MS && sm.label !== 'start');
+    const third = Math.max(1, Math.floor(afterWarm.length / 3)), early = afterWarm.slice(0, third), late = afterWarm.slice(-third);
+    const floorOf = (list, k) => Math.min(...list.map((sm) => sm[k] ?? 0));
+    const growth = {}, growthEndVsWarm = {}, floors = {};
+    for (const k of keys) {
+      growthEndVsWarm[k] = (last[k] ?? 0) - (warm[k] ?? 0);
+      if (ACTIVITY.includes(k)) { floors[k] = { early: floorOf(early, k), late: floorOf(late, k), samplesPerThird: third }; growth[k] = floors[k].late - floors[k].early; }
+      else growth[k] = growthEndVsWarm[k];
+    }
     const soft = { objects: last.objects - warm.objects, domNodes: last.domNodes - warm.domNodes, heapMB: warm.heap && last.heap ? Math.round((last.heap - warm.heap) / 1048576 * 10) / 10 : null, targetsCreatedMinusDisposed: last.targetsCreated - last.targetsDisposed };
     const bad = Object.entries(growth).filter(([, v]) => v > 0).map(([k, v]) => `${k} +${v}`);
     if (soft.domNodes > 40) bad.push(`domNodes +${soft.domNodes}`);
-    const result = { minutes: MINUTES, elapsedMs: Date.now() - t0, cycles, warmupAt: warm.label, growth, soft, bad, errors: errors.concat(pageErrors), delta, samples };
+    const result = { minutes: MINUTES, elapsedMs: Date.now() - t0, cycles, warmupAt: warm.label, tour, growth, growthEndVsWarm, floors, soft, bad, errors: errors.concat(pageErrors), delta, samples };
     fs.mkdirSync(path.dirname(path.resolve(OUT)), { recursive: true });
     fs.writeFileSync(OUT, JSON.stringify(result, null, 1));
     console.log('주기', JSON.stringify(cycles), '경과(분)', (result.elapsedMs / 60000).toFixed(1));
-    console.log('증가(워밍업 뒤 → 끝)', JSON.stringify(growth), '참고', JSON.stringify(soft));
+    console.log('증가(워밍업 뒤 → 끝; 오디오·타이머류는 바닥값 앞 구간 → 뒤 구간)', JSON.stringify(growth), '참고', JSON.stringify(soft));
+    console.log('끝-워밍업 차(참고)', JSON.stringify(growthEndVsWarm), '바닥값', JSON.stringify(floors));
     console.log('오류', JSON.stringify(result.errors.slice(0, 4)));
     const ok = !bad.length && !result.errors.length && cycles.codex >= Math.min(50, MINUTES >= 10 ? 50 : 1) && last.pipelineFailed !== true;
     console.log(ok ? 'ENDURANCE PASS' : 'ENDURANCE FAIL ' + bad.join(', '));

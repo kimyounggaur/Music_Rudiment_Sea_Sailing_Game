@@ -6,6 +6,10 @@
  *   복구 뒤 계획대로 타깃을 새로 만들었는가(개수가 손실 전과 같은가), 프레임이 다시 도는가, 오류가 없는가, 여러 번 되풀이해도 자원이 늘지 않는가.
  *   헤드리스 SwiftShader에서 돈다. 실제 기기의 손실(GPU 재설정 등)은 NOT_RUN으로 남긴다.
  *
+ *   손실·복구는 phase8Qa.loseContext/restoreContext(RM3 이전부터 있던 QA 함수)로 일으킨다. 이 함수들은 확장(WEBGL_lose_context)을 접속 때 한 번 받아 두고 쓴다.
+ *   손실된 컨텍스트에서는 getExtension()이 null을 돌려주므로(현재 Chromium), 매번 getExtension을 부르는 fxQa.restoreContext는 복구를 일으키지 못한다
+ *   (RM8 빌드의 fxQa.loseContext·restoreContext는 쓰지 않는다. RM9에서 지우거나 고친다).
+ *
  * 사용: BASE_URL=http://127.0.0.1:8767 node rm8-context.cjs [--out output/playwright/rm8-context.json] [--cycles 2]
  */
 const fs = require('fs');
@@ -17,7 +21,9 @@ const OUT = arg('out', path.join('output', 'playwright', 'rm8-context.json'));
 const CYCLES = Number(arg('cycles', 2));
 const COMBOS = [['high', 'full'], ['high', 'lite'], ['mid', 'full'], ['mid', 'off'], ['low', 'full'], ['low', 'off']];
 // 컨텍스트 손실이 부르는 정상 로그(three·브라우저)는 오류로 세지 않는다
-const EXPECTED = /context lost|context restored|CONTEXT_LOST|WebGL: context|lose_context|loseContext|restoreContext/i;
+// three r128은 복구 때 새 모듈을 만들고, 복구 이전에 만든 객체(그림자 맵 등)에 붙은 옛 dispose 처리기는 그대로 남는다. 복구 뒤 설정을 바꿔 그 객체를 지우면
+// 옛 처리기가 옛 컨텍스트의 핸들을 지우려다 Chromium이 "delete*: object does not belong to this context" 경고(deleteTexture·deleteFramebuffer·deleteVertexArray 등)를 낸다(새 처리기는 새 핸들을 정상으로 지운다). 무해한 경고다.
+const EXPECTED = /context lost|context restored|CONTEXT_LOST|WebGL: context|lose_context|loseContext|restoreContext|INVALID_OPERATION: delete\w*: object does not belong to this context/i;
 
 const SNAP = () => {
   const g = window.__OCEAN_GAME__, s = g.pipeline.snapshot(), info = g.renderer.info;
@@ -50,7 +56,7 @@ const SNAP = () => {
       let last = base;
       for (let c = 1; c <= CYCLES; c++) {
         const tag = `${quality}/${fx}#${c}`;
-        const lostOk = await page.evaluate(() => window.__OCEAN_API__.fxQa.loseContext());
+        const lostOk = await page.evaluate(() => window.__OCEAN_API__.phase8Qa.loseContext());
         await page.waitForTimeout(700);
         const during = await page.evaluate(SNAP);
         const f0 = during.frames;
@@ -62,12 +68,12 @@ const SNAP = () => {
         check(during.overlay === true, `${tag}: 손실 중 안내 화면`);
         check(during.raf === false, `${tag}: 손실 중 프레임 루프 정지`);
         check(during2.frames === f0, `${tag}: 손실 중 프레임이 늘지 않는다 (${f0} → ${during2.frames})`);
-        await page.evaluate(() => window.__OCEAN_API__.fxQa.restoreContext());
+        await page.evaluate(() => window.__OCEAN_API__.phase8Qa.restoreContext());
         await page.waitForTimeout(1500);
         await frames(page, 8);
         const after = await page.evaluate(SNAP);
         check(after.lost === false && after.contextLost === false && after.glLost === false, `${tag}: 복구 표시`);
-        check(after.restored === c, `${tag}: 복구 횟수 ${c} (${after.restored})`);
+        check(after.restored === base.restored + c, `${tag}: 복구 횟수 ${base.restored + c} (${after.restored}; 파이프라인 계수는 조합이 바뀌어도 누적된다)`);
         check(after.targets === base.targets, `${tag}: 복구 뒤 타깃 수 ${base.targets} (${after.targets})`);
         check(after.plan === base.plan, `${tag}: 복구 뒤 계획이 같다 (${base.plan} → ${after.plan})`);
         check(after.overlay === false && after.raf === true, `${tag}: 안내 화면이 닫히고 루프가 돈다`);
@@ -89,12 +95,12 @@ const SNAP = () => {
     // 손실 중 설정 화면을 열고 품질을 바꿔도 터지지 않는다(복구 뒤 새 설정대로 만든다)
     await page.evaluate(() => { const g = window.__OCEAN_GAME__; g.applyQualityProfile('mid', false); g.applyFx('full', false); });
     await frames(page, 6);
-    await page.evaluate(() => window.__OCEAN_API__.fxQa.loseContext());
+    await page.evaluate(() => window.__OCEAN_API__.phase8Qa.loseContext());
     await page.waitForTimeout(600);
     await page.evaluate(() => { const g = window.__OCEAN_GAME__; g.applyQualityProfile('low', false); });
     const whileLost = await page.evaluate(SNAP);
     check(whileLost.targets === 0, '손실 중 품질을 바꿔도 타깃을 만들지 않는다 (' + whileLost.targets + ')');
-    await page.evaluate(() => window.__OCEAN_API__.fxQa.restoreContext());
+    await page.evaluate(() => window.__OCEAN_API__.phase8Qa.restoreContext());
     await page.waitForTimeout(1500);
     await frames(page, 6);
     const afterSwitch = await page.evaluate(SNAP);

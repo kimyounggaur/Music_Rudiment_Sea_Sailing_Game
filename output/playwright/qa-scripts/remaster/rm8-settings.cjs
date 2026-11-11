@@ -3,6 +3,7 @@
  * RM8 설정 새 항목 3개(화면 효과·조용한 화면·감상 카메라) 저장 왕복 실측 (설계서 O-45의 화면 쪽 짝, 9장 RM8).
  *   진짜 저장소(localStorage)를 쓰려고 ?qa=1 없이 일반 주소로 연다(QA 주소는 저장을 메모리로 돌린다).
  *   설정 화면의 단추를 눌러 → 저장된 값(localStorage) 확인 → 새로고침 → 다시 열어 단추 상태·HUD 동작이 그대로인지 본다.
+ *   튜토리얼이 끝난 저장(진행 하나만)을 심고 시작한다: 튜토리얼 중에는 조용한 화면이어도 안내가 늘 떠 있다.
  *
  * 사용: BASE_URL=http://127.0.0.1:8767 node rm8-settings.cjs [--out output/playwright/rm8-settings.json]
  */
@@ -36,7 +37,12 @@ async function startAndOpenSettings(page) {
 
 (async () => {
   // 일반 주소(?qa 없음). 합격 판정에 쓰는 것은 화면과 저장소뿐이다.
-  const { browser, page, errors } = await open({ query: '', width: 900, height: 700 });
+  // 조용한 화면 검사는 튜토리얼이 끝난 상태를 전제로 한다(튜토리얼 중에는 안내가 늘 떠 있는 것이 설계다: hudStateFor의 tutorialActive).
+  // 설정 값은 건드리지 않고 진행(튜토리얼 완료)만 한 번 심는다(재접속 때 게임이 쓴 저장을 덮지 않게 sessionStorage 표식).
+  const seedTutorialDone = async (p) => p.addInitScript((key) => {
+    try { if (!sessionStorage.getItem('__settings_seeded')) { localStorage.setItem(key, JSON.stringify({ version: 1, progress: { tutorialDone: true } })); sessionStorage.setItem('__settings_seeded', '1'); } } catch (e) { /* 저장소가 막혀도 시험은 이어 간다 */ }
+  }, KEY);
+  const { browser, page, errors } = await open({ query: '', width: 900, height: 700, before: seedTutorialDone });
   const problems = [], rows = [];
   let checks = 0; const check = (cond, message) => { checks++; if (!cond) problems.push(message); return cond; };
   try {

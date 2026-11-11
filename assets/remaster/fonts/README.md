@@ -4,9 +4,9 @@
 
 | 파일 | 원본 | 크기(바이트) | 담은 글자 |
 |---|---|---|---|
-| `ld-myeongjo-400.woff2` | Gowun Batang 400 | 94952 | 905 |
-| `ld-myeongjo-700.woff2` | Gowun Batang 700 | 81588 | 905 |
-| `ld-score-500i.woff2` | Cormorant Garamond 500 Italic | 20172 | 118 |
-| `ld-score-600.woff2` | Cormorant Garamond 600 | 26496 | 118 |
+| `ld-myeongjo-400.woff2` | Gowun Batang 400 | 96352 | 919 |
+| `ld-myeongjo-700.woff2` | Gowun Batang 700 | 82912 | 919 |
+| `ld-score-500i.woff2` | Cormorant Garamond 500 Italic | 20308 | 119 |
+| `ld-score-600.woff2` | Cormorant Garamond 600 | 26564 | 119 |
 
 서브셋은 `tools/build-fonts.py`로 다시 만듭니다. 문구가 바뀌어 한글 음절이 늘면 그 스크립트를 다시 돌립니다. 빠진 글자는 뒤따르는 시스템 명조로 표시되므로 깨지지 않습니다.

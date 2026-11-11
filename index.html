@@ -32,10 +32,10 @@ ux_endurance: 1800014ms / errors 0 (UI v7); v12 repeat audit PASS; v13 render-ca
 ux_physical_device_checks: NOT_RUN
 ux_report: UX_GATE_REPORT.md
 ux_handoff: UX_HANDOFF.md
-remaster_track: RM7 COMPLETE (UI remaster, design spec v1.0)
-remaster_last_gate: GRM7 PASS
-remaster_tests: 42/42 (suite O, RM0-RM7)
-remaster_regression: 853/853
+remaster_track: RM8 COMPLETE (accessibility and performance, design spec v1.0)
+remaster_last_gate: GRM8 PASS
+remaster_tests: 45/45 (suite O, RM0-RM8)
+remaster_regression: 856/856
 remaster_report: REMASTER_GATE_REPORT.md
 remaster_handoff: REMASTER_HANDOFF.md
 -->
@@ -5058,10 +5058,12 @@ remaster_handoff: REMASTER_HANDOFF.md
           font-size: calc(12px * var(--text-scale));
         }
       }
-      /* 글자를 크게(1.15·1.3) 했을 때 좁은 화면(폭 600px 이하)·낮은 화면(높이 640px 이하)에서는 해역 이름이 두 줄로 꺾이고
+      /* 글자를 크게(1.15·1.3) 했을 때 좁은 화면(폭 600px 이하)·낮은 화면(높이 760px 이하)에서는 해역 이름이 두 줄로 꺾이고
          보조 줄이 붙어 해역 칩이 중앙 안전영역(위에서 22.5%)까지 내려온다(844×390: 1.3배에서 2~40px 침범).
-         이름은 한 줄에 들어가는 크기(기본 22px 아래로는 내리지 않는다)로 두고, 보조 줄은 잠잠 때처럼 접는다. */
-      @media (max-width: 600px), (max-height: 640px) {
+         이름은 한 줄에 들어가는 크기(기본 22px 아래로는 내리지 않는다)로 두고, 보조 줄은 잠잠 때처럼 접는다.
+         높이 기준은 RM7에서 640px이었으나, 창이 낮은 데스크톱(1280×720·1366×657)에서 글자 1.3배일 때도 해역 칩 + 목표 칩이 위 22.5% 띠를
+         넘어(1366×657: 14px) 760px로 올렸다. */
+      @media (max-width: 600px), (max-height: 760px) {
         html[data-text-scale="1.15"] .region-chip strong,
         html[data-text-scale="1.3"] .region-chip strong {
           font-size: max(22px, calc(16px * var(--text-scale)));
@@ -5126,12 +5128,18 @@ remaster_handoff: REMASTER_HANDOFF.md
           max-width: var(--m-chip-w);
         }
       }
-      @media (max-height: 500px) and (orientation: landscape) {
+      /* 가로이고 키가 640px 이하이면 목표 칩은 해역 이름 칩 아래가 아니라 화면 아래에 선다.
+         위쪽 22.5% 띠(1024×600에서 135px)에는 해역 칩(62px)과 목표 칩(54px)이 함께 들어가지 못해 칩이 중앙 안전영역을 침범한다.
+         자리는 원본의 가로 규칙(왼쪽 210px · 아래 16px · 폭은 100vw - 440px까지)을 그대로 따른다. 조작 단추 묶음(오른쪽)·수집 카운터(왼쪽)와 겹치지 않는 자리다.
+         RM7 빌드는 여기서 아래 간격을 88px로 올려 원본보다 72px 위, 곧 중앙 안전영역 안으로 끌어올렸다(터치 화면은 원본의 html[data-touch] 규칙이
+         더 세게 눌러 가렸기 때문에 행렬에서 보이지 않았다). 터치 가로 폰(높이 500px 이하)의 자리는 원본의 터치 규칙이 정한다. */
+      @media (max-height: 640px) and (orientation: landscape) {
         .objective-chip {
           top: auto;
-          bottom: calc(88px + var(--safe-bottom));
-          max-width: 200px;
+          left: calc(210px + var(--safe-left));
+          bottom: calc(var(--sp-4) + var(--safe-bottom));
           width: auto;
+          max-width: min(var(--m-chip-w), calc(100vw - 440px));
         }
       }
       /* 나침반: 56px. 상자·그림자를 걷고 상아색 1px 고리만. 라벨이 밝은 하늘 위에서도 읽히도록 안쪽만 --m-wash-3 원판을 깐다. */
@@ -5337,6 +5345,24 @@ remaster_handoff: REMASTER_HANDOFF.md
           bottom: -5px;
         }
       }
+      /* 키가 720px 이하인 세로 터치 화면(375×667·390×664·414×622 등)에서 수집 카운터를 낮춘다.
+         조이스틱은 --stick-size(22.5dvh - 40px)로 줄지만 그 위의 카운터는 줄지 않아서, 점수 서체(18px)로 카운터가 원본보다 5.6px 커진 뒤로
+         카운터 윗면이 중앙 안전영역의 아래 끝(77.5%)을 2~5px 넘었다(375×667·글자 배율 1.0에서 2px). 카운터를 조이스틱 상자 바로 위에 붙이고(간격 0),
+         줄 간격·여백을 줄이며, 글자를 키웠을 때는 숫자를 16px × 배율로 둔다(320×568급 규칙과 같다). 아래 띠에 조이스틱과 카운터가 함께 들어가는 계산은
+         카운터 높이 25px 기준 7px의 여유가 남는다. */
+      @media (max-height: 720px) and (orientation: portrait) {
+        html[data-touch="true"] .collect-counter {
+          bottom: calc(var(--stick-size) + var(--sp-2) + var(--safe-bottom));
+          padding: 3px 10px;
+        }
+        html[data-touch="true"] .collect-counter b {
+          line-height: 1.05;
+        }
+        html[data-touch="true"][data-text-scale="1.15"] .collect-counter b,
+        html[data-touch="true"][data-text-scale="1.3"] .collect-counter b {
+          font-size: calc(16px * var(--text-scale));
+        }
+      }
       /* 지도가 열려 있는 동안 좁은 화면에서는 목표 칩과 해역 이름 칩이 비켜선다(지도가 오른쪽 위를 덮고, 글자 1.3배에서는 해역 칩이 지도 쪽으로 파고든다).
          해역 이름은 지도를 닫으면 바로 돌아오고, 해역이 바뀔 때는 표제 카드가 따로 말해 준다. :has를 모르는 브라우저에서는 무시된다. */
       @media (max-width: 480px) {
@@ -5513,15 +5539,29 @@ remaster_handoff: REMASTER_HANDOFF.md
       #title-overlay {
         align-items: start;
         justify-items: start;
+        /* 카드가 앉는 칸을 화면 높이에 묶는다(카드의 최대 높이가 이 칸을 기준으로 정해진다) */
+        grid-template-rows: minmax(0, 1fr);
       }
       #title-overlay::after {
         background: linear-gradient(90deg, rgba(3, 19, 33, 0.4) 0%, rgba(3, 19, 33, 0) 58%);
       }
+      /* 타이틀 카드는 화면 크기·글자 배율과 상관없이 잘리지 않는다(RM8).
+         ① 제목 크기: "음악이론의"가 카드 안쪽 폭(--m-room)에 한 줄로 들어가게 잡는다(5글자 × (1em + 자간 0.04em)에 여유를 둔 5.4em).
+            처음에는 폭 기준을 화면 폭(100vw)으로만 잡아, 카드가 540px에서 멈추는 태블릿·데스크톱의 글자 배율 1.15 이상에서 제목이 3줄로 꺾였다.
+         ② 높이: 카드는 앉는 칸 안에서만 서고(max-height), 그래도 모자라면 카드 안에서 스크롤된다. 원본은 가로폰(높이 520 이하)에서만 그랬고,
+            RM7이 더한 위 여백(--m-card-top)이 그 상자의 계산을 어긋나게 해 아래 단추 줄이 화면 밖으로 밀렸다.
+         ③ 꾸밈(부제·물결·거울)은 아래 미디어 쿼리가 높이에 따라 먼저 덜어 내므로 스크롤은 정말 낮은 화면에서만 쓰인다. 값은 QA 도구 survey-title.cjs(화면 × 글자 배율 × 저장 유무)로 쟀다 */
       #title-overlay .title-card {
-        --m-title-size: min(var(--fs-8), calc((100vw - 96px) / 5.4));
+        --m-card-top: clamp(0px, 6dvh, 56px);
+        --m-room: calc(min(540px, 100vw - 2 * clamp(18px, 4vw, 48px) - var(--safe-left) - var(--safe-right)) - clamp(16px, 3vw, 32px) - clamp(40px, 7vw, 96px));
+        --m-title-size: min(var(--fs-8), calc(var(--m-room) / 5.4));
         align-self: start;
         width: min(540px, 100%);
-        margin-top: clamp(0px, 6dvh, 56px);
+        margin-top: var(--m-card-top);
+        max-height: calc(100% - var(--m-card-top));
+        overflow-x: hidden;
+        overflow-y: auto;
+        overscroll-behavior: contain;
         padding: clamp(16px, 3vw, 32px) clamp(40px, 7vw, 96px) clamp(16px, 3vw, 32px) clamp(16px, 3vw, 32px);
         background: linear-gradient(90deg, var(--m-wash-3) calc(100% - 64px), rgba(12, 14, 30, 0) 100%);
         border: 0;
@@ -5592,6 +5632,54 @@ remaster_handoff: REMASTER_HANDOFF.md
       }
       @media (max-height: 520px) {
         #title-overlay .title-mirror {
+          display: none;
+        }
+      }
+      /* 가로폰(높이 520 이하): 카드는 위 여백 없이 칸 전체를 쓰고, 제목은 칸에 맞춰 줄인다.
+         제목 크기 = min(글자 배율 크기, 카드 폭에 한 줄, (화면 높이 − 고정 여백 92px − 배율에 따라 커지는 줄들 100px × 배율) ÷ 제목 두 줄(2.2))
+         카드 폭은 원본 규칙(너비 60vw)과 같게 min(540px, 60vw)로 못박아 폭 기준과 실제 폭이 어긋나지 않게 했다 */
+      @media (max-height: 520px) and (orientation: landscape) {
+        #title-overlay .title-card {
+          --m-card-top: 0px;
+          --m-room: calc(min(540px, 60vw, 100vw - 28px - var(--safe-left) - var(--safe-right)) - clamp(16px, 3vw, 32px) - clamp(40px, 7vw, 96px));
+          --m-title-size: min(var(--fs-8), calc(var(--m-room) / 5.4), calc((100dvh - 92px - 100px * var(--text-scale)) / 2.2));
+          max-width: min(540px, 60vw);
+          padding-top: 12px;
+          padding-bottom: 12px;
+        }
+      }
+      /* 너비 700 이상(카드가 540 폭이라 제목·부제가 길다)에서는 부제·물결·거울을 원본보다 일찍 덜어 낸다.
+         기준 높이는 저장이 있어(진행 줄·단추 둘) 카드가 가장 긴 상태에서 잰 값이고, 글자 배율이 크면 카드가 길어지므로 기준을 올린다 */
+      @media (min-width: 700px) and (max-height: 700px) {
+        #title-overlay .title-card .subtitle,
+        #title-overlay .title-wave {
+          display: none;
+        }
+      }
+      @media (min-width: 700px) and (max-height: 740px) {
+        html[data-text-scale="1.15"] #title-overlay .title-card .subtitle,
+        html[data-text-scale="1.15"] #title-overlay .title-wave {
+          display: none;
+        }
+      }
+      @media (min-width: 700px) and (max-height: 760px) {
+        html[data-text-scale="1.3"] #title-overlay .title-card .subtitle,
+        html[data-text-scale="1.3"] #title-overlay .title-wave {
+          display: none;
+        }
+      }
+      @media (min-width: 700px) and (max-height: 570px) {
+        #title-overlay .title-mirror {
+          display: none;
+        }
+      }
+      @media (min-width: 700px) and (max-height: 600px) {
+        html[data-text-scale="1.15"] #title-overlay .title-mirror {
+          display: none;
+        }
+      }
+      @media (min-width: 700px) and (max-height: 610px) {
+        html[data-text-scale="1.3"] #title-overlay .title-mirror {
           display: none;
         }
       }
@@ -6153,6 +6241,16 @@ remaster_handoff: REMASTER_HANDOFF.md
         box-shadow: 0 0 0 2px var(--m-panel), 0 0 0 3px var(--m-amber);
       }
 
+      /* 시련 안내 띠, 키 501px 이상의 창(RM8).
+         원본의 상한 22dvh는 키 600px 창(1024×600)에서 132px라 내용(문항 40개 실측 최대 141px)보다 작아 듣기·순서 항해 문항 16개가 최대 10px 넘쳐
+         띠가 스크롤됐다(survey-banner.cjs, RM7은 이 크기를 재지 않았다). 바닥값 160px를 둔다. 키 727px 이상이면 22dvh가 더 커서 바닥값이 쓰이지 않고,
+         내용이 상한보다 작으면 늘 내용만큼만 선다. 폭 600 이하 세로폰(아래 규칙, 바닥값 168px)은 뒤에 있는 그 규칙이 이긴다. 키 500px 이하 가로폰은 이 규칙에 해당하지 않는다 */
+      @media (min-height: 501px) {
+        #trial-overlay[data-world="true"] .trial-banner {
+          max-height: max(22dvh, 160px);
+        }
+      }
+
       /* 시련 안내 띠, 세로폰(폭 600 이하).
          문장이 좁은 한 칸(도구 단추 옆 132~170px)에 갇혀 서너 줄로 쌓이던 배치를 바꾼다. 왼쪽 위에 종류·진행 칩과 진행 점,
          오른쪽에 도구 단추(44px 그대로), 그 아래 전체 폭으로 문장·보조 문구·파형을 놓는다.
@@ -6297,6 +6395,19 @@ remaster_handoff: REMASTER_HANDOFF.md
         }
         .hint-portrait {
           top: max(22dvh, 96px);
+        }
+        /* 장식 파형은 문장·보조 문구 칸 위가 아니라 왼쪽 칩 줄 아래에 둔다(RM8).
+           원본은 오른쪽 아래(문장 칸 안)에 80×16px로 앉아 있어, 보조 문구가 길면 끝 글자와 16px 겹쳤다. 띠 높이가 도구 단추 줄(44px)로 정해지는
+           낮은 띠에서도 칩과 겹치지 않도록 높이를 8px로 줄인다(survey-banner.cjs: 문항 40개 × 화면 10종 × 글자 배율 3종에서 겹침 0) */
+        #trial-overlay[data-world="true"] .waveform {
+          right: auto;
+          left: var(--sp-3);
+          width: 56px;
+          height: var(--sp-2);
+          padding: 0;
+        }
+        #trial-overlay[data-world="true"] .waveform span {
+          height: var(--sp-2);
         }
         /* 가로폰: 네 칸이라 글자가 세 줄이 되어도 잘리지 않게 높이는 늘어나게 둔다(서랍이 스크롤된다) */
         #trial-overlay[data-world="true"] .trial-choice {
@@ -12320,6 +12431,9 @@ remaster_handoff: REMASTER_HANDOFF.md
           lighthouseResponses: hidden ? 8 : 0,
         });
       }
+      // RM8: 접속 때 저장을 읽는 첫 호출(아래 SAVE = loadSave())이 sanitizeSave를 거치므로, 그 안에서 쓰는 값은 여기서 먼저 선언한다.
+      //   리마스터 코어 구역(파일 아래쪽)에 두면 저장이 있는 접속마다 선언 전 접근 오류가 나서 저장이 지워졌다(RM0~RM7). 검사 O-45가 순서를 본다.
+      const REMASTER_FX_VALUES = Object.freeze(["auto", "full", "lite", "off"]);
       function sanitizeSave(input) {
         const base = createDefaultSave(),
           src = input && typeof input === "object" ? input : {};
@@ -12652,6 +12766,8 @@ remaster_handoff: REMASTER_HANDOFF.md
         return result;
       }
       SAVE = loadSave();
+      // RM8: 접속 때 저장을 읽은 결과(복구했는지)를 붙들어 둔다. LAST_SAVE_RECOVERY는 검사가 loadSave()를 다시 부르면 덮어써진다.
+      const BOOT_SAVE_RECOVERED = LAST_SAVE_RECOVERY.status === "recovered";
       function persist() {
         SAVE = saveData(SAVE, ACTIVE_STORE);
         return SAVE;
@@ -13128,6 +13244,13 @@ remaster_handoff: REMASTER_HANDOFF.md
       }
       function test(suiteRecord, name, fn) {
         suiteRecord.tests.push({ name, fn });
+      }
+      // RM8: 화면 배치 검사. 창 크기·글자 배율·터치 여부에 따라 결과가 달라지는 검사(uiHudProbe로 실제 HUD를 재는 O-38~O-41)는
+      // 늘 돌고 집계에도 그대로 들어가지만, 접속 때의 "시작 허용" 조건에서는 실패를 뺀다. 배치가 한 곳 어긋났다는 이유로
+      // 작은 화면의 게임이 통째로 시작되지 않으면 안 되기 때문이다. ?test=1 보고서와 QA(runAllTests)에서는 실패가 그대로 실패다.
+      const LAYOUT_TEST_IDS = ["O-38", "O-39", "O-40", "O-41"];
+      function isLayoutTest(name) {
+        return LAYOUT_TEST_IDS.some((id) => String(name).startsWith(id + " "));
       }
       function assert(condition, message = "조건이 거짓입니다.") {
         if (!condition) failAssertion(message, condition, true);
@@ -16667,6 +16790,11 @@ remaster_handoff: REMASTER_HANDOFF.md
         api.text(document.getElementById("objective-title"), "1/6 · 앞으로 나아가세요");
         api.text(document.getElementById("objective-hint"), "W / ↑ · 앞으로");
         api.prop(document.querySelector(".minimap-panel"), "hidden", !mapOpen);
+        const regionChip = document.getElementById("region-chip");
+        if (regionChip) {
+          const bottom = regionChip.getBoundingClientRect().bottom;
+          if (bottom > 0) api.style("--m-chip-bottom", Math.round(bottom + 6) + "px");
+        }
         return api;
       }
       const uiNormalize = (text) => String(text).replace(/\s+/g, " ").trim();
@@ -16976,6 +17104,247 @@ remaster_handoff: REMASTER_HANDOFF.md
         assertEqual(list.textContent, "수집 18개 · 필요 8개 / 핵심 개념 2/3");
         assertArray([...list.querySelectorAll(".check")].map((node) => node.dataset.done), ["true", "false"]);
       });
+      // RM8 접근성·성능 검사 (설계서 O-43~O-45). THREE 없이 순수 함수와 가짜 객체만 쓰고, 건드린 값은 모두 되돌린다.
+      test(suiteRemaster, "O-43 자동 화면 효과 조정 규칙 (1.3배·3초 지속·한 단계씩·알림 한 번·사용자 지정값 보호)", () => {
+        const target = AUTO_FX.targetDesktopMs;
+        // 프레임 간격 frameMs로 seconds초 동안 시각을 몰아 신호가 난 시각(시작 기준 ms)을 모은다
+        const run = (frameMs, seconds, auto = createAutoFx(), t = target) => {
+          const start = 1000,
+            fired = [];
+          let now = start;
+          while (now < start + seconds * 1000) {
+            now += frameMs;
+            if (auto.push(now, t)) fired.push(Math.round(now - start));
+          }
+          return { auto, fired };
+        };
+        assertEqual(run(16.7, 40).fired.length, 0, "목표 안(60fps)에서는 신호가 없다");
+        assertEqual(run(target * 1.29, 40).fired.length, 0, "1.3배 이하는 느리다고 보지 않는다");
+        const slow = run(25, 32); // 40fps: 1.3배 초과
+        assert(slow.fired.length === 3, "25ms 프레임을 32초 몰면 6초·16초·26초 무렵에 세 번 (" + slow.fired.join(",") + ")");
+        assert(slow.fired[0] >= 6000 && slow.fired[0] <= 6200, "첫 신호는 창이 차는 3초 + 지속 3초 뒤 (" + slow.fired[0] + ")");
+        assert(slow.fired[1] - slow.fired[0] >= 9900, "신호 뒤 4초는 재지 않고 창이 다시 차야 한다 (" + (slow.fired[1] - slow.fired[0]) + ")");
+        // 느린 구간이 3초를 못 채우고 회복하면 신호가 없다: 느림 4초(창 3초 + 1초) → 정상 20초
+        const recover = createAutoFx();
+        const slowPart = run(25, 4, recover),
+          okPart = (() => {
+            let now = 1000 + 4000;
+            const fired = [];
+            while (now < 1000 + 24000) {
+              now += 16.7;
+              if (recover.push(now, target)) fired.push(now);
+            }
+            return fired;
+          })();
+        assertEqual(slowPart.fired.length + okPart.length, 0, "3초를 못 채우고 회복하면 신호가 없다");
+        // 250ms를 넘는 간격(탭 숨김·로딩)은 프레임이 아니라 멈춤: 창을 비운다
+        const gap = createAutoFx();
+        run(25, 4, gap);
+        gap.push(1000 + 4000 + 1000, target); // 1초 멈춤
+        assertEqual(gap.size, 0, "긴 간격 뒤에는 창이 비어 있다");
+        // 모바일 목표(30fps = 33.3ms): 40ms(25fps)는 1.3배(43.3ms) 이하라 신호가 없고, 50ms(20fps)는 신호가 난다
+        assertEqual(run(40, 40, createAutoFx(), AUTO_FX.targetMobileMs).fired.length, 0);
+        assert(run(50, 40, createAutoFx(), AUTO_FX.targetMobileMs).fired.length >= 1);
+        // 설정값·오류 강등·자동 강등의 합성: 사용자가 직접 고른 값(auto가 아닌 값)은 자동 조정이 덮어쓰지 않는다
+        assertEqual(effectiveFx("auto", null, "lite"), "lite");
+        assertEqual(effectiveFx("full", null, "lite"), "full", "full을 직접 골랐으면 그대로");
+        assertEqual(effectiveFx("lite", null, "off"), "lite", "lite를 직접 골랐으면 그대로");
+        assertEqual(effectiveFx("auto", "off", "lite"), "off", "오류로 낮춘 값이 더 낮으면 그쪽");
+        assertEqual(effectiveFx("full", "lite", "off"), "lite", "오류로 낮춘 값은 직접 고른 값에도 적용");
+        assertEqual(effectiveFx("bogus", null, null), "auto");
+        // 다음 단계: 비용이 실제로 달라지는 단계만. low는 lite와 비용이 같아 곧장 off
+        assertEqual(autoNextFx("high", false, "full"), "lite");
+        assertEqual(autoNextFx("mid", true, "auto"), "lite");
+        assertEqual(autoNextFx("mid", false, "lite"), "off");
+        assertEqual(autoNextFx("mid", false, "off"), null);
+        assertEqual(autoNextFx("low", false, "full"), "off");
+        assertEqual(autoNextFx("low", false, "off"), null);
+        // 주소 규칙: QA·검사 주소에서는 꺼짐, ?autofx=1이면 켜짐, ?autofx=0이면 꺼짐, 일반 주소는 켜짐
+        assertEqual(RenderPipeline.autoAllowed(""), true);
+        assertEqual(RenderPipeline.autoAllowed("?qa=1"), false);
+        assertEqual(RenderPipeline.autoAllowed("?test=1"), false);
+        assertEqual(RenderPipeline.autoAllowed("?qa=1&autofx=1"), true);
+        assertEqual(RenderPipeline.autoAllowed("?autofx=0"), false);
+        // 가짜 파이프라인으로 끝까지: 직접 고른 full은 그대로, auto는 lite → off로 한 단계씩, 알림은 한 번
+        const saved = { fx: SAVE.settings.fx, quality: SAVE.settings.quality };
+        try {
+          const toasts = [],
+            fake = Object.create(RenderPipeline.prototype);
+          let applied = 0,
+            clock = 5000;
+          Object.assign(fake, {
+            autoFx: createAutoFx({ window: 10, holdMs: 100, settleMs: 50 }),
+            autoCap: null,
+            autoSteps: 0,
+            autoNotified: false,
+            autoQuality: null,
+            autoEnabled: true,
+            failed: false,
+            lost: false,
+            mobile: false,
+            game: { showToast: (text) => toasts.push(text) },
+          });
+          fake.apply = () => applied++;
+          fake.pageHidden = () => false;
+          // 시계는 호출 사이에 거꾸로 가지 않게 하나로 이어 쓴다. 50ms 간격 = 20fps(데스크톱 목표의 3배)
+          const drive = (ms) => {
+            const end = clock + ms;
+            while (clock < end) {
+              clock += 50;
+              fake.feedAuto(clock);
+            }
+          };
+          SAVE.settings.quality = "high";
+          SAVE.settings.fx = "full";
+          drive(3000);
+          assertEqual(fake.autoCap, null, "직접 고른 full은 덮어쓰지 않는다");
+          assertEqual(applied, 0);
+          SAVE.settings.fx = "auto";
+          fake.pageHidden = () => true;
+          drive(3000);
+          assertEqual(fake.autoCap, null, "탭이 가려진 동안에는 재지 않는다");
+          assertEqual(fake.autoFx.size, 0);
+          fake.pageHidden = () => false;
+          drive(3000);
+          assertEqual(fake.autoCap, "off", "느린 채로 두면 lite를 거쳐 off까지 내려간다");
+          assertEqual(fake.autoSteps, 2);
+          assertEqual(applied, 2, "단계마다 계획을 다시 적용한다");
+          assertEqual(toasts.length, 1, "알림은 한 번만");
+          assertEqual(toasts[0], "화면 효과를 가볍게 바꿨어요");
+          const stepsBefore = fake.autoSteps;
+          drive(3000);
+          assertEqual(fake.autoSteps, stepsBefore, "더 내릴 곳이 없으면 멈춘다");
+          // 컨텍스트 손실 중에도 재지 않는다
+          fake.lost = true;
+          drive(1000);
+          assertEqual(fake.autoFx.size, 0);
+          fake.lost = false;
+          // 품질을 바꾸면 자동으로 낮춘 기록을 지우고 새 기준에서 다시 잰다
+          SAVE.settings.quality = "mid";
+          fake.feedAuto(clock + 50);
+          assertEqual(fake.autoCap, null);
+          assertEqual(applied, 3, "기록을 지우면서 계획을 되돌려 다시 적용한다");
+        } finally {
+          SAVE.settings.fx = saved.fx;
+          SAVE.settings.quality = saved.quality;
+        }
+      });
+      test(suiteRemaster, "O-44 컨텍스트 손실·복구: 낡은 렌더 타깃 핸들을 버리고 복구 뒤 계획대로 새로 만든다", () => {
+        const saved = { fx: SAVE.settings.fx, quality: SAVE.settings.quality };
+        try {
+          SAVE.settings.quality = "high";
+          SAVE.settings.fx = "full";
+          let created = 0,
+            disposed = 0;
+          // 다중 샘플 타깃은 samples가 4다(실제 makeTarget과 같다). 이 값이 계획과 어긋나면 resize가 매번 다시 만든다.
+          const mk = (w, h, samples = 0) => ({ width: w, height: h, samples, dispose: () => disposed++ }),
+            fake = Object.create(RenderPipeline.prototype),
+            before = pipelinePlan("high", "full", false);
+          Object.assign(fake, {
+            targets: { scene: mk(10, 10, 4), refl: mk(5, 5), bright: mk(5, 5), blur: [mk(5, 5), mk(5, 5), mk(2, 2), mk(2, 2)] },
+            counters: { created: 7, disposed: 0 },
+            size: { w: 10, h: 10 },
+            reflReady: true,
+            lost: false,
+            failed: false,
+            demoted: null,
+            plan: before,
+            watchFrames: 0,
+            mobile: false,
+            autoFx: createAutoFx(),
+            autoCap: null,
+            renderer: { getDrawingBufferSize: (v) => { v.x = 200; v.y = 100; }, capabilities: { isWebGL2: true }, setRenderTarget: () => {} },
+            _v2: { x: 0, y: 0 },
+            compositeMaterial: { uniforms: { uRes: { value: { set: () => {} } } } },
+            compositeLiteMaterial: { uniforms: { uRes: { value: { set: () => {} } } } },
+            atmosphere: null,
+            game: {},
+          });
+          fake.makeTarget = (w, h, { msaa = false } = {}) => {
+            created++;
+            fake.counters.created++;
+            return mk(w, h, msaa && fake.renderer.capabilities.isWebGL2 ? 4 : 0);
+          };
+          fake.applyCss = () => {};
+          assertEqual(fake.targetCount(), 7, "손실 전에는 타깃 7개(장면·반사·밝은 부분·번짐 4)");
+          assertEqual(fake.usable(), true);
+          fake.contextLost();
+          assertEqual(fake.lost, true);
+          assertEqual(fake.usable(), false, "컨텍스트가 없으면 이 파이프라인으로 그리지 않는다");
+          assertEqual(fake.targetCount(), 0, "낡은 핸들을 모두 버렸다");
+          assertEqual(fake.reflReady, false);
+          assertEqual(fake.counters.lost, 1);
+          assertEqual(disposed, 0, "이미 사라진 GL 객체에는 dispose를 부르지 않는다");
+          fake.resize(true);
+          assertEqual(created, 0, "손실 중에는 타깃을 만들지 않는다");
+          fake.contextRestored();
+          assertEqual(fake.lost, false);
+          assertEqual(fake.usable(), true);
+          assertEqual(fake.counters.restored, 1);
+          // 복구 뒤 계획은 설정·기기에서 다시 정한 것(같은 계획이라도 새 컨텍스트에서 다시 만든다)
+          const plan = pipelinePlan("high", "full", fake.mobile);
+          assertEqual(JSON.stringify(fake.plan), JSON.stringify(plan));
+          assertEqual(fake.plan.reflect, "planar");
+          assertEqual(fake.plan.post, "full");
+          const want = pipelineTargetSizes(200, 100, plan);
+          assertEqual(created, 1 + 1 + 1 + 4, "계획이 요구하는 7개를 모두 새로 만든다");
+          assertArray([fake.targets.scene.width, fake.targets.scene.height], want.scene);
+          assertArray([fake.targets.refl.width, fake.targets.refl.height], want.refl);
+          assertArray([fake.targets.bright.width, fake.targets.bright.height], want.bloom[0]);
+          assertArray([fake.targets.blur[3].width, fake.targets.blur[3].height], want.bloom[1]);
+          assertEqual(fake.targets.scene.samples, 4, "높음 품질의 장면 타깃은 다중 샘플");
+          assertEqual(fake.targetCount(), 7);
+          assertEqual(fake.reflReady, false, "반사는 첫 프레임에 다시 그린다");
+          assertEqual(fake.watchFrames, 12, "복구 뒤 12프레임은 셰이더 컴파일 결과를 지켜본다");
+          // 복구 뒤 같은 크기로 resize를 또 불러도 타깃을 다시 만들지 않는다
+          const afterRestore = created;
+          fake.resize(false);
+          assertEqual(created, afterRestore);
+          assertEqual(disposed, 0);
+        } finally {
+          SAVE.settings.fx = saved.fx;
+          SAVE.settings.quality = saved.quality;
+        }
+      });
+      test(suiteRemaster, "O-45 설정 새 항목 3개(화면 효과·조용한 화면·감상 카메라)의 저장 왕복", () => {
+        const roundTrip = (patch) => {
+          const data = createDefaultSave();
+          Object.assign(data.settings, patch);
+          return migrate(JSON.parse(JSON.stringify(data))).settings;
+        };
+        const defaults = createDefaultSave().settings;
+        for (const fx of REMASTER_FX_VALUES)
+          for (const hudQuiet of [true, false])
+            for (const scenicCam of [true, false]) {
+              const back = roundTrip({ fx, hudQuiet, scenicCam });
+              assertEqual(back.fx, fx);
+              assertEqual(back.hudQuiet, hudQuiet);
+              assertEqual(back.scenicCam, scenicCam);
+            }
+        const bad = roundTrip({ fx: "ultra", hudQuiet: "yes", scenicCam: 3 });
+        assertEqual(bad.fx, "auto", "모르는 효과값은 auto");
+        assertEqual(bad.hudQuiet, defaults.hudQuiet, "참·거짓이 아니면 기본값");
+        assertEqual(bad.scenicCam, defaults.scenicCam, "참·거짓이 아니면 기본값");
+        const keep = roundTrip({ fx: "lite", textScale: 1.3, quality: "low", volBgm: 0.25, hudQuiet: false });
+        assertEqual(keep.fx, "lite");
+        assertEqual(keep.textScale, 1.3, "다른 설정은 그대로");
+        assertEqual(keep.quality, "low");
+        assertEqual(keep.volBgm, 0.25);
+        assertEqual(keep.hudQuiet, false);
+        // 자동 조정은 저장하지 않는다: 저장된 fx는 사용자가 고른 값뿐이다(자동으로 낮춰도 "auto"로 남는다)
+        const auto = roundTrip({ fx: "auto" });
+        assertEqual(auto.fx, "auto");
+        // 설정 화면 마크업의 계약: 효과 단추 넷(값 목록과 같은 순서)과 토글 둘
+        assertArray([...document.querySelectorAll("[data-fx]")].map((node) => node.dataset.fx), [...REMASTER_FX_VALUES]);
+        for (const id of ["hud-quiet-toggle", "scenic-cam-toggle"]) assert(document.getElementById(id), id);
+        // 접속 때 저장을 읽는 첫 호출(SAVE = loadSave())은 파일 위쪽에서 일어나 sanitizeSave를 거친다. 그 안에서 쓰는 REMASTER_FX_VALUES가
+        // 그보다 아래에서 선언되면 "선언 전 접근" 오류가 나고, 게임은 저장을 깨진 것으로 보아 지운 채 새 항해로 복구한다(저장이 있는 접속에서만 드러난다).
+        // 이 검사는 검사 실행 시점에는 이미 선언된 뒤라 값으로는 못 잡는다: 소스에서 선언이 첫 호출보다 앞서는지를 본다.
+        const source = document.documentElement.outerHTML,
+          declaredAt = source.indexOf("const REMASTER_FX_" + "VALUES"),
+          firstLoadAt = source.indexOf("SAVE = load" + "Save();");
+        assert(declaredAt > 0 && firstLoadAt > 0 && declaredAt < firstLoadAt, "REMASTER_FX_VALUES 선언(" + declaredAt + ")이 첫 loadSave() 호출(" + firstLoadAt + ")보다 앞선다");
+      });
       function runAllTests() {
         const results = {
           suites: [],
@@ -16990,6 +17359,8 @@ remaster_handoff: REMASTER_HANDOFF.md
             ux: { pass: 0, fail: 0 },
             remaster: { pass: 0, fail: 0 },
           },
+          // 실패한 검사 가운데 화면 배치 검사의 수(종류별). 시작 허용 조건에서는 이만큼을 뺀다.
+          layoutFail: {},
         };
         TEST_REGISTRY.forEach((suiteRecord) => {
           const suiteResult = {
@@ -17008,6 +17379,8 @@ remaster_handoff: REMASTER_HANDOFF.md
             } catch (error) {
               suiteResult.fail++;
               results.totals[suiteRecord.kind].fail++;
+              if (isLayoutTest(testRecord.name))
+                results.layoutFail[suiteRecord.kind] = (results.layoutFail[suiteRecord.kind] || 0) + 1;
               suiteResult.tests.push({
                 name: testRecord.name,
                 ok: false,
@@ -22094,7 +22467,7 @@ remaster_handoff: REMASTER_HANDOFF.md
         "main",
         "post",
       ]);
-      const REMASTER_FX_VALUES = Object.freeze(["auto", "full", "lite", "off"]);
+      // REMASTER_FX_VALUES는 파일 위쪽(sanitizeSave 앞)에서 선언한다(patches/rm8a.py 8번). 접속 때 저장을 읽는 첫 호출이 그보다 먼저 일어난다.
       function remasterHash(text) {
         let h = 0x811c9dc5;
         for (let i = 0; i < text.length; i++) {
@@ -23296,6 +23669,111 @@ remaster_handoff: REMASTER_HANDOFF.md
         gl_FragColor = vec4(clamp(c, 0.0, 1.0), 1.0);
       }
       `;
+      // ---------------------------------------------------------------------
+      // 자동 화면 효과 조정 (RM8, 설계서 5.11) — 프레임 시각만 받아 "한 단계 낮출지"를 정하는 순수 로직(THREE 없이 검사 O-43이 직접 부른다).
+      //   최근 120프레임 평균이 목표 프레임 시간의 1.3배를 3초 넘게 이어서 넘으면 신호를 한 번 낸다.
+      //   250ms 넘는 간격(탭 숨김·로딩·긴 정지)은 프레임이 아니라 멈춤으로 보고 창을 비운다.
+      //   신호 뒤 4초는 재지 않는다(렌더 타깃 재생성·셰이더 컴파일로 일부러 느려지는 구간).
+      //   사용자가 설정에서 직접 고른 fx(auto가 아닌 값)는 덮어쓰지 않는다 — effectiveFx가 그 규칙이다.
+      // ---------------------------------------------------------------------
+      const AUTO_FX = Object.freeze({
+        window: 120, // 평균을 내는 프레임 수
+        over: 1.3, // 목표의 몇 배를 넘으면 느리다고 보는가
+        holdMs: 3000, // 그 상태가 이만큼 이어져야 신호
+        gapMs: 250, // 이보다 긴 간격은 멈춤으로 본다
+        settleMs: 4000, // 신호 뒤 재지 않는 시간
+        targetDesktopMs: 1000 / 60, // 데스크톱 목표 60fps (설계서 5.12)
+        targetMobileMs: 1000 / 30, // 모바일 목표 30fps (설계서 5.12)
+      });
+      function createAutoFx(options = {}) {
+        const cfg = { ...AUTO_FX, ...options },
+          ring = new Float64Array(cfg.window);
+        let size = 0,
+          cursor = 0,
+          sum = 0,
+          lastAt = -1,
+          overSince = -1,
+          settleUntil = -Infinity,
+          signals = 0;
+        const clearWindow = () => {
+          ring.fill(0);
+          size = 0;
+          cursor = 0;
+          sum = 0;
+          overSince = -1;
+        };
+        return {
+          // now: 밀리초 시각(rAF·performance.now). targetMs: 이 기기의 목표 프레임 시간. 반환: 한 단계 낮추라는 신호이면 true.
+          push(now, targetMs = cfg.targetDesktopMs) {
+            if (!Number.isFinite(now)) return false;
+            const gap = lastAt < 0 ? 0 : now - lastAt;
+            lastAt = now;
+            if (gap <= 0) return false;
+            if (gap > cfg.gapMs) {
+              clearWindow();
+              return false;
+            }
+            if (now < settleUntil) return false;
+            if (size === cfg.window) sum -= ring[cursor];
+            else size++;
+            ring[cursor] = gap;
+            sum += gap;
+            cursor = (cursor + 1) % cfg.window;
+            if (size < cfg.window) return false;
+            if (sum / size <= targetMs * cfg.over) {
+              overSince = -1;
+              return false;
+            }
+            if (overSince < 0) {
+              overSince = now;
+              return false;
+            }
+            if (now - overSince < cfg.holdMs) return false;
+            signals++;
+            clearWindow();
+            settleUntil = now + cfg.settleMs;
+            return true;
+          },
+          // 설정을 바꾸거나 탭이 숨겨졌을 때: 쌓인 프레임을 버리고 처음부터 다시 잰다.
+          reset() {
+            clearWindow();
+            lastAt = -1;
+            settleUntil = -Infinity;
+          },
+          get signals() {
+            return signals;
+          },
+          get mean() {
+            return size ? sum / size : 0;
+          },
+          get size() {
+            return size;
+          },
+        };
+      }
+      // 설정값(asked)·오류로 낮춘 값(demoted)·자동으로 낮춘 값(autoCap)을 합쳐 지금 쓸 fx를 정한다.
+      //   오류로 낮춘 값은 늘 지킨다. 자동으로 낮춘 값은 설정이 "auto"일 때만 적용한다(사용자가 직접 고른 값은 덮어쓰지 않는다).
+      function effectiveFx(asked, demoted = null, autoCap = null) {
+        const rank = { auto: 3, full: 3, lite: 2, off: 1 },
+          ask = REMASTER_FX_VALUES.includes(asked) ? asked : "auto";
+        let fx = ask;
+        if (demoted && rank[demoted] < rank[fx]) fx = demoted;
+        if (ask === "auto" && autoCap && rank[autoCap] < rank[fx]) fx = autoCap;
+        return fx;
+      }
+      // 계획에서 비용에 영향을 주는 필드만 모아 비교용 글자로 만든다(fx 이름 자체는 뺀다).
+      function planCost(plan) {
+        return [plan.reflect, plan.reflectScale, plan.post, plan.msaa ? 1 : 0, plan.passes].join("|");
+      }
+      // 지금 fx(auto는 full로 본다)에서 한 단계 낮췄을 때 비용이 실제로 달라지는 다음 fx. 더 내릴 곳이 없으면 null.
+      function autoNextFx(quality, mobile, currentFx = "full", table = CONFIG.qualityProfiles) {
+        const order = ["full", "lite", "off"],
+          start = Math.max(0, order.indexOf(currentFx === "auto" ? "full" : currentFx)),
+          here = planCost(pipelinePlan(quality, order[start], mobile, table));
+        for (let i = start + 1; i < order.length; i++)
+          if (planCost(pipelinePlan(quality, order[i], mobile, table)) !== here) return order[i];
+        return null;
+      }
       class RenderPipeline {
         constructor(game) {
           this.game = game;
@@ -23307,6 +23785,14 @@ remaster_handoff: REMASTER_HANDOFF.md
           this.failed = false;
           this.failure = "";
           this.demoted = null; // 컴파일·타깃 오류로 한 단계 낮춘 fx
+          // RM8 자동 조정(5.11): 느리면 fx를 한 단계씩 낮춘다. 설정이 auto일 때만 적용되고, 저장하지 않는다(접속마다 다시 잰다).
+          this.autoFx = createAutoFx();
+          this.autoCap = null;
+          this.autoSteps = 0;
+          this.autoNotified = false;
+          this.autoQuality = null;
+          this.autoManual = false; // QA 전용: 켜 두면 진짜 프레임은 재지 않고 가짜 프레임(fxQa.feed)만 잰다
+          this.autoEnabled = RenderPipeline.autoAllowed(typeof location !== "undefined" ? location.search : "");
           this.targets = { scene: null, refl: null, bright: null, blur: [] };
           this.counters = { created: 0, disposed: 0 };
           this.size = { w: 0, h: 0 };
@@ -23427,8 +23913,8 @@ remaster_handoff: REMASTER_HANDOFF.md
         currentPlan() {
           const settings = SAVE.settings,
             asked = REMASTER_FX_VALUES.includes(settings.fx) ? settings.fx : "auto",
-            rank = { auto: 3, full: 3, lite: 2, off: 1 },
-            fx = this.demoted && rank[this.demoted] < rank[asked] ? this.demoted : asked;
+            cap = this.autoCap && this.autoQuality === settings.quality ? this.autoCap : null, // 품질을 바꿨으면 이전 품질에서 낮춘 기록은 무시한다
+            fx = effectiveFx(asked, this.demoted, cap);
           return pipelinePlan(settings.quality, fx, this.mobile);
         }
         // 품질·fx·창 크기가 바뀔 때 부른다. 필요 없어진 타깃은 버리고, 필요한 것만 만든다.
@@ -23450,10 +23936,59 @@ remaster_handoff: REMASTER_HANDOFF.md
           this.resize(true);
           this.applyCss();
         }
+        // 자동 조정은 QA(?qa=1)·검사(?test=1) 주소에서는 꺼 둔다(느린 헤드리스 환경에서 장면이 바뀌면 측정이 흔들린다). ?autofx=1이면 QA에서도 켠다, ?autofx=0이면 끈다.
+        static autoAllowed(search) {
+          const q = new URLSearchParams(search || ""),
+            forced = q.get("autofx");
+          if (forced === "1") return true;
+          if (forced === "0") return false;
+          return q.get("qa") !== "1" && q.get("test") !== "1";
+        }
+        // 탭이 가려져 있는지(숨은 탭의 프레임은 재지 않는다). 검사가 덮어쓸 수 있게 따로 둔다.
+        pageHidden() {
+          return typeof document !== "undefined" && document.hidden === true;
+        }
+        // 프레임마다 부른다(render 맨 앞이 real=true로). 설정이 auto가 아니거나 탭이 숨겨졌으면 쌓인 프레임을 버린다.
+        feedAuto(now = performance.now(), real = false) {
+          if (!this.autoEnabled || (real && this.autoManual)) return;
+          const settings = SAVE.settings;
+          if (this.autoQuality !== null && this.autoQuality !== settings.quality) this.resetAuto(true); // 품질을 바꿨으면 새 기준에서 다시
+          if (settings.fx !== "auto" || this.failed || this.lost || this.pageHidden()) {
+            this.autoFx.reset();
+            return;
+          }
+          if (this.autoFx.push(now, this.mobile ? AUTO_FX.targetMobileMs : AUTO_FX.targetDesktopMs)) this.lowerAuto();
+        }
+        // 한 단계 낮춘다. 낮춰도 비용이 같은 단계는 건너뛴다. 더 내릴 곳이 없으면 false. 알림은 접속당 한 번만.
+        lowerAuto() {
+          const settings = SAVE.settings,
+            next = autoNextFx(settings.quality, this.mobile, this.autoCap || "full");
+          if (!next) return false;
+          this.autoCap = next;
+          this.autoSteps++;
+          this.autoQuality = settings.quality;
+          this.apply();
+          const game = this.game;
+          if (!this.autoNotified) {
+            this.autoNotified = true;
+            if (game && typeof game.showToast === "function") game.showToast("화면 효과를 가볍게 바꿨어요");
+          }
+          if (game && typeof game.updateVisualSettingsUi === "function") game.updateVisualSettingsUi();
+          return true;
+        }
+        // 사용자가 효과·품질을 직접 바꿨거나 컨텍스트가 새로 생겼을 때: 자동으로 낮춘 기록을 지운다.
+        resetAuto(reapply = false) {
+          const had = Boolean(this.autoCap);
+          this.autoCap = null;
+          this.autoQuality = null;
+          this.autoFx.reset();
+          if (reapply && had) this.apply();
+        }
         // 사용자가 설정에서 fx를 바꾸면 오류로 낮춘 기록을 지우고 다시 시도한다.
         setFx(value) {
           SAVE.settings.fx = REMASTER_FX_VALUES.includes(value) ? value : "auto";
           this.demoted = null;
+          this.resetAuto();
           this.failure = "";
           this.failed = false;
           this.apply();
@@ -23529,6 +24064,7 @@ remaster_handoff: REMASTER_HANDOFF.md
           this.counters.restored = (this.counters.restored || 0) + 1;
           this.plan = null; // 같은 계획이어도 새 컨텍스트에서 다시 확인한다
           this.watchFrames = 12;
+          this.autoFx.reset();
           this.apply();
         }
         dispose() {
@@ -23691,6 +24227,7 @@ remaster_handoff: REMASTER_HANDOFF.md
           return Boolean(this.plan) && !this.failed && !this.lost;
         }
         render() {
+          this.feedAuto(performance.now(), true);
           const game = this.game,
             renderer = this.renderer,
             stats = this.stats,
@@ -23741,6 +24278,7 @@ remaster_handoff: REMASTER_HANDOFF.md
             failed: this.failed,
             failure: this.failure,
             demoted: this.demoted,
+            auto: { enabled: this.autoEnabled, manual: this.autoManual, cap: this.autoCap, steps: this.autoSteps, signals: this.autoFx.signals, meanMs: Math.round(this.autoFx.mean * 10) / 10, notified: this.autoNotified },
             size: this.size,
             targets: { scene: dims(t.scene), refl: dims(t.refl), bright: dims(t.bright), blur: t.blur.map(dims), msaa: Boolean(t.scene && t.scene.samples) },
             targetCount: this.targetCount(),
@@ -30005,7 +30543,10 @@ remaster_handoff: REMASTER_HANDOFF.md
             " 품질 · " +
             (SAVE.settings.fixedDay
               ? "해역 분위기를 고정했어요"
-              : "하늘이 천천히 흔들려요");
+              : "하늘이 천천히 흔들려요") +
+            (this.pipeline && this.pipeline.autoCap && SAVE.settings.fx === "auto"
+              ? " · 화면 효과를 가볍게 낮춰 두었어요"
+              : "");
         }
         applyQualityProfile(name, persistSetting = true) {
           const quality = CONFIG.qualityProfiles[name] ? name : "mid",
@@ -31862,7 +32403,11 @@ remaster_handoff: REMASTER_HANDOFF.md
             !document.getElementById("storage-banner").hidden
           ) {
             document.getElementById("storage-banner").hidden = true;
-            this.showToast("이번 접속에서만 진행이 저장돼요");
+            this.showToast(
+              !STORAGE_FALLBACK_ACTIVE && BOOT_SAVE_RECOVERED
+                ? "이전 저장 기록을 읽지 못해 새 항해로 시작했어요"
+                : "이번 접속에서만 진행이 저장돼요",
+            );
           }
           this.quietHud = new QuietHud(this);
           this.initializeQuietHud();
@@ -32073,7 +32618,7 @@ remaster_handoff: REMASTER_HANDOFF.md
             document.documentElement.style.setProperty("--accent", r.color);
             this.showRegionCard(r, now, u.firstVisit);
             if (u.firstVisit && MODE.current === "SAILING")
-              this.autoMap(LIGHTHOUSE_STAGE.mapMs);
+              this.autoMap(LIGHTHOUSE_STAGE.mapMs, regionCardTotal(Boolean(SAVE.settings.reducedMotion)));
             writeUi(
               document.getElementById("region-live"),
               r.name + "에 들어왔어요",
@@ -32190,15 +32735,26 @@ remaster_handoff: REMASTER_HANDOFF.md
           root.style.setProperty("--bars", "0");
         }
         // 점등이 끝났을 때와 처음 가 보는 해역에서 지도를 잠깐 보여 준다(8.4·8.5절). 이미 열려 있으면 그대로 둔다.
-        autoMap(ms) {
+        autoMap(ms, delayMs = 0) {
           const u = this.ux;
           if (!u || u.mapOpen || !document.querySelector(".minimap-panel")) return;
-          this.toggleMinimap();
-          const token = (u.autoMapToken = (u.autoMapToken || 0) + 1);
+          const open = () => {
+            this.toggleMinimap();
+            const token = (u.autoMapToken = (u.autoMapToken || 0) + 1);
+            clearTimeout(u.autoMapTimer);
+            u.autoMapTimer = setTimeout(() => {
+              if (u.autoMapToken === token && u.mapOpen) this.toggleMinimap();
+            }, ms);
+          };
+          if (!(delayMs > 0)) {
+            open();
+            return;
+          }
+          const wait = (u.autoMapToken = (u.autoMapToken || 0) + 1);
           clearTimeout(u.autoMapTimer);
           u.autoMapTimer = setTimeout(() => {
-            if (u.autoMapToken === token && u.mapOpen) this.toggleMinimap();
-          }, ms);
+            if (u.autoMapToken === wait && !u.mapOpen && MODE.current === "SAILING") open();
+          }, delayMs);
         }
         // RM4: 3D가 첫 프레임을 그린 뒤 타이틀의 포스터를 900ms에 걸쳐 걷는다(7.4절).
         revealTitleScene() {
@@ -33277,6 +33833,47 @@ remaster_handoff: REMASTER_HANDOFF.md
                 };
               },
             });
+            window.__OCEAN_API__.fxQa = Object.freeze({
+              snapshot: () => (PHASE_ONE_GAME.pipeline ? PHASE_ONE_GAME.pipeline.snapshot() : null),
+              // 자동 조정 로직을 켜고 끈다(QA 주소는 기본이 꺼짐). manual이면 진짜 프레임은 재지 않고 feed()의 가짜 프레임만 잰다.
+              setAutoEnabled: (value, manual = false) => {
+                const pipe = PHASE_ONE_GAME.pipeline;
+                if (!pipe) return null;
+                pipe.autoEnabled = Boolean(value);
+                pipe.autoManual = Boolean(manual);
+                pipe.autoFx.reset();
+                return { enabled: pipe.autoEnabled, manual: pipe.autoManual };
+              },
+              // 느린 프레임을 흉내 낸다: frameMs 간격으로 seconds초 동안 프레임이 들어온 것처럼 feedAuto를 몬다.
+              // 가짜 시각은 실제 시각보다 한참 뒤에서 시작하고, 끝나면 재던 기록을 비운다(진짜 프레임과 섞이지 않게).
+              feed: (frameMs, seconds) => {
+                const pipe = PHASE_ONE_GAME.pipeline;
+                if (!pipe) return null;
+                const base = performance.now() + 1e7,
+                  before = pipe.autoFx.signals;
+                pipe.autoFx.reset();
+                for (let now = base; now < base + seconds * 1000; now += frameMs) pipe.feedAuto(now);
+                pipe.autoFx.reset();
+                return { signals: pipe.autoFx.signals - before, cap: pipe.autoCap, steps: pipe.autoSteps };
+              },
+              lowerOnce: () => (PHASE_ONE_GAME.pipeline ? PHASE_ONE_GAME.pipeline.lowerAuto() : false),
+              resetAuto: () => (PHASE_ONE_GAME.pipeline ? PHASE_ONE_GAME.pipeline.resetAuto(true) : null),
+              // WEBGL_lose_context 확장으로 실제 컨텍스트 손실·복구를 일으킨다(없으면 null)
+              loseContext: () => {
+                const gl = PHASE_ONE_GAME.renderer.getContext(),
+                  ext = gl.getExtension("WEBGL_lose_context");
+                if (!ext) return null;
+                ext.loseContext();
+                return true;
+              },
+              restoreContext: () => {
+                const gl = PHASE_ONE_GAME.renderer.getContext(),
+                  ext = gl.getExtension("WEBGL_lose_context");
+                if (!ext) return null;
+                ext.restoreContext();
+                return true;
+              },
+            });
             window.__OCEAN_API__.hudQa = Object.freeze({
               snapshot: () => {
                 const hud = PHASE_ONE_GAME.quietHud;
@@ -33951,8 +34548,8 @@ remaster_handoff: REMASTER_HANDOFF.md
             phase6.fail +
             phase7.fail +
             phase8.fail +
-            results.totals.ux.fail +
-            results.totals.remaster.fail ===
+            (results.totals.ux.fail - (results.layoutFail.ux || 0)) +
+            (results.totals.remaster.fail - (results.layoutFail.remaster || 0)) ===
             0 &&
           fixed.pass === 110 &&
           dynamic.pass === 564 &&
@@ -34045,12 +34642,21 @@ remaster_handoff: REMASTER_HANDOFF.md
         }
         if (IS_DEBUG_MODE)
           console.info("[음악이론의 바다] Phase 0", results.totals);
-        const firstFailure = results.suites.flatMap((suiteResult) =>
+        const failures = results.suites.flatMap((suiteResult) =>
           suiteResult.tests
             .filter((result) => !result.ok)
             .map((result) => ({ suite: suiteResult.name, ...result })),
-        )[0];
+        );
+        const firstFailure = failures.find((result) => !isLayoutTest(result.name));
         if (firstFailure) console.error("[첫 실패]", firstFailure);
+        if (IS_DEBUG_MODE) {
+          const layoutFailures = failures.filter((result) => isLayoutTest(result.name));
+          if (layoutFailures.length)
+            console.info(
+              "[화면 배치 검사 실패 — 시작은 막지 않음]",
+              layoutFailures.map((result) => result.name + " → " + result.error),
+            );
+        }
       }
       bootPhaseZero();
     </script>

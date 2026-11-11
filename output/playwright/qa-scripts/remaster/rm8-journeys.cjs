@@ -56,7 +56,29 @@ async function solveTrial(page) {
     }
     await page.waitForTimeout(900);
   }
-  return { steps, drag, result: await page.locator('#trial-result').innerText() };
+  const result = await page.locator('#trial-result').innerText();
+  return { steps, drag, passed: result.includes('등대를 밝힐 준비가 됐어요'), result };
+}
+
+// 결과 화면의 첫 단추("등대 점등하기")를 눌러 점등 장면을 열고 건너뛴다. 막히면 그때의 상태를 남기고 멈춘다.
+//  - 점등 기록(lighthousesLit)이 먼저 남고 장면이 뜬다. 장면은 6초(동작 줄이기 2초) 뒤 저절로 끝난다.
+//  - 헤드리스는 프레임이 2~4fps라 Playwright의 클릭 대기("요소가 안정될 때까지")가 장면 길이보다 길어질 수 있다. 처음 돌렸을 때
+//    "#lighthouse-skip is not visible"로 시간 초과한 원인이다(단추가 보이는 사이에 장면이 저절로 끝났다). 그래서 기록을 기다린 뒤 DOM 단추를 직접 누른다.
+async function lightLighthouse(page, label, trial, region, problems) {
+  const where = () => page.evaluate((region) => ({ mode: window.__OCEAN_GAME__.stabilitySnapshot().mode, lit: window.__OCEAN_API__.journeyQa.snapshot().save.progress.lighthousesLit, wanted: region }), region);
+  if (!trial.passed) {
+    problems.push(label + ': 시련을 통과하지 못했다 ' + JSON.stringify(await where()));
+    throw new Error(label + ' 시련 미통과');
+  }
+  await page.locator('.result-actions button').first().click();
+  try {
+    await page.waitForFunction((region) => window.__OCEAN_API__.journeyQa.snapshot().save.progress.lighthousesLit.includes(region), region, { timeout: 30000 });
+    await page.evaluate(() => { if (window.__OCEAN_GAME__.stabilitySnapshot().mode === 'LIGHTHOUSE_EVENT') document.getElementById('lighthouse-skip').click(); });
+    await page.waitForFunction(() => window.__OCEAN_GAME__.stabilitySnapshot().mode === 'SAILING', null, { timeout: 30000 });
+  } catch (e) {
+    problems.push(label + ': 등대 점등 장면을 지나지 못했다 ' + JSON.stringify(await where()));
+    throw e;
+  }
 }
 
 async function runCondition(name) {
@@ -76,9 +98,32 @@ async function runCondition(name) {
     // 항해 안내: 목표 글자가 단계마다 바뀐다
     const stage = [];
     const objective = async () => stage.push(await page.locator('#objective-title').textContent());
+    // 헤드리스 렌더는 프레임이 느려(2~4fps) 게임 시간이 실제 시계의 몇 %로만 흐른다. 고정 시간(1.8초·0.6초)만 누르면 안내 1단계(2칸 이동)·2단계(방향 0.12rad)의 기준을 못 채운다.
+    // 그래서 "목표 글자가 다음 단계로 바뀔 때까지"(최대 120초) 키를 누르고 있다가 뗀다. 사람이 키를 누르고 있는 것과 같은 입력이다.
+    const holdUntilNextObjective = async (key, stepNo, maxMs = 120000) => {
+      const t0 = Date.now();
+      let moved = false;
+      await page.keyboard.down(key);
+      try {
+        while (Date.now() - t0 < maxMs) {
+          const title = (await page.locator('#objective-title').textContent()) || '';
+          if (!title.startsWith(stepNo + '/6')) { moved = true; break; } // "✓ n/6 · 완료했어요"이거나 다음 단계
+          await page.waitForTimeout(300);
+        }
+      } finally { await page.keyboard.up(key); }
+      // 완료 표시가 걷히고 다음 단계 글자가 뜰 때까지(최대 20초)
+      for (let i = 0; i < 80; i++) {
+        const title = (await page.locator('#objective-title').textContent()) || '';
+        if (title.startsWith((stepNo + 1) + '/6') || title.startsWith('✓') === false && !title.startsWith(stepNo + '/6')) break;
+        await page.waitForTimeout(250);
+      }
+      return { key, stepNo, moved, ms: Date.now() - t0 };
+    };
     await objective();
-    await page.keyboard.down('w'); await page.waitForTimeout(1800); await page.keyboard.up('w'); await objective();
-    await page.keyboard.down('d'); await page.waitForTimeout(600); await page.keyboard.up('d'); await objective();
+    info.tutorialHolds = [];
+    info.tutorialHolds.push(await holdUntilNextObjective('w', 1)); await objective();
+    info.tutorialHolds.push(await holdUntilNextObjective('d', 2)); await objective();
+    check(info.tutorialHolds.every((h) => h.moved), '항해 안내 1·2단계를 키 입력만으로 넘겼다 (' + JSON.stringify(info.tutorialHolds) + ')');
     info.tutorial = stage;
     check(new Set(stage).size >= 2, '항해 안내 목표가 단계마다 바뀐다 (' + JSON.stringify(stage) + ')');
 
@@ -112,18 +157,17 @@ async function runCondition(name) {
     await page.screenshot({ path: outPath('rm8', `journey_${name}_trial-result.png`) });
     // 그레이스케일 등 색에 기대지 않는 단서: 결과 화면에 글자가 있다
     check(harbor.result.trim().length > 0, '시련 결과 글자가 있다');
-    await page.locator('.result-actions button').first().click();
-    await page.locator('#lighthouse-skip').click();
+    await lightLighthouse(page, '항구 시련', harbor, 0, problems);
 
     // 해역 3 시련
     await page.evaluate(() => { window.__OCEAN_API__.questQa.prepare(3); window.__OCEAN_GAME__.audio.setMuted(true); window.__OCEAN_GAME__.startRegionTrial(3); });
     const silence = await solveTrial(page);
     info.silence = silence;
-    await page.locator('.result-actions button').first().click();
-    await page.locator('#lighthouse-skip').click();
+    await lightLighthouse(page, '해역 3 시련', silence, 3, problems);
 
     // 조건별 마무리 확인
-    const post = await page.evaluate(() => { const s = window.__OCEAN_API__.journeyQa.snapshot(), html = document.documentElement; return { trials: s.save.progress.trialsPassed, lights: s.save.progress.lighthousesLit, terms: s.save.progress.termsFound.length, mode: window.__OCEAN_GAME__.stabilitySnapshot().mode, reduced: html.dataset.reducedMotion || null, scale: html.dataset.textScale || null, muted: window.__OCEAN_GAME__.audio.muted === true, filter: html.style.filter }; });
+    // 음소거는 게임 설정(저장)에 있다. 오디오 엔진 객체에는 muted 속성이 없다(처음에 그 속성을 읽어 점검이 늘 거짓이었다).
+    const post = await page.evaluate(() => { const s = window.__OCEAN_API__.journeyQa.snapshot(), html = document.documentElement; return { trials: s.save.progress.trialsPassed, lights: s.save.progress.lighthousesLit, terms: s.save.progress.termsFound.length, mode: window.__OCEAN_GAME__.stabilitySnapshot().mode, reduced: html.dataset.reducedMotion || null, scale: html.dataset.textScale || null, muted: s.save.settings.muted === true, filter: html.style.filter }; });
     info.post = post;
     check(post.trials.includes(0) && post.trials.includes(3), '시련 2개 통과 (' + JSON.stringify(post.trials) + ')');
     check(post.lights.includes(0) && post.lights.includes(3), '등대 2개 점등 (' + JSON.stringify(post.lights) + ')');

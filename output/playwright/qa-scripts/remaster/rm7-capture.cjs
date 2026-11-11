@@ -172,8 +172,11 @@ async function runPaper(paper) {
         await page.evaluate((scale) => { document.documentElement.style.setProperty('--text-scale', scale); document.documentElement.dataset.textScale = String(scale); }, scale);
         for (const [width, height] of sizes) {
           await page.setViewportSize({ width, height });
-          if (state.startsWith('sailing')) {
+          if (state.startsWith('sailing') || state === 'region-banner') {
             // 지도는 기본 닫힘이다(처음 가는 해역에서 잠깐 자동으로 열렸다 닫히는 것은 제외하고 잰다). sailing-map만 연 채로 잰다.
+            // region-banner도 닫힌 채로 잰다: 앞 장면(sailing-map)이 지도를 연 채로 남겨 두면 카드와 지도가 한 화면에 겹쳐 잡힌다. 자동 흐름에서는 지도가
+            // 카드가 걷힌 뒤에 열리므로(rm8a.py 7번, 겹침은 rm8-cardmap.cjs가 프레임마다 잰다) 이 장면은 카드만 본다. 카드가 떠 있는 동안 사람이 지도를
+            // 직접 열면 폭이 좁은 세로폰에서 겹치는 것은 알려진 한계다(RM8 한계 목록).
             await page.evaluate((openMap) => { const g = window.__OCEAN_GAME__; if (Boolean(g.ux.mapOpen) !== openMap) g.toggleMinimap(); g.ux.autoMapToken = (g.ux.autoMapToken || 0) + 1; }, state === 'sailing-map');
           }
           await page.waitForTimeout(220);
