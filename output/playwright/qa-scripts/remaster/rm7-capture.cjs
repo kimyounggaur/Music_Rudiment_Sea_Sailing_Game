@@ -188,6 +188,9 @@ async function runPaper(paper) {
           out.push({ ...(await page.evaluate(MEASURE, state)), file: `${tag}_${paper}_${state}_s${scale}_${width}x${height}.${ext}` });
         }
       }
+      // 재는 동안 서버의 빌드가 바뀌었으면(다시 만들었으면) 이 줄들은 한 빌드의 증거가 아니다. 멈추고 처음부터 다시 돌린다.
+      const nowHash = await buildFingerprint();
+      if (nowHash !== buildHash) { log('중단', `측정 중 빌드가 바뀌었습니다(${buildHash} → ${nowHash}).`); process.exit(9); }
       // 진행 중에도 위반을 볼 수 있게 장면 하나가 끝날 때마다 한 줄로 알린다
       const rows = out.filter((r) => r.state === state), keyOf = (r) => [r.center && r.center.violations.length && 'center:' + r.center.violations.join('+'), r.touch && r.touch.length && 'touch', r.contrast.violations.length && 'contrast', r.copy && r.copy.length && 'copy', r.overflow && 'overflow', r.overlaps && r.overlaps.length && 'overlap:' + r.overlaps[0], r.clipped && r.clipped.length && 'clipped:' + r.clipped[0]].filter(Boolean);
       const badRows = rows.filter((r) => keyOf(r).length);
