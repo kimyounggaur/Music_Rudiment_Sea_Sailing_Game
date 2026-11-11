@@ -8,7 +8,7 @@
  *   BASE_URL=http://127.0.0.1:8766 node survey-banner.cjs                                  기본: 화면 7종 × 배율 1·1.15·1.3 × 해역 8개
  *   node survey-banner.cjs 320x568,844x390 1,1.3 0,3 결과.json                              화면 · 배율 · 해역 · 결과 파일(선택)
  * 환경변수: BASE_URL(기본 게임 폴더 서버), CSS_FILE(이 CSS를 페이지에 덧붙여 후보 규칙을 빌드 없이 시험한다)
- * 출력: 칸(화면·배율)마다 한 줄 — n(문항 수) · bad(넘친 수) · maxOver(최대 넘친 px) · 종류별 · 가장 나쁜 문항
+ * 출력: 칸(화면·배율)마다 한 줄 — n(문항 수) · bad(넘친 수) · maxOver(최대 넘친 px) · 종류별 · 가장 나쁜 문항 · 겹침(띠 안의 칸끼리 2px 넘게 파고든 문항 수와 최대 px, RM8에서 더함)
  */
 const fs = require('fs');
 const { open } = require('./lib.cjs');
@@ -57,8 +57,21 @@ const OUT = process.argv[5] || '';
               const r = c.getBoundingClientRect(), s = getComputedStyle(c);
               if (r.height && s.display !== 'none') bottom = Math.max(bottom, r.bottom + (parseFloat(s.marginBottom) || 0));
             }
+            // 보이는 자식끼리의 겹침: 글자 칸(문장·보조 문구·진행 안내)과 장식 파형이 서로 파고드는 가장 큰 높이(px)
+            const kids = [];
+            for (const c of b.children) {
+              const s = getComputedStyle(c), r = c.getBoundingClientRect();
+              if (c.hidden || s.display === 'none' || s.visibility === 'hidden' || r.width < 2 || r.height < 2) continue;
+              kids.push({ id: c.id || c.className, r });
+            }
+            let ovl = 0, ovlPair = '';
+            for (let a = 0; a < kids.length; a++) for (let z = a + 1; z < kids.length; z++) {
+              const w = Math.min(kids[a].r.right, kids[z].r.right) - Math.max(kids[a].r.left, kids[z].r.left);
+              const h = Math.min(kids[a].r.bottom, kids[z].r.bottom) - Math.max(kids[a].r.top, kids[z].r.top);
+              if (w > 2 && h > 2 && h > ovl) { ovl = Math.round(h); ovlPair = kids[a].id + ' × ' + kids[z].id; }
+            }
             out.push({
-              i, type: qs[i].type, over: b.scrollHeight - b.clientHeight, h: Math.round(br.height), maxH: cs.maxHeight,
+              i, type: qs[i].type, ovl, ovlPair, over: b.scrollHeight - b.clientHeight, h: Math.round(br.height), maxH: cs.maxHeight,
               need: Math.round(bottom - br.top + parseFloat(cs.paddingBottom)),
               plen: (document.getElementById('trial-prompt').textContent || '').length,
               flen: (document.getElementById('trial-fallback').textContent || '').length,
@@ -74,18 +87,21 @@ const OUT = process.argv[5] || '';
   for (const r of rows) {
     if (r.skip) continue;
     const k = r.W + 'x' + r.H + ' s' + r.scale;
-    const s = (sum[k] = sum[k] || { n: 0, bad: 0, maxOver: 0, worst: null, byType: {} });
+    const s = (sum[k] = sum[k] || { n: 0, bad: 0, maxOver: 0, worst: null, byType: {}, ovlBad: 0, maxOvl: 0, worstOvl: null });
     s.n++;
     if (r.over > 2) { s.bad++; s.byType[r.type] = (s.byType[r.type] || 0) + 1; }
+    if (r.ovl > 2) { s.ovlBad++; if (r.ovl > s.maxOvl) { s.maxOvl = r.ovl; s.worstOvl = { region: r.region, i: r.i, type: r.type, pair: r.ovlPair, plen: r.plen, flen: r.flen }; } }
     if (r.over > s.maxOver) { s.maxOver = r.over; s.worst = { region: r.region, i: r.i, type: r.type, need: r.need, h: r.h, plen: r.plen, flen: r.flen }; }
   }
-  let bad = 0;
+  let bad = 0, ovlBad = 0;
   for (const k of Object.keys(sum)) {
-    bad += sum[k].bad;
-    console.log(k.padEnd(14), 'n=' + sum[k].n, 'bad=' + sum[k].bad, 'maxOver=' + sum[k].maxOver, JSON.stringify(sum[k].byType), sum[k].worst ? JSON.stringify(sum[k].worst) : '');
+    bad += sum[k].bad; ovlBad += sum[k].ovlBad;
+    console.log(k.padEnd(14), 'n=' + sum[k].n, 'bad=' + sum[k].bad, 'maxOver=' + sum[k].maxOver, JSON.stringify(sum[k].byType), sum[k].worst ? JSON.stringify(sum[k].worst) : '',
+      sum[k].ovlBad ? ' | 겹침 ' + sum[k].ovlBad + '칸 최대 ' + sum[k].maxOvl + 'px ' + JSON.stringify(sum[k].worstOvl) : '');
   }
-  console.log(bad ? 'SURVEY FAIL: 넘친 칸 ' + bad : 'SURVEY PASS: 넘침 0건 (' + rows.filter((r) => !r.skip).length + '칸)');
+  const fail = bad + ovlBad;
+  console.log(fail ? 'SURVEY FAIL: 넘친 칸 ' + bad + ' · 겹친 칸 ' + ovlBad : 'SURVEY PASS: 넘침·겹침 0건 (' + rows.filter((r) => !r.skip).length + '칸)');
   if (OUT) fs.writeFileSync(OUT, JSON.stringify(rows));
   await browser.close();
-  process.exit(bad ? 1 : 0);
+  process.exit(fail ? 1 : 0);
 })();
