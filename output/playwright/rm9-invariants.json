@@ -1,0 +1,137 @@
+{
+ "problems": [],
+ "report": {
+  "A": {
+   "makeStaticWorldColliders 함수": {
+    "found": {
+     "baseline": true,
+     "game": true
+    },
+    "bytes": 1860,
+    "identical": true
+   },
+   "ALLOWED_TRANSITIONS 표": {
+    "found": {
+     "baseline": true,
+     "game": true
+    },
+    "bytes": 626,
+    "identical": true
+   },
+   "saveKey": {
+    "baseline": "lesson_designer_ocean_v1",
+    "game": "lesson_designer_ocean_v1"
+   }
+  },
+  "B": {
+   "termCount": {
+    "baseline": 141,
+    "game": 141
+   },
+   "용어 데이터(141개 전부)": "identical",
+   "퀴즈 정의": "identical",
+   "spawnKinds": {
+    "buoys": 128,
+    "bottleTerms": 13,
+    "none": 0
+   },
+   "부표·유리병 자리(용어 141개의 x, z, 해역)": "identical",
+   "유리병 18개(id·해역·보상·x·z)": "identical",
+   "콘텐츠 감사표(용어·부표·유리병·퀴즈)": "identical",
+   "해역 중심·반경": "identical",
+   "해역 수업 규칙": "identical",
+   "시련 문항 집합(해역 0~7, 기본 시드)": "identical",
+   "최종 항로 명세": "identical",
+   "NPC 명부": "identical"
+  },
+  "C": {
+   "saves": 6,
+   "rows": [
+    {
+     "label": "항구(처음)",
+     "version": 1,
+     "banner": false,
+     "newSettings": {
+      "fx": "auto",
+      "hudQuiet": true,
+      "scenicCam": true
+     },
+     "progress": "identical",
+     "position": "identical",
+     "session": "identical"
+    },
+    {
+     "label": "1번 해역 준비",
+     "version": 1,
+     "banner": false,
+     "newSettings": {
+      "fx": "auto",
+      "hudQuiet": true,
+      "scenicCam": true
+     },
+     "progress": "identical",
+     "position": "identical",
+     "session": "identical"
+    },
+    {
+     "label": "4번 해역 준비",
+     "version": 1,
+     "banner": false,
+     "newSettings": {
+      "fx": "auto",
+      "hudQuiet": true,
+      "scenicCam": true
+     },
+     "progress": "identical",
+     "position": "identical",
+     "session": "identical"
+    },
+    {
+     "label": "7번 해역 준비",
+     "version": 1,
+     "banner": false,
+     "newSettings": {
+      "fx": "auto",
+      "hudQuiet": true,
+      "scenicCam": true
+     },
+     "progress": "identical",
+     "position": "identical",
+     "session": "identical"
+    },
+    {
+     "label": "일반 엔딩 직전",
+     "version": 1,
+     "banner": false,
+     "newSettings": {
+      "fx": "auto",
+      "hudQuiet": true,
+      "scenicCam": true
+     },
+     "progress": "identical",
+     "position": "identical",
+     "session": "identical"
+    },
+    {
+     "label": "히든 엔딩 직전(용어 141·병 18)",
+     "version": 1,
+     "banner": false,
+     "newSettings": {
+      "fx": "auto",
+      "hudQuiet": true,
+      "scenicCam": true
+     },
+     "progress": "identical",
+     "position": "identical",
+     "session": "identical"
+    }
+   ],
+   "plain": {
+    "clickedFx": true,
+    "stored": true,
+    "version": 1,
+    "fx": "lite"
+   }
+  }
+ }
+}

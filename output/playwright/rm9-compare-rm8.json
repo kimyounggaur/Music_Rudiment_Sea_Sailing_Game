@@ -1,0 +1,123 @@
+{
+ "images": 6,
+ "rows": [
+  {
+   "image": "rm_RM8_r0-harbor-nohud_mood_scale1_1440x900_a.png",
+   "mean_abs_rm8_vs_rm8": 5.392,
+   "mean_abs_rm8_vs_rm9": 5.474,
+   "block24_rm8_vs_rm8": 2.966,
+   "block24_rm8_vs_rm9": 3.195,
+   "luminance": {
+    "rm8_a": 0.4826,
+    "rm8_b": 0.484,
+    "rm9": 0.4828
+   },
+   "saturation": {
+    "rm8_a": 0.2913,
+    "rm8_b": 0.2904,
+    "rm9": 0.2912
+   },
+   "tone_delta_max": 0.0012,
+   "tone_delta_noise": 0.0013
+  },
+  {
+   "image": "rm_RM8_r0-harbor_mood_scale1_1440x900_a.png",
+   "mean_abs_rm8_vs_rm8": 8.541,
+   "mean_abs_rm8_vs_rm9": 9.489,
+   "block24_rm8_vs_rm8": 4.543,
+   "block24_rm8_vs_rm9": 5.434,
+   "luminance": {
+    "rm8_a": 0.484,
+    "rm8_b": 0.4852,
+    "rm9": 0.4839
+   },
+   "saturation": {
+    "rm8_a": 0.2879,
+    "rm8_b": 0.2873,
+    "rm9": 0.2882
+   },
+   "tone_delta_max": 0.0013,
+   "tone_delta_noise": 0.0012
+  },
+  {
+   "image": "rm_RM8_r3-canyon-nohud_mood_scale1_1440x900_a.png",
+   "mean_abs_rm8_vs_rm8": 5.26,
+   "mean_abs_rm8_vs_rm9": 6.418,
+   "block24_rm8_vs_rm8": 2.844,
+   "block24_rm8_vs_rm9": 3.945,
+   "luminance": {
+    "rm8_a": 0.1102,
+    "rm8_b": 0.1097,
+    "rm9": 0.1104
+   },
+   "saturation": {
+    "rm8_a": 0.8157,
+    "rm8_b": 0.8162,
+    "rm9": 0.8151
+   },
+   "tone_delta_max": 0.0011,
+   "tone_delta_noise": 0.0005
+  },
+  {
+   "image": "rm_RM8_r3-canyon_mood_scale1_1440x900_a.png",
+   "mean_abs_rm8_vs_rm8": 4.321,
+   "mean_abs_rm8_vs_rm9": 4.832,
+   "block24_rm8_vs_rm8": 2.064,
+   "block24_rm8_vs_rm9": 2.708,
+   "luminance": {
+    "rm8_a": 0.1088,
+    "rm8_b": 0.1085,
+    "rm9": 0.1084
+   },
+   "saturation": {
+    "rm8_a": 0.82,
+    "rm8_b": 0.82,
+    "rm9": 0.82
+   },
+   "tone_delta_max": 0.0,
+   "tone_delta_noise": 0.0003
+  },
+  {
+   "image": "rm_RM8_r7-fifths-nohud_mood_scale1_1440x900_a.png",
+   "mean_abs_rm8_vs_rm8": 5.512,
+   "mean_abs_rm8_vs_rm9": 4.742,
+   "block24_rm8_vs_rm8": 3.683,
+   "block24_rm8_vs_rm9": 3.054,
+   "luminance": {
+    "rm8_a": 0.1715,
+    "rm8_b": 0.1709,
+    "rm9": 0.1717
+   },
+   "saturation": {
+    "rm8_a": 0.7569,
+    "rm8_b": 0.7599,
+    "rm9": 0.7574
+   },
+   "tone_delta_max": 0.0025,
+   "tone_delta_noise": 0.0029
+  },
+  {
+   "image": "rm_RM8_r7-fifths_mood_scale1_1440x900_a.png",
+   "mean_abs_rm8_vs_rm8": 8.658,
+   "mean_abs_rm8_vs_rm9": 6.862,
+   "block24_rm8_vs_rm8": 6.442,
+   "block24_rm8_vs_rm9": 4.782,
+   "luminance": {
+    "rm8_a": 0.1747,
+    "rm8_b": 0.1782,
+    "rm9": 0.176
+   },
+   "saturation": {
+    "rm8_a": 0.7536,
+    "rm8_b": 0.7509,
+    "rm9": 0.7537
+   },
+   "tone_delta_max": 0.0029,
+   "tone_delta_noise": 0.0035
+  }
+ ],
+ "worst_tone_delta": 0.0029,
+ "worst_block_ratio_vs_noise": 1.39,
+ "pass": true,
+ "criteria": "밝기·채도 차 0.01 이하, 블록(24px) 평균 차가 RM8끼리의 잡음 바닥의 2배 이하"
+}

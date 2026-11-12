@@ -1,0 +1,114 @@
+{
+ "ok": true,
+ "rows": {
+  "calm": {
+   "strength": 0,
+   "uReflOn": 1,
+   "reflReady": true,
+   "reflectionCalls": 57,
+   "plan": "full"
+  },
+  "full": {
+   "strength": 1,
+   "uReflOn": 0,
+   "reflReady": true,
+   "reflectionCalls": 0,
+   "plan": "full"
+  },
+  "fadeSamples": [
+   {
+    "strength": 1,
+    "uReflOn": 0,
+    "sim": 3.8,
+    "frame": 78,
+    "until": 4.55
+   },
+   {
+    "strength": 1,
+    "uReflOn": 0,
+    "sim": 3.85,
+    "frame": 79,
+    "until": 4.55
+   },
+   {
+    "strength": 0.929,
+    "uReflOn": 0.071,
+    "sim": 3.9,
+    "frame": 80,
+    "until": 4.55
+   },
+   {
+    "strength": 0.857,
+    "uReflOn": 0.143,
+    "sim": 3.95,
+    "frame": 81,
+    "until": 4.55
+   },
+   {
+    "strength": 0.786,
+    "uReflOn": 0.214,
+    "sim": 4,
+    "frame": 82,
+    "until": 4.55
+   },
+   {
+    "strength": 0.714,
+    "uReflOn": 0.286,
+    "sim": 4.05,
+    "frame": 83,
+    "until": 4.55
+   },
+   {
+    "strength": 0.643,
+    "uReflOn": 0.357,
+    "sim": 4.1,
+    "frame": 84,
+    "until": 4.55
+   },
+   {
+    "strength": 0.571,
+    "uReflOn": 0.429,
+    "sim": 4.15,
+    "frame": 85,
+    "until": 4.55
+   },
+   {
+    "strength": 0.5,
+    "uReflOn": 0.5,
+    "sim": 4.2,
+    "frame": 86,
+    "until": 4.55
+   },
+   {
+    "strength": 0.429,
+    "uReflOn": 0.571,
+    "sim": 4.25,
+    "frame": 87,
+    "until": 4.55
+   }
+  ],
+  "fading": {
+   "strength": 0.929,
+   "uReflOn": 0.071,
+   "sim": 3.9,
+   "frame": 80,
+   "until": 4.55
+  },
+  "fadeRelationOk": true,
+  "after": {
+   "strength": 0,
+   "uReflOn": 1,
+   "reflReady": true,
+   "reflectionCalls": 57,
+   "plan": "full"
+  },
+  "centre": {
+   "strength": 1,
+   "uReflOn": 0,
+   "reflReady": true,
+   "reflectionCalls": 0,
+   "plan": "full"
+  }
+ },
+ "errors": []
+}

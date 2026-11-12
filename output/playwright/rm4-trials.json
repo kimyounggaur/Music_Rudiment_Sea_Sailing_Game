@@ -1,0 +1,459 @@
+{
+ "S1": {
+  "region": 1,
+  "reduced": false,
+  "solved": {
+   "region": 1,
+   "typesSeen": [
+    "ordered_navigation",
+    "symbol_matching",
+    "listening",
+    "navigation"
+   ],
+   "steps": 16,
+   "drag": true,
+   "result": "5/5 등대를 밝힐 준비가 됐어요 첫 시도 정답 5개 · 통과선 4개 ✓ 1. 교육용 대표값이 느린 빠르기부터 네 부표를 선택하세요. 정답: Largo → accelerando → Moderato → 메트로놈 기호 내 첫 답: Largo → accel"
+  },
+  "types": [
+   {
+    "type": "ordered_navigation",
+    "mode": "steer",
+    "fov": 53,
+    "worldBuoys": 4,
+    "occlusion": [
+     {
+      "id": "r1_moderato",
+      "d": 29.1,
+      "bearing": 12.3,
+      "blocked": 5,
+      "fully": false
+     },
+     {
+      "id": "r1_accelerando",
+      "d": 26.4,
+      "bearing": -66.8,
+      "blocked": 0,
+      "fully": false
+     }
+    ]
+   },
+   {
+    "type": "symbol_matching",
+    "mode": "steer",
+    "fov": 53,
+    "worldBuoys": 0,
+    "occlusion": null
+   },
+   {
+    "type": "listening",
+    "mode": "steer",
+    "fov": 53,
+    "worldBuoys": 4,
+    "occlusion": [
+     {
+      "id": "r1_metronome_mark",
+      "d": 25,
+      "bearing": 14.3,
+      "blocked": 3,
+      "fully": false
+     },
+     {
+      "id": "r1_andantino",
+      "d": 25,
+      "bearing": -75.7,
+      "blocked": 0,
+      "fully": false
+     }
+    ]
+   },
+   {
+    "type": "navigation",
+    "mode": "steer",
+    "fov": 53,
+    "worldBuoys": 4,
+    "occlusion": [
+     {
+      "id": "r1_ritardando",
+      "d": 25,
+      "bearing": 14.3,
+      "blocked": 3,
+      "fully": false
+     },
+     {
+      "id": "r1_presto",
+      "d": 25,
+      "bearing": -75.7,
+      "blocked": 0,
+      "fully": false
+     }
+    ]
+   }
+  ],
+  "timeline": {
+   "barsFull": 735,
+   "titleOn": 4409,
+   "startBars": 0,
+   "barsMax": 1,
+   "lastEventSince": 5951,
+   "endAt": 12555,
+   "afterMode": "steer",
+   "lightRise": {
+    "k10": 13,
+    "k50": null,
+    "k99": null
+   },
+   "cameraMode": [
+    "lighthouse"
+   ],
+   "lighthouseDistAtEnd": 39.9,
+   "lighthouseYAtEnd": 17.9,
+   "mapOpenedAfterEvent": true,
+   "mapClosedLater": false,
+   "evFrames": 10,
+   "lightPlan": {
+    "delay": 0.95,
+    "duration": 3,
+    "from": 0.15,
+    "sim": 17.1
+   },
+   "simPerWallRatio": 0.076,
+   "maxFrameGapMs": 887
+  },
+  "after": {
+   "eventHidden": true,
+   "mapOpen": true,
+   "mode": "scenic",
+   "lit": 1,
+   "k": 0.971,
+   "lighthouses": [
+    0,
+    1
+   ]
+  },
+  "shotsTaken": [
+   "bars",
+   "title"
+  ],
+  "errors": [],
+  "checks": {
+   "allFourTypes": true,
+   "passed": true,
+   "lighthouseLit": true,
+   "barsDescend": true,
+   "titleLate": true,
+   "cameraLighthouse": true,
+   "endedAroundSix": true,
+   "lightPlanNormal": true,
+   "backToSteer": true,
+   "autoMap": true,
+   "worldBuoysNotFullyHidden": true,
+   "noErrors": true
+  },
+  "ok": true
+ },
+ "S2": {
+  "region": 2,
+  "reduced": false,
+  "solved": {
+   "region": 2,
+   "typesSeen": [
+    "listening",
+    "symbol_matching",
+    "navigation",
+    "ordered_navigation"
+   ],
+   "steps": 17,
+   "drag": true,
+   "result": "6/6 등대를 밝힐 준비가 됐어요 첫 시도 정답 6개 · 통과선 5개 ✓ 1. 소리와 시각 시연에 맞는 용어를 고르세요. 정답: 갖춘마디 내 첫 답: 갖춘마디 다시 듣기 ✓ 2. 기호와 용어를 네 쌍 연결하세요. 정답: 2분음표 → 16분음표 → 4분",
+   "skip": {
+    "before": {
+     "lit": 0.15,
+     "k": 0.15,
+     "hidden": false,
+     "mapOpen": true,
+     "mode": "lighthouse"
+    },
+    "after": {
+     "lit": 1,
+     "k": 0.976,
+     "hidden": true,
+     "mapOpen": true,
+     "mode": "steer"
+    }
+   }
+  },
+  "types": [
+   {
+    "type": "listening",
+    "mode": "steer",
+    "fov": 53,
+    "worldBuoys": 4,
+    "occlusion": [
+     {
+      "id": "r2_common_time",
+      "d": 29.1,
+      "bearing": 12.3,
+      "blocked": 5,
+      "fully": false
+     },
+     {
+      "id": "r2_sixteenth_note",
+      "d": 26.4,
+      "bearing": -66.8,
+      "blocked": 0,
+      "fully": false
+     }
+    ]
+   },
+   {
+    "type": "symbol_matching",
+    "mode": "steer",
+    "fov": 53,
+    "worldBuoys": 0,
+    "occlusion": null
+   },
+   {
+    "type": "navigation",
+    "mode": "steer",
+    "fov": 53,
+    "worldBuoys": 4,
+    "occlusion": [
+     {
+      "id": "r2_quarter_note",
+      "d": 25,
+      "bearing": 14.3,
+      "blocked": 2,
+      "fully": false
+     },
+     {
+      "id": "r2_eighth_note",
+      "d": 25,
+      "bearing": -75.7,
+      "blocked": 0,
+      "fully": false
+     }
+    ]
+   },
+   {
+    "type": "ordered_navigation",
+    "mode": "steer",
+    "fov": 53,
+    "worldBuoys": 4,
+    "occlusion": [
+     {
+      "id": "r2_syncopation",
+      "d": 25,
+      "bearing": 14.3,
+      "blocked": 2,
+      "fully": false
+     },
+     {
+      "id": "r2_strong_weak_beats",
+      "d": 25,
+      "bearing": -75.7,
+      "blocked": 0,
+      "fully": false
+     }
+    ]
+   }
+  ],
+  "timeline": {
+   "barsFull": 714,
+   "titleOn": null,
+   "startBars": 0.004,
+   "barsMax": 1,
+   "lastEventSince": 1965,
+   "endAt": 2581,
+   "afterMode": "steer",
+   "lightRise": {
+    "k10": 34,
+    "k50": null,
+    "k99": null
+   },
+   "cameraMode": [
+    "lighthouse"
+   ],
+   "lighthouseDistAtEnd": 39.4,
+   "lighthouseYAtEnd": 12.7,
+   "mapOpenedAfterEvent": true,
+   "mapClosedLater": false,
+   "evFrames": 4,
+   "lightPlan": {
+    "delay": 0.95,
+    "duration": 3,
+    "from": 0.15,
+    "sim": 11.45
+   },
+   "simPerWallRatio": 0.078,
+   "maxFrameGapMs": 679
+  },
+  "after": {
+   "eventHidden": true,
+   "mapOpen": true,
+   "mode": "scenic",
+   "lit": 1,
+   "k": 0.976,
+   "lighthouses": [
+    0,
+    2
+   ]
+  },
+  "shotsTaken": [],
+  "errors": [],
+  "checks": {
+   "allFourTypes": true,
+   "skipFinishesLights": true,
+   "lightsWereRising": true,
+   "mapAfterSkip": true,
+   "backToSteer": true,
+   "noErrors": true
+  },
+  "ok": true
+ },
+ "S3": {
+  "region": 3,
+  "reduced": true,
+  "solved": {
+   "region": 3,
+   "typesSeen": [
+    "ordered_navigation",
+    "symbol_matching",
+    "listening",
+    "navigation"
+   ],
+   "steps": 14,
+   "drag": true,
+   "result": "5/5 등대를 밝힐 준비가 됐어요 첫 시도 정답 5개 · 통과선 4개 ✓ 1. 도감에 제시된 학습 순서대로 네 부표를 선택하세요. 정답: piano → fortissimo → 극단 셈여림 → crescendo 내 첫 답: piano → fortissi"
+  },
+  "types": [
+   {
+    "type": "ordered_navigation",
+    "mode": "steer",
+    "fov": 53,
+    "worldBuoys": 4,
+    "occlusion": [
+     {
+      "id": "r3_fortissimo",
+      "d": 29.1,
+      "bearing": 12.3,
+      "blocked": 5,
+      "fully": false
+     },
+     {
+      "id": "r3_extreme_dynamics",
+      "d": 26.4,
+      "bearing": -66.8,
+      "blocked": 0,
+      "fully": false
+     }
+    ]
+   },
+   {
+    "type": "symbol_matching",
+    "mode": "steer",
+    "fov": 53,
+    "worldBuoys": 0,
+    "occlusion": null
+   },
+   {
+    "type": "listening",
+    "mode": "steer",
+    "fov": 53,
+    "worldBuoys": 4,
+    "occlusion": [
+     {
+      "id": "r3_subito",
+      "d": 25,
+      "bearing": 14.3,
+      "blocked": 3,
+      "fully": false
+     },
+     {
+      "id": "r3_mezzo_forte",
+      "d": 25,
+      "bearing": -75.7,
+      "blocked": 0,
+      "fully": false
+     }
+    ]
+   },
+   {
+    "type": "navigation",
+    "mode": "steer",
+    "fov": 53,
+    "worldBuoys": 4,
+    "occlusion": [
+     {
+      "id": "r3_fortepiano",
+      "d": 25,
+      "bearing": 14.3,
+      "blocked": 3,
+      "fully": false
+     },
+     {
+      "id": "r3_mezzo_piano",
+      "d": 25,
+      "bearing": -75.7,
+      "blocked": 0,
+      "fully": false
+     }
+    ]
+   }
+  ],
+  "timeline": {
+   "barsFull": 10,
+   "titleOn": 1334,
+   "startBars": 1,
+   "barsMax": 1,
+   "lastEventSince": 1334,
+   "endAt": null,
+   "afterMode": null,
+   "lightRise": {
+    "k10": 10,
+    "k50": null,
+    "k99": null
+   },
+   "cameraMode": [
+    "lighthouse"
+   ],
+   "lighthouseDistAtEnd": 45,
+   "lighthouseYAtEnd": 24,
+   "mapOpenedAfterEvent": true,
+   "mapClosedLater": false,
+   "evFrames": 3,
+   "lightPlan": {
+    "delay": 0.15,
+    "duration": 1,
+    "from": 0.15,
+    "sim": 14.65
+   },
+   "simPerWallRatio": 0.076,
+   "maxFrameGapMs": 710
+  },
+  "after": {
+   "eventHidden": true,
+   "mapOpen": true,
+   "mode": "steer",
+   "lit": 1,
+   "k": 0.974,
+   "lighthouses": [
+    0,
+    3
+   ]
+  },
+  "shotsTaken": [],
+  "errors": [],
+  "checks": {
+   "allFourTypes": true,
+   "barsStaticFull": true,
+   "titleAt1200": true,
+   "endedAroundTwo": true,
+   "cameraFixed": true,
+   "lightPlanReduced": true,
+   "litAfterEvent": true,
+   "backToSteer": true,
+   "noErrors": true
+  },
+  "ok": true
+ }
+}

@@ -1,0 +1,462 @@
+{
+ "viewport": [
+  1280,
+  720
+ ],
+ "k": 1,
+ "rows": [
+  {
+   "mood": "dawn",
+   "q": "low",
+   "fx": "auto",
+   "plan": {
+    "quality": "low",
+    "fx": "auto",
+    "reflectScale": 0,
+    "msaa": false,
+    "reflect": "sky",
+    "post": "css",
+    "passes": 1
+   },
+   "targets": 0,
+   "calls": {
+    "reflection": 0,
+    "main": 74,
+    "post": 0
+   },
+   "tone": {
+    "luminance": 0.507,
+    "saturation": 0.256
+   }
+  },
+  {
+   "mood": "dawn",
+   "q": "low",
+   "fx": "off",
+   "plan": {
+    "quality": "low",
+    "fx": "off",
+    "reflectScale": 0,
+    "msaa": false,
+    "reflect": "sky",
+    "post": "none",
+    "passes": 1
+   },
+   "targets": 0,
+   "calls": {
+    "reflection": 0,
+    "main": 74,
+    "post": 0
+   },
+   "tone": {
+    "luminance": 0.508,
+    "saturation": 0.256
+   }
+  },
+  {
+   "mood": "dawn",
+   "q": "mid",
+   "fx": "off",
+   "plan": {
+    "quality": "mid",
+    "fx": "off",
+    "reflectScale": 0,
+    "msaa": false,
+    "reflect": "sky",
+    "post": "none",
+    "passes": 1
+   },
+   "targets": 0,
+   "calls": {
+    "reflection": 0,
+    "main": 74,
+    "post": 0
+   },
+   "tone": {
+    "luminance": 0.506,
+    "saturation": 0.253
+   }
+  },
+  {
+   "mood": "dawn",
+   "q": "mid",
+   "fx": "lite",
+   "plan": {
+    "quality": "mid",
+    "fx": "lite",
+    "reflectScale": 0,
+    "msaa": false,
+    "reflect": "sky",
+    "post": "composite",
+    "passes": 2
+   },
+   "targets": 1,
+   "calls": {
+    "reflection": 0,
+    "main": 74,
+    "post": 1
+   },
+   "tone": {
+    "luminance": 0.44,
+    "saturation": 0.304
+   }
+  },
+  {
+   "mood": "dawn",
+   "q": "mid",
+   "fx": "full",
+   "plan": {
+    "quality": "mid",
+    "fx": "full",
+    "reflectScale": 0.5,
+    "msaa": false,
+    "reflect": "planar",
+    "post": "full",
+    "passes": 8
+   },
+   "targets": 7,
+   "calls": {
+    "reflection": 57,
+    "main": 74,
+    "post": 6
+   },
+   "tone": {
+    "luminance": 0.414,
+    "saturation": 0.328
+   }
+  },
+  {
+   "mood": "dawn",
+   "q": "high",
+   "fx": "full",
+   "plan": {
+    "quality": "high",
+    "fx": "full",
+    "reflectScale": 0.75,
+    "msaa": true,
+    "reflect": "planar",
+    "post": "full",
+    "passes": 8
+   },
+   "targets": 7,
+   "calls": {
+    "reflection": 57,
+    "main": 74,
+    "post": 6
+   },
+   "tone": {
+    "luminance": 0.412,
+    "saturation": 0.33
+   }
+  },
+  {
+   "mood": "deep",
+   "q": "low",
+   "fx": "auto",
+   "plan": {
+    "quality": "low",
+    "fx": "auto",
+    "reflectScale": 0,
+    "msaa": false,
+    "reflect": "sky",
+    "post": "css",
+    "passes": 1
+   },
+   "targets": 0,
+   "calls": {
+    "reflection": 0,
+    "main": 45,
+    "post": 0
+   },
+   "tone": {
+    "luminance": 0.145,
+    "saturation": 0.604
+   }
+  },
+  {
+   "mood": "deep",
+   "q": "low",
+   "fx": "off",
+   "plan": {
+    "quality": "low",
+    "fx": "off",
+    "reflectScale": 0,
+    "msaa": false,
+    "reflect": "sky",
+    "post": "none",
+    "passes": 1
+   },
+   "targets": 0,
+   "calls": {
+    "reflection": 0,
+    "main": 45,
+    "post": 0
+   },
+   "tone": {
+    "luminance": 0.143,
+    "saturation": 0.621
+   }
+  },
+  {
+   "mood": "deep",
+   "q": "mid",
+   "fx": "off",
+   "plan": {
+    "quality": "mid",
+    "fx": "off",
+    "reflectScale": 0,
+    "msaa": false,
+    "reflect": "sky",
+    "post": "none",
+    "passes": 1
+   },
+   "targets": 0,
+   "calls": {
+    "reflection": 0,
+    "main": 45,
+    "post": 0
+   },
+   "tone": {
+    "luminance": 0.145,
+    "saturation": 0.626
+   }
+  },
+  {
+   "mood": "deep",
+   "q": "mid",
+   "fx": "lite",
+   "plan": {
+    "quality": "mid",
+    "fx": "lite",
+    "reflectScale": 0,
+    "msaa": false,
+    "reflect": "sky",
+    "post": "composite",
+    "passes": 2
+   },
+   "targets": 1,
+   "calls": {
+    "reflection": 0,
+    "main": 45,
+    "post": 1
+   },
+   "tone": {
+    "luminance": 0.097,
+    "saturation": 0.815
+   }
+  },
+  {
+   "mood": "deep",
+   "q": "mid",
+   "fx": "full",
+   "plan": {
+    "quality": "mid",
+    "fx": "full",
+    "reflectScale": 0.5,
+    "msaa": false,
+    "reflect": "planar",
+    "post": "full",
+    "passes": 8
+   },
+   "targets": 7,
+   "calls": {
+    "reflection": 30,
+    "main": 45,
+    "post": 6
+   },
+   "tone": {
+    "luminance": 0.094,
+    "saturation": 0.802
+   }
+  },
+  {
+   "mood": "deep",
+   "q": "high",
+   "fx": "full",
+   "plan": {
+    "quality": "high",
+    "fx": "full",
+    "reflectScale": 0.75,
+    "msaa": true,
+    "reflect": "planar",
+    "post": "full",
+    "passes": 8
+   },
+   "targets": 7,
+   "calls": {
+    "reflection": 30,
+    "main": 45,
+    "post": 6
+   },
+   "tone": {
+    "luminance": 0.096,
+    "saturation": 0.801
+   }
+  },
+  {
+   "mood": "aurora",
+   "q": "low",
+   "fx": "auto",
+   "plan": {
+    "quality": "low",
+    "fx": "auto",
+    "reflectScale": 0,
+    "msaa": false,
+    "reflect": "sky",
+    "post": "css",
+    "passes": 1
+   },
+   "targets": 0,
+   "calls": {
+    "reflection": 0,
+    "main": 87,
+    "post": 0
+   },
+   "tone": {
+    "luminance": 0.248,
+    "saturation": 0.498
+   }
+  },
+  {
+   "mood": "aurora",
+   "q": "low",
+   "fx": "off",
+   "plan": {
+    "quality": "low",
+    "fx": "off",
+    "reflectScale": 0,
+    "msaa": false,
+    "reflect": "sky",
+    "post": "none",
+    "passes": 1
+   },
+   "targets": 0,
+   "calls": {
+    "reflection": 0,
+    "main": 87,
+    "post": 0
+   },
+   "tone": {
+    "luminance": 0.24,
+    "saturation": 0.531
+   }
+  },
+  {
+   "mood": "aurora",
+   "q": "mid",
+   "fx": "off",
+   "plan": {
+    "quality": "mid",
+    "fx": "off",
+    "reflectScale": 0,
+    "msaa": false,
+    "reflect": "sky",
+    "post": "none",
+    "passes": 1
+   },
+   "targets": 0,
+   "calls": {
+    "reflection": 0,
+    "main": 87,
+    "post": 0
+   },
+   "tone": {
+    "luminance": 0.191,
+    "saturation": 0.562
+   }
+  },
+  {
+   "mood": "aurora",
+   "q": "mid",
+   "fx": "lite",
+   "plan": {
+    "quality": "mid",
+    "fx": "lite",
+    "reflectScale": 0,
+    "msaa": false,
+    "reflect": "sky",
+    "post": "composite",
+    "passes": 2
+   },
+   "targets": 1,
+   "calls": {
+    "reflection": 0,
+    "main": 87,
+    "post": 1
+   },
+   "tone": {
+    "luminance": 0.136,
+    "saturation": 0.734
+   }
+  },
+  {
+   "mood": "aurora",
+   "q": "mid",
+   "fx": "full",
+   "plan": {
+    "quality": "mid",
+    "fx": "full",
+    "reflectScale": 0.5,
+    "msaa": false,
+    "reflect": "planar",
+    "post": "full",
+    "passes": 8
+   },
+   "targets": 7,
+   "calls": {
+    "reflection": 66,
+    "main": 87,
+    "post": 6
+   },
+   "tone": {
+    "luminance": 0.142,
+    "saturation": 0.721
+   }
+  },
+  {
+   "mood": "aurora",
+   "q": "high",
+   "fx": "full",
+   "plan": {
+    "quality": "high",
+    "fx": "full",
+    "reflectScale": 0.75,
+    "msaa": true,
+    "reflect": "planar",
+    "post": "full",
+    "passes": 8
+   },
+   "targets": 7,
+   "calls": {
+    "reflection": 66,
+    "main": 87,
+    "post": 6
+   },
+   "tone": {
+    "luminance": 0.143,
+    "saturation": 0.721
+   }
+  }
+ ],
+ "files": [
+  "/home/claude/remaster/game/output/playwright/rm_RM3_dawn_low_auto_1280x720_after.png",
+  "/home/claude/remaster/game/output/playwright/rm_RM3_dawn_low_off_1280x720_after.png",
+  "/home/claude/remaster/game/output/playwright/rm_RM3_dawn_mid_off_1280x720_after.png",
+  "/home/claude/remaster/game/output/playwright/rm_RM3_dawn_mid_lite_1280x720_after.png",
+  "/home/claude/remaster/game/output/playwright/rm_RM3_dawn_mid_full_1280x720_after.png",
+  "/home/claude/remaster/game/output/playwright/rm_RM3_dawn_high_full_1280x720_after.png",
+  "/home/claude/remaster/game/output/playwright/rm_RM3_deep_low_auto_1280x720_after.png",
+  "/home/claude/remaster/game/output/playwright/rm_RM3_deep_low_off_1280x720_after.png",
+  "/home/claude/remaster/game/output/playwright/rm_RM3_deep_mid_off_1280x720_after.png",
+  "/home/claude/remaster/game/output/playwright/rm_RM3_deep_mid_lite_1280x720_after.png",
+  "/home/claude/remaster/game/output/playwright/rm_RM3_deep_mid_full_1280x720_after.png",
+  "/home/claude/remaster/game/output/playwright/rm_RM3_deep_high_full_1280x720_after.png",
+  "/home/claude/remaster/game/output/playwright/rm_RM3_aurora_low_auto_1280x720_after.png",
+  "/home/claude/remaster/game/output/playwright/rm_RM3_aurora_low_off_1280x720_after.png",
+  "/home/claude/remaster/game/output/playwright/rm_RM3_aurora_mid_off_1280x720_after.png",
+  "/home/claude/remaster/game/output/playwright/rm_RM3_aurora_mid_lite_1280x720_after.png",
+  "/home/claude/remaster/game/output/playwright/rm_RM3_aurora_mid_full_1280x720_after.png",
+  "/home/claude/remaster/game/output/playwright/rm_RM3_aurora_high_full_1280x720_after.png"
+ ],
+ "errors": []
+}

@@ -1,0 +1,1861 @@
+{
+ "region": 8,
+ "gate": true,
+ "checks": [
+  {
+   "name": "normal: 근경·원경 모두 로드됨",
+   "ok": true,
+   "detail": {
+    "far": "ready",
+    "near": "ready",
+    "waitedMs": 537
+   }
+  },
+  {
+   "name": "normal: 원시 도형이 전부 숨음",
+   "ok": true,
+   "detail": {
+    "primitives": 1,
+    "hidden": 1
+   }
+  },
+  {
+   "name": "normal: 충돌체가 발자국 수만큼 더해짐",
+   "ok": true,
+   "detail": [
+    {
+     "region": 8,
+     "x": -63,
+     "z": -40,
+     "r": 4.5,
+     "landmark": "r8-repeat-gate"
+    },
+    {
+     "region": 8,
+     "x": 63,
+     "z": -40,
+     "r": 4.5,
+     "landmark": "r8-repeat-gate"
+    },
+    {
+     "region": 8,
+     "x": 0,
+     "z": 68,
+     "r": 3,
+     "landmark": "r8-repeat-gate"
+    }
+   ]
+  },
+  {
+   "name": "normal: 로드된 근경 삼각형 = 데이터 표",
+   "ok": true,
+   "detail": {
+    "loaded": 5184,
+    "table": 5184,
+    "meshes": 6,
+    "materials": 6
+   }
+  },
+  {
+   "name": "normal: 로드된 원경 삼각형 = 데이터 표",
+   "ok": true,
+   "detail": {
+    "loaded": 570,
+    "table": 570,
+    "meshes": 3,
+    "materials": 3
+   }
+  },
+  {
+   "name": "예산: 근경 ≤ 30,000 · 원경 ≤ 6,000 · 원경 ≤ 근경의 20%",
+   "ok": true,
+   "detail": {
+    "near": 5184,
+    "far": 570,
+    "ratio": 0.11
+   }
+  },
+  {
+   "name": "실루엣: 지점마다 근경 실루엣이 화면에 보임(≥ 0.3% 면적)",
+   "ok": true,
+   "detail": [
+    {
+     "id": "fixed",
+     "nearCoverage": 0.0148,
+     "farCoverage": 0.0133,
+     "iou": 0.895
+    },
+    {
+     "id": "close",
+     "nearCoverage": 0.0272,
+     "farCoverage": 0.0237,
+     "iou": 0.871
+    },
+    {
+     "id": "farOut",
+     "nearCoverage": 0.005,
+     "farCoverage": 0.0044,
+     "iou": 0.88
+    }
+   ]
+  },
+  {
+   "name": "원경 대역이 근경 실루엣을 그대로 닮음(IoU ≥ 0.75, 근경 지점)",
+   "ok": true,
+   "detail": [
+    {
+     "id": "fixed",
+     "iou": 0.895
+    },
+    {
+     "id": "close",
+     "iou": 0.871
+    },
+    {
+     "id": "farOut",
+     "iou": 0.88
+    }
+   ]
+  },
+  {
+   "name": "수집: 부표·병 모두 충돌체 밖(여유 ≥ 4 m)",
+   "ok": true,
+   "detail": {
+    "count": 17,
+    "minClearance": 14.85,
+    "nearest": [
+     {
+      "kind": "term",
+      "id": "r8_dc_al_fine",
+      "x": -48.504,
+      "z": -21.692,
+      "clearance": 14.85,
+      "who": "r8-repeat-gate"
+     },
+     {
+      "kind": "term",
+      "id": "r8_da_capo",
+      "x": -22.513,
+      "z": 56.406,
+      "clearance": 18.32,
+      "who": "r8-repeat-gate"
+     },
+     {
+      "kind": "term",
+      "id": "r8_ternary_form",
+      "x": 36.964,
+      "z": -26.588,
+      "clearance": 20.79,
+      "who": "r8-repeat-gate"
+     }
+    ]
+   }
+  },
+  {
+   "name": "수집: 용어·병 전부 수집되고 월드 규칙에 밀려나지 않음(< 0.5 m)",
+   "ok": true,
+   "detail": {
+    "rows": 17,
+    "missed": [],
+    "maxMoved": 0
+   }
+  },
+  {
+   "name": "예산 참고: 근경 지점 합계 호출·삼각형",
+   "ok": true,
+   "detail": {
+    "calls": 123,
+    "tris": 110095,
+    "shadow": {
+     "calls": 4,
+     "triangles": 2132
+    },
+    "reflection": {
+     "calls": 41,
+     "triangles": 25100
+    },
+    "main": {
+     "calls": 72,
+     "triangles": 82851
+    }
+   }
+  },
+  {
+   "name": "both: 둘 다 실패해도 원시 도형이 그대로 보이고 충돌체가 없음(모든 단계)",
+   "ok": true,
+   "detail": {
+    "shots": [
+     {
+      "shot": "fixed",
+      "far": "failed",
+      "near": "failed",
+      "hidden": 0,
+      "primitives": 1,
+      "colliders": 0
+     },
+     {
+      "shot": "close",
+      "far": "failed",
+      "near": "failed",
+      "hidden": 0,
+      "primitives": 1,
+      "colliders": 0
+     },
+     {
+      "shot": "farOut",
+      "far": "failed",
+      "near": "failed",
+      "hidden": 0,
+      "primitives": 1,
+      "colliders": 0
+     }
+    ],
+    "failures": 2
+   }
+  },
+  {
+   "name": "near 실패: 원경 대역이 본 패스에 서서 원시 도형을 대신하고 충돌체는 없음(모든 단계)",
+   "ok": true,
+   "detail": [
+    {
+     "shot": "fixed",
+     "far": "ready",
+     "near": "failed",
+     "hidden": 1,
+     "primitives": 1,
+     "colliders": 0
+    },
+    {
+     "shot": "close",
+     "far": "ready",
+     "near": "failed",
+     "hidden": 1,
+     "primitives": 1,
+     "colliders": 0
+    },
+    {
+     "shot": "farOut",
+     "far": "ready",
+     "near": "failed",
+     "hidden": 1,
+     "primitives": 1,
+     "colliders": 0
+    }
+   ]
+  },
+  {
+   "name": "far 실패(근경 단계): 근경이 서서 원시 도형을 대신하고 충돌체가 더해짐",
+   "ok": true,
+   "detail": [
+    {
+     "shot": "fixed",
+     "far": "failed",
+     "near": "ready",
+     "hidden": 1,
+     "primitives": 1,
+     "colliders": 3
+    },
+    {
+     "shot": "close",
+     "far": "failed",
+     "near": "ready",
+     "hidden": 1,
+     "primitives": 1,
+     "colliders": 3
+    }
+   ]
+  },
+  {
+   "name": "far 실패(원경 단계): 보여줄 모델이 없으면 원시 도형이 돌아옴",
+   "ok": true,
+   "detail": [
+    {
+     "shot": "farOut",
+     "far": "failed",
+     "near": "ready",
+     "hidden": 0,
+     "primitives": 1,
+     "colliders": 3
+    }
+   ]
+  },
+  {
+   "name": "콘솔 오류 없음(정상 시나리오는 하나도 없어야 하고, 실패 시나리오는 끊은 요청 로그만 허용)",
+   "ok": true,
+   "detail": [
+    {
+     "scenario": "normal",
+     "errors": []
+    },
+    {
+     "scenario": "both",
+     "errors": [
+      "error: Failed to load resource: net::ERR_FAILED",
+      "error: Failed to load resource: net::ERR_FAILED"
+     ]
+    },
+    {
+     "scenario": "near",
+     "errors": [
+      "error: Failed to load resource: net::ERR_FAILED"
+     ]
+    },
+    {
+     "scenario": "far",
+     "errors": [
+      "error: Failed to load resource: net::ERR_FAILED"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "외부 요청 없음(three CDN 대신 로컬 응답만)",
+   "ok": true,
+   "detail": [
+    [],
+    [],
+    [],
+    []
+   ]
+  }
+ ],
+ "results": [
+  {
+   "scenario": "normal",
+   "shots": {
+    "fixed": {
+     "shot": "fixed",
+     "stage": "near",
+     "far": "ready",
+     "near": "ready",
+     "waitedMs": 537,
+     "snapshot": {
+      "id": "r8-repeat-gate",
+      "region": 8,
+      "stage": "near",
+      "far": "ready",
+      "near": "ready",
+      "colliders": 3,
+      "primitivesHidden": 1,
+      "primitives": 1,
+      "error": null
+     },
+     "litFile": "/home/claude/remaster/game/output/playwright/rm6_r8_normal_fixed_lit.png",
+     "sil": {
+      "near": {
+       "coverage": 0.014840494791666667,
+       "bbox": [
+        0,
+        192,
+        1279,
+        378
+       ]
+      },
+      "far": {
+       "coverage": 0.013284505208333333,
+       "bbox": [
+        0,
+        200,
+        1279,
+        377
+       ]
+      },
+      "iou": 0.8948753563857007
+     },
+     "nearFile": "/home/claude/remaster/game/output/playwright/rm6_r8_fixed_sil_near.png",
+     "farFile": "/home/claude/remaster/game/output/playwright/rm6_r8_fixed_sil_far.png",
+     "diffFile": "/home/claude/remaster/game/output/playwright/rm6_r8_fixed_sil_diff.png"
+    },
+    "close": {
+     "shot": "close",
+     "stage": "near",
+     "far": "ready",
+     "near": "ready",
+     "waitedMs": 584,
+     "snapshot": {
+      "id": "r8-repeat-gate",
+      "region": 8,
+      "stage": "near",
+      "far": "ready",
+      "near": "ready",
+      "colliders": 3,
+      "primitivesHidden": 1,
+      "primitives": 1,
+      "error": null
+     },
+     "litFile": "/home/claude/remaster/game/output/playwright/rm6_r8_normal_close_lit.png",
+     "sil": {
+      "near": {
+       "coverage": 0.02722113715277778,
+       "bbox": [
+        164,
+        160,
+        1279,
+        400
+       ]
+      },
+      "far": {
+       "coverage": 0.023704427083333333,
+       "bbox": [
+        173,
+        173,
+        1279,
+        399
+       ]
+      },
+      "iou": 0.8708095826523697
+     },
+     "nearFile": "/home/claude/remaster/game/output/playwright/rm6_r8_close_sil_near.png",
+     "farFile": "/home/claude/remaster/game/output/playwright/rm6_r8_close_sil_far.png",
+     "diffFile": "/home/claude/remaster/game/output/playwright/rm6_r8_close_sil_diff.png"
+    },
+    "farOut": {
+     "shot": "farOut",
+     "stage": "far",
+     "far": "ready",
+     "near": "ready",
+     "waitedMs": 519,
+     "snapshot": {
+      "id": "r8-repeat-gate",
+      "region": 8,
+      "stage": "far",
+      "far": "ready",
+      "near": "ready",
+      "colliders": 3,
+      "primitivesHidden": 1,
+      "primitives": 1,
+      "error": null
+     },
+     "litFile": "/home/claude/remaster/game/output/playwright/rm6_r8_normal_farOut_lit.png",
+     "sil": {
+      "near": {
+       "coverage": 0.004966362847222222,
+       "bbox": [
+        531,
+        246,
+        1016,
+        328
+       ]
+      },
+      "far": {
+       "coverage": 0.004368489583333334,
+       "bbox": [
+        531,
+        248,
+        1015,
+        328
+       ]
+      },
+      "iou": 0.8796154686475858
+     },
+     "nearFile": "/home/claude/remaster/game/output/playwright/rm6_r8_farOut_sil_near.png",
+     "farFile": "/home/claude/remaster/game/output/playwright/rm6_r8_farOut_sil_far.png",
+     "diffFile": "/home/claude/remaster/game/output/playwright/rm6_r8_farOut_sil_diff.png"
+    }
+   },
+   "checks": {},
+   "spec": {
+    "id": "r8-repeat-gate",
+    "name": "도돌이 문",
+    "near": {
+     "path": "assets/remaster/models/landmark-r8-repeat-gate.glb",
+     "tris": 5184,
+     "bytes": 148688,
+     "sha256": "5d3727d7db4711f678bd66d67b1d13de2823b124439b0712cc1f7f2eedf1125b"
+    },
+    "far": {
+     "path": "assets/remaster/models/landmark-r8-repeat-gate-far.glb",
+     "tris": 570,
+     "bytes": 25220,
+     "sha256": "9c6e5a6e8c0135bd221cb63aabd7041de44ead3b15dc6203a53cf94a7044bd42"
+    },
+    "footprints": [
+     {
+      "x": -63,
+      "z": -40,
+      "r": 4.5
+     },
+     {
+      "x": 63,
+      "z": -40,
+      "r": 4.5
+     },
+     {
+      "x": 0,
+      "z": 68,
+      "r": 3
+     }
+    ],
+    "hide": [
+     "r8-cones"
+    ],
+    "hideProps": []
+   },
+   "remasterReadyMs": 516,
+   "final": {
+    "enabled": true,
+    "requests": 13,
+    "failures": 0,
+    "music": {
+     "updates": 90,
+     "applied": 111,
+     "locks": 9,
+     "phase": 0.406,
+     "period": 0.395,
+     "events": {
+      "beatAt": 4.95,
+      "flashAt": 4.95,
+      "degree": null,
+      "degreeAt": null,
+      "pearls": 0,
+      "pearlAt": null,
+      "bar": 21,
+      "barAt": 4.899999999999991
+     },
+     "bound": [
+      {
+       "id": "r0-staff-gate",
+       "near": [
+        "Glow_clef",
+        "Lantern_notes"
+       ],
+       "far": 2
+      },
+      {
+       "id": "r7-key-ring",
+       "near": [],
+       "far": 3
+      },
+      {
+       "id": "r1-tempo-tower",
+       "near": [
+        "Beat_pendulum",
+        "Lantern_tempo"
+       ],
+       "far": 1
+      },
+      {
+       "id": "r2-storm-drum",
+       "near": [
+        "Beat_head",
+        "Glow_arc",
+        "Glow_rim"
+       ],
+       "far": 1
+      },
+      {
+       "id": "r8-repeat-gate",
+       "near": [
+        "Lantern_dotsStart",
+        "Lantern_dotsEnd",
+        "Glow_coda"
+       ],
+       "far": 2
+      },
+      {
+       "id": "r3-dynamics-canyon",
+       "near": [],
+       "far": 1
+      },
+      {
+       "id": "r5-scale-lights",
+       "near": [],
+       "far": 1
+      },
+      {
+       "id": "r6-chord-spires",
+       "near": [],
+       "far": 1
+      },
+      {
+       "id": "r4-fermata-bridge",
+       "near": [],
+       "far": 2
+      }
+     ]
+    },
+    "entries": [
+     {
+      "id": "r0-staff-gate",
+      "region": 0,
+      "stage": "far",
+      "far": "ready",
+      "near": "ready",
+      "colliders": 2,
+      "primitivesHidden": 1,
+      "primitives": 1,
+      "error": null
+     },
+     {
+      "id": "r7-key-ring",
+      "region": 7,
+      "stage": "far",
+      "far": "ready",
+      "near": "idle",
+      "colliders": 0,
+      "primitivesHidden": 1,
+      "primitives": 1,
+      "error": null
+     },
+     {
+      "id": "r3-dynamics-canyon",
+      "region": 3,
+      "stage": "far",
+      "far": "ready",
+      "near": "idle",
+      "colliders": 0,
+      "primitivesHidden": 1,
+      "primitives": 1,
+      "error": null
+     },
+     {
+      "id": "r1-tempo-tower",
+      "region": 1,
+      "stage": "near",
+      "far": "ready",
+      "near": "ready",
+      "colliders": 0,
+      "primitivesHidden": 1,
+      "primitives": 1,
+      "error": null
+     },
+     {
+      "id": "r5-scale-lights",
+      "region": 5,
+      "stage": "none",
+      "far": "ready",
+      "near": "idle",
+      "colliders": 0,
+      "primitivesHidden": 0,
+      "primitives": 1,
+      "error": null
+     },
+     {
+      "id": "r6-chord-spires",
+      "region": 6,
+      "stage": "none",
+      "far": "ready",
+      "near": "idle",
+      "colliders": 0,
+      "primitivesHidden": 0,
+      "primitives": 1,
+      "error": null
+     },
+     {
+      "id": "r2-storm-drum",
+      "region": 2,
+      "stage": "near",
+      "far": "ready",
+      "near": "ready",
+      "colliders": 0,
+      "primitivesHidden": 2,
+      "primitives": 2,
+      "error": null
+     },
+     {
+      "id": "r4-fermata-bridge",
+      "region": 4,
+      "stage": "none",
+      "far": "ready",
+      "near": "idle",
+      "colliders": 0,
+      "primitivesHidden": 0,
+      "primitives": 1,
+      "error": null
+     },
+     {
+      "id": "r8-repeat-gate",
+      "region": 8,
+      "stage": "far",
+      "far": "ready",
+      "near": "ready",
+      "colliders": 3,
+      "primitivesHidden": 1,
+      "primitives": 1,
+      "error": null
+     }
+    ]
+   },
+   "rootStats": {
+    "near": {
+     "tris": 5184,
+     "meshes": 6,
+     "materials": 6,
+     "visible": true,
+     "name": "landmark-r8-repeat-gate-near"
+    },
+    "far": {
+     "tris": 570,
+     "meshes": 3,
+     "materials": 3,
+     "visible": true,
+     "name": "landmark-r8-repeat-gate-far"
+    }
+   },
+   "colliders": [
+    {
+     "region": 8,
+     "x": -63,
+     "z": -40,
+     "r": 4.5,
+     "landmark": "r8-repeat-gate"
+    },
+    {
+     "region": 8,
+     "x": 63,
+     "z": -40,
+     "r": 4.5,
+     "landmark": "r8-repeat-gate"
+    },
+    {
+     "region": 8,
+     "x": 0,
+     "z": 68,
+     "r": 3,
+     "landmark": "r8-repeat-gate"
+    }
+   ],
+   "collectables": [
+    {
+     "kind": "term",
+     "id": "r8_repeat_sign",
+     "x": -23.867,
+     "z": -8.293,
+     "clearance": 41.87,
+     "who": "r8-repeat-gate"
+    },
+    {
+     "kind": "term",
+     "id": "r8_first_second_ending",
+     "x": 35.81,
+     "z": -23.804,
+     "clearance": 23.15,
+     "who": "r8-repeat-gate"
+    },
+    {
+     "kind": "term",
+     "id": "r8_da_capo",
+     "x": -22.513,
+     "z": 56.406,
+     "clearance": 18.32,
+     "who": "r8-repeat-gate"
+    },
+    {
+     "kind": "term",
+     "id": "r8_dal_segno",
+     "x": -15.447,
+     "z": -37.402,
+     "clearance": 39.12,
+     "who": "r8-repeat-gate"
+    },
+    {
+     "kind": "term",
+     "id": "r8_segno",
+     "x": 54.17,
+     "z": 21.28,
+     "clearance": 53.41,
+     "who": "r8-repeat-gate"
+    },
+    {
+     "kind": "term",
+     "id": "r8_coda",
+     "x": -35.422,
+     "z": 13.573,
+     "clearance": 51.75,
+     "who": "r8-repeat-gate"
+    },
+    {
+     "kind": "term",
+     "id": "r8_to_coda",
+     "x": 29.147,
+     "z": -47.426,
+     "clearance": 26.16,
+     "who": "r8-repeat-gate"
+    },
+    {
+     "kind": "term",
+     "id": "r8_fine",
+     "x": 5.967,
+     "z": 34.894,
+     "clearance": 26.64,
+     "who": "r8-repeat-gate"
+    },
+    {
+     "kind": "term",
+     "id": "r8_dc_al_fine",
+     "x": -48.504,
+     "z": -21.692,
+     "clearance": 14.85,
+     "who": "r8-repeat-gate"
+    },
+    {
+     "kind": "term",
+     "id": "r8_motive",
+     "x": 31.131,
+     "z": -10.54,
+     "clearance": 34.9,
+     "who": "r8-repeat-gate"
+    },
+    {
+     "kind": "term",
+     "id": "r8_phrase",
+     "x": -34.139,
+     "z": 37.348,
+     "clearance": 38.88,
+     "who": "r8-repeat-gate"
+    },
+    {
+     "kind": "term",
+     "id": "r8_period",
+     "x": 0.137,
+     "z": -30.333,
+     "clearance": 55.1,
+     "who": "r8-repeat-gate"
+    },
+    {
+     "kind": "term",
+     "id": "r8_one_part_form",
+     "x": 36.412,
+     "z": 31.378,
+     "clearance": 44.64,
+     "who": "r8-repeat-gate"
+    },
+    {
+     "kind": "term",
+     "id": "r8_binary_form",
+     "x": -27.764,
+     "z": -1.409,
+     "clearance": 43.76,
+     "who": "r8-repeat-gate"
+    },
+    {
+     "kind": "term",
+     "id": "r8_ternary_form",
+     "x": 36.964,
+     "z": -26.588,
+     "clearance": 20.79,
+     "who": "r8-repeat-gate"
+    },
+    {
+     "kind": "bottle",
+     "id": "bottle_r8_1",
+     "x": -44.209,
+     "z": -12.712,
+     "clearance": 24.63,
+     "who": "r8-repeat-gate"
+    },
+    {
+     "kind": "bottle",
+     "id": "bottle_r8_2",
+     "x": 35.135,
+     "z": -29.69,
+     "clearance": 21.21,
+     "who": "r8-repeat-gate"
+    }
+   ],
+   "journey": {
+    "rows": [
+     {
+      "id": "r8_repeat_sign",
+      "kind": "term",
+      "moved": 0,
+      "had": false,
+      "has": true
+     },
+     {
+      "id": "r8_first_second_ending",
+      "kind": "term",
+      "moved": 0,
+      "had": false,
+      "has": true
+     },
+     {
+      "id": "r8_da_capo",
+      "kind": "term",
+      "moved": 0,
+      "had": false,
+      "has": true
+     },
+     {
+      "id": "r8_dal_segno",
+      "kind": "term",
+      "moved": 0,
+      "had": false,
+      "has": true
+     },
+     {
+      "id": "r8_segno",
+      "kind": "term",
+      "moved": 0,
+      "had": false,
+      "has": true
+     },
+     {
+      "id": "r8_coda",
+      "kind": "term",
+      "moved": 0,
+      "had": false,
+      "has": true
+     },
+     {
+      "id": "r8_to_coda",
+      "kind": "term",
+      "moved": 0,
+      "had": false,
+      "has": true
+     },
+     {
+      "id": "r8_fine",
+      "kind": "term",
+      "moved": 0,
+      "had": false,
+      "has": true
+     },
+     {
+      "id": "r8_dc_al_fine",
+      "kind": "term",
+      "moved": 0,
+      "had": false,
+      "has": true
+     },
+     {
+      "id": "r8_motive",
+      "kind": "term",
+      "moved": 0,
+      "had": false,
+      "has": true
+     },
+     {
+      "id": "r8_phrase",
+      "kind": "term",
+      "moved": 0,
+      "had": false,
+      "has": true
+     },
+     {
+      "id": "r8_period",
+      "kind": "term",
+      "moved": 0,
+      "had": false,
+      "has": true
+     },
+     {
+      "id": "r8_one_part_form",
+      "kind": "term",
+      "moved": 0,
+      "had": false,
+      "has": true
+     },
+     {
+      "id": "r8_binary_form",
+      "kind": "term",
+      "moved": 0,
+      "had": false,
+      "has": true
+     },
+     {
+      "id": "r8_ternary_form",
+      "kind": "term",
+      "moved": 0,
+      "had": false,
+      "has": true
+     },
+     {
+      "id": "bottle_r8_1",
+      "kind": "bottle",
+      "moved": 0,
+      "had": false,
+      "has": true
+     },
+     {
+      "id": "bottle_r8_2",
+      "kind": "bottle",
+      "moved": 0,
+      "had": false,
+      "has": true
+     }
+    ],
+    "missed": []
+   },
+   "passes": {
+    "shadow": {
+     "calls": 4,
+     "triangles": 2132
+    },
+    "reflection": {
+     "calls": 41,
+     "triangles": 25100
+    },
+    "main": {
+     "calls": 72,
+     "triangles": 82851
+    },
+    "post": {
+     "calls": 6,
+     "triangles": 12
+    },
+    "total": {
+     "calls": 123,
+     "triangles": 110095
+    }
+   },
+   "errors": [],
+   "externalRequests": []
+  },
+  {
+   "scenario": "both",
+   "shots": {
+    "fixed": {
+     "shot": "fixed",
+     "stage": "near",
+     "far": "failed",
+     "near": "failed",
+     "waitedMs": 575,
+     "snapshot": {
+      "id": "r8-repeat-gate",
+      "region": 8,
+      "stage": "near",
+      "far": "failed",
+      "near": "failed",
+      "colliders": 0,
+      "primitivesHidden": 0,
+      "primitives": 1,
+      "error": "[object ProgressEvent]"
+     },
+     "litFile": "/home/claude/remaster/game/output/playwright/rm6_r8_both_fixed_lit.png"
+    },
+    "close": {
+     "shot": "close",
+     "stage": "near",
+     "far": "failed",
+     "near": "failed",
+     "waitedMs": 569,
+     "snapshot": {
+      "id": "r8-repeat-gate",
+      "region": 8,
+      "stage": "near",
+      "far": "failed",
+      "near": "failed",
+      "colliders": 0,
+      "primitivesHidden": 0,
+      "primitives": 1,
+      "error": "[object ProgressEvent]"
+     },
+     "litFile": "/home/claude/remaster/game/output/playwright/rm6_r8_both_close_lit.png"
+    },
+    "farOut": {
+     "shot": "farOut",
+     "stage": "far",
+     "far": "failed",
+     "near": "failed",
+     "waitedMs": 544,
+     "snapshot": {
+      "id": "r8-repeat-gate",
+      "region": 8,
+      "stage": "far",
+      "far": "failed",
+      "near": "failed",
+      "colliders": 0,
+      "primitivesHidden": 0,
+      "primitives": 1,
+      "error": "[object ProgressEvent]"
+     },
+     "litFile": "/home/claude/remaster/game/output/playwright/rm6_r8_both_farOut_lit.png"
+    }
+   },
+   "checks": {},
+   "spec": {
+    "id": "r8-repeat-gate",
+    "name": "도돌이 문",
+    "near": {
+     "path": "assets/remaster/models/landmark-r8-repeat-gate.glb",
+     "tris": 5184,
+     "bytes": 148688,
+     "sha256": "5d3727d7db4711f678bd66d67b1d13de2823b124439b0712cc1f7f2eedf1125b"
+    },
+    "far": {
+     "path": "assets/remaster/models/landmark-r8-repeat-gate-far.glb",
+     "tris": 570,
+     "bytes": 25220,
+     "sha256": "9c6e5a6e8c0135bd221cb63aabd7041de44ead3b15dc6203a53cf94a7044bd42"
+    },
+    "footprints": [
+     {
+      "x": -63,
+      "z": -40,
+      "r": 4.5
+     },
+     {
+      "x": 63,
+      "z": -40,
+      "r": 4.5
+     },
+     {
+      "x": 0,
+      "z": 68,
+      "r": 3
+     }
+    ],
+    "hide": [
+     "r8-cones"
+    ],
+    "hideProps": []
+   },
+   "remasterReadyMs": 525,
+   "final": {
+    "enabled": true,
+    "requests": 13,
+    "failures": 2,
+    "music": {
+     "updates": 87,
+     "applied": 56,
+     "locks": 9,
+     "phase": 0.545,
+     "period": 0.395,
+     "events": {
+      "beatAt": 4.8,
+      "flashAt": 4.8,
+      "degree": null,
+      "degreeAt": null,
+      "pearls": 0,
+      "pearlAt": null,
+      "bar": 20,
+      "barAt": 4.699999999999991
+     },
+     "bound": [
+      {
+       "id": "r0-staff-gate",
+       "near": [
+        "Glow_clef",
+        "Lantern_notes"
+       ],
+       "far": 2
+      },
+      {
+       "id": "r7-key-ring",
+       "near": [],
+       "far": 3
+      },
+      {
+       "id": "r1-tempo-tower",
+       "near": [
+        "Beat_pendulum",
+        "Lantern_tempo"
+       ],
+       "far": 1
+      },
+      {
+       "id": "r2-storm-drum",
+       "near": [
+        "Beat_head",
+        "Glow_arc",
+        "Glow_rim"
+       ],
+       "far": 1
+      },
+      {
+       "id": "r3-dynamics-canyon",
+       "near": [],
+       "far": 1
+      },
+      {
+       "id": "r5-scale-lights",
+       "near": [],
+       "far": 1
+      },
+      {
+       "id": "r6-chord-spires",
+       "near": [],
+       "far": 1
+      },
+      {
+       "id": "r4-fermata-bridge",
+       "near": [],
+       "far": 2
+      }
+     ]
+    },
+    "entries": [
+     {
+      "id": "r0-staff-gate",
+      "region": 0,
+      "stage": "far",
+      "far": "ready",
+      "near": "ready",
+      "colliders": 2,
+      "primitivesHidden": 1,
+      "primitives": 1,
+      "error": null
+     },
+     {
+      "id": "r7-key-ring",
+      "region": 7,
+      "stage": "far",
+      "far": "ready",
+      "near": "idle",
+      "colliders": 0,
+      "primitivesHidden": 1,
+      "primitives": 1,
+      "error": null
+     },
+     {
+      "id": "r3-dynamics-canyon",
+      "region": 3,
+      "stage": "far",
+      "far": "ready",
+      "near": "idle",
+      "colliders": 0,
+      "primitivesHidden": 1,
+      "primitives": 1,
+      "error": null
+     },
+     {
+      "id": "r1-tempo-tower",
+      "region": 1,
+      "stage": "near",
+      "far": "ready",
+      "near": "ready",
+      "colliders": 0,
+      "primitivesHidden": 1,
+      "primitives": 1,
+      "error": null
+     },
+     {
+      "id": "r5-scale-lights",
+      "region": 5,
+      "stage": "none",
+      "far": "ready",
+      "near": "idle",
+      "colliders": 0,
+      "primitivesHidden": 0,
+      "primitives": 1,
+      "error": null
+     },
+     {
+      "id": "r6-chord-spires",
+      "region": 6,
+      "stage": "none",
+      "far": "ready",
+      "near": "idle",
+      "colliders": 0,
+      "primitivesHidden": 0,
+      "primitives": 1,
+      "error": null
+     },
+     {
+      "id": "r2-storm-drum",
+      "region": 2,
+      "stage": "near",
+      "far": "ready",
+      "near": "ready",
+      "colliders": 0,
+      "primitivesHidden": 2,
+      "primitives": 2,
+      "error": null
+     },
+     {
+      "id": "r4-fermata-bridge",
+      "region": 4,
+      "stage": "none",
+      "far": "ready",
+      "near": "idle",
+      "colliders": 0,
+      "primitivesHidden": 0,
+      "primitives": 1,
+      "error": null
+     },
+     {
+      "id": "r8-repeat-gate",
+      "region": 8,
+      "stage": "far",
+      "far": "failed",
+      "near": "failed",
+      "colliders": 0,
+      "primitivesHidden": 0,
+      "primitives": 1,
+      "error": "[object ProgressEvent]"
+     }
+    ]
+   },
+   "errors": [
+    "error: Failed to load resource: net::ERR_FAILED",
+    "error: Failed to load resource: net::ERR_FAILED"
+   ],
+   "externalRequests": []
+  },
+  {
+   "scenario": "near",
+   "shots": {
+    "fixed": {
+     "shot": "fixed",
+     "stage": "near",
+     "far": "ready",
+     "near": "failed",
+     "waitedMs": 562,
+     "snapshot": {
+      "id": "r8-repeat-gate",
+      "region": 8,
+      "stage": "near",
+      "far": "ready",
+      "near": "failed",
+      "colliders": 0,
+      "primitivesHidden": 1,
+      "primitives": 1,
+      "error": "[object ProgressEvent]"
+     },
+     "litFile": "/home/claude/remaster/game/output/playwright/rm6_r8_near_fixed_lit.png"
+    },
+    "close": {
+     "shot": "close",
+     "stage": "near",
+     "far": "ready",
+     "near": "failed",
+     "waitedMs": 604,
+     "snapshot": {
+      "id": "r8-repeat-gate",
+      "region": 8,
+      "stage": "near",
+      "far": "ready",
+      "near": "failed",
+      "colliders": 0,
+      "primitivesHidden": 1,
+      "primitives": 1,
+      "error": "[object ProgressEvent]"
+     },
+     "litFile": "/home/claude/remaster/game/output/playwright/rm6_r8_near_close_lit.png"
+    },
+    "farOut": {
+     "shot": "farOut",
+     "stage": "far",
+     "far": "ready",
+     "near": "failed",
+     "waitedMs": 532,
+     "snapshot": {
+      "id": "r8-repeat-gate",
+      "region": 8,
+      "stage": "far",
+      "far": "ready",
+      "near": "failed",
+      "colliders": 0,
+      "primitivesHidden": 1,
+      "primitives": 1,
+      "error": "[object ProgressEvent]"
+     },
+     "litFile": "/home/claude/remaster/game/output/playwright/rm6_r8_near_farOut_lit.png"
+    }
+   },
+   "checks": {},
+   "spec": {
+    "id": "r8-repeat-gate",
+    "name": "도돌이 문",
+    "near": {
+     "path": "assets/remaster/models/landmark-r8-repeat-gate.glb",
+     "tris": 5184,
+     "bytes": 148688,
+     "sha256": "5d3727d7db4711f678bd66d67b1d13de2823b124439b0712cc1f7f2eedf1125b"
+    },
+    "far": {
+     "path": "assets/remaster/models/landmark-r8-repeat-gate-far.glb",
+     "tris": 570,
+     "bytes": 25220,
+     "sha256": "9c6e5a6e8c0135bd221cb63aabd7041de44ead3b15dc6203a53cf94a7044bd42"
+    },
+    "footprints": [
+     {
+      "x": -63,
+      "z": -40,
+      "r": 4.5
+     },
+     {
+      "x": 63,
+      "z": -40,
+      "r": 4.5
+     },
+     {
+      "x": 0,
+      "z": 68,
+      "r": 3
+     }
+    ],
+    "hide": [
+     "r8-cones"
+    ],
+    "hideProps": []
+   },
+   "remasterReadyMs": 689,
+   "final": {
+    "enabled": true,
+    "requests": 13,
+    "failures": 1,
+    "music": {
+     "updates": 87,
+     "applied": 56,
+     "locks": 9,
+     "phase": 0.181,
+     "period": 0.395,
+     "events": {
+      "beatAt": 4.8,
+      "flashAt": 4.8,
+      "degree": null,
+      "degreeAt": null,
+      "pearls": 0,
+      "pearlAt": null,
+      "bar": 21,
+      "barAt": 4.699999999999991
+     },
+     "bound": [
+      {
+       "id": "r0-staff-gate",
+       "near": [
+        "Glow_clef",
+        "Lantern_notes"
+       ],
+       "far": 2
+      },
+      {
+       "id": "r7-key-ring",
+       "near": [],
+       "far": 3
+      },
+      {
+       "id": "r1-tempo-tower",
+       "near": [
+        "Beat_pendulum",
+        "Lantern_tempo"
+       ],
+       "far": 1
+      },
+      {
+       "id": "r2-storm-drum",
+       "near": [
+        "Beat_head",
+        "Glow_arc",
+        "Glow_rim"
+       ],
+       "far": 1
+      },
+      {
+       "id": "r8-repeat-gate",
+       "near": [],
+       "far": 2
+      },
+      {
+       "id": "r3-dynamics-canyon",
+       "near": [],
+       "far": 1
+      },
+      {
+       "id": "r5-scale-lights",
+       "near": [],
+       "far": 1
+      },
+      {
+       "id": "r6-chord-spires",
+       "near": [],
+       "far": 1
+      },
+      {
+       "id": "r4-fermata-bridge",
+       "near": [],
+       "far": 2
+      }
+     ]
+    },
+    "entries": [
+     {
+      "id": "r0-staff-gate",
+      "region": 0,
+      "stage": "far",
+      "far": "ready",
+      "near": "ready",
+      "colliders": 2,
+      "primitivesHidden": 1,
+      "primitives": 1,
+      "error": null
+     },
+     {
+      "id": "r7-key-ring",
+      "region": 7,
+      "stage": "far",
+      "far": "ready",
+      "near": "idle",
+      "colliders": 0,
+      "primitivesHidden": 1,
+      "primitives": 1,
+      "error": null
+     },
+     {
+      "id": "r3-dynamics-canyon",
+      "region": 3,
+      "stage": "far",
+      "far": "ready",
+      "near": "idle",
+      "colliders": 0,
+      "primitivesHidden": 1,
+      "primitives": 1,
+      "error": null
+     },
+     {
+      "id": "r1-tempo-tower",
+      "region": 1,
+      "stage": "near",
+      "far": "ready",
+      "near": "ready",
+      "colliders": 0,
+      "primitivesHidden": 1,
+      "primitives": 1,
+      "error": null
+     },
+     {
+      "id": "r5-scale-lights",
+      "region": 5,
+      "stage": "none",
+      "far": "ready",
+      "near": "idle",
+      "colliders": 0,
+      "primitivesHidden": 0,
+      "primitives": 1,
+      "error": null
+     },
+     {
+      "id": "r6-chord-spires",
+      "region": 6,
+      "stage": "none",
+      "far": "ready",
+      "near": "idle",
+      "colliders": 0,
+      "primitivesHidden": 0,
+      "primitives": 1,
+      "error": null
+     },
+     {
+      "id": "r2-storm-drum",
+      "region": 2,
+      "stage": "near",
+      "far": "ready",
+      "near": "ready",
+      "colliders": 0,
+      "primitivesHidden": 2,
+      "primitives": 2,
+      "error": null
+     },
+     {
+      "id": "r4-fermata-bridge",
+      "region": 4,
+      "stage": "none",
+      "far": "ready",
+      "near": "idle",
+      "colliders": 0,
+      "primitivesHidden": 0,
+      "primitives": 1,
+      "error": null
+     },
+     {
+      "id": "r8-repeat-gate",
+      "region": 8,
+      "stage": "far",
+      "far": "ready",
+      "near": "failed",
+      "colliders": 0,
+      "primitivesHidden": 1,
+      "primitives": 1,
+      "error": "[object ProgressEvent]"
+     }
+    ]
+   },
+   "errors": [
+    "error: Failed to load resource: net::ERR_FAILED"
+   ],
+   "externalRequests": []
+  },
+  {
+   "scenario": "far",
+   "shots": {
+    "fixed": {
+     "shot": "fixed",
+     "stage": "near",
+     "far": "failed",
+     "near": "ready",
+     "waitedMs": 565,
+     "snapshot": {
+      "id": "r8-repeat-gate",
+      "region": 8,
+      "stage": "near",
+      "far": "failed",
+      "near": "ready",
+      "colliders": 3,
+      "primitivesHidden": 1,
+      "primitives": 1,
+      "error": "[object ProgressEvent]"
+     },
+     "litFile": "/home/claude/remaster/game/output/playwright/rm6_r8_far_fixed_lit.png"
+    },
+    "close": {
+     "shot": "close",
+     "stage": "near",
+     "far": "failed",
+     "near": "ready",
+     "waitedMs": 577,
+     "snapshot": {
+      "id": "r8-repeat-gate",
+      "region": 8,
+      "stage": "near",
+      "far": "failed",
+      "near": "ready",
+      "colliders": 3,
+      "primitivesHidden": 1,
+      "primitives": 1,
+      "error": "[object ProgressEvent]"
+     },
+     "litFile": "/home/claude/remaster/game/output/playwright/rm6_r8_far_close_lit.png"
+    },
+    "farOut": {
+     "shot": "farOut",
+     "stage": "far",
+     "far": "failed",
+     "near": "ready",
+     "waitedMs": 553,
+     "snapshot": {
+      "id": "r8-repeat-gate",
+      "region": 8,
+      "stage": "far",
+      "far": "failed",
+      "near": "ready",
+      "colliders": 3,
+      "primitivesHidden": 0,
+      "primitives": 1,
+      "error": "[object ProgressEvent]"
+     },
+     "litFile": "/home/claude/remaster/game/output/playwright/rm6_r8_far_farOut_lit.png"
+    }
+   },
+   "checks": {},
+   "spec": {
+    "id": "r8-repeat-gate",
+    "name": "도돌이 문",
+    "near": {
+     "path": "assets/remaster/models/landmark-r8-repeat-gate.glb",
+     "tris": 5184,
+     "bytes": 148688,
+     "sha256": "5d3727d7db4711f678bd66d67b1d13de2823b124439b0712cc1f7f2eedf1125b"
+    },
+    "far": {
+     "path": "assets/remaster/models/landmark-r8-repeat-gate-far.glb",
+     "tris": 570,
+     "bytes": 25220,
+     "sha256": "9c6e5a6e8c0135bd221cb63aabd7041de44ead3b15dc6203a53cf94a7044bd42"
+    },
+    "footprints": [
+     {
+      "x": -63,
+      "z": -40,
+      "r": 4.5
+     },
+     {
+      "x": 63,
+      "z": -40,
+      "r": 4.5
+     },
+     {
+      "x": 0,
+      "z": 68,
+      "r": 3
+     }
+    ],
+    "hide": [
+     "r8-cones"
+    ],
+    "hideProps": []
+   },
+   "remasterReadyMs": 539,
+   "final": {
+    "enabled": true,
+    "requests": 13,
+    "failures": 1,
+    "music": {
+     "updates": 87,
+     "applied": 107,
+     "locks": 5,
+     "phase": 0.76,
+     "period": 0.395,
+     "events": {
+      "beatAt": 4.95,
+      "flashAt": 4.95,
+      "degree": null,
+      "degreeAt": null,
+      "pearls": 0,
+      "pearlAt": null,
+      "bar": 20,
+      "barAt": 4.94999999999999
+     },
+     "bound": [
+      {
+       "id": "r0-staff-gate",
+       "near": [
+        "Glow_clef",
+        "Lantern_notes"
+       ],
+       "far": 2
+      },
+      {
+       "id": "r7-key-ring",
+       "near": [],
+       "far": 3
+      },
+      {
+       "id": "r1-tempo-tower",
+       "near": [
+        "Beat_pendulum",
+        "Lantern_tempo"
+       ],
+       "far": 1
+      },
+      {
+       "id": "r2-storm-drum",
+       "near": [
+        "Beat_head",
+        "Glow_arc",
+        "Glow_rim"
+       ],
+       "far": 1
+      },
+      {
+       "id": "r3-dynamics-canyon",
+       "near": [],
+       "far": 1
+      },
+      {
+       "id": "r6-chord-spires",
+       "near": [],
+       "far": 1
+      },
+      {
+       "id": "r4-fermata-bridge",
+       "near": [],
+       "far": 2
+      },
+      {
+       "id": "r8-repeat-gate",
+       "near": [
+        "Lantern_dotsStart",
+        "Lantern_dotsEnd",
+        "Glow_coda"
+       ],
+       "far": 0
+      },
+      {
+       "id": "r5-scale-lights",
+       "near": [],
+       "far": 1
+      }
+     ]
+    },
+    "entries": [
+     {
+      "id": "r0-staff-gate",
+      "region": 0,
+      "stage": "far",
+      "far": "ready",
+      "near": "ready",
+      "colliders": 2,
+      "primitivesHidden": 1,
+      "primitives": 1,
+      "error": null
+     },
+     {
+      "id": "r7-key-ring",
+      "region": 7,
+      "stage": "far",
+      "far": "ready",
+      "near": "idle",
+      "colliders": 0,
+      "primitivesHidden": 1,
+      "primitives": 1,
+      "error": null
+     },
+     {
+      "id": "r3-dynamics-canyon",
+      "region": 3,
+      "stage": "far",
+      "far": "ready",
+      "near": "idle",
+      "colliders": 0,
+      "primitivesHidden": 1,
+      "primitives": 1,
+      "error": null
+     },
+     {
+      "id": "r1-tempo-tower",
+      "region": 1,
+      "stage": "near",
+      "far": "ready",
+      "near": "ready",
+      "colliders": 0,
+      "primitivesHidden": 1,
+      "primitives": 1,
+      "error": null
+     },
+     {
+      "id": "r5-scale-lights",
+      "region": 5,
+      "stage": "none",
+      "far": "ready",
+      "near": "idle",
+      "colliders": 0,
+      "primitivesHidden": 0,
+      "primitives": 1,
+      "error": null
+     },
+     {
+      "id": "r6-chord-spires",
+      "region": 6,
+      "stage": "none",
+      "far": "ready",
+      "near": "idle",
+      "colliders": 0,
+      "primitivesHidden": 0,
+      "primitives": 1,
+      "error": null
+     },
+     {
+      "id": "r2-storm-drum",
+      "region": 2,
+      "stage": "near",
+      "far": "ready",
+      "near": "ready",
+      "colliders": 0,
+      "primitivesHidden": 2,
+      "primitives": 2,
+      "error": null
+     },
+     {
+      "id": "r4-fermata-bridge",
+      "region": 4,
+      "stage": "none",
+      "far": "ready",
+      "near": "idle",
+      "colliders": 0,
+      "primitivesHidden": 0,
+      "primitives": 1,
+      "error": null
+     },
+     {
+      "id": "r8-repeat-gate",
+      "region": 8,
+      "stage": "far",
+      "far": "failed",
+      "near": "ready",
+      "colliders": 3,
+      "primitivesHidden": 0,
+      "primitives": 1,
+      "error": "[object ProgressEvent]"
+     }
+    ]
+   },
+   "errors": [
+    "error: Failed to load resource: net::ERR_FAILED"
+   ],
+   "externalRequests": []
+  }
+ ]
+}

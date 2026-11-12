@@ -1,0 +1,88 @@
+{
+ "note": "SwiftShader software rendering; not real GPU frame rate",
+ "size": [
+  640,
+  360
+ ],
+ "frames": 80,
+ "rows": [
+  {
+   "path": "legacy",
+   "quality": "low",
+   "meanMs": 259.7,
+   "p50Ms": 256.6,
+   "p95Ms": 291,
+   "normalsCalls": 16,
+   "normalsMsPerFrame": 0.156,
+   "drawCalls": 103,
+   "programs": 27,
+   "oceanSegments": 48,
+   "errors": 0
+  },
+  {
+   "path": "legacy",
+   "quality": "mid",
+   "meanMs": 358.6,
+   "p50Ms": 357.3,
+   "p95Ms": 399.9,
+   "normalsCalls": 27,
+   "normalsMsPerFrame": 0.337,
+   "drawCalls": 151,
+   "programs": 20,
+   "oceanSegments": 72,
+   "errors": 0
+  },
+  {
+   "path": "legacy",
+   "quality": "high",
+   "meanMs": 379.4,
+   "p50Ms": 376.4,
+   "p95Ms": 415.5,
+   "normalsCalls": 40,
+   "normalsMsPerFrame": 0.668,
+   "drawCalls": 151,
+   "programs": 20,
+   "oceanSegments": 96,
+   "errors": 0
+  },
+  {
+   "path": "remaster",
+   "quality": "low",
+   "meanMs": 270.5,
+   "p50Ms": 268,
+   "p95Ms": 291.6,
+   "normalsCalls": 0,
+   "normalsMsPerFrame": 0,
+   "drawCalls": 74,
+   "programs": 24,
+   "oceanSegments": 48,
+   "errors": 0
+  },
+  {
+   "path": "remaster",
+   "quality": "mid",
+   "meanMs": 383.5,
+   "p50Ms": 383,
+   "p95Ms": 422.5,
+   "normalsCalls": 0,
+   "normalsMsPerFrame": 0,
+   "drawCalls": 134,
+   "programs": 17,
+   "oceanSegments": 72,
+   "errors": 0
+  },
+  {
+   "path": "remaster",
+   "quality": "high",
+   "meanMs": 421.8,
+   "p50Ms": 414.8,
+   "p95Ms": 474.6,
+   "normalsCalls": 0,
+   "normalsMsPerFrame": 0,
+   "drawCalls": 134,
+   "programs": 18,
+   "oceanSegments": 96,
+   "errors": 0
+  }
+ ]
+}

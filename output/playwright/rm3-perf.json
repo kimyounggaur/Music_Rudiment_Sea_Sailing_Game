@@ -1,0 +1,112 @@
+{
+ "note": "SwiftShader software rendering; not real GPU frame rate",
+ "size": [
+  640,
+  360
+ ],
+ "frames": 60,
+ "rows": [
+  {
+   "path": "legacy",
+   "quality": "mid",
+   "fx": "auto",
+   "meanMs": 358.7,
+   "p50Ms": 349.3,
+   "p95Ms": 438,
+   "calls": {
+    "shadow": 48,
+    "reflection": 0,
+    "main": 103,
+    "post": 0
+   },
+   "tris": 290058,
+   "programs": 20,
+   "errors": 0
+  },
+  {
+   "path": "remaster",
+   "quality": "mid",
+   "fx": "off",
+   "meanMs": 373.5,
+   "p50Ms": 366.5,
+   "p95Ms": 413.8,
+   "calls": {
+    "shadow": 60,
+    "reflection": 0,
+    "main": 74,
+    "post": 0
+   },
+   "tris": 290758,
+   "programs": 21,
+   "errors": 0
+  },
+  {
+   "path": "remaster",
+   "quality": "mid",
+   "fx": "lite",
+   "meanMs": 236.7,
+   "p50Ms": 233.9,
+   "p95Ms": 275.8,
+   "calls": {
+    "shadow": 60,
+    "reflection": 0,
+    "main": 74,
+    "post": 1
+   },
+   "tris": 290760,
+   "programs": 22,
+   "errors": 0
+  },
+  {
+   "path": "remaster",
+   "quality": "mid",
+   "fx": "full",
+   "meanMs": 300,
+   "p50Ms": 297.1,
+   "p95Ms": 338.4,
+   "calls": {
+    "shadow": 60,
+    "reflection": 57,
+    "main": 74,
+    "post": 6
+   },
+   "tris": 348915,
+   "programs": 20,
+   "errors": 0
+  },
+  {
+   "path": "remaster",
+   "quality": "low",
+   "fx": "auto",
+   "meanMs": 284.8,
+   "p50Ms": 281.5,
+   "p95Ms": 325.4,
+   "calls": {
+    "shadow": 0,
+    "reflection": 0,
+    "main": 74,
+    "post": 0
+   },
+   "tris": 152475,
+   "programs": 27,
+   "errors": 0
+  },
+  {
+   "path": "remaster",
+   "quality": "high",
+   "fx": "full",
+   "meanMs": 516.1,
+   "p50Ms": 513.8,
+   "p95Ms": 553.9,
+   "calls": {
+    "shadow": 60,
+    "reflection": 57,
+    "main": 74,
+    "post": 6
+   },
+   "tris": 356979,
+   "programs": 21,
+   "errors": 0
+  }
+ ]
+}

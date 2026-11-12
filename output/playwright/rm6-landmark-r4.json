@@ -1,0 +1,1685 @@
+{
+ "region": 4,
+ "gate": true,
+ "checks": [
+  {
+   "name": "normal: 근경·원경 모두 로드됨",
+   "ok": true,
+   "detail": {
+    "far": "ready",
+    "near": "ready",
+    "waitedMs": 534
+   }
+  },
+  {
+   "name": "normal: 원시 도형이 전부 숨음",
+   "ok": true,
+   "detail": {
+    "primitives": 1,
+    "hidden": 1
+   }
+  },
+  {
+   "name": "normal: 충돌체가 발자국 수만큼 더해짐",
+   "ok": true,
+   "detail": []
+  },
+  {
+   "name": "normal: 로드된 근경 삼각형 = 데이터 표",
+   "ok": true,
+   "detail": {
+    "loaded": 7206,
+    "table": 7206,
+    "meshes": 5,
+    "materials": 5
+   }
+  },
+  {
+   "name": "normal: 로드된 원경 삼각형 = 데이터 표",
+   "ok": true,
+   "detail": {
+    "loaded": 660,
+    "table": 660,
+    "meshes": 3,
+    "materials": 3
+   }
+  },
+  {
+   "name": "예산: 근경 ≤ 30,000 · 원경 ≤ 6,000 · 원경 ≤ 근경의 20%",
+   "ok": true,
+   "detail": {
+    "near": 7206,
+    "far": 660,
+    "ratio": 0.092
+   }
+  },
+  {
+   "name": "실루엣: 지점마다 근경 실루엣이 화면에 보임(≥ 0.3% 면적)",
+   "ok": true,
+   "detail": [
+    {
+     "id": "fixed",
+     "nearCoverage": 0.0347,
+     "farCoverage": 0.0321,
+     "iou": 0.844
+    },
+    {
+     "id": "close",
+     "nearCoverage": 0.0145,
+     "farCoverage": 0.0141,
+     "iou": 0.817
+    },
+    {
+     "id": "farOut",
+     "nearCoverage": 0.0043,
+     "farCoverage": 0.0043,
+     "iou": 0.819
+    }
+   ]
+  },
+  {
+   "name": "원경 대역이 근경 실루엣을 그대로 닮음(IoU ≥ 0.75, 근경 지점)",
+   "ok": true,
+   "detail": [
+    {
+     "id": "fixed",
+     "iou": 0.844
+    },
+    {
+     "id": "close",
+     "iou": 0.817
+    },
+    {
+     "id": "farOut",
+     "iou": 0.819
+    }
+   ]
+  },
+  {
+   "name": "수집: 부표·병 모두 충돌체 밖(여유 ≥ 4 m)",
+   "ok": true,
+   "detail": {
+    "count": 15,
+    "minClearance": 12.23,
+    "nearest": [
+     {
+      "kind": "term",
+      "id": "r4_slur",
+      "x": 134.531,
+      "z": 209.912,
+      "clearance": 12.23,
+      "who": "static"
+     },
+     {
+      "kind": "bottle",
+      "id": "bottle_r4_2",
+      "x": 150.746,
+      "z": 182.316,
+      "clearance": 12.33,
+      "who": "static"
+     },
+     {
+      "kind": "term",
+      "id": "r4_fermata",
+      "x": 73.886,
+      "z": 273.963,
+      "clearance": 14.48,
+      "who": "static"
+     }
+    ]
+   }
+  },
+  {
+   "name": "수집: 용어·병 전부 수집되고 월드 규칙에 밀려나지 않음(< 0.5 m)",
+   "ok": true,
+   "detail": {
+    "rows": 15,
+    "missed": [],
+    "maxMoved": 0
+   }
+  },
+  {
+   "name": "예산 참고: 근경 지점 합계 호출·삼각형",
+   "ok": true,
+   "detail": {
+    "calls": 86,
+    "tris": 90943,
+    "shadow": {
+     "calls": 9,
+     "triangles": 7406
+    },
+    "reflection": {
+     "calls": 21,
+     "triangles": 6590
+    },
+    "main": {
+     "calls": 50,
+     "triangles": 76935
+    }
+   }
+  },
+  {
+   "name": "both: 둘 다 실패해도 원시 도형이 그대로 보이고 충돌체가 없음(모든 단계)",
+   "ok": true,
+   "detail": {
+    "shots": [
+     {
+      "shot": "fixed",
+      "far": "failed",
+      "near": "failed",
+      "hidden": 0,
+      "primitives": 1,
+      "colliders": 0
+     },
+     {
+      "shot": "close",
+      "far": "failed",
+      "near": "failed",
+      "hidden": 0,
+      "primitives": 1,
+      "colliders": 0
+     },
+     {
+      "shot": "farOut",
+      "far": "failed",
+      "near": "failed",
+      "hidden": 0,
+      "primitives": 1,
+      "colliders": 0
+     }
+    ],
+    "failures": 2
+   }
+  },
+  {
+   "name": "near 실패: 원경 대역이 본 패스에 서서 원시 도형을 대신하고 충돌체는 없음(모든 단계)",
+   "ok": true,
+   "detail": [
+    {
+     "shot": "fixed",
+     "far": "ready",
+     "near": "failed",
+     "hidden": 1,
+     "primitives": 1,
+     "colliders": 0
+    },
+    {
+     "shot": "close",
+     "far": "ready",
+     "near": "failed",
+     "hidden": 1,
+     "primitives": 1,
+     "colliders": 0
+    },
+    {
+     "shot": "farOut",
+     "far": "ready",
+     "near": "failed",
+     "hidden": 1,
+     "primitives": 1,
+     "colliders": 0
+    }
+   ]
+  },
+  {
+   "name": "far 실패(근경 단계): 근경이 서서 원시 도형을 대신하고 충돌체가 더해짐",
+   "ok": true,
+   "detail": [
+    {
+     "shot": "fixed",
+     "far": "failed",
+     "near": "ready",
+     "hidden": 1,
+     "primitives": 1,
+     "colliders": 0
+    },
+    {
+     "shot": "close",
+     "far": "failed",
+     "near": "ready",
+     "hidden": 1,
+     "primitives": 1,
+     "colliders": 0
+    }
+   ]
+  },
+  {
+   "name": "far 실패(원경 단계): 보여줄 모델이 없으면 원시 도형이 돌아옴",
+   "ok": true,
+   "detail": [
+    {
+     "shot": "farOut",
+     "far": "failed",
+     "near": "ready",
+     "hidden": 0,
+     "primitives": 1,
+     "colliders": 0
+    }
+   ]
+  },
+  {
+   "name": "콘솔 오류 없음(정상 시나리오는 하나도 없어야 하고, 실패 시나리오는 끊은 요청 로그만 허용)",
+   "ok": true,
+   "detail": [
+    {
+     "scenario": "normal",
+     "errors": []
+    },
+    {
+     "scenario": "both",
+     "errors": [
+      "error: Failed to load resource: net::ERR_FAILED",
+      "error: Failed to load resource: net::ERR_FAILED"
+     ]
+    },
+    {
+     "scenario": "near",
+     "errors": [
+      "error: Failed to load resource: net::ERR_FAILED"
+     ]
+    },
+    {
+     "scenario": "far",
+     "errors": [
+      "error: Failed to load resource: net::ERR_FAILED"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "외부 요청 없음(three CDN 대신 로컬 응답만)",
+   "ok": true,
+   "detail": [
+    [],
+    [],
+    [],
+    []
+   ]
+  }
+ ],
+ "results": [
+  {
+   "scenario": "normal",
+   "shots": {
+    "fixed": {
+     "shot": "fixed",
+     "stage": "near",
+     "far": "ready",
+     "near": "ready",
+     "waitedMs": 534,
+     "snapshot": {
+      "id": "r4-fermata-bridge",
+      "region": 4,
+      "stage": "near",
+      "far": "ready",
+      "near": "ready",
+      "colliders": 0,
+      "primitivesHidden": 1,
+      "primitives": 1,
+      "error": null
+     },
+     "litFile": "/home/claude/remaster/game/output/playwright/rm6_r4_normal_fixed_lit.png",
+     "sil": {
+      "near": {
+       "coverage": 0.03467447916666667,
+       "bbox": [
+        0,
+        0,
+        1279,
+        320
+       ]
+      },
+      "far": {
+       "coverage": 0.032136501736111114,
+       "bbox": [
+        0,
+        0,
+        1279,
+        320
+       ]
+      },
+      "iou": 0.8439446574029708
+     },
+     "nearFile": "/home/claude/remaster/game/output/playwright/rm6_r4_fixed_sil_near.png",
+     "farFile": "/home/claude/remaster/game/output/playwright/rm6_r4_fixed_sil_far.png",
+     "diffFile": "/home/claude/remaster/game/output/playwright/rm6_r4_fixed_sil_diff.png"
+    },
+    "close": {
+     "shot": "close",
+     "stage": "near",
+     "far": "ready",
+     "near": "ready",
+     "waitedMs": 573,
+     "snapshot": {
+      "id": "r4-fermata-bridge",
+      "region": 4,
+      "stage": "near",
+      "far": "ready",
+      "near": "ready",
+      "colliders": 0,
+      "primitivesHidden": 1,
+      "primitives": 1,
+      "error": null
+     },
+     "litFile": "/home/claude/remaster/game/output/playwright/rm6_r4_normal_close_lit.png",
+     "sil": {
+      "near": {
+       "coverage": 0.014506293402777778,
+       "bbox": [
+        515,
+        146,
+        1044,
+        307
+       ]
+      },
+      "far": {
+       "coverage": 0.014115668402777778,
+       "bbox": [
+        515,
+        145,
+        1044,
+        307
+       ]
+      },
+      "iou": 0.8167917900681865
+     },
+     "nearFile": "/home/claude/remaster/game/output/playwright/rm6_r4_close_sil_near.png",
+     "farFile": "/home/claude/remaster/game/output/playwright/rm6_r4_close_sil_far.png",
+     "diffFile": "/home/claude/remaster/game/output/playwright/rm6_r4_close_sil_diff.png"
+    },
+    "farOut": {
+     "shot": "farOut",
+     "stage": "far",
+     "far": "ready",
+     "near": "ready",
+     "waitedMs": 515,
+     "snapshot": {
+      "id": "r4-fermata-bridge",
+      "region": 4,
+      "stage": "far",
+      "far": "ready",
+      "near": "ready",
+      "colliders": 0,
+      "primitivesHidden": 1,
+      "primitives": 1,
+      "error": null
+     },
+     "litFile": "/home/claude/remaster/game/output/playwright/rm6_r4_normal_farOut_lit.png",
+     "sil": {
+      "near": {
+       "coverage": 0.004312065972222222,
+       "bbox": [
+        588,
+        210,
+        894,
+        301
+       ]
+      },
+      "far": {
+       "coverage": 0.004319661458333333,
+       "bbox": [
+        588,
+        209,
+        894,
+        301
+       ]
+      },
+      "iou": 0.819117310770638
+     },
+     "nearFile": "/home/claude/remaster/game/output/playwright/rm6_r4_farOut_sil_near.png",
+     "farFile": "/home/claude/remaster/game/output/playwright/rm6_r4_farOut_sil_far.png",
+     "diffFile": "/home/claude/remaster/game/output/playwright/rm6_r4_farOut_sil_diff.png"
+    }
+   },
+   "checks": {},
+   "spec": {
+    "id": "r4-fermata-bridge",
+    "name": "페르마타 아치",
+    "near": {
+     "path": "assets/remaster/models/landmark-r4-fermata-bridge.glb",
+     "tris": 7206,
+     "bytes": 203040,
+     "sha256": "026c6711f752f3f3b3a4745c54186dd37a724747f02fed9da1c9e07a9e8a294f"
+    },
+    "far": {
+     "path": "assets/remaster/models/landmark-r4-fermata-bridge-far.glb",
+     "tris": 660,
+     "bytes": 27956,
+     "sha256": "a5e6fda860f385cbd7a21a6cb1d776170e4a58a0fa9eb2dd4368259ab8329f99"
+    },
+    "footprints": [],
+    "hide": [
+     "r4-spheres"
+    ],
+    "hideProps": []
+   },
+   "remasterReadyMs": 499,
+   "final": {
+    "enabled": true,
+    "requests": 11,
+    "failures": 0,
+    "music": {
+     "updates": 90,
+     "applied": 58,
+     "locks": 9,
+     "phase": 0.383,
+     "period": 0.395,
+     "events": {
+      "beatAt": 5.1,
+      "flashAt": null,
+      "degree": null,
+      "degreeAt": null,
+      "pearls": 0,
+      "pearlAt": null,
+      "bar": 19,
+      "barAt": 5.09999999999999
+     },
+     "bound": [
+      {
+       "id": "r0-staff-gate",
+       "near": [
+        "Glow_clef",
+        "Lantern_notes"
+       ],
+       "far": 2
+      },
+      {
+       "id": "r2-storm-drum",
+       "near": [],
+       "far": 1
+      },
+      {
+       "id": "r7-key-ring",
+       "near": [],
+       "far": 3
+      },
+      {
+       "id": "r1-tempo-tower",
+       "near": [
+        "Beat_pendulum",
+        "Lantern_tempo"
+       ],
+       "far": 1
+      },
+      {
+       "id": "r8-repeat-gate",
+       "near": [],
+       "far": 2
+      },
+      {
+       "id": "r3-dynamics-canyon",
+       "near": [],
+       "far": 1
+      },
+      {
+       "id": "r5-scale-lights",
+       "near": [],
+       "far": 1
+      },
+      {
+       "id": "r4-fermata-bridge",
+       "near": [
+        "Lantern_dots",
+        "Glow_hold"
+       ],
+       "far": 2
+      }
+     ]
+    },
+    "entries": [
+     {
+      "id": "r0-staff-gate",
+      "region": 0,
+      "stage": "none",
+      "far": "ready",
+      "near": "ready",
+      "colliders": 2,
+      "primitivesHidden": 0,
+      "primitives": 1,
+      "error": null
+     },
+     {
+      "id": "r7-key-ring",
+      "region": 7,
+      "stage": "none",
+      "far": "ready",
+      "near": "idle",
+      "colliders": 0,
+      "primitivesHidden": 0,
+      "primitives": 1,
+      "error": null
+     },
+     {
+      "id": "r3-dynamics-canyon",
+      "region": 3,
+      "stage": "far",
+      "far": "ready",
+      "near": "idle",
+      "colliders": 0,
+      "primitivesHidden": 1,
+      "primitives": 1,
+      "error": null
+     },
+     {
+      "id": "r1-tempo-tower",
+      "region": 1,
+      "stage": "none",
+      "far": "ready",
+      "near": "ready",
+      "colliders": 0,
+      "primitivesHidden": 0,
+      "primitives": 1,
+      "error": null
+     },
+     {
+      "id": "r5-scale-lights",
+      "region": 5,
+      "stage": "far",
+      "far": "ready",
+      "near": "idle",
+      "colliders": 0,
+      "primitivesHidden": 1,
+      "primitives": 1,
+      "error": null
+     },
+     {
+      "id": "r6-chord-spires",
+      "region": 6,
+      "stage": "none",
+      "far": "idle",
+      "near": "idle",
+      "colliders": 0,
+      "primitivesHidden": 0,
+      "primitives": 1,
+      "error": null
+     },
+     {
+      "id": "r2-storm-drum",
+      "region": 2,
+      "stage": "none",
+      "far": "ready",
+      "near": "idle",
+      "colliders": 0,
+      "primitivesHidden": 0,
+      "primitives": 2,
+      "error": null
+     },
+     {
+      "id": "r4-fermata-bridge",
+      "region": 4,
+      "stage": "far",
+      "far": "ready",
+      "near": "ready",
+      "colliders": 0,
+      "primitivesHidden": 1,
+      "primitives": 1,
+      "error": null
+     },
+     {
+      "id": "r8-repeat-gate",
+      "region": 8,
+      "stage": "none",
+      "far": "ready",
+      "near": "idle",
+      "colliders": 0,
+      "primitivesHidden": 0,
+      "primitives": 1,
+      "error": null
+     }
+    ]
+   },
+   "rootStats": {
+    "near": {
+     "tris": 7206,
+     "meshes": 5,
+     "materials": 5,
+     "visible": true,
+     "name": "landmark-r4-fermata-bridge-near"
+    },
+    "far": {
+     "tris": 660,
+     "meshes": 3,
+     "materials": 3,
+     "visible": true,
+     "name": "landmark-r4-fermata-bridge-far"
+    }
+   },
+   "colliders": [],
+   "collectables": [
+    {
+     "kind": "term",
+     "id": "r4_staccato",
+     "x": 149.364,
+     "z": 156.214,
+     "clearance": 37.7,
+     "who": "static"
+    },
+    {
+     "kind": "term",
+     "id": "r4_legato",
+     "x": 200.632,
+     "z": 237.256,
+     "clearance": 35.46,
+     "who": "static"
+    },
+    {
+     "kind": "term",
+     "id": "r4_tenuto",
+     "x": 56.849,
+     "z": 286.125,
+     "clearance": 34.47,
+     "who": "static"
+    },
+    {
+     "kind": "term",
+     "id": "r4_accent",
+     "x": 104.651,
+     "z": 168.995,
+     "clearance": 46.24,
+     "who": "static"
+    },
+    {
+     "kind": "term",
+     "id": "r4_marcato",
+     "x": 155.592,
+     "z": 267.94,
+     "clearance": 20.92,
+     "who": "static"
+    },
+    {
+     "kind": "term",
+     "id": "r4_fermata",
+     "x": 73.886,
+     "z": 273.963,
+     "clearance": 14.48,
+     "who": "static"
+    },
+    {
+     "kind": "term",
+     "id": "r4_slur",
+     "x": 134.531,
+     "z": 209.912,
+     "clearance": 12.23,
+     "who": "static"
+    },
+    {
+     "kind": "term",
+     "id": "r4_tie",
+     "x": 95.554,
+     "z": 325.584,
+     "clearance": 42.22,
+     "who": "static"
+    },
+    {
+     "kind": "term",
+     "id": "r4_trill",
+     "x": 64.123,
+     "z": 167.967,
+     "clearance": 33.24,
+     "who": "static"
+    },
+    {
+     "kind": "term",
+     "id": "r4_mordent",
+     "x": 183.122,
+     "z": 245.609,
+     "clearance": 30.1,
+     "who": "static"
+    },
+    {
+     "kind": "term",
+     "id": "r4_grace_note",
+     "x": 61.838,
+     "z": 265.344,
+     "clearance": 17.87,
+     "who": "static"
+    },
+    {
+     "kind": "term",
+     "id": "r4_arpeggio",
+     "x": 129.363,
+     "z": 187.895,
+     "clearance": 22.56,
+     "who": "static"
+    },
+    {
+     "kind": "term",
+     "id": "r4_octave_sign",
+     "x": 89.559,
+     "z": 151.206,
+     "clearance": 54.37,
+     "who": "static"
+    },
+    {
+     "kind": "bottle",
+     "id": "bottle_r4_1",
+     "x": 159.088,
+     "z": 245.473,
+     "clearance": 24.12,
+     "who": "static"
+    },
+    {
+     "kind": "bottle",
+     "id": "bottle_r4_2",
+     "x": 150.746,
+     "z": 182.316,
+     "clearance": 12.33,
+     "who": "static"
+    }
+   ],
+   "journey": {
+    "rows": [
+     {
+      "id": "r4_staccato",
+      "kind": "term",
+      "moved": 0,
+      "had": false,
+      "has": true
+     },
+     {
+      "id": "r4_legato",
+      "kind": "term",
+      "moved": 0,
+      "had": false,
+      "has": true
+     },
+     {
+      "id": "r4_tenuto",
+      "kind": "term",
+      "moved": 0,
+      "had": false,
+      "has": true
+     },
+     {
+      "id": "r4_accent",
+      "kind": "term",
+      "moved": 0,
+      "had": false,
+      "has": true
+     },
+     {
+      "id": "r4_marcato",
+      "kind": "term",
+      "moved": 0,
+      "had": false,
+      "has": true
+     },
+     {
+      "id": "r4_fermata",
+      "kind": "term",
+      "moved": 0,
+      "had": false,
+      "has": true
+     },
+     {
+      "id": "r4_slur",
+      "kind": "term",
+      "moved": 0,
+      "had": false,
+      "has": true
+     },
+     {
+      "id": "r4_tie",
+      "kind": "term",
+      "moved": 0,
+      "had": false,
+      "has": true
+     },
+     {
+      "id": "r4_trill",
+      "kind": "term",
+      "moved": 0,
+      "had": false,
+      "has": true
+     },
+     {
+      "id": "r4_mordent",
+      "kind": "term",
+      "moved": 0,
+      "had": false,
+      "has": true
+     },
+     {
+      "id": "r4_grace_note",
+      "kind": "term",
+      "moved": 0,
+      "had": false,
+      "has": true
+     },
+     {
+      "id": "r4_arpeggio",
+      "kind": "term",
+      "moved": 0,
+      "had": false,
+      "has": true
+     },
+     {
+      "id": "r4_octave_sign",
+      "kind": "term",
+      "moved": 0,
+      "had": false,
+      "has": true
+     },
+     {
+      "id": "bottle_r4_1",
+      "kind": "bottle",
+      "moved": 0,
+      "had": false,
+      "has": true
+     },
+     {
+      "id": "bottle_r4_2",
+      "kind": "bottle",
+      "moved": 0,
+      "had": false,
+      "has": true
+     }
+    ],
+    "missed": []
+   },
+   "passes": {
+    "shadow": {
+     "calls": 9,
+     "triangles": 7406
+    },
+    "reflection": {
+     "calls": 21,
+     "triangles": 6590
+    },
+    "main": {
+     "calls": 50,
+     "triangles": 76935
+    },
+    "post": {
+     "calls": 6,
+     "triangles": 12
+    },
+    "total": {
+     "calls": 86,
+     "triangles": 90943
+    }
+   },
+   "errors": [],
+   "externalRequests": []
+  },
+  {
+   "scenario": "both",
+   "shots": {
+    "fixed": {
+     "shot": "fixed",
+     "stage": "near",
+     "far": "failed",
+     "near": "failed",
+     "waitedMs": 516,
+     "snapshot": {
+      "id": "r4-fermata-bridge",
+      "region": 4,
+      "stage": "near",
+      "far": "failed",
+      "near": "failed",
+      "colliders": 0,
+      "primitivesHidden": 0,
+      "primitives": 1,
+      "error": "[object ProgressEvent]"
+     },
+     "litFile": "/home/claude/remaster/game/output/playwright/rm6_r4_both_fixed_lit.png"
+    },
+    "close": {
+     "shot": "close",
+     "stage": "near",
+     "far": "failed",
+     "near": "failed",
+     "waitedMs": 547,
+     "snapshot": {
+      "id": "r4-fermata-bridge",
+      "region": 4,
+      "stage": "near",
+      "far": "failed",
+      "near": "failed",
+      "colliders": 0,
+      "primitivesHidden": 0,
+      "primitives": 1,
+      "error": "[object ProgressEvent]"
+     },
+     "litFile": "/home/claude/remaster/game/output/playwright/rm6_r4_both_close_lit.png"
+    },
+    "farOut": {
+     "shot": "farOut",
+     "stage": "far",
+     "far": "failed",
+     "near": "failed",
+     "waitedMs": 504,
+     "snapshot": {
+      "id": "r4-fermata-bridge",
+      "region": 4,
+      "stage": "far",
+      "far": "failed",
+      "near": "failed",
+      "colliders": 0,
+      "primitivesHidden": 0,
+      "primitives": 1,
+      "error": "[object ProgressEvent]"
+     },
+     "litFile": "/home/claude/remaster/game/output/playwright/rm6_r4_both_farOut_lit.png"
+    }
+   },
+   "checks": {},
+   "spec": {
+    "id": "r4-fermata-bridge",
+    "name": "페르마타 아치",
+    "near": {
+     "path": "assets/remaster/models/landmark-r4-fermata-bridge.glb",
+     "tris": 7206,
+     "bytes": 203040,
+     "sha256": "026c6711f752f3f3b3a4745c54186dd37a724747f02fed9da1c9e07a9e8a294f"
+    },
+    "far": {
+     "path": "assets/remaster/models/landmark-r4-fermata-bridge-far.glb",
+     "tris": 660,
+     "bytes": 27956,
+     "sha256": "a5e6fda860f385cbd7a21a6cb1d776170e4a58a0fa9eb2dd4368259ab8329f99"
+    },
+    "footprints": [],
+    "hide": [
+     "r4-spheres"
+    ],
+    "hideProps": []
+   },
+   "remasterReadyMs": 487,
+   "final": {
+    "enabled": true,
+    "requests": 11,
+    "failures": 2,
+    "music": {
+     "updates": 87,
+     "applied": 5,
+     "locks": 9,
+     "phase": 0.981,
+     "period": 0.395,
+     "events": {
+      "beatAt": 4.7,
+      "flashAt": null,
+      "degree": null,
+      "degreeAt": null,
+      "pearls": 0,
+      "pearlAt": null,
+      "bar": 18,
+      "barAt": 4.699999999999991
+     },
+     "bound": [
+      {
+       "id": "r0-staff-gate",
+       "near": [
+        "Glow_clef",
+        "Lantern_notes"
+       ],
+       "far": 2
+      },
+      {
+       "id": "r7-key-ring",
+       "near": [],
+       "far": 3
+      },
+      {
+       "id": "r1-tempo-tower",
+       "near": [
+        "Beat_pendulum",
+        "Lantern_tempo"
+       ],
+       "far": 1
+      },
+      {
+       "id": "r2-storm-drum",
+       "near": [],
+       "far": 1
+      },
+      {
+       "id": "r8-repeat-gate",
+       "near": [],
+       "far": 2
+      },
+      {
+       "id": "r5-scale-lights",
+       "near": [],
+       "far": 1
+      },
+      {
+       "id": "r3-dynamics-canyon",
+       "near": [],
+       "far": 1
+      }
+     ]
+    },
+    "entries": [
+     {
+      "id": "r0-staff-gate",
+      "region": 0,
+      "stage": "none",
+      "far": "ready",
+      "near": "ready",
+      "colliders": 2,
+      "primitivesHidden": 0,
+      "primitives": 1,
+      "error": null
+     },
+     {
+      "id": "r7-key-ring",
+      "region": 7,
+      "stage": "none",
+      "far": "ready",
+      "near": "idle",
+      "colliders": 0,
+      "primitivesHidden": 0,
+      "primitives": 1,
+      "error": null
+     },
+     {
+      "id": "r3-dynamics-canyon",
+      "region": 3,
+      "stage": "far",
+      "far": "ready",
+      "near": "idle",
+      "colliders": 0,
+      "primitivesHidden": 1,
+      "primitives": 1,
+      "error": null
+     },
+     {
+      "id": "r1-tempo-tower",
+      "region": 1,
+      "stage": "none",
+      "far": "ready",
+      "near": "ready",
+      "colliders": 0,
+      "primitivesHidden": 0,
+      "primitives": 1,
+      "error": null
+     },
+     {
+      "id": "r5-scale-lights",
+      "region": 5,
+      "stage": "far",
+      "far": "ready",
+      "near": "idle",
+      "colliders": 0,
+      "primitivesHidden": 1,
+      "primitives": 1,
+      "error": null
+     },
+     {
+      "id": "r6-chord-spires",
+      "region": 6,
+      "stage": "none",
+      "far": "idle",
+      "near": "idle",
+      "colliders": 0,
+      "primitivesHidden": 0,
+      "primitives": 1,
+      "error": null
+     },
+     {
+      "id": "r2-storm-drum",
+      "region": 2,
+      "stage": "none",
+      "far": "ready",
+      "near": "idle",
+      "colliders": 0,
+      "primitivesHidden": 0,
+      "primitives": 2,
+      "error": null
+     },
+     {
+      "id": "r4-fermata-bridge",
+      "region": 4,
+      "stage": "far",
+      "far": "failed",
+      "near": "failed",
+      "colliders": 0,
+      "primitivesHidden": 0,
+      "primitives": 1,
+      "error": "[object ProgressEvent]"
+     },
+     {
+      "id": "r8-repeat-gate",
+      "region": 8,
+      "stage": "none",
+      "far": "ready",
+      "near": "idle",
+      "colliders": 0,
+      "primitivesHidden": 0,
+      "primitives": 1,
+      "error": null
+     }
+    ]
+   },
+   "errors": [
+    "error: Failed to load resource: net::ERR_FAILED",
+    "error: Failed to load resource: net::ERR_FAILED"
+   ],
+   "externalRequests": []
+  },
+  {
+   "scenario": "near",
+   "shots": {
+    "fixed": {
+     "shot": "fixed",
+     "stage": "near",
+     "far": "ready",
+     "near": "failed",
+     "waitedMs": 560,
+     "snapshot": {
+      "id": "r4-fermata-bridge",
+      "region": 4,
+      "stage": "near",
+      "far": "ready",
+      "near": "failed",
+      "colliders": 0,
+      "primitivesHidden": 1,
+      "primitives": 1,
+      "error": "[object ProgressEvent]"
+     },
+     "litFile": "/home/claude/remaster/game/output/playwright/rm6_r4_near_fixed_lit.png"
+    },
+    "close": {
+     "shot": "close",
+     "stage": "near",
+     "far": "ready",
+     "near": "failed",
+     "waitedMs": 538,
+     "snapshot": {
+      "id": "r4-fermata-bridge",
+      "region": 4,
+      "stage": "near",
+      "far": "ready",
+      "near": "failed",
+      "colliders": 0,
+      "primitivesHidden": 1,
+      "primitives": 1,
+      "error": "[object ProgressEvent]"
+     },
+     "litFile": "/home/claude/remaster/game/output/playwright/rm6_r4_near_close_lit.png"
+    },
+    "farOut": {
+     "shot": "farOut",
+     "stage": "far",
+     "far": "ready",
+     "near": "failed",
+     "waitedMs": 572,
+     "snapshot": {
+      "id": "r4-fermata-bridge",
+      "region": 4,
+      "stage": "far",
+      "far": "ready",
+      "near": "failed",
+      "colliders": 0,
+      "primitivesHidden": 1,
+      "primitives": 1,
+      "error": "[object ProgressEvent]"
+     },
+     "litFile": "/home/claude/remaster/game/output/playwright/rm6_r4_near_farOut_lit.png"
+    }
+   },
+   "checks": {},
+   "spec": {
+    "id": "r4-fermata-bridge",
+    "name": "페르마타 아치",
+    "near": {
+     "path": "assets/remaster/models/landmark-r4-fermata-bridge.glb",
+     "tris": 7206,
+     "bytes": 203040,
+     "sha256": "026c6711f752f3f3b3a4745c54186dd37a724747f02fed9da1c9e07a9e8a294f"
+    },
+    "far": {
+     "path": "assets/remaster/models/landmark-r4-fermata-bridge-far.glb",
+     "tris": 660,
+     "bytes": 27956,
+     "sha256": "a5e6fda860f385cbd7a21a6cb1d776170e4a58a0fa9eb2dd4368259ab8329f99"
+    },
+    "footprints": [],
+    "hide": [
+     "r4-spheres"
+    ],
+    "hideProps": []
+   },
+   "remasterReadyMs": 567,
+   "final": {
+    "enabled": true,
+    "requests": 11,
+    "failures": 1,
+    "music": {
+     "updates": 86,
+     "applied": 5,
+     "locks": 9,
+     "phase": 0.787,
+     "period": 0.395,
+     "events": {
+      "beatAt": 4.65,
+      "flashAt": null,
+      "degree": null,
+      "degreeAt": null,
+      "pearls": 0,
+      "pearlAt": null,
+      "bar": 18,
+      "barAt": 4.6499999999999915
+     },
+     "bound": [
+      {
+       "id": "r0-staff-gate",
+       "near": [
+        "Glow_clef",
+        "Lantern_notes"
+       ],
+       "far": 2
+      },
+      {
+       "id": "r7-key-ring",
+       "near": [],
+       "far": 3
+      },
+      {
+       "id": "r1-tempo-tower",
+       "near": [
+        "Beat_pendulum",
+        "Lantern_tempo"
+       ],
+       "far": 1
+      },
+      {
+       "id": "r2-storm-drum",
+       "near": [],
+       "far": 1
+      },
+      {
+       "id": "r8-repeat-gate",
+       "near": [],
+       "far": 2
+      },
+      {
+       "id": "r3-dynamics-canyon",
+       "near": [],
+       "far": 1
+      },
+      {
+       "id": "r5-scale-lights",
+       "near": [],
+       "far": 1
+      },
+      {
+       "id": "r4-fermata-bridge",
+       "near": [],
+       "far": 2
+      }
+     ]
+    },
+    "entries": [
+     {
+      "id": "r0-staff-gate",
+      "region": 0,
+      "stage": "none",
+      "far": "ready",
+      "near": "ready",
+      "colliders": 2,
+      "primitivesHidden": 0,
+      "primitives": 1,
+      "error": null
+     },
+     {
+      "id": "r7-key-ring",
+      "region": 7,
+      "stage": "none",
+      "far": "ready",
+      "near": "idle",
+      "colliders": 0,
+      "primitivesHidden": 0,
+      "primitives": 1,
+      "error": null
+     },
+     {
+      "id": "r3-dynamics-canyon",
+      "region": 3,
+      "stage": "far",
+      "far": "ready",
+      "near": "idle",
+      "colliders": 0,
+      "primitivesHidden": 1,
+      "primitives": 1,
+      "error": null
+     },
+     {
+      "id": "r1-tempo-tower",
+      "region": 1,
+      "stage": "none",
+      "far": "ready",
+      "near": "ready",
+      "colliders": 0,
+      "primitivesHidden": 0,
+      "primitives": 1,
+      "error": null
+     },
+     {
+      "id": "r5-scale-lights",
+      "region": 5,
+      "stage": "far",
+      "far": "ready",
+      "near": "idle",
+      "colliders": 0,
+      "primitivesHidden": 1,
+      "primitives": 1,
+      "error": null
+     },
+     {
+      "id": "r6-chord-spires",
+      "region": 6,
+      "stage": "none",
+      "far": "idle",
+      "near": "idle",
+      "colliders": 0,
+      "primitivesHidden": 0,
+      "primitives": 1,
+      "error": null
+     },
+     {
+      "id": "r2-storm-drum",
+      "region": 2,
+      "stage": "none",
+      "far": "ready",
+      "near": "idle",
+      "colliders": 0,
+      "primitivesHidden": 0,
+      "primitives": 2,
+      "error": null
+     },
+     {
+      "id": "r4-fermata-bridge",
+      "region": 4,
+      "stage": "far",
+      "far": "ready",
+      "near": "failed",
+      "colliders": 0,
+      "primitivesHidden": 1,
+      "primitives": 1,
+      "error": "[object ProgressEvent]"
+     },
+     {
+      "id": "r8-repeat-gate",
+      "region": 8,
+      "stage": "none",
+      "far": "ready",
+      "near": "idle",
+      "colliders": 0,
+      "primitivesHidden": 0,
+      "primitives": 1,
+      "error": null
+     }
+    ]
+   },
+   "errors": [
+    "error: Failed to load resource: net::ERR_FAILED"
+   ],
+   "externalRequests": []
+  },
+  {
+   "scenario": "far",
+   "shots": {
+    "fixed": {
+     "shot": "fixed",
+     "stage": "near",
+     "far": "failed",
+     "near": "ready",
+     "waitedMs": 572,
+     "snapshot": {
+      "id": "r4-fermata-bridge",
+      "region": 4,
+      "stage": "near",
+      "far": "failed",
+      "near": "ready",
+      "colliders": 0,
+      "primitivesHidden": 1,
+      "primitives": 1,
+      "error": "[object ProgressEvent]"
+     },
+     "litFile": "/home/claude/remaster/game/output/playwright/rm6_r4_far_fixed_lit.png"
+    },
+    "close": {
+     "shot": "close",
+     "stage": "near",
+     "far": "failed",
+     "near": "ready",
+     "waitedMs": 578,
+     "snapshot": {
+      "id": "r4-fermata-bridge",
+      "region": 4,
+      "stage": "near",
+      "far": "failed",
+      "near": "ready",
+      "colliders": 0,
+      "primitivesHidden": 1,
+      "primitives": 1,
+      "error": "[object ProgressEvent]"
+     },
+     "litFile": "/home/claude/remaster/game/output/playwright/rm6_r4_far_close_lit.png"
+    },
+    "farOut": {
+     "shot": "farOut",
+     "stage": "far",
+     "far": "failed",
+     "near": "ready",
+     "waitedMs": 496,
+     "snapshot": {
+      "id": "r4-fermata-bridge",
+      "region": 4,
+      "stage": "far",
+      "far": "failed",
+      "near": "ready",
+      "colliders": 0,
+      "primitivesHidden": 0,
+      "primitives": 1,
+      "error": "[object ProgressEvent]"
+     },
+     "litFile": "/home/claude/remaster/game/output/playwright/rm6_r4_far_farOut_lit.png"
+    }
+   },
+   "checks": {},
+   "spec": {
+    "id": "r4-fermata-bridge",
+    "name": "페르마타 아치",
+    "near": {
+     "path": "assets/remaster/models/landmark-r4-fermata-bridge.glb",
+     "tris": 7206,
+     "bytes": 203040,
+     "sha256": "026c6711f752f3f3b3a4745c54186dd37a724747f02fed9da1c9e07a9e8a294f"
+    },
+    "far": {
+     "path": "assets/remaster/models/landmark-r4-fermata-bridge-far.glb",
+     "tris": 660,
+     "bytes": 27956,
+     "sha256": "a5e6fda860f385cbd7a21a6cb1d776170e4a58a0fa9eb2dd4368259ab8329f99"
+    },
+    "footprints": [],
+    "hide": [
+     "r4-spheres"
+    ],
+    "hideProps": []
+   },
+   "remasterReadyMs": 591,
+   "final": {
+    "enabled": true,
+    "requests": 11,
+    "failures": 1,
+    "music": {
+     "updates": 87,
+     "applied": 56,
+     "locks": 9,
+     "phase": 0.041,
+     "period": 0.395,
+     "events": {
+      "beatAt": 4.8,
+      "flashAt": null,
+      "degree": null,
+      "degreeAt": null,
+      "pearls": 0,
+      "pearlAt": null,
+      "bar": 19,
+      "barAt": 4.799999999999991
+     },
+     "bound": [
+      {
+       "id": "r0-staff-gate",
+       "near": [
+        "Glow_clef",
+        "Lantern_notes"
+       ],
+       "far": 2
+      },
+      {
+       "id": "r7-key-ring",
+       "near": [],
+       "far": 3
+      },
+      {
+       "id": "r1-tempo-tower",
+       "near": [
+        "Beat_pendulum",
+        "Lantern_tempo"
+       ],
+       "far": 1
+      },
+      {
+       "id": "r2-storm-drum",
+       "near": [],
+       "far": 1
+      },
+      {
+       "id": "r8-repeat-gate",
+       "near": [],
+       "far": 2
+      },
+      {
+       "id": "r3-dynamics-canyon",
+       "near": [],
+       "far": 1
+      },
+      {
+       "id": "r5-scale-lights",
+       "near": [],
+       "far": 1
+      },
+      {
+       "id": "r4-fermata-bridge",
+       "near": [
+        "Lantern_dots",
+        "Glow_hold"
+       ],
+       "far": 0
+      }
+     ]
+    },
+    "entries": [
+     {
+      "id": "r0-staff-gate",
+      "region": 0,
+      "stage": "none",
+      "far": "ready",
+      "near": "ready",
+      "colliders": 2,
+      "primitivesHidden": 0,
+      "primitives": 1,
+      "error": null
+     },
+     {
+      "id": "r7-key-ring",
+      "region": 7,
+      "stage": "none",
+      "far": "ready",
+      "near": "idle",
+      "colliders": 0,
+      "primitivesHidden": 0,
+      "primitives": 1,
+      "error": null
+     },
+     {
+      "id": "r3-dynamics-canyon",
+      "region": 3,
+      "stage": "far",
+      "far": "ready",
+      "near": "idle",
+      "colliders": 0,
+      "primitivesHidden": 1,
+      "primitives": 1,
+      "error": null
+     },
+     {
+      "id": "r1-tempo-tower",
+      "region": 1,
+      "stage": "none",
+      "far": "ready",
+      "near": "ready",
+      "colliders": 0,
+      "primitivesHidden": 0,
+      "primitives": 1,
+      "error": null
+     },
+     {
+      "id": "r5-scale-lights",
+      "region": 5,
+      "stage": "far",
+      "far": "ready",
+      "near": "idle",
+      "colliders": 0,
+      "primitivesHidden": 1,
+      "primitives": 1,
+      "error": null
+     },
+     {
+      "id": "r6-chord-spires",
+      "region": 6,
+      "stage": "none",
+      "far": "idle",
+      "near": "idle",
+      "colliders": 0,
+      "primitivesHidden": 0,
+      "primitives": 1,
+      "error": null
+     },
+     {
+      "id": "r2-storm-drum",
+      "region": 2,
+      "stage": "none",
+      "far": "ready",
+      "near": "idle",
+      "colliders": 0,
+      "primitivesHidden": 0,
+      "primitives": 2,
+      "error": null
+     },
+     {
+      "id": "r4-fermata-bridge",
+      "region": 4,
+      "stage": "far",
+      "far": "failed",
+      "near": "ready",
+      "colliders": 0,
+      "primitivesHidden": 0,
+      "primitives": 1,
+      "error": "[object ProgressEvent]"
+     },
+     {
+      "id": "r8-repeat-gate",
+      "region": 8,
+      "stage": "none",
+      "far": "ready",
+      "near": "idle",
+      "colliders": 0,
+      "primitivesHidden": 0,
+      "primitives": 1,
+      "error": null
+     }
+    ]
+   },
+   "errors": [
+    "error: Failed to load resource: net::ERR_FAILED"
+   ],
+   "externalRequests": []
+  }
+ ]
+}

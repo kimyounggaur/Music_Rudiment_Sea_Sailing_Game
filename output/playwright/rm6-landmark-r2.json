@@ -1,0 +1,1681 @@
+{
+ "region": 2,
+ "gate": true,
+ "checks": [
+  {
+   "name": "normal: 근경·원경 모두 로드됨",
+   "ok": true,
+   "detail": {
+    "far": "ready",
+    "near": "ready",
+    "waitedMs": 610
+   }
+  },
+  {
+   "name": "normal: 원시 도형이 전부 숨음",
+   "ok": true,
+   "detail": {
+    "primitives": 2,
+    "hidden": 2
+   }
+  },
+  {
+   "name": "normal: 충돌체가 발자국 수만큼 더해짐",
+   "ok": true,
+   "detail": []
+  },
+  {
+   "name": "normal: 로드된 근경 삼각형 = 데이터 표",
+   "ok": true,
+   "detail": {
+    "loaded": 10496,
+    "table": 10496,
+    "meshes": 11,
+    "materials": 10
+   }
+  },
+  {
+   "name": "normal: 로드된 원경 삼각형 = 데이터 표",
+   "ok": true,
+   "detail": {
+    "loaded": 654,
+    "table": 654,
+    "meshes": 2,
+    "materials": 2
+   }
+  },
+  {
+   "name": "예산: 근경 ≤ 30,000 · 원경 ≤ 6,000 · 원경 ≤ 근경의 20%",
+   "ok": true,
+   "detail": {
+    "near": 10496,
+    "far": 654,
+    "ratio": 0.062
+   }
+  },
+  {
+   "name": "실루엣: 지점마다 근경 실루엣이 화면에 보임(≥ 0.3% 면적)",
+   "ok": true,
+   "detail": [
+    {
+     "id": "fixed",
+     "nearCoverage": 0.128,
+     "farCoverage": 0.1037,
+     "iou": 0.795
+    },
+    {
+     "id": "close",
+     "nearCoverage": 0.0522,
+     "farCoverage": 0.0409,
+     "iou": 0.783
+    },
+    {
+     "id": "farOut",
+     "nearCoverage": 0.0114,
+     "farCoverage": 0.009,
+     "iou": 0.789
+    }
+   ]
+  },
+  {
+   "name": "원경 대역이 근경 실루엣을 그대로 닮음(IoU ≥ 0.75, 근경 지점)",
+   "ok": true,
+   "detail": [
+    {
+     "id": "fixed",
+     "iou": 0.795
+    },
+    {
+     "id": "close",
+     "iou": 0.783
+    },
+    {
+     "id": "farOut",
+     "iou": 0.789
+    }
+   ]
+  },
+  {
+   "name": "수집: 부표·병 모두 충돌체 밖(여유 ≥ 4 m)",
+   "ok": true,
+   "detail": {
+    "count": 17,
+    "minClearance": 11.07,
+    "nearest": [
+     {
+      "kind": "term",
+      "id": "r2_common_time",
+      "x": 218.433,
+      "z": -131.903,
+      "clearance": 11.07,
+      "who": "static"
+     },
+     {
+      "kind": "bottle",
+      "id": "bottle_r2_2",
+      "x": 251.116,
+      "z": -119.799,
+      "clearance": 11.16,
+      "who": "static"
+     },
+     {
+      "kind": "term",
+      "id": "r2_sixteenth_note",
+      "x": 118.036,
+      "z": -136.181,
+      "clearance": 14.32,
+      "who": "static"
+     }
+    ]
+   }
+  },
+  {
+   "name": "수집: 용어·병 전부 수집되고 월드 규칙에 밀려나지 않음(< 0.5 m)",
+   "ok": true,
+   "detail": {
+    "rows": 17,
+    "missed": [],
+    "maxMoved": 0
+   }
+  },
+  {
+   "name": "예산 참고: 근경 지점 합계 호출·삼각형",
+   "ok": true,
+   "detail": {
+    "calls": 105,
+    "tris": 97305,
+    "shadow": {
+     "calls": 11,
+     "triangles": 9668
+    },
+    "reflection": {
+     "calls": 24,
+     "triangles": 6724
+    },
+    "main": {
+     "calls": 64,
+     "triangles": 80901
+    }
+   }
+  },
+  {
+   "name": "both: 둘 다 실패해도 원시 도형이 그대로 보이고 충돌체가 없음(모든 단계)",
+   "ok": true,
+   "detail": {
+    "shots": [
+     {
+      "shot": "fixed",
+      "far": "failed",
+      "near": "failed",
+      "hidden": 0,
+      "primitives": 2,
+      "colliders": 0
+     },
+     {
+      "shot": "close",
+      "far": "failed",
+      "near": "failed",
+      "hidden": 0,
+      "primitives": 2,
+      "colliders": 0
+     },
+     {
+      "shot": "farOut",
+      "far": "failed",
+      "near": "failed",
+      "hidden": 0,
+      "primitives": 2,
+      "colliders": 0
+     }
+    ],
+    "failures": 2
+   }
+  },
+  {
+   "name": "near 실패: 원경 대역이 본 패스에 서서 원시 도형을 대신하고 충돌체는 없음(모든 단계)",
+   "ok": true,
+   "detail": [
+    {
+     "shot": "fixed",
+     "far": "ready",
+     "near": "failed",
+     "hidden": 2,
+     "primitives": 2,
+     "colliders": 0
+    },
+    {
+     "shot": "close",
+     "far": "ready",
+     "near": "failed",
+     "hidden": 2,
+     "primitives": 2,
+     "colliders": 0
+    },
+    {
+     "shot": "farOut",
+     "far": "ready",
+     "near": "failed",
+     "hidden": 2,
+     "primitives": 2,
+     "colliders": 0
+    }
+   ]
+  },
+  {
+   "name": "far 실패(근경 단계): 근경이 서서 원시 도형을 대신하고 충돌체가 더해짐",
+   "ok": true,
+   "detail": [
+    {
+     "shot": "fixed",
+     "far": "failed",
+     "near": "ready",
+     "hidden": 2,
+     "primitives": 2,
+     "colliders": 0
+    },
+    {
+     "shot": "close",
+     "far": "failed",
+     "near": "ready",
+     "hidden": 2,
+     "primitives": 2,
+     "colliders": 0
+    }
+   ]
+  },
+  {
+   "name": "far 실패(원경 단계): 보여줄 모델이 없으면 원시 도형이 돌아옴",
+   "ok": true,
+   "detail": [
+    {
+     "shot": "farOut",
+     "far": "failed",
+     "near": "ready",
+     "hidden": 0,
+     "primitives": 2,
+     "colliders": 0
+    }
+   ]
+  },
+  {
+   "name": "콘솔 오류 없음(정상 시나리오는 하나도 없어야 하고, 실패 시나리오는 끊은 요청 로그만 허용)",
+   "ok": true,
+   "detail": [
+    {
+     "scenario": "normal",
+     "errors": []
+    },
+    {
+     "scenario": "both",
+     "errors": [
+      "error: Failed to load resource: net::ERR_FAILED",
+      "error: Failed to load resource: net::ERR_FAILED"
+     ]
+    },
+    {
+     "scenario": "near",
+     "errors": [
+      "error: Failed to load resource: net::ERR_FAILED"
+     ]
+    },
+    {
+     "scenario": "far",
+     "errors": [
+      "error: Failed to load resource: net::ERR_FAILED"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "외부 요청 없음(three CDN 대신 로컬 응답만)",
+   "ok": true,
+   "detail": [
+    [],
+    [],
+    [],
+    []
+   ]
+  }
+ ],
+ "results": [
+  {
+   "scenario": "normal",
+   "shots": {
+    "fixed": {
+     "shot": "fixed",
+     "stage": "near",
+     "far": "ready",
+     "near": "ready",
+     "waitedMs": 610,
+     "snapshot": {
+      "id": "r2-storm-drum",
+      "region": 2,
+      "stage": "near",
+      "far": "ready",
+      "near": "ready",
+      "colliders": 0,
+      "primitivesHidden": 2,
+      "primitives": 2,
+      "error": null
+     },
+     "litFile": "/home/claude/remaster/game/output/playwright/rm6_r2_normal_fixed_lit.png",
+     "sil": {
+      "near": {
+       "coverage": 0.12797200520833332,
+       "bbox": [
+        0,
+        0,
+        1279,
+        502
+       ]
+      },
+      "far": {
+       "coverage": 0.10374891493055556,
+       "bbox": [
+        61,
+        0,
+        1279,
+        488
+       ]
+      },
+      "iou": 0.7946769978065936
+     },
+     "nearFile": "/home/claude/remaster/game/output/playwright/rm6_r2_fixed_sil_near.png",
+     "farFile": "/home/claude/remaster/game/output/playwright/rm6_r2_fixed_sil_far.png",
+     "diffFile": "/home/claude/remaster/game/output/playwright/rm6_r2_fixed_sil_diff.png"
+    },
+    "close": {
+     "shot": "close",
+     "stage": "near",
+     "far": "ready",
+     "near": "ready",
+     "waitedMs": 622,
+     "snapshot": {
+      "id": "r2-storm-drum",
+      "region": 2,
+      "stage": "near",
+      "far": "ready",
+      "near": "ready",
+      "colliders": 0,
+      "primitivesHidden": 2,
+      "primitives": 2,
+      "error": null
+     },
+     "litFile": "/home/claude/remaster/game/output/playwright/rm6_r2_normal_close_lit.png",
+     "sil": {
+      "near": {
+       "coverage": 0.05220486111111111,
+       "bbox": [
+        204,
+        0,
+        997,
+        370
+       ]
+      },
+      "far": {
+       "coverage": 0.04094292534722222,
+       "bbox": [
+        271,
+        0,
+        994,
+        361
+       ]
+      },
+      "iou": 0.7830511995015058
+     },
+     "nearFile": "/home/claude/remaster/game/output/playwright/rm6_r2_close_sil_near.png",
+     "farFile": "/home/claude/remaster/game/output/playwright/rm6_r2_close_sil_far.png",
+     "diffFile": "/home/claude/remaster/game/output/playwright/rm6_r2_close_sil_diff.png"
+    },
+    "farOut": {
+     "shot": "farOut",
+     "stage": "far",
+     "far": "ready",
+     "near": "ready",
+     "waitedMs": 515,
+     "snapshot": {
+      "id": "r2-storm-drum",
+      "region": 2,
+      "stage": "far",
+      "far": "ready",
+      "near": "ready",
+      "colliders": 0,
+      "primitivesHidden": 2,
+      "primitives": 2,
+      "error": null
+     },
+     "litFile": "/home/claude/remaster/game/output/playwright/rm6_r2_normal_farOut_lit.png",
+     "sil": {
+      "near": {
+       "coverage": 0.011397569444444445,
+       "bbox": [
+        513,
+        146,
+        875,
+        327
+       ]
+      },
+      "far": {
+       "coverage": 0.009014756944444445,
+       "bbox": [
+        539,
+        150,
+        874,
+        326
+       ]
+      },
+      "iou": 0.7892334030816055
+     },
+     "nearFile": "/home/claude/remaster/game/output/playwright/rm6_r2_farOut_sil_near.png",
+     "farFile": "/home/claude/remaster/game/output/playwright/rm6_r2_farOut_sil_far.png",
+     "diffFile": "/home/claude/remaster/game/output/playwright/rm6_r2_farOut_sil_diff.png"
+    }
+   },
+   "checks": {},
+   "spec": {
+    "id": "r2-storm-drum",
+    "name": "폭풍의 북",
+    "near": {
+     "path": "assets/remaster/models/landmark-r2-storm-drum.glb",
+     "tris": 10496,
+     "bytes": 348708,
+     "sha256": "033c8d5d6777323c6d3eecd84bf3547664822a994aabce8e15bbe8b89f7b2ac0"
+    },
+    "far": {
+     "path": "assets/remaster/models/landmark-r2-storm-drum-far.glb",
+     "tris": 654,
+     "bytes": 30408,
+     "sha256": "85fd759af180386f92707b437fbd546410f5e761a05c48dd65c0326ae345fb57"
+    },
+    "footprints": [],
+    "hide": [
+     "r2-drums",
+     "r2-rocks"
+    ],
+    "hideProps": []
+   },
+   "remasterReadyMs": 508,
+   "final": {
+    "enabled": true,
+    "requests": 9,
+    "failures": 0,
+    "music": {
+     "updates": 90,
+     "applied": 58,
+     "locks": 9,
+     "phase": 0.299,
+     "period": 0.395,
+     "events": {
+      "beatAt": 5.1,
+      "flashAt": 5.1,
+      "degree": null,
+      "degreeAt": null,
+      "pearls": 0,
+      "pearlAt": null,
+      "bar": 24,
+      "barAt": 5.09999999999999
+     },
+     "bound": [
+      {
+       "id": "r0-staff-gate",
+       "near": [
+        "Glow_clef",
+        "Lantern_notes"
+       ],
+       "far": 2
+      },
+      {
+       "id": "r7-key-ring",
+       "near": [],
+       "far": 3
+      },
+      {
+       "id": "r1-tempo-tower",
+       "near": [
+        "Beat_pendulum",
+        "Lantern_tempo"
+       ],
+       "far": 1
+      },
+      {
+       "id": "r2-storm-drum",
+       "near": [
+        "Beat_head",
+        "Glow_arc",
+        "Glow_rim"
+       ],
+       "far": 1
+      },
+      {
+       "id": "r8-repeat-gate",
+       "near": [],
+       "far": 2
+      },
+      {
+       "id": "r3-dynamics-canyon",
+       "near": [],
+       "far": 1
+      }
+     ]
+    },
+    "entries": [
+     {
+      "id": "r0-staff-gate",
+      "region": 0,
+      "stage": "none",
+      "far": "ready",
+      "near": "ready",
+      "colliders": 2,
+      "primitivesHidden": 0,
+      "primitives": 1,
+      "error": null
+     },
+     {
+      "id": "r7-key-ring",
+      "region": 7,
+      "stage": "none",
+      "far": "ready",
+      "near": "idle",
+      "colliders": 0,
+      "primitivesHidden": 0,
+      "primitives": 1,
+      "error": null
+     },
+     {
+      "id": "r3-dynamics-canyon",
+      "region": 3,
+      "stage": "far",
+      "far": "ready",
+      "near": "idle",
+      "colliders": 0,
+      "primitivesHidden": 1,
+      "primitives": 1,
+      "error": null
+     },
+     {
+      "id": "r1-tempo-tower",
+      "region": 1,
+      "stage": "far",
+      "far": "ready",
+      "near": "ready",
+      "colliders": 0,
+      "primitivesHidden": 1,
+      "primitives": 1,
+      "error": null
+     },
+     {
+      "id": "r5-scale-lights",
+      "region": 5,
+      "stage": "none",
+      "far": "idle",
+      "near": "idle",
+      "colliders": 0,
+      "primitivesHidden": 0,
+      "primitives": 1,
+      "error": null
+     },
+     {
+      "id": "r6-chord-spires",
+      "region": 6,
+      "stage": "none",
+      "far": "idle",
+      "near": "idle",
+      "colliders": 0,
+      "primitivesHidden": 0,
+      "primitives": 1,
+      "error": null
+     },
+     {
+      "id": "r2-storm-drum",
+      "region": 2,
+      "stage": "far",
+      "far": "ready",
+      "near": "ready",
+      "colliders": 0,
+      "primitivesHidden": 2,
+      "primitives": 2,
+      "error": null
+     },
+     {
+      "id": "r4-fermata-bridge",
+      "region": 4,
+      "stage": "none",
+      "far": "idle",
+      "near": "idle",
+      "colliders": 0,
+      "primitivesHidden": 0,
+      "primitives": 1,
+      "error": null
+     },
+     {
+      "id": "r8-repeat-gate",
+      "region": 8,
+      "stage": "none",
+      "far": "ready",
+      "near": "idle",
+      "colliders": 0,
+      "primitivesHidden": 0,
+      "primitives": 1,
+      "error": null
+     }
+    ]
+   },
+   "rootStats": {
+    "near": {
+     "tris": 10496,
+     "meshes": 11,
+     "materials": 10,
+     "visible": true,
+     "name": "landmark-r2-storm-drum-near"
+    },
+    "far": {
+     "tris": 654,
+     "meshes": 2,
+     "materials": 2,
+     "visible": true,
+     "name": "landmark-r2-storm-drum-far"
+    }
+   },
+   "colliders": [],
+   "collectables": [
+    {
+     "kind": "term",
+     "id": "r2_whole_note",
+     "x": 227.232,
+     "z": -172.478,
+     "clearance": 16.21,
+     "who": "static"
+    },
+    {
+     "kind": "term",
+     "id": "r2_half_note",
+     "x": 178.092,
+     "z": -107.415,
+     "clearance": 39.14,
+     "who": "static"
+    },
+    {
+     "kind": "term",
+     "id": "r2_quarter_note",
+     "x": 166.488,
+     "z": -248.185,
+     "clearance": 78.61,
+     "who": "static"
+    },
+    {
+     "kind": "term",
+     "id": "r2_eighth_note",
+     "x": 214.92,
+     "z": -67.864,
+     "clearance": 52.59,
+     "who": "static"
+    },
+    {
+     "kind": "term",
+     "id": "r2_sixteenth_note",
+     "x": 118.036,
+     "z": -136.181,
+     "clearance": 14.32,
+     "who": "static"
+    },
+    {
+     "kind": "term",
+     "id": "r2_dotted_note",
+     "x": 230.159,
+     "z": -204.457,
+     "clearance": 30.52,
+     "who": "static"
+    },
+    {
+     "kind": "term",
+     "id": "r2_rest",
+     "x": 215.268,
+     "z": -78.901,
+     "clearance": 49.87,
+     "who": "static"
+    },
+    {
+     "kind": "term",
+     "id": "r2_time_signature",
+     "x": 168.494,
+     "z": -191.811,
+     "clearance": 26.52,
+     "who": "static"
+    },
+    {
+     "kind": "term",
+     "id": "r2_common_time",
+     "x": 218.433,
+     "z": -131.903,
+     "clearance": 11.07,
+     "who": "static"
+    },
+    {
+     "kind": "term",
+     "id": "r2_alla_breve",
+     "x": 181.446,
+     "z": -127.358,
+     "clearance": 27.15,
+     "who": "static"
+    },
+    {
+     "kind": "term",
+     "id": "r2_complete_measure",
+     "x": 199.947,
+     "z": -236.337,
+     "clearance": 74.39,
+     "who": "static"
+    },
+    {
+     "kind": "term",
+     "id": "r2_anacrusis",
+     "x": 230.005,
+     "z": -192.013,
+     "clearance": 21.83,
+     "who": "static"
+    },
+    {
+     "kind": "term",
+     "id": "r2_syncopation",
+     "x": 208.235,
+     "z": -135.912,
+     "clearance": 21.53,
+     "who": "static"
+    },
+    {
+     "kind": "term",
+     "id": "r2_triplet",
+     "x": 227.179,
+     "z": -181.719,
+     "clearance": 18.89,
+     "who": "static"
+    },
+    {
+     "kind": "term",
+     "id": "r2_strong_weak_beats",
+     "x": 194.441,
+     "z": -97.768,
+     "clearance": 47.12,
+     "who": "static"
+    },
+    {
+     "kind": "bottle",
+     "id": "bottle_r2_1",
+     "x": 211.347,
+     "z": -225.453,
+     "clearance": 58.7,
+     "who": "static"
+    },
+    {
+     "kind": "bottle",
+     "id": "bottle_r2_2",
+     "x": 251.116,
+     "z": -119.799,
+     "clearance": 11.16,
+     "who": "static"
+    }
+   ],
+   "journey": {
+    "rows": [
+     {
+      "id": "r2_whole_note",
+      "kind": "term",
+      "moved": 0,
+      "had": false,
+      "has": true
+     },
+     {
+      "id": "r2_half_note",
+      "kind": "term",
+      "moved": 0,
+      "had": false,
+      "has": true
+     },
+     {
+      "id": "r2_quarter_note",
+      "kind": "term",
+      "moved": 0,
+      "had": false,
+      "has": true
+     },
+     {
+      "id": "r2_eighth_note",
+      "kind": "term",
+      "moved": 0,
+      "had": false,
+      "has": true
+     },
+     {
+      "id": "r2_sixteenth_note",
+      "kind": "term",
+      "moved": 0,
+      "had": false,
+      "has": true
+     },
+     {
+      "id": "r2_dotted_note",
+      "kind": "term",
+      "moved": 0,
+      "had": false,
+      "has": true
+     },
+     {
+      "id": "r2_rest",
+      "kind": "term",
+      "moved": 0,
+      "had": false,
+      "has": true
+     },
+     {
+      "id": "r2_time_signature",
+      "kind": "term",
+      "moved": 0,
+      "had": false,
+      "has": true
+     },
+     {
+      "id": "r2_common_time",
+      "kind": "term",
+      "moved": 0,
+      "had": false,
+      "has": true
+     },
+     {
+      "id": "r2_alla_breve",
+      "kind": "term",
+      "moved": 0,
+      "had": false,
+      "has": true
+     },
+     {
+      "id": "r2_complete_measure",
+      "kind": "term",
+      "moved": 0,
+      "had": false,
+      "has": true
+     },
+     {
+      "id": "r2_anacrusis",
+      "kind": "term",
+      "moved": 0,
+      "had": false,
+      "has": true
+     },
+     {
+      "id": "r2_syncopation",
+      "kind": "term",
+      "moved": 0,
+      "had": false,
+      "has": true
+     },
+     {
+      "id": "r2_triplet",
+      "kind": "term",
+      "moved": 0,
+      "had": false,
+      "has": true
+     },
+     {
+      "id": "r2_strong_weak_beats",
+      "kind": "term",
+      "moved": 0,
+      "had": false,
+      "has": true
+     },
+     {
+      "id": "bottle_r2_1",
+      "kind": "bottle",
+      "moved": 0,
+      "had": false,
+      "has": true
+     },
+     {
+      "id": "bottle_r2_2",
+      "kind": "bottle",
+      "moved": 0,
+      "had": false,
+      "has": true
+     }
+    ],
+    "missed": []
+   },
+   "passes": {
+    "shadow": {
+     "calls": 11,
+     "triangles": 9668
+    },
+    "reflection": {
+     "calls": 24,
+     "triangles": 6724
+    },
+    "main": {
+     "calls": 64,
+     "triangles": 80901
+    },
+    "post": {
+     "calls": 6,
+     "triangles": 12
+    },
+    "total": {
+     "calls": 105,
+     "triangles": 97305
+    }
+   },
+   "errors": [],
+   "externalRequests": []
+  },
+  {
+   "scenario": "both",
+   "shots": {
+    "fixed": {
+     "shot": "fixed",
+     "stage": "near",
+     "far": "failed",
+     "near": "failed",
+     "waitedMs": 561,
+     "snapshot": {
+      "id": "r2-storm-drum",
+      "region": 2,
+      "stage": "near",
+      "far": "failed",
+      "near": "failed",
+      "colliders": 0,
+      "primitivesHidden": 0,
+      "primitives": 2,
+      "error": "[object ProgressEvent]"
+     },
+     "litFile": "/home/claude/remaster/game/output/playwright/rm6_r2_both_fixed_lit.png"
+    },
+    "close": {
+     "shot": "close",
+     "stage": "near",
+     "far": "failed",
+     "near": "failed",
+     "waitedMs": 496,
+     "snapshot": {
+      "id": "r2-storm-drum",
+      "region": 2,
+      "stage": "near",
+      "far": "failed",
+      "near": "failed",
+      "colliders": 0,
+      "primitivesHidden": 0,
+      "primitives": 2,
+      "error": "[object ProgressEvent]"
+     },
+     "litFile": "/home/claude/remaster/game/output/playwright/rm6_r2_both_close_lit.png"
+    },
+    "farOut": {
+     "shot": "farOut",
+     "stage": "far",
+     "far": "failed",
+     "near": "failed",
+     "waitedMs": 533,
+     "snapshot": {
+      "id": "r2-storm-drum",
+      "region": 2,
+      "stage": "far",
+      "far": "failed",
+      "near": "failed",
+      "colliders": 0,
+      "primitivesHidden": 0,
+      "primitives": 2,
+      "error": "[object ProgressEvent]"
+     },
+     "litFile": "/home/claude/remaster/game/output/playwright/rm6_r2_both_farOut_lit.png"
+    }
+   },
+   "checks": {},
+   "spec": {
+    "id": "r2-storm-drum",
+    "name": "폭풍의 북",
+    "near": {
+     "path": "assets/remaster/models/landmark-r2-storm-drum.glb",
+     "tris": 10496,
+     "bytes": 348708,
+     "sha256": "033c8d5d6777323c6d3eecd84bf3547664822a994aabce8e15bbe8b89f7b2ac0"
+    },
+    "far": {
+     "path": "assets/remaster/models/landmark-r2-storm-drum-far.glb",
+     "tris": 654,
+     "bytes": 30408,
+     "sha256": "85fd759af180386f92707b437fbd546410f5e761a05c48dd65c0326ae345fb57"
+    },
+    "footprints": [],
+    "hide": [
+     "r2-drums",
+     "r2-rocks"
+    ],
+    "hideProps": []
+   },
+   "remasterReadyMs": 548,
+   "final": {
+    "enabled": true,
+    "requests": 9,
+    "failures": 2,
+    "music": {
+     "updates": 87,
+     "applied": 5,
+     "locks": 9,
+     "phase": 0.994,
+     "period": 0.395,
+     "events": {
+      "beatAt": 4.85,
+      "flashAt": 4.85,
+      "degree": null,
+      "degreeAt": null,
+      "pearls": 0,
+      "pearlAt": null,
+      "bar": 22,
+      "barAt": 4.849999999999991
+     },
+     "bound": [
+      {
+       "id": "r0-staff-gate",
+       "near": [
+        "Glow_clef",
+        "Lantern_notes"
+       ],
+       "far": 2
+      },
+      {
+       "id": "r7-key-ring",
+       "near": [],
+       "far": 3
+      },
+      {
+       "id": "r1-tempo-tower",
+       "near": [
+        "Beat_pendulum",
+        "Lantern_tempo"
+       ],
+       "far": 1
+      },
+      {
+       "id": "r8-repeat-gate",
+       "near": [],
+       "far": 2
+      },
+      {
+       "id": "r3-dynamics-canyon",
+       "near": [],
+       "far": 1
+      }
+     ]
+    },
+    "entries": [
+     {
+      "id": "r0-staff-gate",
+      "region": 0,
+      "stage": "none",
+      "far": "ready",
+      "near": "ready",
+      "colliders": 2,
+      "primitivesHidden": 0,
+      "primitives": 1,
+      "error": null
+     },
+     {
+      "id": "r7-key-ring",
+      "region": 7,
+      "stage": "none",
+      "far": "ready",
+      "near": "idle",
+      "colliders": 0,
+      "primitivesHidden": 0,
+      "primitives": 1,
+      "error": null
+     },
+     {
+      "id": "r3-dynamics-canyon",
+      "region": 3,
+      "stage": "far",
+      "far": "ready",
+      "near": "idle",
+      "colliders": 0,
+      "primitivesHidden": 1,
+      "primitives": 1,
+      "error": null
+     },
+     {
+      "id": "r1-tempo-tower",
+      "region": 1,
+      "stage": "far",
+      "far": "ready",
+      "near": "ready",
+      "colliders": 0,
+      "primitivesHidden": 1,
+      "primitives": 1,
+      "error": null
+     },
+     {
+      "id": "r5-scale-lights",
+      "region": 5,
+      "stage": "none",
+      "far": "idle",
+      "near": "idle",
+      "colliders": 0,
+      "primitivesHidden": 0,
+      "primitives": 1,
+      "error": null
+     },
+     {
+      "id": "r6-chord-spires",
+      "region": 6,
+      "stage": "none",
+      "far": "idle",
+      "near": "idle",
+      "colliders": 0,
+      "primitivesHidden": 0,
+      "primitives": 1,
+      "error": null
+     },
+     {
+      "id": "r2-storm-drum",
+      "region": 2,
+      "stage": "far",
+      "far": "failed",
+      "near": "failed",
+      "colliders": 0,
+      "primitivesHidden": 0,
+      "primitives": 2,
+      "error": "[object ProgressEvent]"
+     },
+     {
+      "id": "r4-fermata-bridge",
+      "region": 4,
+      "stage": "none",
+      "far": "idle",
+      "near": "idle",
+      "colliders": 0,
+      "primitivesHidden": 0,
+      "primitives": 1,
+      "error": null
+     },
+     {
+      "id": "r8-repeat-gate",
+      "region": 8,
+      "stage": "none",
+      "far": "ready",
+      "near": "idle",
+      "colliders": 0,
+      "primitivesHidden": 0,
+      "primitives": 1,
+      "error": null
+     }
+    ]
+   },
+   "errors": [
+    "error: Failed to load resource: net::ERR_FAILED",
+    "error: Failed to load resource: net::ERR_FAILED"
+   ],
+   "externalRequests": []
+  },
+  {
+   "scenario": "near",
+   "shots": {
+    "fixed": {
+     "shot": "fixed",
+     "stage": "near",
+     "far": "ready",
+     "near": "failed",
+     "waitedMs": 547,
+     "snapshot": {
+      "id": "r2-storm-drum",
+      "region": 2,
+      "stage": "near",
+      "far": "ready",
+      "near": "failed",
+      "colliders": 0,
+      "primitivesHidden": 2,
+      "primitives": 2,
+      "error": "[object ProgressEvent]"
+     },
+     "litFile": "/home/claude/remaster/game/output/playwright/rm6_r2_near_fixed_lit.png"
+    },
+    "close": {
+     "shot": "close",
+     "stage": "near",
+     "far": "ready",
+     "near": "failed",
+     "waitedMs": 549,
+     "snapshot": {
+      "id": "r2-storm-drum",
+      "region": 2,
+      "stage": "near",
+      "far": "ready",
+      "near": "failed",
+      "colliders": 0,
+      "primitivesHidden": 2,
+      "primitives": 2,
+      "error": "[object ProgressEvent]"
+     },
+     "litFile": "/home/claude/remaster/game/output/playwright/rm6_r2_near_close_lit.png"
+    },
+    "farOut": {
+     "shot": "farOut",
+     "stage": "far",
+     "far": "ready",
+     "near": "failed",
+     "waitedMs": 528,
+     "snapshot": {
+      "id": "r2-storm-drum",
+      "region": 2,
+      "stage": "far",
+      "far": "ready",
+      "near": "failed",
+      "colliders": 0,
+      "primitivesHidden": 2,
+      "primitives": 2,
+      "error": "[object ProgressEvent]"
+     },
+     "litFile": "/home/claude/remaster/game/output/playwright/rm6_r2_near_farOut_lit.png"
+    }
+   },
+   "checks": {},
+   "spec": {
+    "id": "r2-storm-drum",
+    "name": "폭풍의 북",
+    "near": {
+     "path": "assets/remaster/models/landmark-r2-storm-drum.glb",
+     "tris": 10496,
+     "bytes": 348708,
+     "sha256": "033c8d5d6777323c6d3eecd84bf3547664822a994aabce8e15bbe8b89f7b2ac0"
+    },
+    "far": {
+     "path": "assets/remaster/models/landmark-r2-storm-drum-far.glb",
+     "tris": 654,
+     "bytes": 30408,
+     "sha256": "85fd759af180386f92707b437fbd546410f5e761a05c48dd65c0326ae345fb57"
+    },
+    "footprints": [],
+    "hide": [
+     "r2-drums",
+     "r2-rocks"
+    ],
+    "hideProps": []
+   },
+   "remasterReadyMs": 546,
+   "final": {
+    "enabled": true,
+    "requests": 9,
+    "failures": 1,
+    "music": {
+     "updates": 87,
+     "applied": 5,
+     "locks": 9,
+     "phase": 0.945,
+     "period": 0.395,
+     "events": {
+      "beatAt": 4.9,
+      "flashAt": 4.9,
+      "degree": null,
+      "degreeAt": null,
+      "pearls": 0,
+      "pearlAt": null,
+      "bar": 22,
+      "barAt": 4.899999999999991
+     },
+     "bound": [
+      {
+       "id": "r0-staff-gate",
+       "near": [
+        "Glow_clef",
+        "Lantern_notes"
+       ],
+       "far": 2
+      },
+      {
+       "id": "r7-key-ring",
+       "near": [],
+       "far": 3
+      },
+      {
+       "id": "r1-tempo-tower",
+       "near": [
+        "Beat_pendulum",
+        "Lantern_tempo"
+       ],
+       "far": 1
+      },
+      {
+       "id": "r2-storm-drum",
+       "near": [],
+       "far": 1
+      },
+      {
+       "id": "r8-repeat-gate",
+       "near": [],
+       "far": 2
+      },
+      {
+       "id": "r3-dynamics-canyon",
+       "near": [],
+       "far": 1
+      }
+     ]
+    },
+    "entries": [
+     {
+      "id": "r0-staff-gate",
+      "region": 0,
+      "stage": "none",
+      "far": "ready",
+      "near": "ready",
+      "colliders": 2,
+      "primitivesHidden": 0,
+      "primitives": 1,
+      "error": null
+     },
+     {
+      "id": "r7-key-ring",
+      "region": 7,
+      "stage": "none",
+      "far": "ready",
+      "near": "idle",
+      "colliders": 0,
+      "primitivesHidden": 0,
+      "primitives": 1,
+      "error": null
+     },
+     {
+      "id": "r3-dynamics-canyon",
+      "region": 3,
+      "stage": "far",
+      "far": "ready",
+      "near": "idle",
+      "colliders": 0,
+      "primitivesHidden": 1,
+      "primitives": 1,
+      "error": null
+     },
+     {
+      "id": "r1-tempo-tower",
+      "region": 1,
+      "stage": "far",
+      "far": "ready",
+      "near": "ready",
+      "colliders": 0,
+      "primitivesHidden": 1,
+      "primitives": 1,
+      "error": null
+     },
+     {
+      "id": "r5-scale-lights",
+      "region": 5,
+      "stage": "none",
+      "far": "idle",
+      "near": "idle",
+      "colliders": 0,
+      "primitivesHidden": 0,
+      "primitives": 1,
+      "error": null
+     },
+     {
+      "id": "r6-chord-spires",
+      "region": 6,
+      "stage": "none",
+      "far": "idle",
+      "near": "idle",
+      "colliders": 0,
+      "primitivesHidden": 0,
+      "primitives": 1,
+      "error": null
+     },
+     {
+      "id": "r2-storm-drum",
+      "region": 2,
+      "stage": "far",
+      "far": "ready",
+      "near": "failed",
+      "colliders": 0,
+      "primitivesHidden": 2,
+      "primitives": 2,
+      "error": "[object ProgressEvent]"
+     },
+     {
+      "id": "r4-fermata-bridge",
+      "region": 4,
+      "stage": "none",
+      "far": "idle",
+      "near": "idle",
+      "colliders": 0,
+      "primitivesHidden": 0,
+      "primitives": 1,
+      "error": null
+     },
+     {
+      "id": "r8-repeat-gate",
+      "region": 8,
+      "stage": "none",
+      "far": "ready",
+      "near": "idle",
+      "colliders": 0,
+      "primitivesHidden": 0,
+      "primitives": 1,
+      "error": null
+     }
+    ]
+   },
+   "errors": [
+    "error: Failed to load resource: net::ERR_FAILED"
+   ],
+   "externalRequests": []
+  },
+  {
+   "scenario": "far",
+   "shots": {
+    "fixed": {
+     "shot": "fixed",
+     "stage": "near",
+     "far": "failed",
+     "near": "ready",
+     "waitedMs": 607,
+     "snapshot": {
+      "id": "r2-storm-drum",
+      "region": 2,
+      "stage": "near",
+      "far": "failed",
+      "near": "ready",
+      "colliders": 0,
+      "primitivesHidden": 2,
+      "primitives": 2,
+      "error": "[object ProgressEvent]"
+     },
+     "litFile": "/home/claude/remaster/game/output/playwright/rm6_r2_far_fixed_lit.png"
+    },
+    "close": {
+     "shot": "close",
+     "stage": "near",
+     "far": "failed",
+     "near": "ready",
+     "waitedMs": 518,
+     "snapshot": {
+      "id": "r2-storm-drum",
+      "region": 2,
+      "stage": "near",
+      "far": "failed",
+      "near": "ready",
+      "colliders": 0,
+      "primitivesHidden": 2,
+      "primitives": 2,
+      "error": "[object ProgressEvent]"
+     },
+     "litFile": "/home/claude/remaster/game/output/playwright/rm6_r2_far_close_lit.png"
+    },
+    "farOut": {
+     "shot": "farOut",
+     "stage": "far",
+     "far": "failed",
+     "near": "ready",
+     "waitedMs": 527,
+     "snapshot": {
+      "id": "r2-storm-drum",
+      "region": 2,
+      "stage": "far",
+      "far": "failed",
+      "near": "ready",
+      "colliders": 0,
+      "primitivesHidden": 0,
+      "primitives": 2,
+      "error": "[object ProgressEvent]"
+     },
+     "litFile": "/home/claude/remaster/game/output/playwright/rm6_r2_far_farOut_lit.png"
+    }
+   },
+   "checks": {},
+   "spec": {
+    "id": "r2-storm-drum",
+    "name": "폭풍의 북",
+    "near": {
+     "path": "assets/remaster/models/landmark-r2-storm-drum.glb",
+     "tris": 10496,
+     "bytes": 348708,
+     "sha256": "033c8d5d6777323c6d3eecd84bf3547664822a994aabce8e15bbe8b89f7b2ac0"
+    },
+    "far": {
+     "path": "assets/remaster/models/landmark-r2-storm-drum-far.glb",
+     "tris": 654,
+     "bytes": 30408,
+     "sha256": "85fd759af180386f92707b437fbd546410f5e761a05c48dd65c0326ae345fb57"
+    },
+    "footprints": [],
+    "hide": [
+     "r2-drums",
+     "r2-rocks"
+    ],
+    "hideProps": []
+   },
+   "remasterReadyMs": 508,
+   "final": {
+    "enabled": true,
+    "requests": 9,
+    "failures": 1,
+    "music": {
+     "updates": 87,
+     "applied": 56,
+     "locks": 9,
+     "phase": 0.994,
+     "period": 0.395,
+     "events": {
+      "beatAt": 4.75,
+      "flashAt": 4.75,
+      "degree": null,
+      "degreeAt": null,
+      "pearls": 0,
+      "pearlAt": null,
+      "bar": 22,
+      "barAt": 4.6499999999999915
+     },
+     "bound": [
+      {
+       "id": "r0-staff-gate",
+       "near": [
+        "Glow_clef",
+        "Lantern_notes"
+       ],
+       "far": 2
+      },
+      {
+       "id": "r7-key-ring",
+       "near": [],
+       "far": 3
+      },
+      {
+       "id": "r1-tempo-tower",
+       "near": [
+        "Beat_pendulum",
+        "Lantern_tempo"
+       ],
+       "far": 1
+      },
+      {
+       "id": "r8-repeat-gate",
+       "near": [],
+       "far": 2
+      },
+      {
+       "id": "r3-dynamics-canyon",
+       "near": [],
+       "far": 1
+      },
+      {
+       "id": "r2-storm-drum",
+       "near": [
+        "Beat_head",
+        "Glow_arc",
+        "Glow_rim"
+       ],
+       "far": 0
+      }
+     ]
+    },
+    "entries": [
+     {
+      "id": "r0-staff-gate",
+      "region": 0,
+      "stage": "none",
+      "far": "ready",
+      "near": "ready",
+      "colliders": 2,
+      "primitivesHidden": 0,
+      "primitives": 1,
+      "error": null
+     },
+     {
+      "id": "r7-key-ring",
+      "region": 7,
+      "stage": "none",
+      "far": "ready",
+      "near": "idle",
+      "colliders": 0,
+      "primitivesHidden": 0,
+      "primitives": 1,
+      "error": null
+     },
+     {
+      "id": "r3-dynamics-canyon",
+      "region": 3,
+      "stage": "far",
+      "far": "ready",
+      "near": "idle",
+      "colliders": 0,
+      "primitivesHidden": 1,
+      "primitives": 1,
+      "error": null
+     },
+     {
+      "id": "r1-tempo-tower",
+      "region": 1,
+      "stage": "far",
+      "far": "ready",
+      "near": "ready",
+      "colliders": 0,
+      "primitivesHidden": 1,
+      "primitives": 1,
+      "error": null
+     },
+     {
+      "id": "r5-scale-lights",
+      "region": 5,
+      "stage": "none",
+      "far": "idle",
+      "near": "idle",
+      "colliders": 0,
+      "primitivesHidden": 0,
+      "primitives": 1,
+      "error": null
+     },
+     {
+      "id": "r6-chord-spires",
+      "region": 6,
+      "stage": "none",
+      "far": "idle",
+      "near": "idle",
+      "colliders": 0,
+      "primitivesHidden": 0,
+      "primitives": 1,
+      "error": null
+     },
+     {
+      "id": "r2-storm-drum",
+      "region": 2,
+      "stage": "far",
+      "far": "failed",
+      "near": "ready",
+      "colliders": 0,
+      "primitivesHidden": 0,
+      "primitives": 2,
+      "error": "[object ProgressEvent]"
+     },
+     {
+      "id": "r4-fermata-bridge",
+      "region": 4,
+      "stage": "none",
+      "far": "idle",
+      "near": "idle",
+      "colliders": 0,
+      "primitivesHidden": 0,
+      "primitives": 1,
+      "error": null
+     },
+     {
+      "id": "r8-repeat-gate",
+      "region": 8,
+      "stage": "none",
+      "far": "ready",
+      "near": "idle",
+      "colliders": 0,
+      "primitivesHidden": 0,
+      "primitives": 1,
+      "error": null
+     }
+    ]
+   },
+   "errors": [
+    "error: Failed to load resource: net::ERR_FAILED"
+   ],
+   "externalRequests": []
+  }
+ ]
+}

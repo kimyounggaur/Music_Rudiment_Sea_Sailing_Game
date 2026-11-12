@@ -1,0 +1,25 @@
+{
+ "bars": {
+  "pinMs": 1500,
+  "bars": "1.000",
+  "title": "false",
+  "hidden": false,
+  "mode": "lighthouse",
+  "lit": 0.225,
+  "k": 0.228,
+  "fov": 53,
+  "state": null
+ },
+ "title": {
+  "pinMs": 4600,
+  "bars": "1.000",
+  "title": "true",
+  "hidden": false,
+  "mode": "lighthouse",
+  "lit": 1,
+  "k": 0.967,
+  "fov": 53,
+  "state": null
+ },
+ "errors": []
+}

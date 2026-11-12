@@ -1,0 +1,332 @@
+[
+ {
+  "name": "reduced",
+  "checks": 12,
+  "tutorialHolds": [
+   {
+    "key": "w",
+    "stepNo": 1,
+    "moved": true,
+    "ms": 9312
+   },
+   {
+    "key": "d",
+    "stepNo": 2,
+    "moved": true,
+    "ms": 8052
+   }
+  ],
+  "tutorial": [
+   "1/6 · 앞으로 나아가세요",
+   "2/6 · 배를 돌려 보세요",
+   "3/6 · 빛나는 부표로 가세요",
+   "6/6 · 항구 등대에서 대화해요"
+  ],
+  "sailing": {
+   "hud": "awake",
+   "reduced": "true",
+   "scale": "1",
+   "center": [],
+   "overflow": false,
+   "contrast": 0,
+   "touch": 0,
+   "copy": 0,
+   "animations": []
+  },
+  "harborDialogue": "항해·기보 안내\n마에스트로 선장\n\n첫 오선은 항해 지도라네. 음의 자리를 살펴보게. 항해·기보·부표·도감의 기본을 확인하세요.\n\n수집 12개 · 필요 6개\n/\n핵심 개념 2/2\n/\n시련 5문항 · 4개 이상 정답이면 통과\n\n나중에\n시련 시작",
+  "harbor": {
+   "steps": 18,
+   "drag": true,
+   "passed": true,
+   "result": "4/5\n등대를 밝힐 준비가 됐어요\n\n첫 시도 정답 4개 · 통과선 4개\n\n✓ 1. 소리와 시각 시연에 맞는 용어를 고르세요.\n\n정답: 높은음자리표\n\n내 첫 답: 높은음자리표\n\n다시 듣기\n× 2. 도감에 제시된 학습 순서대로 네 부표를 선택하세요.\n\n정답: 높은음자리표 → 가온음자리표 → 겹세로줄 → 가온다\n\n내 첫 답: 가온다 → 가온음자리표 → 겹세로줄 → 가온다\n\n다시 듣기개념 다시 보기\n✓ 3. 기호와 용어를 네 쌍 연결하세요.\n\n정답: 끝세로줄 → 음이름 → 계이름 → 겹세로줄\n\n내 첫 답: 끝세로줄 → 음이름 → 계이름 → 겹세로줄\n\n다시 듣기\n✓ 4. ‘다(C)음 자리를 정하는 기호’에 맞는 도돌이 항구 부표를 고르세요.\n\n정답: 가온음자리표\n\n내 첫 답: 가온음자리표\n\n다시 듣기\n✓ 5. 기호와 용어를 네 쌍 연결하세요.\n\n정답: 끝세로줄 → 높은음자리표 → 낮은음자리표 → 가온음자리표\n\n내 첫 답: 끝세로줄 → 높은음자리표 → 낮은음자리표 → 가온음자리표\n\n다시 듣기\n등대 점등하기\n항해로 돌아가기"
+  },
+  "silence": {
+   "steps": 12,
+   "drag": true,
+   "passed": true,
+   "result": "5/5\n등대를 밝힐 준비가 됐어요\n\n첫 시도 정답 5개 · 통과선 4개\n\n✓ 1. ‘매우 여리게’에 맞는 심해 협곡 부표를 고르세요.\n\n정답: pianissimo\n\n내 첫 답: pianissimo\n\n다시 듣기\n✓ 2. 기호와 용어를 네 쌍 연결하세요.\n\n정답: decrescendo → mezzo forte → 극단 셈여림 → 셈여림\n\n내 첫 답: decrescendo → mezzo forte → 극단 셈여림 → 셈여림\n\n다시 듣기\n✓ 3. 도감에 제시된 학습 순서대로 네 부표를 선택하세요.\n\n정답: pianissimo → mezzo forte → forte → fortissimo\n\n내 첫 답: pianissimo → mezzo forte → forte → fortissimo\n\n다시 듣기\n✓ 4. 소리와 시각 시연에 맞는 용어를 고르세요.\n\n정답: pianissimo\n\n내 첫 답: pianissimo\n\n다시 듣기\n✓ 5. 소리와 시각 시연에 맞는 용어를 고르세요.\n\n정답: decrescendo\n\n내 첫 답: decrescendo\n\n다시 듣기\n등대 점등하기\n항해로 돌아가기"
+  },
+  "post": {
+   "trials": [
+    0,
+    3
+   ],
+   "lights": [
+    0,
+    3
+   ],
+   "terms": 14,
+   "mode": "SAILING",
+   "reduced": "true",
+   "scale": "1",
+   "muted": true,
+   "filter": ""
+  },
+  "errors": [],
+  "problems": []
+ },
+ {
+  "name": "muted",
+  "checks": 10,
+  "tutorialHolds": [
+   {
+    "key": "w",
+    "stepNo": 1,
+    "moved": true,
+    "ms": 9029
+   },
+   {
+    "key": "d",
+    "stepNo": 2,
+    "moved": true,
+    "ms": 6906
+   }
+  ],
+  "tutorial": [
+   "1/6 · 앞으로 나아가세요",
+   "2/6 · 배를 돌려 보세요",
+   "3/6 · 빛나는 부표로 가세요",
+   "6/6 · 항구 등대에서 대화해요"
+  ],
+  "sailing": {
+   "hud": "awake",
+   "reduced": "false",
+   "scale": "1",
+   "center": [],
+   "overflow": false,
+   "contrast": 0,
+   "touch": 0,
+   "copy": 0,
+   "animations": []
+  },
+  "harborDialogue": "항해·기보 안내\n마에스트로 선장\n\n첫\n\n수집 12개 · 필요 6개\n/\n핵심 개념 2/2\n/\n시련 5문항 · 4개 이상 정답이면 통과\n\n대사 바로 보기\n나중에\n시련 시작",
+  "harbor": {
+   "steps": 16,
+   "drag": true,
+   "passed": true,
+   "result": "5/5\n등대를 밝힐 준비가 됐어요\n\n첫 시도 정답 5개 · 통과선 4개\n\n✓ 1. 소리와 시각 시연에 맞는 용어를 고르세요.\n\n정답: 가온음자리표\n\n내 첫 답: 가온음자리표\n\n다시 듣기\n✓ 2. 기호와 용어를 네 쌍 연결하세요.\n\n정답: 낮은음자리표 → 끝세로줄 → 음이름 → 높은음자리표\n\n내 첫 답: 낮은음자리표 → 끝세로줄 → 음이름 → 높은음자리표\n\n다시 듣기\n✓ 3. 도감에 제시된 학습 순서대로 네 부표를 선택하세요.\n\n정답: 보표 → 높은음자리표 → 마디 → 음이름\n\n내 첫 답: 보표 → 높은음자리표 → 마디 → 음이름\n\n다시 듣기\n✓ 4. ‘높은음자리표와 낮은음자리표 사이의 다(C4)’에 맞는 도돌이 항구 부표를 고르세요.\n\n정답: 가온다\n\n내 첫 답: 가온다\n\n다시 듣기\n✓ 5. 도감에 제시된 학습 순서대로 네 부표를 선택하세요.\n\n정답: 보표 → 덧줄 → 겹세로줄 → 계이름\n\n내 첫 답: 보표 → 덧줄 → 겹세로줄 → 계이름\n\n다시 듣기\n등대 점등하기\n항해로 돌아가기"
+  },
+  "silence": {
+   "steps": 16,
+   "drag": true,
+   "passed": true,
+   "result": "5/5\n등대를 밝힐 준비가 됐어요\n\n첫 시도 정답 5개 · 통과선 4개\n\n✓ 1. 소리와 시각 시연에 맞는 용어를 고르세요.\n\n정답: 셈여림\n\n내 첫 답: 셈여림\n\n다시 듣기\n✓ 2. ‘갑자기’에 맞는 심해 협곡 부표를 고르세요.\n\n정답: subito\n\n내 첫 답: subito\n\n다시 듣기\n✓ 3. 기호와 용어를 네 쌍 연결하세요.\n\n정답: 셈여림 → mezzo piano → fortissimo → subito\n\n내 첫 답: 셈여림 → mezzo piano → fortissimo → subito\n\n다시 듣기\n✓ 4. 기호와 용어를 네 쌍 연결하세요.\n\n정답: diminuendo → 극단 셈여림 → forte → fortepiano\n\n내 첫 답: diminuendo → 극단 셈여림 → forte → fortepiano\n\n다시 듣기\n✓ 5. 도감에 제시된 학습 순서대로 네 부표를 선택하세요.\n\n정답: 셈여림 → pianissimo → mezzo forte → sforzando\n\n내 첫 답: 셈여림 → pianissimo → mezzo forte → sforzando\n\n다시 듣기\n등대 점등하기\n항해로 돌아가기"
+  },
+  "post": {
+   "trials": [
+    0,
+    3
+   ],
+   "lights": [
+    0,
+    3
+   ],
+   "terms": 14,
+   "mode": "SAILING",
+   "reduced": "false",
+   "scale": "1",
+   "muted": true,
+   "filter": ""
+  },
+  "errors": [],
+  "problems": []
+ },
+ {
+  "name": "scale13",
+  "checks": 14,
+  "tutorialHolds": [
+   {
+    "key": "w",
+    "stepNo": 1,
+    "moved": true,
+    "ms": 9044
+   },
+   {
+    "key": "d",
+    "stepNo": 2,
+    "moved": true,
+    "ms": 7277
+   }
+  ],
+  "tutorial": [
+   "1/6 · 앞으로 나아가세요",
+   "2/6 · 배를 돌려 보세요",
+   "3/6 · 빛나는 부표로 가세요",
+   "6/6 · 항구 등대에서 대화해요"
+  ],
+  "sailing": {
+   "hud": "awake",
+   "reduced": "false",
+   "scale": "1.3",
+   "center": [],
+   "overflow": false,
+   "contrast": 0,
+   "touch": 0,
+   "copy": 0,
+   "animations": []
+  },
+  "harborDialogue": "항해·기보 안내\n마에스트로 선장\n\n첫\n\n수집 12개 · 필요 6개\n/\n핵심 개념 2/2\n/\n시련 5문항 · 4개 이상 정답이면 통과\n\n대사 바로 보기\n나중에\n시련 시작",
+  "harbor": {
+   "steps": 13,
+   "drag": true,
+   "passed": true,
+   "result": "5/5\n등대를 밝힐 준비가 됐어요\n\n첫 시도 정답 5개 · 통과선 4개\n\n✓ 1. ‘세로줄로 나뉜 한 칸’에 맞는 도돌이 항구 부표를 고르세요.\n\n정답: 마디\n\n내 첫 답: 마디\n\n다시 듣기\n✓ 2. ‘높은음자리표와 낮은음자리표 사이의 다(C4)’에 맞는 도돌이 항구 부표를 고르세요.\n\n정답: 가온다\n\n내 첫 답: 가온다\n\n다시 듣기\n✓ 3. 소리와 시각 시연에 맞는 용어를 고르세요.\n\n정답: 세로줄\n\n내 첫 답: 세로줄\n\n다시 듣기\n✓ 4. 기호와 용어를 네 쌍 연결하세요.\n\n정답: 낮은음자리표 → 끝세로줄 → 덧줄 → 계이름\n\n내 첫 답: 낮은음자리표 → 끝세로줄 → 덧줄 → 계이름\n\n다시 듣기\n✓ 5. 도감에 제시된 학습 순서대로 네 부표를 선택하세요.\n\n정답: 덧줄 → 높은음자리표 → 계이름 → 가온다\n\n내 첫 답: 덧줄 → 높은음자리표 → 계이름 → 가온다\n\n다시 듣기\n등대 점등하기\n항해로 돌아가기"
+  },
+  "silence": {
+   "steps": 16,
+   "drag": true,
+   "passed": true,
+   "result": "5/5\n등대를 밝힐 준비가 됐어요\n\n첫 시도 정답 5개 · 통과선 4개\n\n✓ 1. ‘극한의 여림과 셈’에 맞는 심해 협곡 부표를 고르세요.\n\n정답: 극단 셈여림\n\n내 첫 답: 극단 셈여림\n\n다시 듣기\n✓ 2. 도감에 제시된 학습 순서대로 네 부표를 선택하세요.\n\n정답: pianissimo → mezzo piano → forte → fortissimo\n\n내 첫 답: pianissimo → mezzo piano → forte → fortissimo\n\n다시 듣기\n✓ 3. 기호와 용어를 네 쌍 연결하세요.\n\n정답: pianissimo → piano → mezzo forte → crescendo\n\n내 첫 답: pianissimo → piano → mezzo forte → crescendo\n\n다시 듣기\n✓ 4. 소리와 시각 시연에 맞는 용어를 고르세요.\n\n정답: decrescendo\n\n내 첫 답: decrescendo\n\n다시 듣기\n✓ 5. 기호와 용어를 네 쌍 연결하세요.\n\n정답: piano → sforzando → decrescendo → mezzo forte\n\n내 첫 답: piano → sforzando → decrescendo → mezzo forte\n\n다시 듣기\n등대 점등하기\n항해로 돌아가기"
+  },
+  "post": {
+   "trials": [
+    0,
+    3
+   ],
+   "lights": [
+    0,
+    3
+   ],
+   "terms": 14,
+   "mode": "SAILING",
+   "reduced": "false",
+   "scale": "1.3",
+   "muted": true,
+   "filter": ""
+  },
+  "errors": [],
+  "problems": []
+ },
+ {
+  "name": "scale13-phone",
+  "checks": 14,
+  "tutorialHolds": [
+   {
+    "key": "w",
+    "stepNo": 1,
+    "moved": true,
+    "ms": 3420
+   },
+   {
+    "key": "d",
+    "stepNo": 2,
+    "moved": true,
+    "ms": 3173
+   }
+  ],
+  "tutorial": [
+   "1/6 · 앞으로 나아가세요",
+   "2/6 · 배를 돌려 보세요",
+   "3/6 · 빛나는 부표로 가세요",
+   "✓ 5/6 · 완료했어요"
+  ],
+  "sailing": {
+   "hud": "awake",
+   "reduced": "false",
+   "scale": "1.3",
+   "center": [],
+   "overflow": false,
+   "contrast": 0,
+   "touch": 0,
+   "copy": 0,
+   "animations": []
+  },
+  "harborDialogue": "항해·기보 안내\n마에스트로 선장\n\n첫\n\n수집 12개 · 필요 6개\n/\n핵심 개념 2/2\n/\n시련 5문항 · 4개 이상 정답이면 통과\n\n대사 바로 보기\n나중에\n시련 시작",
+  "harbor": {
+   "steps": 13,
+   "drag": true,
+   "passed": true,
+   "result": "5/5\n등대를 밝힐 준비가 됐어요\n\n첫 시도 정답 5개 · 통과선 4개\n\n✓ 1. 기호와 용어를 네 쌍 연결하세요.\n\n정답: 끝세로줄 → 가온음자리표 → 낮은음자리표 → 보표\n\n내 첫 답: 끝세로줄 → 가온음자리표 → 낮은음자리표 → 보표\n\n다시 듣기\n✓ 2. 소리와 시각 시연에 맞는 용어를 고르세요.\n\n정답: 가온다\n\n내 첫 답: 가온다\n\n다시 듣기\n✓ 3. ‘단락의 구분’에 맞는 도돌이 항구 부표를 고르세요.\n\n정답: 겹세로줄\n\n내 첫 답: 겹세로줄\n\n다시 듣기\n✓ 4. 소리와 시각 시연에 맞는 용어를 고르세요.\n\n정답: 높은음자리표\n\n내 첫 답: 높은음자리표\n\n다시 듣기\n✓ 5. 도감에 제시된 학습 순서대로 네 부표를 선택하세요.\n\n정답: 덧줄 → 마디 → 음이름 → 계이름\n\n내 첫 답: 덧줄 → 마디 → 음이름 → 계이름\n\n다시 듣기\n등대 점등하기\n항해로 돌아가기"
+  },
+  "silence": {
+   "steps": 16,
+   "drag": true,
+   "passed": true,
+   "result": "5/5\n등대를 밝힐 준비가 됐어요\n\n첫 시도 정답 5개 · 통과선 4개\n\n✓ 1. 소리와 시각 시연에 맞는 용어를 고르세요.\n\n정답: 극단 셈여림\n\n내 첫 답: 극단 셈여림\n\n다시 듣기\n✓ 2. ‘여리게’에 맞는 심해 협곡 부표를 고르세요.\n\n정답: piano\n\n내 첫 답: piano\n\n다시 듣기\n✓ 3. 기호와 용어를 네 쌍 연결하세요.\n\n정답: mezzo forte → subito → piano → pianissimo\n\n내 첫 답: mezzo forte → subito → piano → pianissimo\n\n다시 듣기\n✓ 4. 기호와 용어를 네 쌍 연결하세요.\n\n정답: fortepiano → decrescendo → subito → piano\n\n내 첫 답: fortepiano → decrescendo → subito → piano\n\n다시 듣기\n✓ 5. 도감에 제시된 학습 순서대로 네 부표를 선택하세요.\n\n정답: mezzo piano → forte → 극단 셈여림 → crescendo\n\n내 첫 답: mezzo piano → forte → 극단 셈여림 → crescendo\n\n다시 듣기\n등대 점등하기\n항해로 돌아가기"
+  },
+  "post": {
+   "trials": [
+    0,
+    3
+   ],
+   "lights": [
+    0,
+    3
+   ],
+   "terms": 14,
+   "mode": "SAILING",
+   "reduced": "false",
+   "scale": "1.3",
+   "muted": true,
+   "filter": ""
+  },
+  "errors": [],
+  "problems": []
+ },
+ {
+  "name": "gray",
+  "checks": 12,
+  "tutorialHolds": [
+   {
+    "key": "w",
+    "stepNo": 1,
+    "moved": true,
+    "ms": 9147
+   },
+   {
+    "key": "d",
+    "stepNo": 2,
+    "moved": true,
+    "ms": 7954
+   }
+  ],
+  "tutorial": [
+   "1/6 · 앞으로 나아가세요",
+   "2/6 · 배를 돌려 보세요",
+   "3/6 · 빛나는 부표로 가세요",
+   "6/6 · 항구 등대에서 대화해요"
+  ],
+  "sailing": {
+   "hud": "awake",
+   "reduced": "false",
+   "scale": "1",
+   "center": [],
+   "overflow": false,
+   "contrast": 0,
+   "touch": 0,
+   "copy": 0,
+   "animations": []
+  },
+  "harborDialogue": "항해·기보 안내\n마에스트로 선장\n\n첫\n\n수집 12개 · 필요 6개\n/\n핵심 개념 2/2\n/\n시련 5문항 · 4개 이상 정답이면 통과\n\n대사 바로 보기\n나중에\n시련 시작",
+  "harbor": {
+   "steps": 16,
+   "drag": true,
+   "passed": true,
+   "result": "5/5\n등대를 밝힐 준비가 됐어요\n\n첫 시도 정답 5개 · 통과선 4개\n\n✓ 1. 기호와 용어를 네 쌍 연결하세요.\n\n정답: 마디 → 계이름 → 세로줄 → 가온음자리표\n\n내 첫 답: 마디 → 계이름 → 세로줄 → 가온음자리표\n\n다시 듣기\n✓ 2. 도감에 제시된 학습 순서대로 네 부표를 선택하세요.\n\n정답: 보표 → 덧줄 → 음이름 → 계이름\n\n내 첫 답: 보표 → 덧줄 → 음이름 → 계이름\n\n다시 듣기\n✓ 3. ‘음을 적는 다섯 줄’에 맞는 도돌이 항구 부표를 고르세요.\n\n정답: 보표\n\n내 첫 답: 보표\n\n다시 듣기\n✓ 4. 도감에 제시된 학습 순서대로 네 부표를 선택하세요.\n\n정답: 높은음자리표 → 끝세로줄 → 음이름 → 가온다\n\n내 첫 답: 높은음자리표 → 끝세로줄 → 음이름 → 가온다\n\n다시 듣기\n✓ 5. 소리와 시각 시연에 맞는 용어를 고르세요.\n\n정답: 가온음자리표\n\n내 첫 답: 가온음자리표\n\n다시 듣기\n등대 점등하기\n항해로 돌아가기"
+  },
+  "silence": {
+   "steps": 16,
+   "drag": true,
+   "passed": true,
+   "result": "5/5\n등대를 밝힐 준비가 됐어요\n\n첫 시도 정답 5개 · 통과선 4개\n\n✓ 1. 기호와 용어를 네 쌍 연결하세요.\n\n정답: fortissimo → subito → 극단 셈여림 → 셈여림\n\n내 첫 답: fortissimo → subito → 극단 셈여림 → 셈여림\n\n다시 듣기\n✓ 2. 기호와 용어를 네 쌍 연결하세요.\n\n정답: forte → 극단 셈여림 → mezzo piano → fortepiano\n\n내 첫 답: forte → 극단 셈여림 → mezzo piano → fortepiano\n\n다시 듣기\n✓ 3. 도감에 제시된 학습 순서대로 네 부표를 선택하세요.\n\n정답: piano → forte → crescendo → sforzando\n\n내 첫 답: piano → forte → crescendo → sforzando\n\n다시 듣기\n✓ 4. 소리와 시각 시연에 맞는 용어를 고르세요.\n\n정답: 극단 셈여림\n\n내 첫 답: 극단 셈여림\n\n다시 듣기\n✓ 5. ‘매우 여리게’에 맞는 심해 협곡 부표를 고르세요.\n\n정답: pianissimo\n\n내 첫 답: pianissimo\n\n다시 듣기\n등대 점등하기\n항해로 돌아가기"
+  },
+  "post": {
+   "trials": [
+    0,
+    3
+   ],
+   "lights": [
+    0,
+    3
+   ],
+   "terms": 14,
+   "mode": "SAILING",
+   "reduced": "false",
+   "scale": "1",
+   "muted": true,
+   "filter": "grayscale(1)"
+  },
+  "errors": [],
+  "problems": []
+ }
+]

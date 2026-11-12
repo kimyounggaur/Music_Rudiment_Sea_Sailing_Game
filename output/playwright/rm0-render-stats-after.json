@@ -1,0 +1,307 @@
+{
+ "base": "default",
+ "quality": "mid",
+ "viewport": [
+  1280,
+  720
+ ],
+ "rows": [
+  {
+   "region": 0,
+   "old": {
+    "calls": 100,
+    "triangles": 160427
+   },
+   "programs": 20,
+   "geometries": 148,
+   "textures": 2,
+   "passes": {
+    "shadow": {
+     "calls": 48,
+     "triangles": 129391
+    },
+    "reflection": {
+     "calls": 0,
+     "triangles": 0
+    },
+    "main": {
+     "calls": 100,
+     "triangles": 160427
+    },
+    "post": {
+     "calls": 0,
+     "triangles": 0
+    },
+    "total": {
+     "calls": 148,
+     "triangles": 289818
+    }
+   },
+   "point": "r0-harbor"
+  },
+  {
+   "region": 1,
+   "old": {
+    "calls": 78,
+    "triangles": 140720
+   },
+   "programs": 20,
+   "geometries": 148,
+   "textures": 2,
+   "passes": {
+    "shadow": {
+     "calls": 61,
+     "triangles": 132568
+    },
+    "reflection": {
+     "calls": 0,
+     "triangles": 0
+    },
+    "main": {
+     "calls": 78,
+     "triangles": 140720
+    },
+    "post": {
+     "calls": 0,
+     "triangles": 0
+    },
+    "total": {
+     "calls": 139,
+     "triangles": 273288
+    }
+   },
+   "point": "r1-arch"
+  },
+  {
+   "region": 2,
+   "old": {
+    "calls": 65,
+    "triangles": 140884
+   },
+   "programs": 20,
+   "geometries": 148,
+   "textures": 2,
+   "passes": {
+    "shadow": {
+     "calls": 38,
+     "triangles": 118244
+    },
+    "reflection": {
+     "calls": 0,
+     "triangles": 0
+    },
+    "main": {
+     "calls": 65,
+     "triangles": 140884
+    },
+    "post": {
+     "calls": 0,
+     "triangles": 0
+    },
+    "total": {
+     "calls": 103,
+     "triangles": 259128
+    }
+   },
+   "point": "r2-storm"
+  },
+  {
+   "region": 3,
+   "old": {
+    "calls": 54,
+    "triangles": 139132
+   },
+   "programs": 20,
+   "geometries": 151,
+   "textures": 2,
+   "passes": {
+    "shadow": {
+     "calls": 33,
+     "triangles": 117340
+    },
+    "reflection": {
+     "calls": 0,
+     "triangles": 0
+    },
+    "main": {
+     "calls": 54,
+     "triangles": 139132
+    },
+    "post": {
+     "calls": 0,
+     "triangles": 0
+    },
+    "total": {
+     "calls": 87,
+     "triangles": 256472
+    }
+   },
+   "point": "r3-canyon"
+  },
+  {
+   "region": 4,
+   "old": {
+    "calls": 50,
+    "triangles": 140592
+   },
+   "programs": 20,
+   "geometries": 153,
+   "textures": 2,
+   "passes": {
+    "shadow": {
+     "calls": 36,
+     "triangles": 118720
+    },
+    "reflection": {
+     "calls": 0,
+     "triangles": 0
+    },
+    "main": {
+     "calls": 50,
+     "triangles": 140592
+    },
+    "post": {
+     "calls": 0,
+     "triangles": 0
+    },
+    "total": {
+     "calls": 86,
+     "triangles": 259312
+    }
+   },
+   "point": "r4-islands"
+  },
+  {
+   "region": 5,
+   "old": {
+    "calls": 61,
+    "triangles": 158778
+   },
+   "programs": 20,
+   "geometries": 163,
+   "textures": 2,
+   "passes": {
+    "shadow": {
+     "calls": 37,
+     "triangles": 112682
+    },
+    "reflection": {
+     "calls": 0,
+     "triangles": 0
+    },
+    "main": {
+     "calls": 61,
+     "triangles": 158778
+    },
+    "post": {
+     "calls": 0,
+     "triangles": 0
+    },
+    "total": {
+     "calls": 98,
+     "triangles": 271460
+    }
+   },
+   "point": "r5-strait"
+  },
+  {
+   "region": 6,
+   "old": {
+    "calls": 66,
+    "triangles": 139610
+   },
+   "programs": 20,
+   "geometries": 163,
+   "textures": 2,
+   "passes": {
+    "shadow": {
+     "calls": 56,
+     "triangles": 132002
+    },
+    "reflection": {
+     "calls": 0,
+     "triangles": 0
+    },
+    "main": {
+     "calls": 66,
+     "triangles": 139610
+    },
+    "post": {
+     "calls": 0,
+     "triangles": 0
+    },
+    "total": {
+     "calls": 122,
+     "triangles": 271612
+    }
+   },
+   "point": "r6-coral"
+  },
+  {
+   "region": 7,
+   "old": {
+    "calls": 89,
+    "triangles": 163722
+   },
+   "programs": 20,
+   "geometries": 172,
+   "textures": 2,
+   "passes": {
+    "shadow": {
+     "calls": 45,
+     "triangles": 130422
+    },
+    "reflection": {
+     "calls": 0,
+     "triangles": 0
+    },
+    "main": {
+     "calls": 89,
+     "triangles": 163722
+    },
+    "post": {
+     "calls": 0,
+     "triangles": 0
+    },
+    "total": {
+     "calls": 134,
+     "triangles": 294144
+    }
+   },
+   "point": "r7-fifths"
+  },
+  {
+   "region": 8,
+   "old": {
+    "calls": 83,
+    "triangles": 149138
+   },
+   "programs": 20,
+   "geometries": 172,
+   "textures": 2,
+   "passes": {
+    "shadow": {
+     "calls": 50,
+     "triangles": 118202
+    },
+    "reflection": {
+     "calls": 0,
+     "triangles": 0
+    },
+    "main": {
+     "calls": 83,
+     "triangles": 149138
+    },
+    "post": {
+     "calls": 0,
+     "triangles": 0
+    },
+    "total": {
+     "calls": 133,
+     "triangles": 267340
+    }
+   },
+   "point": "r8-maelstrom"
+  }
+ ]
+}

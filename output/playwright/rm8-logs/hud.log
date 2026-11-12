@@ -1,0 +1,23 @@
+비터치 320x568   s1    ✗ 겹침: collect-counter×action-cluster 28px
+비터치 320x568   s1.15 ✗ 겹침: collect-counter×action-cluster 28px
+비터치 320x568   s1.3  ✗ 겹침: collect-counter×action-cluster 30px
+비터치 568x320   s1    ✗ 안전영역: action-cluster
+비터치 568x320   s1.15 ✗ 안전영역: objective-chip+action-cluster
+비터치 568x320   s1.3  ✗ 안전영역: objective-chip+action-cluster
+터치 568x320   s1    ✗ 안전영역: action-cluster
+터치 568x320   s1.15 ✗ 안전영역: action-cluster
+터치 568x320   s1.3  ✗ 안전영역: objective-chip+action-cluster
+터치 640x360   s1    ✗ 안전영역: action-cluster
+터치 640x360   s1.15 ✗ 안전영역: action-cluster
+터치 640x360   s1.3  ✗ 안전영역: action-cluster
+터치 667x375   s1    ✗ 안전영역: action-cluster
+터치 667x375   s1.15 ✗ 안전영역: action-cluster
+터치 667x375   s1.3  ✗ 안전영역: action-cluster
+터치 700x500   s1    ✗ 안전영역: action-cluster
+터치 700x500   s1.15 ✗ 안전영역: action-cluster
+터치 700x500   s1.3  ✗ 안전영역: action-cluster
+터치 740x360   s1    ✗ 안전영역: action-cluster
+터치 740x360   s1.15 ✗ 안전영역: action-cluster
+터치 740x360   s1.3  ✗ 안전영역: action-cluster
+종류별 위반 칸 {"안전영역":18,"겹침":3,"화면 밖":0,"HUD가 켜지지 않음(측정 무효)":0}
+HUD SURVEY FAIL: 위반 21칸 / 204

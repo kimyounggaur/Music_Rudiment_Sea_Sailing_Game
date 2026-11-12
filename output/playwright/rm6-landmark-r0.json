@@ -1,0 +1,2001 @@
+{
+ "region": 0,
+ "gate": true,
+ "checks": [
+  {
+   "name": "normal: 근경·원경 모두 로드됨",
+   "ok": true,
+   "detail": {
+    "far": "ready",
+    "near": "ready",
+    "waitedMs": 604
+   }
+  },
+  {
+   "name": "normal: 원시 도형이 전부 숨음",
+   "ok": true,
+   "detail": {
+    "primitives": 1,
+    "hidden": 1
+   }
+  },
+  {
+   "name": "normal: 충돌체가 발자국 수만큼 더해짐",
+   "ok": true,
+   "detail": [
+    {
+     "region": 0,
+     "x": 25,
+     "z": -342,
+     "r": 4.5,
+     "landmark": "r0-staff-gate"
+    },
+    {
+     "region": 0,
+     "x": -25,
+     "z": -342,
+     "r": 4.5,
+     "landmark": "r0-staff-gate"
+    }
+   ]
+  },
+  {
+   "name": "normal: 로드된 근경 삼각형 = 데이터 표",
+   "ok": true,
+   "detail": {
+    "loaded": 6690,
+    "table": 6690,
+    "meshes": 6,
+    "materials": 6
+   }
+  },
+  {
+   "name": "normal: 로드된 원경 삼각형 = 데이터 표",
+   "ok": true,
+   "detail": {
+    "loaded": 944,
+    "table": 944,
+    "meshes": 3,
+    "materials": 3
+   }
+  },
+  {
+   "name": "예산: 근경 ≤ 30,000 · 원경 ≤ 6,000 · 원경 ≤ 근경의 20%",
+   "ok": true,
+   "detail": {
+    "near": 6690,
+    "far": 944,
+    "ratio": 0.141
+   }
+  },
+  {
+   "name": "실루엣: 지점마다 근경 실루엣이 화면에 보임(≥ 0.3% 면적)",
+   "ok": true,
+   "detail": [
+    {
+     "id": "start",
+     "nearCoverage": 0.0135,
+     "farCoverage": 0.0124,
+     "iou": 0.92
+    },
+    {
+     "id": "fixed",
+     "nearCoverage": 0.0191,
+     "farCoverage": 0.0174,
+     "iou": 0.912
+    },
+    {
+     "id": "close",
+     "nearCoverage": 0.0568,
+     "farCoverage": 0.0525,
+     "iou": 0.924
+    },
+    {
+     "id": "farN",
+     "nearCoverage": 0.0156,
+     "farCoverage": 0.0145,
+     "iou": 0.932
+    },
+    {
+     "id": "farS",
+     "nearCoverage": 0.0023,
+     "farCoverage": 0.0021,
+     "iou": 0.922
+    }
+   ]
+  },
+  {
+   "name": "원경 대역이 근경 실루엣을 그대로 닮음(IoU ≥ 0.75, 근경 지점)",
+   "ok": true,
+   "detail": [
+    {
+     "id": "start",
+     "iou": 0.92
+    },
+    {
+     "id": "fixed",
+     "iou": 0.912
+    },
+    {
+     "id": "close",
+     "iou": 0.924
+    },
+    {
+     "id": "farN",
+     "iou": 0.932
+    },
+    {
+     "id": "farS",
+     "iou": 0.922
+    }
+   ]
+  },
+  {
+   "name": "해역 0: 시작 위치에서 배가 겹치는 고체 메시 없음",
+   "ok": true,
+   "detail": {
+    "normal": [],
+    "anyIncludingTransparent": [],
+    "rect": {
+     "x0": -2.88,
+     "x1": 3.77,
+     "z0": -437.18,
+     "z1": -420.65,
+     "y1": 13.21
+    }
+   }
+  },
+  {
+   "name": "해역 0: 기준선(원시 도형 복구)에서는 스캔이 부두를 잡음(스캔 유효성)",
+   "ok": true,
+   "detail": [
+    {
+     "mesh": "Mesh<region-0#r0-pier",
+     "tris": 8
+    }
+   ]
+  },
+  {
+   "name": "수집: 부표·병 모두 충돌체 밖(여유 ≥ 4 m)",
+   "ok": true,
+   "detail": {
+    "count": 14,
+    "minClearance": 10.74,
+    "nearest": [
+     {
+      "kind": "term",
+      "id": "r0_middle_c",
+      "x": 7.893,
+      "z": -350.809,
+      "clearance": 10.74,
+      "who": "r0-staff-gate"
+     },
+     {
+      "kind": "term",
+      "id": "r0_staff",
+      "x": 25.805,
+      "z": -424.35,
+      "clearance": 10.77,
+      "who": "static"
+     },
+     {
+      "kind": "term",
+      "id": "r0_ledger_line",
+      "x": 31.71,
+      "z": -433.671,
+      "clearance": 13.88,
+      "who": "static"
+     }
+    ]
+   }
+  },
+  {
+   "name": "수집: 용어·병 전부 수집되고 월드 규칙에 밀려나지 않음(< 0.5 m)",
+   "ok": true,
+   "detail": {
+    "rows": 14,
+    "missed": [],
+    "maxMoved": 0
+   }
+  },
+  {
+   "name": "예산 참고: 근경 지점 합계 호출·삼각형",
+   "ok": true,
+   "detail": {
+    "calls": 146,
+    "tris": 124165,
+    "shadow": {
+     "calls": 17,
+     "triangles": 6484
+    },
+    "reflection": {
+     "calls": 40,
+     "triangles": 20530
+    },
+    "main": {
+     "calls": 83,
+     "triangles": 97139
+    }
+   }
+  },
+  {
+   "name": "both: 둘 다 실패해도 원시 도형이 그대로 보이고 충돌체가 없음(모든 단계)",
+   "ok": true,
+   "detail": {
+    "shots": [
+     {
+      "shot": "start",
+      "far": "failed",
+      "near": "failed",
+      "hidden": 0,
+      "primitives": 1,
+      "colliders": 0
+     },
+     {
+      "shot": "fixed",
+      "far": "failed",
+      "near": "failed",
+      "hidden": 0,
+      "primitives": 1,
+      "colliders": 0
+     },
+     {
+      "shot": "close",
+      "far": "failed",
+      "near": "failed",
+      "hidden": 0,
+      "primitives": 1,
+      "colliders": 0
+     },
+     {
+      "shot": "farN",
+      "far": "failed",
+      "near": "failed",
+      "hidden": 0,
+      "primitives": 1,
+      "colliders": 0
+     },
+     {
+      "shot": "farS",
+      "far": "failed",
+      "near": "failed",
+      "hidden": 0,
+      "primitives": 1,
+      "colliders": 0
+     }
+    ],
+    "failures": 2
+   }
+  },
+  {
+   "name": "near 실패: 원경 대역이 본 패스에 서서 원시 도형을 대신하고 충돌체는 없음(모든 단계)",
+   "ok": true,
+   "detail": [
+    {
+     "shot": "start",
+     "far": "ready",
+     "near": "failed",
+     "hidden": 1,
+     "primitives": 1,
+     "colliders": 0
+    },
+    {
+     "shot": "fixed",
+     "far": "ready",
+     "near": "failed",
+     "hidden": 1,
+     "primitives": 1,
+     "colliders": 0
+    },
+    {
+     "shot": "close",
+     "far": "ready",
+     "near": "failed",
+     "hidden": 1,
+     "primitives": 1,
+     "colliders": 0
+    },
+    {
+     "shot": "farN",
+     "far": "ready",
+     "near": "failed",
+     "hidden": 1,
+     "primitives": 1,
+     "colliders": 0
+    },
+    {
+     "shot": "farS",
+     "far": "ready",
+     "near": "failed",
+     "hidden": 1,
+     "primitives": 1,
+     "colliders": 0
+    }
+   ]
+  },
+  {
+   "name": "far 실패(근경 단계): 근경이 서서 원시 도형을 대신하고 충돌체가 더해짐",
+   "ok": true,
+   "detail": [
+    {
+     "shot": "start",
+     "far": "failed",
+     "near": "ready",
+     "hidden": 1,
+     "primitives": 1,
+     "colliders": 2
+    },
+    {
+     "shot": "fixed",
+     "far": "failed",
+     "near": "ready",
+     "hidden": 1,
+     "primitives": 1,
+     "colliders": 2
+    },
+    {
+     "shot": "close",
+     "far": "failed",
+     "near": "ready",
+     "hidden": 1,
+     "primitives": 1,
+     "colliders": 2
+    }
+   ]
+  },
+  {
+   "name": "far 실패(원경 단계): 보여줄 모델이 없으면 원시 도형이 돌아옴",
+   "ok": true,
+   "detail": [
+    {
+     "shot": "farN",
+     "far": "failed",
+     "near": "ready",
+     "hidden": 0,
+     "primitives": 1,
+     "colliders": 2
+    },
+    {
+     "shot": "farS",
+     "far": "failed",
+     "near": "ready",
+     "hidden": 0,
+     "primitives": 1,
+     "colliders": 2
+    }
+   ]
+  },
+  {
+   "name": "콘솔 오류 없음(정상 시나리오는 하나도 없어야 하고, 실패 시나리오는 끊은 요청 로그만 허용)",
+   "ok": true,
+   "detail": [
+    {
+     "scenario": "normal",
+     "errors": []
+    },
+    {
+     "scenario": "both",
+     "errors": [
+      "error: Failed to load resource: net::ERR_FAILED",
+      "error: Failed to load resource: net::ERR_FAILED"
+     ]
+    },
+    {
+     "scenario": "near",
+     "errors": [
+      "error: Failed to load resource: net::ERR_FAILED"
+     ]
+    },
+    {
+     "scenario": "far",
+     "errors": [
+      "error: Failed to load resource: net::ERR_FAILED"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "외부 요청 없음(three CDN 대신 로컬 응답만)",
+   "ok": true,
+   "detail": [
+    [],
+    [],
+    [],
+    []
+   ]
+  }
+ ],
+ "results": [
+  {
+   "scenario": "normal",
+   "shots": {
+    "start": {
+     "shot": "start",
+     "stage": "near",
+     "far": "ready",
+     "near": "ready",
+     "waitedMs": 604,
+     "snapshot": {
+      "id": "r0-staff-gate",
+      "region": 0,
+      "stage": "near",
+      "far": "ready",
+      "near": "ready",
+      "colliders": 2,
+      "primitivesHidden": 1,
+      "primitives": 1,
+      "error": null
+     },
+     "litFile": "/home/claude/remaster/game/output/playwright/rm6_r0_normal_start_lit.png",
+     "sil": {
+      "near": {
+       "coverage": 0.013475477430555556,
+       "bbox": [
+        502,
+        162,
+        849,
+        339
+       ]
+      },
+      "far": {
+       "coverage": 0.012398003472222223,
+       "bbox": [
+        503,
+        162,
+        848,
+        339
+       ]
+      },
+      "iou": 0.9200418713261937
+     },
+     "nearFile": "/home/claude/remaster/game/output/playwright/rm6_r0_start_sil_near.png",
+     "farFile": "/home/claude/remaster/game/output/playwright/rm6_r0_start_sil_far.png",
+     "diffFile": "/home/claude/remaster/game/output/playwright/rm6_r0_start_sil_diff.png"
+    },
+    "fixed": {
+     "shot": "fixed",
+     "stage": "near",
+     "far": "ready",
+     "near": "ready",
+     "waitedMs": 584,
+     "snapshot": {
+      "id": "r0-staff-gate",
+      "region": 0,
+      "stage": "near",
+      "far": "ready",
+      "near": "ready",
+      "colliders": 2,
+      "primitivesHidden": 1,
+      "primitives": 1,
+      "error": null
+     },
+     "litFile": "/home/claude/remaster/game/output/playwright/rm6_r0_normal_fixed_lit.png",
+     "sil": {
+      "near": {
+       "coverage": 0.01910915798611111,
+       "bbox": [
+        833,
+        115,
+        1279,
+        358
+       ]
+      },
+      "far": {
+       "coverage": 0.017438151041666666,
+       "bbox": [
+        836,
+        116,
+        1279,
+        358
+       ]
+      },
+      "iou": 0.9123374779992052
+     },
+     "nearFile": "/home/claude/remaster/game/output/playwright/rm6_r0_fixed_sil_near.png",
+     "farFile": "/home/claude/remaster/game/output/playwright/rm6_r0_fixed_sil_far.png",
+     "diffFile": "/home/claude/remaster/game/output/playwright/rm6_r0_fixed_sil_diff.png"
+    },
+    "close": {
+     "shot": "close",
+     "stage": "near",
+     "far": "ready",
+     "near": "ready",
+     "waitedMs": 611,
+     "snapshot": {
+      "id": "r0-staff-gate",
+      "region": 0,
+      "stage": "near",
+      "far": "ready",
+      "near": "ready",
+      "colliders": 2,
+      "primitivesHidden": 1,
+      "primitives": 1,
+      "error": null
+     },
+     "litFile": "/home/claude/remaster/game/output/playwright/rm6_r0_normal_close_lit.png",
+     "sil": {
+      "near": {
+       "coverage": 0.05677842881944444,
+       "bbox": [
+        363,
+        16,
+        1050,
+        395
+       ]
+      },
+      "far": {
+       "coverage": 0.05249240451388889,
+       "bbox": [
+        369,
+        17,
+        1046,
+        394
+       ]
+      },
+      "iou": 0.9237411171391458
+     },
+     "nearFile": "/home/claude/remaster/game/output/playwright/rm6_r0_close_sil_near.png",
+     "farFile": "/home/claude/remaster/game/output/playwright/rm6_r0_close_sil_far.png",
+     "diffFile": "/home/claude/remaster/game/output/playwright/rm6_r0_close_sil_diff.png"
+    },
+    "farN": {
+     "shot": "farN",
+     "stage": "far",
+     "far": "ready",
+     "near": "ready",
+     "waitedMs": 589,
+     "snapshot": {
+      "id": "r0-staff-gate",
+      "region": 0,
+      "stage": "far",
+      "far": "ready",
+      "near": "ready",
+      "colliders": 2,
+      "primitivesHidden": 1,
+      "primitives": 1,
+      "error": null
+     },
+     "litFile": "/home/claude/remaster/game/output/playwright/rm6_r0_normal_farN_lit.png",
+     "sil": {
+      "near": {
+       "coverage": 0.015568576388888889,
+       "bbox": [
+        539,
+        157,
+        919,
+        346
+       ]
+      },
+      "far": {
+       "coverage": 0.014513888888888889,
+       "bbox": [
+        540,
+        157,
+        918,
+        346
+       ]
+      },
+      "iou": 0.932120705275629
+     },
+     "nearFile": "/home/claude/remaster/game/output/playwright/rm6_r0_farN_sil_near.png",
+     "farFile": "/home/claude/remaster/game/output/playwright/rm6_r0_farN_sil_far.png",
+     "diffFile": "/home/claude/remaster/game/output/playwright/rm6_r0_farN_sil_diff.png"
+    },
+    "farS": {
+     "shot": "farS",
+     "stage": "far",
+     "far": "ready",
+     "near": "ready",
+     "waitedMs": 508,
+     "snapshot": {
+      "id": "r0-staff-gate",
+      "region": 0,
+      "stage": "far",
+      "far": "ready",
+      "near": "ready",
+      "colliders": 2,
+      "primitivesHidden": 1,
+      "primitives": 1,
+      "error": null
+     },
+     "litFile": "/home/claude/remaster/game/output/playwright/rm6_r0_normal_farS_lit.png",
+     "sil": {
+      "near": {
+       "coverage": 0.002263454861111111,
+       "bbox": [
+        670,
+        241,
+        814,
+        313
+       ]
+      },
+      "far": {
+       "coverage": 0.0020865885416666667,
+       "bbox": [
+        670,
+        241,
+        814,
+        313
+       ]
+      },
+      "iou": 0.9218600191754555
+     },
+     "nearFile": "/home/claude/remaster/game/output/playwright/rm6_r0_farS_sil_near.png",
+     "farFile": "/home/claude/remaster/game/output/playwright/rm6_r0_farS_sil_far.png",
+     "diffFile": "/home/claude/remaster/game/output/playwright/rm6_r0_farS_sil_diff.png"
+    }
+   },
+   "checks": {},
+   "spec": {
+    "id": "r0-staff-gate",
+    "name": "오선 관문",
+    "near": {
+     "path": "assets/remaster/models/landmark-r0-staff-gate.glb",
+     "tris": 6690,
+     "bytes": 201868,
+     "sha256": "d46ebd8b98ad1825879465efc599fa34db1ce699fb3e55fcb6369e4804786974"
+    },
+    "far": {
+     "path": "assets/remaster/models/landmark-r0-staff-gate-far.glb",
+     "tris": 944,
+     "bytes": 34860,
+     "sha256": "52782a78d4d7e8ee763a45b1f3647a2329c93ac428a3287a5ad0b6e5ae8249d1"
+    },
+    "footprints": [
+     {
+      "x": 25,
+      "z": 88,
+      "r": 4.5
+     },
+     {
+      "x": -25,
+      "z": 88,
+      "r": 4.5
+     }
+    ],
+    "hide": [
+     "r0-pier"
+    ],
+    "hideProps": []
+   },
+   "remasterReadyMs": 531,
+   "final": {
+    "enabled": true,
+    "requests": 7,
+    "failures": 0,
+    "music": {
+     "updates": 144,
+     "applied": 140,
+     "locks": 34,
+     "phase": 0.82,
+     "period": 0.545,
+     "events": {
+      "beatAt": null,
+      "flashAt": null,
+      "degree": null,
+      "degreeAt": null,
+      "pearls": 0,
+      "pearlAt": null,
+      "bar": 31,
+      "barAt": 7.649999999999981
+     },
+     "bound": [
+      {
+       "id": "r0-staff-gate",
+       "near": [
+        "Glow_clef",
+        "Lantern_notes"
+       ],
+       "far": 2
+      },
+      {
+       "id": "r7-key-ring",
+       "near": [],
+       "far": 3
+      },
+      {
+       "id": "r1-tempo-tower",
+       "near": [
+        "Beat_pendulum",
+        "Lantern_tempo"
+       ],
+       "far": 1
+      },
+      {
+       "id": "r2-storm-drum",
+       "near": [],
+       "far": 1
+      },
+      {
+       "id": "r8-repeat-gate",
+       "near": [],
+       "far": 2
+      }
+     ]
+    },
+    "entries": [
+     {
+      "id": "r0-staff-gate",
+      "region": 0,
+      "stage": "far",
+      "far": "ready",
+      "near": "ready",
+      "colliders": 2,
+      "primitivesHidden": 1,
+      "primitives": 1,
+      "error": null
+     },
+     {
+      "id": "r7-key-ring",
+      "region": 7,
+      "stage": "none",
+      "far": "ready",
+      "near": "idle",
+      "colliders": 0,
+      "primitivesHidden": 0,
+      "primitives": 1,
+      "error": null
+     },
+     {
+      "id": "r3-dynamics-canyon",
+      "region": 3,
+      "stage": "none",
+      "far": "idle",
+      "near": "idle",
+      "colliders": 0,
+      "primitivesHidden": 0,
+      "primitives": 1,
+      "error": null
+     },
+     {
+      "id": "r1-tempo-tower",
+      "region": 1,
+      "stage": "far",
+      "far": "ready",
+      "near": "ready",
+      "colliders": 0,
+      "primitivesHidden": 1,
+      "primitives": 1,
+      "error": null
+     },
+     {
+      "id": "r5-scale-lights",
+      "region": 5,
+      "stage": "none",
+      "far": "idle",
+      "near": "idle",
+      "colliders": 0,
+      "primitivesHidden": 0,
+      "primitives": 1,
+      "error": null
+     },
+     {
+      "id": "r6-chord-spires",
+      "region": 6,
+      "stage": "none",
+      "far": "idle",
+      "near": "idle",
+      "colliders": 0,
+      "primitivesHidden": 0,
+      "primitives": 1,
+      "error": null
+     },
+     {
+      "id": "r2-storm-drum",
+      "region": 2,
+      "stage": "none",
+      "far": "ready",
+      "near": "idle",
+      "colliders": 0,
+      "primitivesHidden": 0,
+      "primitives": 2,
+      "error": null
+     },
+     {
+      "id": "r4-fermata-bridge",
+      "region": 4,
+      "stage": "none",
+      "far": "idle",
+      "near": "idle",
+      "colliders": 0,
+      "primitivesHidden": 0,
+      "primitives": 1,
+      "error": null
+     },
+     {
+      "id": "r8-repeat-gate",
+      "region": 8,
+      "stage": "none",
+      "far": "ready",
+      "near": "idle",
+      "colliders": 0,
+      "primitivesHidden": 0,
+      "primitives": 1,
+      "error": null
+     }
+    ]
+   },
+   "rootStats": {
+    "near": {
+     "tris": 6690,
+     "meshes": 6,
+     "materials": 6,
+     "visible": true,
+     "name": "landmark-r0-staff-gate-near"
+    },
+    "far": {
+     "tris": 944,
+     "meshes": 3,
+     "materials": 3,
+     "visible": true,
+     "name": "landmark-r0-staff-gate-far"
+    }
+   },
+   "colliders": [
+    {
+     "region": 0,
+     "x": 25,
+     "z": -342,
+     "r": 4.5,
+     "landmark": "r0-staff-gate"
+    },
+    {
+     "region": 0,
+     "x": -25,
+     "z": -342,
+     "r": 4.5,
+     "landmark": "r0-staff-gate"
+    }
+   ],
+   "overlapNormal": {
+    "rect": {
+     "x0": -2.88,
+     "x1": 3.77,
+     "z0": -437.18,
+     "z1": -420.65,
+     "y1": 13.21
+    },
+    "meshes": 51,
+    "tests": 0,
+    "any": [],
+    "solid": []
+   },
+   "overlapBaseline": {
+    "rect": {
+     "x0": -2.88,
+     "x1": 3.77,
+     "z0": -437.18,
+     "z1": -420.65,
+     "y1": 13.22
+    },
+    "meshes": 52,
+    "tests": 12,
+    "any": [
+     {
+      "mesh": "Mesh<region-0#r0-pier",
+      "tris": 8
+     }
+    ],
+    "solid": [
+     {
+      "mesh": "Mesh<region-0#r0-pier",
+      "tris": 8
+     }
+    ]
+   },
+   "collectables": [
+    {
+     "kind": "term",
+     "id": "r0_staff",
+     "x": 25.805,
+     "z": -424.35,
+     "clearance": 10.77,
+     "who": "static"
+    },
+    {
+     "kind": "term",
+     "id": "r0_ledger_line",
+     "x": 31.71,
+     "z": -433.671,
+     "clearance": 13.88,
+     "who": "static"
+    },
+    {
+     "kind": "term",
+     "id": "r0_g_clef",
+     "x": 13.273,
+     "z": -463.553,
+     "clearance": 47.13,
+     "who": "static"
+    },
+    {
+     "kind": "term",
+     "id": "r0_f_clef",
+     "x": -4.893,
+     "z": -375.149,
+     "clearance": 28.94,
+     "who": "static"
+    },
+    {
+     "kind": "term",
+     "id": "r0_c_clef",
+     "x": 53.171,
+     "z": -452.314,
+     "clearance": 28.74,
+     "who": "static"
+    },
+    {
+     "kind": "term",
+     "id": "r0_measure",
+     "x": 43.103,
+     "z": -456.472,
+     "clearance": 32.63,
+     "who": "static"
+    },
+    {
+     "kind": "term",
+     "id": "r0_bar_line",
+     "x": -22.685,
+     "z": -379.439,
+     "clearance": 29.01,
+     "who": "r0-staff-gate"
+    },
+    {
+     "kind": "term",
+     "id": "r0_double_bar",
+     "x": -10.392,
+     "z": -489.347,
+     "clearance": 46.36,
+     "who": "static"
+    },
+    {
+     "kind": "term",
+     "id": "r0_final_bar",
+     "x": -58.874,
+     "z": -374.744,
+     "clearance": 38.61,
+     "who": "r0-staff-gate"
+    },
+    {
+     "kind": "term",
+     "id": "r0_pitch_name",
+     "x": -18.281,
+     "z": -401.829,
+     "clearance": 23.12,
+     "who": "static"
+    },
+    {
+     "kind": "term",
+     "id": "r0_solfege",
+     "x": 46.771,
+     "z": -488.31,
+     "clearance": 64.31,
+     "who": "static"
+    },
+    {
+     "kind": "term",
+     "id": "r0_middle_c",
+     "x": 7.893,
+     "z": -350.809,
+     "clearance": 10.74,
+     "who": "r0-staff-gate"
+    },
+    {
+     "kind": "bottle",
+     "id": "bottle_r0_1",
+     "x": 30.165,
+     "z": -486.445,
+     "clearance": 64.23,
+     "who": "static"
+    },
+    {
+     "kind": "bottle",
+     "id": "bottle_r0_2",
+     "x": 30.165,
+     "z": -373.555,
+     "clearance": 22.34,
+     "who": "static"
+    }
+   ],
+   "journey": {
+    "rows": [
+     {
+      "id": "r0_staff",
+      "kind": "term",
+      "moved": 0,
+      "had": false,
+      "has": true
+     },
+     {
+      "id": "r0_ledger_line",
+      "kind": "term",
+      "moved": 0,
+      "had": false,
+      "has": true
+     },
+     {
+      "id": "r0_g_clef",
+      "kind": "term",
+      "moved": 0,
+      "had": false,
+      "has": true
+     },
+     {
+      "id": "r0_f_clef",
+      "kind": "term",
+      "moved": 0,
+      "had": true,
+      "has": true
+     },
+     {
+      "id": "r0_c_clef",
+      "kind": "term",
+      "moved": 0,
+      "had": false,
+      "has": true
+     },
+     {
+      "id": "r0_measure",
+      "kind": "term",
+      "moved": 0,
+      "had": false,
+      "has": true
+     },
+     {
+      "id": "r0_bar_line",
+      "kind": "term",
+      "moved": 0,
+      "had": false,
+      "has": true
+     },
+     {
+      "id": "r0_double_bar",
+      "kind": "term",
+      "moved": 0,
+      "had": false,
+      "has": true
+     },
+     {
+      "id": "r0_final_bar",
+      "kind": "term",
+      "moved": 0,
+      "had": false,
+      "has": true
+     },
+     {
+      "id": "r0_pitch_name",
+      "kind": "term",
+      "moved": 0,
+      "had": false,
+      "has": true
+     },
+     {
+      "id": "r0_solfege",
+      "kind": "term",
+      "moved": 0,
+      "had": false,
+      "has": true
+     },
+     {
+      "id": "r0_middle_c",
+      "kind": "term",
+      "moved": 0,
+      "had": false,
+      "has": true
+     },
+     {
+      "id": "bottle_r0_1",
+      "kind": "bottle",
+      "moved": 0,
+      "had": false,
+      "has": true
+     },
+     {
+      "id": "bottle_r0_2",
+      "kind": "bottle",
+      "moved": 0,
+      "had": false,
+      "has": true
+     }
+    ],
+    "missed": []
+   },
+   "passes": {
+    "shadow": {
+     "calls": 17,
+     "triangles": 6484
+    },
+    "reflection": {
+     "calls": 40,
+     "triangles": 20530
+    },
+    "main": {
+     "calls": 83,
+     "triangles": 97139
+    },
+    "post": {
+     "calls": 6,
+     "triangles": 12
+    },
+    "total": {
+     "calls": 146,
+     "triangles": 124165
+    }
+   },
+   "errors": [],
+   "externalRequests": []
+  },
+  {
+   "scenario": "both",
+   "shots": {
+    "start": {
+     "shot": "start",
+     "stage": "near",
+     "far": "failed",
+     "near": "failed",
+     "waitedMs": 664,
+     "snapshot": {
+      "id": "r0-staff-gate",
+      "region": 0,
+      "stage": "near",
+      "far": "failed",
+      "near": "failed",
+      "colliders": 0,
+      "primitivesHidden": 0,
+      "primitives": 1,
+      "error": "[object ProgressEvent]"
+     },
+     "litFile": "/home/claude/remaster/game/output/playwright/rm6_r0_both_start_lit.png"
+    },
+    "fixed": {
+     "shot": "fixed",
+     "stage": "near",
+     "far": "failed",
+     "near": "failed",
+     "waitedMs": 613,
+     "snapshot": {
+      "id": "r0-staff-gate",
+      "region": 0,
+      "stage": "near",
+      "far": "failed",
+      "near": "failed",
+      "colliders": 0,
+      "primitivesHidden": 0,
+      "primitives": 1,
+      "error": "[object ProgressEvent]"
+     },
+     "litFile": "/home/claude/remaster/game/output/playwright/rm6_r0_both_fixed_lit.png"
+    },
+    "close": {
+     "shot": "close",
+     "stage": "near",
+     "far": "failed",
+     "near": "failed",
+     "waitedMs": 615,
+     "snapshot": {
+      "id": "r0-staff-gate",
+      "region": 0,
+      "stage": "near",
+      "far": "failed",
+      "near": "failed",
+      "colliders": 0,
+      "primitivesHidden": 0,
+      "primitives": 1,
+      "error": "[object ProgressEvent]"
+     },
+     "litFile": "/home/claude/remaster/game/output/playwright/rm6_r0_both_close_lit.png"
+    },
+    "farN": {
+     "shot": "farN",
+     "stage": "far",
+     "far": "failed",
+     "near": "failed",
+     "waitedMs": 549,
+     "snapshot": {
+      "id": "r0-staff-gate",
+      "region": 0,
+      "stage": "far",
+      "far": "failed",
+      "near": "failed",
+      "colliders": 0,
+      "primitivesHidden": 0,
+      "primitives": 1,
+      "error": "[object ProgressEvent]"
+     },
+     "litFile": "/home/claude/remaster/game/output/playwright/rm6_r0_both_farN_lit.png"
+    },
+    "farS": {
+     "shot": "farS",
+     "stage": "far",
+     "far": "failed",
+     "near": "failed",
+     "waitedMs": 652,
+     "snapshot": {
+      "id": "r0-staff-gate",
+      "region": 0,
+      "stage": "far",
+      "far": "failed",
+      "near": "failed",
+      "colliders": 0,
+      "primitivesHidden": 0,
+      "primitives": 1,
+      "error": "[object ProgressEvent]"
+     },
+     "litFile": "/home/claude/remaster/game/output/playwright/rm6_r0_both_farS_lit.png"
+    }
+   },
+   "checks": {},
+   "spec": {
+    "id": "r0-staff-gate",
+    "name": "오선 관문",
+    "near": {
+     "path": "assets/remaster/models/landmark-r0-staff-gate.glb",
+     "tris": 6690,
+     "bytes": 201868,
+     "sha256": "d46ebd8b98ad1825879465efc599fa34db1ce699fb3e55fcb6369e4804786974"
+    },
+    "far": {
+     "path": "assets/remaster/models/landmark-r0-staff-gate-far.glb",
+     "tris": 944,
+     "bytes": 34860,
+     "sha256": "52782a78d4d7e8ee763a45b1f3647a2329c93ac428a3287a5ad0b6e5ae8249d1"
+    },
+    "footprints": [
+     {
+      "x": 25,
+      "z": 88,
+      "r": 4.5
+     },
+     {
+      "x": -25,
+      "z": 88,
+      "r": 4.5
+     }
+    ],
+    "hide": [
+     "r0-pier"
+    ],
+    "hideProps": []
+   },
+   "remasterReadyMs": 553,
+   "final": {
+    "enabled": true,
+    "requests": 7,
+    "failures": 2,
+    "music": {
+     "updates": 139,
+     "applied": 56,
+     "locks": 34,
+     "phase": 0.473,
+     "period": 0.545,
+     "events": {
+      "beatAt": null,
+      "flashAt": null,
+      "degree": null,
+      "degreeAt": null,
+      "pearls": 0,
+      "pearlAt": null,
+      "bar": 29,
+      "barAt": 7.399999999999982
+     },
+     "bound": [
+      {
+       "id": "r7-key-ring",
+       "near": [],
+       "far": 3
+      },
+      {
+       "id": "r1-tempo-tower",
+       "near": [
+        "Beat_pendulum",
+        "Lantern_tempo"
+       ],
+       "far": 1
+      },
+      {
+       "id": "r2-storm-drum",
+       "near": [],
+       "far": 1
+      },
+      {
+       "id": "r8-repeat-gate",
+       "near": [],
+       "far": 2
+      }
+     ]
+    },
+    "entries": [
+     {
+      "id": "r0-staff-gate",
+      "region": 0,
+      "stage": "far",
+      "far": "failed",
+      "near": "failed",
+      "colliders": 0,
+      "primitivesHidden": 0,
+      "primitives": 1,
+      "error": "[object ProgressEvent]"
+     },
+     {
+      "id": "r7-key-ring",
+      "region": 7,
+      "stage": "none",
+      "far": "ready",
+      "near": "idle",
+      "colliders": 0,
+      "primitivesHidden": 0,
+      "primitives": 1,
+      "error": null
+     },
+     {
+      "id": "r3-dynamics-canyon",
+      "region": 3,
+      "stage": "none",
+      "far": "idle",
+      "near": "idle",
+      "colliders": 0,
+      "primitivesHidden": 0,
+      "primitives": 1,
+      "error": null
+     },
+     {
+      "id": "r1-tempo-tower",
+      "region": 1,
+      "stage": "far",
+      "far": "ready",
+      "near": "ready",
+      "colliders": 0,
+      "primitivesHidden": 1,
+      "primitives": 1,
+      "error": null
+     },
+     {
+      "id": "r5-scale-lights",
+      "region": 5,
+      "stage": "none",
+      "far": "idle",
+      "near": "idle",
+      "colliders": 0,
+      "primitivesHidden": 0,
+      "primitives": 1,
+      "error": null
+     },
+     {
+      "id": "r6-chord-spires",
+      "region": 6,
+      "stage": "none",
+      "far": "idle",
+      "near": "idle",
+      "colliders": 0,
+      "primitivesHidden": 0,
+      "primitives": 1,
+      "error": null
+     },
+     {
+      "id": "r2-storm-drum",
+      "region": 2,
+      "stage": "none",
+      "far": "ready",
+      "near": "idle",
+      "colliders": 0,
+      "primitivesHidden": 0,
+      "primitives": 2,
+      "error": null
+     },
+     {
+      "id": "r4-fermata-bridge",
+      "region": 4,
+      "stage": "none",
+      "far": "idle",
+      "near": "idle",
+      "colliders": 0,
+      "primitivesHidden": 0,
+      "primitives": 1,
+      "error": null
+     },
+     {
+      "id": "r8-repeat-gate",
+      "region": 8,
+      "stage": "none",
+      "far": "ready",
+      "near": "idle",
+      "colliders": 0,
+      "primitivesHidden": 0,
+      "primitives": 1,
+      "error": null
+     }
+    ]
+   },
+   "errors": [
+    "error: Failed to load resource: net::ERR_FAILED",
+    "error: Failed to load resource: net::ERR_FAILED"
+   ],
+   "externalRequests": []
+  },
+  {
+   "scenario": "near",
+   "shots": {
+    "start": {
+     "shot": "start",
+     "stage": "near",
+     "far": "ready",
+     "near": "failed",
+     "waitedMs": 570,
+     "snapshot": {
+      "id": "r0-staff-gate",
+      "region": 0,
+      "stage": "near",
+      "far": "ready",
+      "near": "failed",
+      "colliders": 0,
+      "primitivesHidden": 1,
+      "primitives": 1,
+      "error": "[object ProgressEvent]"
+     },
+     "litFile": "/home/claude/remaster/game/output/playwright/rm6_r0_near_start_lit.png"
+    },
+    "fixed": {
+     "shot": "fixed",
+     "stage": "near",
+     "far": "ready",
+     "near": "failed",
+     "waitedMs": 590,
+     "snapshot": {
+      "id": "r0-staff-gate",
+      "region": 0,
+      "stage": "near",
+      "far": "ready",
+      "near": "failed",
+      "colliders": 0,
+      "primitivesHidden": 1,
+      "primitives": 1,
+      "error": "[object ProgressEvent]"
+     },
+     "litFile": "/home/claude/remaster/game/output/playwright/rm6_r0_near_fixed_lit.png"
+    },
+    "close": {
+     "shot": "close",
+     "stage": "near",
+     "far": "ready",
+     "near": "failed",
+     "waitedMs": 651,
+     "snapshot": {
+      "id": "r0-staff-gate",
+      "region": 0,
+      "stage": "near",
+      "far": "ready",
+      "near": "failed",
+      "colliders": 0,
+      "primitivesHidden": 1,
+      "primitives": 1,
+      "error": "[object ProgressEvent]"
+     },
+     "litFile": "/home/claude/remaster/game/output/playwright/rm6_r0_near_close_lit.png"
+    },
+    "farN": {
+     "shot": "farN",
+     "stage": "far",
+     "far": "ready",
+     "near": "failed",
+     "waitedMs": 581,
+     "snapshot": {
+      "id": "r0-staff-gate",
+      "region": 0,
+      "stage": "far",
+      "far": "ready",
+      "near": "failed",
+      "colliders": 0,
+      "primitivesHidden": 1,
+      "primitives": 1,
+      "error": "[object ProgressEvent]"
+     },
+     "litFile": "/home/claude/remaster/game/output/playwright/rm6_r0_near_farN_lit.png"
+    },
+    "farS": {
+     "shot": "farS",
+     "stage": "far",
+     "far": "ready",
+     "near": "failed",
+     "waitedMs": 582,
+     "snapshot": {
+      "id": "r0-staff-gate",
+      "region": 0,
+      "stage": "far",
+      "far": "ready",
+      "near": "failed",
+      "colliders": 0,
+      "primitivesHidden": 1,
+      "primitives": 1,
+      "error": "[object ProgressEvent]"
+     },
+     "litFile": "/home/claude/remaster/game/output/playwright/rm6_r0_near_farS_lit.png"
+    }
+   },
+   "checks": {},
+   "spec": {
+    "id": "r0-staff-gate",
+    "name": "오선 관문",
+    "near": {
+     "path": "assets/remaster/models/landmark-r0-staff-gate.glb",
+     "tris": 6690,
+     "bytes": 201868,
+     "sha256": "d46ebd8b98ad1825879465efc599fa34db1ce699fb3e55fcb6369e4804786974"
+    },
+    "far": {
+     "path": "assets/remaster/models/landmark-r0-staff-gate-far.glb",
+     "tris": 944,
+     "bytes": 34860,
+     "sha256": "52782a78d4d7e8ee763a45b1f3647a2329c93ac428a3287a5ad0b6e5ae8249d1"
+    },
+    "footprints": [
+     {
+      "x": 25,
+      "z": 88,
+      "r": 4.5
+     },
+     {
+      "x": -25,
+      "z": 88,
+      "r": 4.5
+     }
+    ],
+    "hide": [
+     "r0-pier"
+    ],
+    "hideProps": []
+   },
+   "remasterReadyMs": 552,
+   "final": {
+    "enabled": true,
+    "requests": 7,
+    "failures": 1,
+    "music": {
+     "updates": 139,
+     "applied": 56,
+     "locks": 34,
+     "phase": 0.59,
+     "period": 0.545,
+     "events": {
+      "beatAt": null,
+      "flashAt": null,
+      "degree": null,
+      "degreeAt": null,
+      "pearls": 0,
+      "pearlAt": null,
+      "bar": 29,
+      "barAt": 7.249999999999982
+     },
+     "bound": [
+      {
+       "id": "r0-staff-gate",
+       "near": [],
+       "far": 2
+      },
+      {
+       "id": "r7-key-ring",
+       "near": [],
+       "far": 3
+      },
+      {
+       "id": "r1-tempo-tower",
+       "near": [
+        "Beat_pendulum",
+        "Lantern_tempo"
+       ],
+       "far": 1
+      },
+      {
+       "id": "r2-storm-drum",
+       "near": [],
+       "far": 1
+      },
+      {
+       "id": "r8-repeat-gate",
+       "near": [],
+       "far": 2
+      }
+     ]
+    },
+    "entries": [
+     {
+      "id": "r0-staff-gate",
+      "region": 0,
+      "stage": "far",
+      "far": "ready",
+      "near": "failed",
+      "colliders": 0,
+      "primitivesHidden": 1,
+      "primitives": 1,
+      "error": "[object ProgressEvent]"
+     },
+     {
+      "id": "r7-key-ring",
+      "region": 7,
+      "stage": "none",
+      "far": "ready",
+      "near": "idle",
+      "colliders": 0,
+      "primitivesHidden": 0,
+      "primitives": 1,
+      "error": null
+     },
+     {
+      "id": "r3-dynamics-canyon",
+      "region": 3,
+      "stage": "none",
+      "far": "idle",
+      "near": "idle",
+      "colliders": 0,
+      "primitivesHidden": 0,
+      "primitives": 1,
+      "error": null
+     },
+     {
+      "id": "r1-tempo-tower",
+      "region": 1,
+      "stage": "far",
+      "far": "ready",
+      "near": "ready",
+      "colliders": 0,
+      "primitivesHidden": 1,
+      "primitives": 1,
+      "error": null
+     },
+     {
+      "id": "r5-scale-lights",
+      "region": 5,
+      "stage": "none",
+      "far": "idle",
+      "near": "idle",
+      "colliders": 0,
+      "primitivesHidden": 0,
+      "primitives": 1,
+      "error": null
+     },
+     {
+      "id": "r6-chord-spires",
+      "region": 6,
+      "stage": "none",
+      "far": "idle",
+      "near": "idle",
+      "colliders": 0,
+      "primitivesHidden": 0,
+      "primitives": 1,
+      "error": null
+     },
+     {
+      "id": "r2-storm-drum",
+      "region": 2,
+      "stage": "none",
+      "far": "ready",
+      "near": "idle",
+      "colliders": 0,
+      "primitivesHidden": 0,
+      "primitives": 2,
+      "error": null
+     },
+     {
+      "id": "r4-fermata-bridge",
+      "region": 4,
+      "stage": "none",
+      "far": "idle",
+      "near": "idle",
+      "colliders": 0,
+      "primitivesHidden": 0,
+      "primitives": 1,
+      "error": null
+     },
+     {
+      "id": "r8-repeat-gate",
+      "region": 8,
+      "stage": "none",
+      "far": "ready",
+      "near": "idle",
+      "colliders": 0,
+      "primitivesHidden": 0,
+      "primitives": 1,
+      "error": null
+     }
+    ]
+   },
+   "errors": [
+    "error: Failed to load resource: net::ERR_FAILED"
+   ],
+   "externalRequests": []
+  },
+  {
+   "scenario": "far",
+   "shots": {
+    "start": {
+     "shot": "start",
+     "stage": "near",
+     "far": "failed",
+     "near": "ready",
+     "waitedMs": 596,
+     "snapshot": {
+      "id": "r0-staff-gate",
+      "region": 0,
+      "stage": "near",
+      "far": "failed",
+      "near": "ready",
+      "colliders": 2,
+      "primitivesHidden": 1,
+      "primitives": 1,
+      "error": "[object ProgressEvent]"
+     },
+     "litFile": "/home/claude/remaster/game/output/playwright/rm6_r0_far_start_lit.png"
+    },
+    "fixed": {
+     "shot": "fixed",
+     "stage": "near",
+     "far": "failed",
+     "near": "ready",
+     "waitedMs": 653,
+     "snapshot": {
+      "id": "r0-staff-gate",
+      "region": 0,
+      "stage": "near",
+      "far": "failed",
+      "near": "ready",
+      "colliders": 2,
+      "primitivesHidden": 1,
+      "primitives": 1,
+      "error": "[object ProgressEvent]"
+     },
+     "litFile": "/home/claude/remaster/game/output/playwright/rm6_r0_far_fixed_lit.png"
+    },
+    "close": {
+     "shot": "close",
+     "stage": "near",
+     "far": "failed",
+     "near": "ready",
+     "waitedMs": 684,
+     "snapshot": {
+      "id": "r0-staff-gate",
+      "region": 0,
+      "stage": "near",
+      "far": "failed",
+      "near": "ready",
+      "colliders": 2,
+      "primitivesHidden": 1,
+      "primitives": 1,
+      "error": "[object ProgressEvent]"
+     },
+     "litFile": "/home/claude/remaster/game/output/playwright/rm6_r0_far_close_lit.png"
+    },
+    "farN": {
+     "shot": "farN",
+     "stage": "far",
+     "far": "failed",
+     "near": "ready",
+     "waitedMs": 579,
+     "snapshot": {
+      "id": "r0-staff-gate",
+      "region": 0,
+      "stage": "far",
+      "far": "failed",
+      "near": "ready",
+      "colliders": 2,
+      "primitivesHidden": 0,
+      "primitives": 1,
+      "error": "[object ProgressEvent]"
+     },
+     "litFile": "/home/claude/remaster/game/output/playwright/rm6_r0_far_farN_lit.png"
+    },
+    "farS": {
+     "shot": "farS",
+     "stage": "far",
+     "far": "failed",
+     "near": "ready",
+     "waitedMs": 602,
+     "snapshot": {
+      "id": "r0-staff-gate",
+      "region": 0,
+      "stage": "far",
+      "far": "failed",
+      "near": "ready",
+      "colliders": 2,
+      "primitivesHidden": 0,
+      "primitives": 1,
+      "error": "[object ProgressEvent]"
+     },
+     "litFile": "/home/claude/remaster/game/output/playwright/rm6_r0_far_farS_lit.png"
+    }
+   },
+   "checks": {},
+   "spec": {
+    "id": "r0-staff-gate",
+    "name": "오선 관문",
+    "near": {
+     "path": "assets/remaster/models/landmark-r0-staff-gate.glb",
+     "tris": 6690,
+     "bytes": 201868,
+     "sha256": "d46ebd8b98ad1825879465efc599fa34db1ce699fb3e55fcb6369e4804786974"
+    },
+    "far": {
+     "path": "assets/remaster/models/landmark-r0-staff-gate-far.glb",
+     "tris": 944,
+     "bytes": 34860,
+     "sha256": "52782a78d4d7e8ee763a45b1f3647a2329c93ac428a3287a5ad0b6e5ae8249d1"
+    },
+    "footprints": [
+     {
+      "x": 25,
+      "z": 88,
+      "r": 4.5
+     },
+     {
+      "x": -25,
+      "z": 88,
+      "r": 4.5
+     }
+    ],
+    "hide": [
+     "r0-pier"
+    ],
+    "hideProps": []
+   },
+   "remasterReadyMs": 573,
+   "final": {
+    "enabled": true,
+    "requests": 7,
+    "failures": 1,
+    "music": {
+     "updates": 139,
+     "applied": 135,
+     "locks": 38,
+     "phase": 0.277,
+     "period": 0.545,
+     "events": {
+      "beatAt": null,
+      "flashAt": null,
+      "degree": null,
+      "degreeAt": null,
+      "pearls": 0,
+      "pearlAt": null,
+      "bar": 29,
+      "barAt": 7.199999999999982
+     },
+     "bound": [
+      {
+       "id": "r0-staff-gate",
+       "near": [
+        "Glow_clef",
+        "Lantern_notes"
+       ],
+       "far": 0
+      },
+      {
+       "id": "r7-key-ring",
+       "near": [],
+       "far": 3
+      },
+      {
+       "id": "r1-tempo-tower",
+       "near": [
+        "Beat_pendulum",
+        "Lantern_tempo"
+       ],
+       "far": 1
+      },
+      {
+       "id": "r2-storm-drum",
+       "near": [],
+       "far": 1
+      },
+      {
+       "id": "r8-repeat-gate",
+       "near": [],
+       "far": 2
+      }
+     ]
+    },
+    "entries": [
+     {
+      "id": "r0-staff-gate",
+      "region": 0,
+      "stage": "far",
+      "far": "failed",
+      "near": "ready",
+      "colliders": 2,
+      "primitivesHidden": 0,
+      "primitives": 1,
+      "error": "[object ProgressEvent]"
+     },
+     {
+      "id": "r7-key-ring",
+      "region": 7,
+      "stage": "none",
+      "far": "ready",
+      "near": "idle",
+      "colliders": 0,
+      "primitivesHidden": 0,
+      "primitives": 1,
+      "error": null
+     },
+     {
+      "id": "r3-dynamics-canyon",
+      "region": 3,
+      "stage": "none",
+      "far": "idle",
+      "near": "idle",
+      "colliders": 0,
+      "primitivesHidden": 0,
+      "primitives": 1,
+      "error": null
+     },
+     {
+      "id": "r1-tempo-tower",
+      "region": 1,
+      "stage": "far",
+      "far": "ready",
+      "near": "ready",
+      "colliders": 0,
+      "primitivesHidden": 1,
+      "primitives": 1,
+      "error": null
+     },
+     {
+      "id": "r5-scale-lights",
+      "region": 5,
+      "stage": "none",
+      "far": "idle",
+      "near": "idle",
+      "colliders": 0,
+      "primitivesHidden": 0,
+      "primitives": 1,
+      "error": null
+     },
+     {
+      "id": "r6-chord-spires",
+      "region": 6,
+      "stage": "none",
+      "far": "idle",
+      "near": "idle",
+      "colliders": 0,
+      "primitivesHidden": 0,
+      "primitives": 1,
+      "error": null
+     },
+     {
+      "id": "r2-storm-drum",
+      "region": 2,
+      "stage": "none",
+      "far": "ready",
+      "near": "idle",
+      "colliders": 0,
+      "primitivesHidden": 0,
+      "primitives": 2,
+      "error": null
+     },
+     {
+      "id": "r4-fermata-bridge",
+      "region": 4,
+      "stage": "none",
+      "far": "idle",
+      "near": "idle",
+      "colliders": 0,
+      "primitivesHidden": 0,
+      "primitives": 1,
+      "error": null
+     },
+     {
+      "id": "r8-repeat-gate",
+      "region": 8,
+      "stage": "none",
+      "far": "ready",
+      "near": "idle",
+      "colliders": 0,
+      "primitivesHidden": 0,
+      "primitives": 1,
+      "error": null
+     }
+    ]
+   },
+   "errors": [
+    "error: Failed to load resource: net::ERR_FAILED"
+   ],
+   "externalRequests": []
+  }
+ ]
+}

@@ -1,0 +1,1395 @@
+{
+ "viewport": [
+  1280,
+  720
+ ],
+ "contextLoss": {
+  "errorsAtRestore": [],
+  "errorsAfterQualityChange": 8,
+  "before": {
+   "targets": 7,
+   "calls": {
+    "shadow": 60,
+    "reflection": 57,
+    "main": 74,
+    "post": 6
+   },
+   "tone": {
+    "luminance": 0.393,
+    "saturation": 0.33
+   }
+  },
+  "during": {
+   "contextLost": true,
+   "pipelineLost": true,
+   "targetCount": 0,
+   "overlay": true
+  },
+  "after": {
+   "contextLost": false,
+   "pipelineLost": false,
+   "targetCount": 7,
+   "reflReady": true,
+   "counters": {
+    "created": 21,
+    "disposed": 7,
+    "lost": 1,
+    "restored": 1
+   },
+   "overlay": false,
+   "calls": {
+    "shadow": 60,
+    "reflection": 57,
+    "main": 74,
+    "post": 6
+   },
+   "tris": 348915,
+   "shadowEnabled": true,
+   "autoReset": false,
+   "rebinds": 1,
+   "raf": true,
+   "frames": 86,
+   "tone": {
+    "luminance": 0.392,
+    "saturation": 0.331
+   }
+  },
+  "afterQualityChange": {
+   "plan": {
+    "q": "high",
+    "fx": "full",
+    "reflect": "planar",
+    "post": "full",
+    "passes": 8,
+    "msaa": true
+   },
+   "targets": 7,
+   "calls": {
+    "shadow": 60,
+    "reflection": 57,
+    "main": 74,
+    "post": 6
+   },
+   "tone": {
+    "luminance": 0.391,
+    "saturation": 0.333
+   }
+  }
+ },
+ "errors": [],
+ "matrix": [
+  {
+   "plan": {
+    "q": "low",
+    "fx": "auto",
+    "reflect": "sky",
+    "post": "css",
+    "passes": 1,
+    "msaa": false
+   },
+   "calls": {
+    "shadow": 0,
+    "reflection": 0,
+    "main": 74,
+    "post": 0
+   },
+   "tris": {
+    "shadow": 0,
+    "reflection": 0,
+    "main": 152475,
+    "post": 0,
+    "total": 152475
+   },
+   "targets": 0,
+   "sizes": {
+    "scene": null,
+    "refl": null,
+    "bright": null,
+    "blur": [],
+    "msaa": false
+   },
+   "textures": 1,
+   "geometries": 111,
+   "programs": 27,
+   "filter": "brightness(1) saturate(1.002) contrast(1.101)",
+   "vignette": "",
+   "defines": {
+    "FBM_OCTAVES": 2,
+    "RING_LAYERS": 1,
+    "WATER_LITE": 1,
+    "SKY_LITE": 1
+   },
+   "paletteGrade": false,
+   "reflReady": false,
+   "failed": false,
+   "demoted": null,
+   "tone": {
+    "luminance": 0.509,
+    "saturation": 0.255
+   },
+   "q": "low",
+   "fxAsked": "auto"
+  },
+  {
+   "plan": {
+    "q": "low",
+    "fx": "full",
+    "reflect": "sky",
+    "post": "css",
+    "passes": 1,
+    "msaa": false
+   },
+   "calls": {
+    "shadow": 0,
+    "reflection": 0,
+    "main": 74,
+    "post": 0
+   },
+   "tris": {
+    "shadow": 0,
+    "reflection": 0,
+    "main": 152475,
+    "post": 0,
+    "total": 152475
+   },
+   "targets": 0,
+   "sizes": {
+    "scene": null,
+    "refl": null,
+    "bright": null,
+    "blur": [],
+    "msaa": false
+   },
+   "textures": 1,
+   "geometries": 111,
+   "programs": 27,
+   "filter": "brightness(1) saturate(1.002) contrast(1.101)",
+   "vignette": "",
+   "defines": {
+    "FBM_OCTAVES": 2,
+    "RING_LAYERS": 1,
+    "WATER_LITE": 1,
+    "SKY_LITE": 1
+   },
+   "paletteGrade": false,
+   "reflReady": false,
+   "failed": false,
+   "demoted": null,
+   "tone": {
+    "luminance": 0.509,
+    "saturation": 0.255
+   },
+   "q": "low",
+   "fxAsked": "full"
+  },
+  {
+   "plan": {
+    "q": "low",
+    "fx": "lite",
+    "reflect": "sky",
+    "post": "css",
+    "passes": 1,
+    "msaa": false
+   },
+   "calls": {
+    "shadow": 0,
+    "reflection": 0,
+    "main": 74,
+    "post": 0
+   },
+   "tris": {
+    "shadow": 0,
+    "reflection": 0,
+    "main": 152475,
+    "post": 0,
+    "total": 152475
+   },
+   "targets": 0,
+   "sizes": {
+    "scene": null,
+    "refl": null,
+    "bright": null,
+    "blur": [],
+    "msaa": false
+   },
+   "textures": 1,
+   "geometries": 111,
+   "programs": 27,
+   "filter": "brightness(1) saturate(1.002) contrast(1.101)",
+   "vignette": "",
+   "defines": {
+    "FBM_OCTAVES": 2,
+    "RING_LAYERS": 1,
+    "WATER_LITE": 1,
+    "SKY_LITE": 1
+   },
+   "paletteGrade": false,
+   "reflReady": false,
+   "failed": false,
+   "demoted": null,
+   "tone": {
+    "luminance": 0.508,
+    "saturation": 0.256
+   },
+   "q": "low",
+   "fxAsked": "lite"
+  },
+  {
+   "plan": {
+    "q": "low",
+    "fx": "off",
+    "reflect": "sky",
+    "post": "none",
+    "passes": 1,
+    "msaa": false
+   },
+   "calls": {
+    "shadow": 0,
+    "reflection": 0,
+    "main": 74,
+    "post": 0
+   },
+   "tris": {
+    "shadow": 0,
+    "reflection": 0,
+    "main": 152475,
+    "post": 0,
+    "total": 152475
+   },
+   "targets": 0,
+   "sizes": {
+    "scene": null,
+    "refl": null,
+    "bright": null,
+    "blur": [],
+    "msaa": false
+   },
+   "textures": 1,
+   "geometries": 111,
+   "programs": 27,
+   "filter": "",
+   "vignette": "none",
+   "defines": {
+    "FBM_OCTAVES": 2,
+    "RING_LAYERS": 1,
+    "WATER_LITE": 1,
+    "SKY_LITE": 1
+   },
+   "paletteGrade": true,
+   "reflReady": false,
+   "failed": false,
+   "demoted": null,
+   "tone": {
+    "luminance": 0.508,
+    "saturation": 0.255
+   },
+   "q": "low",
+   "fxAsked": "off"
+  },
+  {
+   "plan": {
+    "q": "mid",
+    "fx": "auto",
+    "reflect": "planar",
+    "post": "full",
+    "passes": 8,
+    "msaa": false
+   },
+   "calls": {
+    "shadow": 60,
+    "reflection": 57,
+    "main": 74,
+    "post": 6
+   },
+   "tris": {
+    "shadow": 132523,
+    "reflection": 58145,
+    "main": 158235,
+    "post": 12,
+    "total": 348915
+   },
+   "targets": 7,
+   "sizes": {
+    "scene": [
+     1280,
+     720
+    ],
+    "refl": [
+     640,
+     360
+    ],
+    "bright": [
+     640,
+     360
+    ],
+    "blur": [
+     [
+      640,
+      360
+     ],
+     [
+      640,
+      360
+     ],
+     [
+      320,
+      180
+     ],
+     [
+      320,
+      180
+     ]
+    ],
+    "msaa": false
+   },
+   "textures": 9,
+   "geometries": 111,
+   "programs": 27,
+   "filter": "",
+   "vignette": "none",
+   "defines": {
+    "FBM_OCTAVES": 3,
+    "RING_LAYERS": 2,
+    "WATER_REFLECT": 1,
+    "WATER_TAPS": 4
+   },
+   "paletteGrade": false,
+   "reflReady": true,
+   "failed": false,
+   "demoted": null,
+   "tone": {
+    "luminance": 0.412,
+    "saturation": 0.331
+   },
+   "q": "mid",
+   "fxAsked": "auto"
+  },
+  {
+   "plan": {
+    "q": "mid",
+    "fx": "full",
+    "reflect": "planar",
+    "post": "full",
+    "passes": 8,
+    "msaa": false
+   },
+   "calls": {
+    "shadow": 60,
+    "reflection": 57,
+    "main": 74,
+    "post": 6
+   },
+   "tris": {
+    "shadow": 132523,
+    "reflection": 58145,
+    "main": 158235,
+    "post": 12,
+    "total": 348915
+   },
+   "targets": 7,
+   "sizes": {
+    "scene": [
+     1280,
+     720
+    ],
+    "refl": [
+     640,
+     360
+    ],
+    "bright": [
+     640,
+     360
+    ],
+    "blur": [
+     [
+      640,
+      360
+     ],
+     [
+      640,
+      360
+     ],
+     [
+      320,
+      180
+     ],
+     [
+      320,
+      180
+     ]
+    ],
+    "msaa": false
+   },
+   "textures": 9,
+   "geometries": 111,
+   "programs": 27,
+   "filter": "",
+   "vignette": "none",
+   "defines": {
+    "FBM_OCTAVES": 3,
+    "RING_LAYERS": 2,
+    "WATER_REFLECT": 1,
+    "WATER_TAPS": 4
+   },
+   "paletteGrade": false,
+   "reflReady": true,
+   "failed": false,
+   "demoted": null,
+   "tone": {
+    "luminance": 0.412,
+    "saturation": 0.331
+   },
+   "q": "mid",
+   "fxAsked": "full"
+  },
+  {
+   "plan": {
+    "q": "mid",
+    "fx": "lite",
+    "reflect": "sky",
+    "post": "composite",
+    "passes": 2,
+    "msaa": false
+   },
+   "calls": {
+    "shadow": 60,
+    "reflection": 0,
+    "main": 74,
+    "post": 1
+   },
+   "tris": {
+    "shadow": 132523,
+    "reflection": 0,
+    "main": 158235,
+    "post": 2,
+    "total": 290760
+   },
+   "targets": 1,
+   "sizes": {
+    "scene": [
+     1280,
+     720
+    ],
+    "refl": null,
+    "bright": null,
+    "blur": [],
+    "msaa": false
+   },
+   "textures": 3,
+   "geometries": 111,
+   "programs": 29,
+   "filter": "",
+   "vignette": "none",
+   "defines": {
+    "FBM_OCTAVES": 3,
+    "RING_LAYERS": 2
+   },
+   "paletteGrade": false,
+   "reflReady": false,
+   "failed": false,
+   "demoted": null,
+   "tone": {
+    "luminance": 0.439,
+    "saturation": 0.304
+   },
+   "q": "mid",
+   "fxAsked": "lite"
+  },
+  {
+   "plan": {
+    "q": "mid",
+    "fx": "off",
+    "reflect": "sky",
+    "post": "none",
+    "passes": 1,
+    "msaa": false
+   },
+   "calls": {
+    "shadow": 60,
+    "reflection": 0,
+    "main": 74,
+    "post": 0
+   },
+   "tris": {
+    "shadow": 132523,
+    "reflection": 0,
+    "main": 158235,
+    "post": 0,
+    "total": 290758
+   },
+   "targets": 0,
+   "sizes": {
+    "scene": null,
+    "refl": null,
+    "bright": null,
+    "blur": [],
+    "msaa": false
+   },
+   "textures": 2,
+   "geometries": 111,
+   "programs": 29,
+   "filter": "",
+   "vignette": "none",
+   "defines": {
+    "FBM_OCTAVES": 3,
+    "RING_LAYERS": 2
+   },
+   "paletteGrade": true,
+   "reflReady": false,
+   "failed": false,
+   "demoted": null,
+   "tone": {
+    "luminance": 0.506,
+    "saturation": 0.254
+   },
+   "q": "mid",
+   "fxAsked": "off"
+  },
+  {
+   "plan": {
+    "q": "high",
+    "fx": "auto",
+    "reflect": "planar",
+    "post": "full",
+    "passes": 8,
+    "msaa": true
+   },
+   "calls": {
+    "shadow": 60,
+    "reflection": 57,
+    "main": 74,
+    "post": 6
+   },
+   "tris": {
+    "shadow": 132523,
+    "reflection": 58145,
+    "main": 166299,
+    "post": 12,
+    "total": 356979
+   },
+   "targets": 7,
+   "sizes": {
+    "scene": [
+     1280,
+     720
+    ],
+    "refl": [
+     960,
+     540
+    ],
+    "bright": [
+     640,
+     360
+    ],
+    "blur": [
+     [
+      640,
+      360
+     ],
+     [
+      640,
+      360
+     ],
+     [
+      320,
+      180
+     ],
+     [
+      320,
+      180
+     ]
+    ],
+    "msaa": true
+   },
+   "textures": 9,
+   "geometries": 111,
+   "programs": 30,
+   "filter": "",
+   "vignette": "none",
+   "defines": {
+    "FBM_OCTAVES": 3,
+    "RING_LAYERS": 2,
+    "WATER_REFLECT": 1,
+    "WATER_TAPS": 4
+   },
+   "paletteGrade": false,
+   "reflReady": true,
+   "failed": false,
+   "demoted": null,
+   "tone": {
+    "luminance": 0.413,
+    "saturation": 0.331
+   },
+   "q": "high",
+   "fxAsked": "auto"
+  },
+  {
+   "plan": {
+    "q": "high",
+    "fx": "full",
+    "reflect": "planar",
+    "post": "full",
+    "passes": 8,
+    "msaa": true
+   },
+   "calls": {
+    "shadow": 60,
+    "reflection": 57,
+    "main": 74,
+    "post": 6
+   },
+   "tris": {
+    "shadow": 132523,
+    "reflection": 58145,
+    "main": 166299,
+    "post": 12,
+    "total": 356979
+   },
+   "targets": 7,
+   "sizes": {
+    "scene": [
+     1280,
+     720
+    ],
+    "refl": [
+     960,
+     540
+    ],
+    "bright": [
+     640,
+     360
+    ],
+    "blur": [
+     [
+      640,
+      360
+     ],
+     [
+      640,
+      360
+     ],
+     [
+      320,
+      180
+     ],
+     [
+      320,
+      180
+     ]
+    ],
+    "msaa": true
+   },
+   "textures": 9,
+   "geometries": 111,
+   "programs": 30,
+   "filter": "",
+   "vignette": "none",
+   "defines": {
+    "FBM_OCTAVES": 3,
+    "RING_LAYERS": 2,
+    "WATER_REFLECT": 1,
+    "WATER_TAPS": 4
+   },
+   "paletteGrade": false,
+   "reflReady": true,
+   "failed": false,
+   "demoted": null,
+   "tone": {
+    "luminance": 0.413,
+    "saturation": 0.331
+   },
+   "q": "high",
+   "fxAsked": "full"
+  },
+  {
+   "plan": {
+    "q": "high",
+    "fx": "lite",
+    "reflect": "sky",
+    "post": "composite",
+    "passes": 2,
+    "msaa": false
+   },
+   "calls": {
+    "shadow": 60,
+    "reflection": 0,
+    "main": 74,
+    "post": 1
+   },
+   "tris": {
+    "shadow": 132523,
+    "reflection": 0,
+    "main": 166299,
+    "post": 2,
+    "total": 298824
+   },
+   "targets": 1,
+   "sizes": {
+    "scene": [
+     1280,
+     720
+    ],
+    "refl": null,
+    "bright": null,
+    "blur": [],
+    "msaa": false
+   },
+   "textures": 3,
+   "geometries": 111,
+   "programs": 30,
+   "filter": "",
+   "vignette": "none",
+   "defines": {
+    "FBM_OCTAVES": 3,
+    "RING_LAYERS": 2
+   },
+   "paletteGrade": false,
+   "reflReady": false,
+   "failed": false,
+   "demoted": null,
+   "tone": {
+    "luminance": 0.442,
+    "saturation": 0.302
+   },
+   "q": "high",
+   "fxAsked": "lite"
+  },
+  {
+   "plan": {
+    "q": "high",
+    "fx": "off",
+    "reflect": "sky",
+    "post": "none",
+    "passes": 1,
+    "msaa": false
+   },
+   "calls": {
+    "shadow": 60,
+    "reflection": 0,
+    "main": 74,
+    "post": 0
+   },
+   "tris": {
+    "shadow": 132523,
+    "reflection": 0,
+    "main": 166299,
+    "post": 0,
+    "total": 298822
+   },
+   "targets": 0,
+   "sizes": {
+    "scene": null,
+    "refl": null,
+    "bright": null,
+    "blur": [],
+    "msaa": false
+   },
+   "textures": 2,
+   "geometries": 111,
+   "programs": 30,
+   "filter": "",
+   "vignette": "none",
+   "defines": {
+    "FBM_OCTAVES": 3,
+    "RING_LAYERS": 2
+   },
+   "paletteGrade": true,
+   "reflReady": false,
+   "failed": false,
+   "demoted": null,
+   "tone": {
+    "luminance": 0.51,
+    "saturation": 0.25
+   },
+   "q": "high",
+   "fxAsked": "off"
+  }
+ ],
+ "toggle": {
+  "baseline": {
+   "plan": {
+    "q": "mid",
+    "fx": "full",
+    "reflect": "planar",
+    "post": "full",
+    "passes": 8,
+    "msaa": false
+   },
+   "calls": {
+    "shadow": 60,
+    "reflection": 57,
+    "main": 74,
+    "post": 6
+   },
+   "tris": {
+    "shadow": 132523,
+    "reflection": 58145,
+    "main": 158235,
+    "post": 12,
+    "total": 348915
+   },
+   "targets": 7,
+   "sizes": {
+    "scene": [
+     1280,
+     720
+    ],
+    "refl": [
+     640,
+     360
+    ],
+    "bright": [
+     640,
+     360
+    ],
+    "blur": [
+     [
+      640,
+      360
+     ],
+     [
+      640,
+      360
+     ],
+     [
+      320,
+      180
+     ],
+     [
+      320,
+      180
+     ]
+    ],
+    "msaa": false
+   },
+   "textures": 9,
+   "geometries": 111,
+   "programs": 30,
+   "filter": "",
+   "vignette": "none",
+   "defines": {
+    "FBM_OCTAVES": 3,
+    "RING_LAYERS": 2,
+    "WATER_REFLECT": 1,
+    "WATER_TAPS": 4
+   },
+   "paletteGrade": false,
+   "reflReady": true,
+   "failed": false,
+   "demoted": null,
+   "tone": {
+    "luminance": 0.414,
+    "saturation": 0.327
+   }
+  },
+  "cycles": [
+   {
+    "i": 1,
+    "targets": 7,
+    "textures": 9,
+    "geometries": 111,
+    "programs": 30
+   },
+   {
+    "i": 2,
+    "targets": 7,
+    "textures": 9,
+    "geometries": 111,
+    "programs": 30
+   },
+   {
+    "i": 3,
+    "targets": 7,
+    "textures": 9,
+    "geometries": 111,
+    "programs": 30
+   },
+   {
+    "i": 4,
+    "targets": 7,
+    "textures": 9,
+    "geometries": 111,
+    "programs": 30
+   },
+   {
+    "i": 5,
+    "targets": 7,
+    "textures": 9,
+    "geometries": 111,
+    "programs": 30
+   },
+   {
+    "i": 6,
+    "targets": 7,
+    "textures": 9,
+    "geometries": 111,
+    "programs": 30
+   },
+   {
+    "i": 7,
+    "targets": 7,
+    "textures": 9,
+    "geometries": 111,
+    "programs": 30
+   },
+   {
+    "i": 8,
+    "targets": 7,
+    "textures": 9,
+    "geometries": 111,
+    "programs": 30
+   },
+   {
+    "i": 9,
+    "targets": 7,
+    "textures": 9,
+    "geometries": 111,
+    "programs": 30
+   },
+   {
+    "i": 10,
+    "targets": 7,
+    "textures": 9,
+    "geometries": 111,
+    "programs": 30
+   },
+   {
+    "i": 11,
+    "targets": 7,
+    "textures": 9,
+    "geometries": 111,
+    "programs": 30
+   },
+   {
+    "i": 12,
+    "targets": 7,
+    "textures": 9,
+    "geometries": 111,
+    "programs": 30
+   },
+   {
+    "i": 13,
+    "targets": 7,
+    "textures": 9,
+    "geometries": 111,
+    "programs": 30
+   },
+   {
+    "i": 14,
+    "targets": 7,
+    "textures": 9,
+    "geometries": 111,
+    "programs": 30
+   },
+   {
+    "i": 15,
+    "targets": 7,
+    "textures": 9,
+    "geometries": 111,
+    "programs": 30
+   },
+   {
+    "i": 16,
+    "targets": 7,
+    "textures": 9,
+    "geometries": 111,
+    "programs": 30
+   },
+   {
+    "i": 17,
+    "targets": 7,
+    "textures": 9,
+    "geometries": 111,
+    "programs": 30
+   },
+   {
+    "i": 18,
+    "targets": 7,
+    "textures": 9,
+    "geometries": 111,
+    "programs": 30
+   },
+   {
+    "i": 19,
+    "targets": 7,
+    "textures": 9,
+    "geometries": 111,
+    "programs": 30
+   },
+   {
+    "i": 20,
+    "targets": 7,
+    "textures": 9,
+    "geometries": 111,
+    "programs": 30
+   }
+  ],
+  "summary": {
+   "baseline": {
+    "targets": 7,
+    "textures": 9,
+    "geometries": 111,
+    "programs": 30
+   },
+   "first": {
+    "i": 1,
+    "targets": 7,
+    "textures": 9,
+    "geometries": 111,
+    "programs": 30
+   },
+   "last": {
+    "i": 20,
+    "targets": 7,
+    "textures": 9,
+    "geometries": 111,
+    "programs": 30
+   },
+   "growthAfterFirstCycle": {
+    "targets": 0,
+    "textures": 0,
+    "geometries": 0,
+    "programs": 0
+   },
+   "growthVsBaseline": {
+    "targets": 0,
+    "textures": 0,
+    "geometries": 0,
+    "programs": 0
+   }
+  }
+ },
+ "points": [
+  {
+   "quality": "mid",
+   "point": "r0-harbor",
+   "calls": {
+    "shadow": 60,
+    "reflection": 57,
+    "main": 74,
+    "post": 6
+   },
+   "tris": {
+    "shadow": 132523,
+    "reflection": 58145,
+    "main": 158235,
+    "post": 12,
+    "total": 348915
+   },
+   "programs": 30
+  },
+  {
+   "quality": "mid",
+   "point": "r1-arch",
+   "calls": {
+    "shadow": 53,
+    "reflection": 43,
+    "main": 63,
+    "post": 6
+   },
+   "tris": {
+    "shadow": 113744,
+    "reflection": 38110,
+    "main": 139496,
+    "post": 12,
+    "total": 291362
+   },
+   "programs": 30
+  },
+  {
+   "quality": "mid",
+   "point": "r2-storm",
+   "calls": {
+    "shadow": 38,
+    "reflection": 36,
+    "main": 51,
+    "post": 6
+   },
+   "tris": {
+    "shadow": 118244,
+    "reflection": 43868,
+    "main": 139636,
+    "post": 12,
+    "total": 301760
+   },
+   "programs": 30
+  },
+  {
+   "quality": "mid",
+   "point": "r3-canyon",
+   "calls": {
+    "shadow": 25,
+    "reflection": 31,
+    "main": 46,
+    "post": 6
+   },
+   "tris": {
+    "shadow": 98516,
+    "reflection": 42964,
+    "main": 138396,
+    "post": 12,
+    "total": 279888
+   },
+   "programs": 31
+  },
+  {
+   "quality": "mid",
+   "point": "r4-islands",
+   "calls": {
+    "shadow": 36,
+    "reflection": 34,
+    "main": 49,
+    "post": 6
+   },
+   "tris": {
+    "shadow": 118720,
+    "reflection": 44344,
+    "main": 140472,
+    "post": 12,
+    "total": 303548
+   },
+   "programs": 31
+  },
+  {
+   "quality": "mid",
+   "point": "r5-strait",
+   "calls": {
+    "shadow": 45,
+    "reflection": 42,
+    "main": 60,
+    "post": 6
+   },
+   "tris": {
+    "shadow": 131506,
+    "reflection": 57128,
+    "main": 158658,
+    "post": 12,
+    "total": 347304
+   },
+   "programs": 31
+  },
+  {
+   "quality": "mid",
+   "point": "r6-coral",
+   "calls": {
+    "shadow": 64,
+    "reflection": 45,
+    "main": 62,
+    "post": 6
+   },
+   "tris": {
+    "shadow": 133678,
+    "reflection": 38800,
+    "main": 139250,
+    "post": 12,
+    "total": 311740
+   },
+   "programs": 31
+  },
+  {
+   "quality": "mid",
+   "point": "r7-fifths",
+   "calls": {
+    "shadow": 45,
+    "reflection": 66,
+    "main": 87,
+    "post": 6
+   },
+   "tris": {
+    "shadow": 130422,
+    "reflection": 61072,
+    "main": 163538,
+    "post": 12,
+    "total": 355044
+   },
+   "programs": 31
+  },
+  {
+   "quality": "mid",
+   "point": "r8-maelstrom",
+   "calls": {
+    "shadow": 62,
+    "reflection": 48,
+    "main": 70,
+    "post": 6
+   },
+   "tris": {
+    "shadow": 121334,
+    "reflection": 43826,
+    "main": 148090,
+    "post": 12,
+    "total": 313262
+   },
+   "programs": 31
+  },
+  {
+   "quality": "high",
+   "point": "r0-harbor",
+   "calls": {
+    "shadow": 60,
+    "reflection": 57,
+    "main": 70,
+    "post": 6
+   },
+   "tris": {
+    "shadow": 132523,
+    "reflection": 58145,
+    "main": 166083,
+    "post": 12,
+    "total": 356763
+   },
+   "programs": 31
+  },
+  {
+   "quality": "high",
+   "point": "r1-arch",
+   "calls": {
+    "shadow": 53,
+    "reflection": 43,
+    "main": 63,
+    "post": 6
+   },
+   "tris": {
+    "shadow": 113744,
+    "reflection": 38110,
+    "main": 147560,
+    "post": 12,
+    "total": 299426
+   },
+   "programs": 31
+  },
+  {
+   "quality": "high",
+   "point": "r2-storm",
+   "calls": {
+    "shadow": 38,
+    "reflection": 36,
+    "main": 51,
+    "post": 6
+   },
+   "tris": {
+    "shadow": 118244,
+    "reflection": 43868,
+    "main": 147700,
+    "post": 12,
+    "total": 309824
+   },
+   "programs": 31
+  },
+  {
+   "quality": "high",
+   "point": "r3-canyon",
+   "calls": {
+    "shadow": 25,
+    "reflection": 30,
+    "main": 45,
+    "post": 6
+   },
+   "tris": {
+    "shadow": 98516,
+    "reflection": 42962,
+    "main": 146436,
+    "post": 12,
+    "total": 287926
+   },
+   "programs": 31
+  },
+  {
+   "quality": "high",
+   "point": "r4-islands",
+   "calls": {
+    "shadow": 36,
+    "reflection": 34,
+    "main": 49,
+    "post": 6
+   },
+   "tris": {
+    "shadow": 118720,
+    "reflection": 44344,
+    "main": 148536,
+    "post": 12,
+    "total": 311612
+   },
+   "programs": 31
+  },
+  {
+   "quality": "high",
+   "point": "r5-strait",
+   "calls": {
+    "shadow": 45,
+    "reflection": 42,
+    "main": 60,
+    "post": 6
+   },
+   "tris": {
+    "shadow": 131506,
+    "reflection": 57128,
+    "main": 166722,
+    "post": 12,
+    "total": 355368
+   },
+   "programs": 31
+  },
+  {
+   "quality": "high",
+   "point": "r6-coral",
+   "calls": {
+    "shadow": 64,
+    "reflection": 45,
+    "main": 62,
+    "post": 6
+   },
+   "tris": {
+    "shadow": 133678,
+    "reflection": 38800,
+    "main": 147314,
+    "post": 12,
+    "total": 319804
+   },
+   "programs": 31
+  },
+  {
+   "quality": "high",
+   "point": "r7-fifths",
+   "calls": {
+    "shadow": 45,
+    "reflection": 66,
+    "main": 87,
+    "post": 6
+   },
+   "tris": {
+    "shadow": 130422,
+    "reflection": 61072,
+    "main": 171602,
+    "post": 12,
+    "total": 363108
+   },
+   "programs": 31
+  },
+  {
+   "quality": "high",
+   "point": "r8-maelstrom",
+   "calls": {
+    "shadow": 62,
+    "reflection": 48,
+    "main": 70,
+    "post": 6
+   },
+   "tris": {
+    "shadow": 121334,
+    "reflection": 43826,
+    "main": 156154,
+    "post": 12,
+    "total": 321326
+   },
+   "programs": 31
+  }
+ ],
+ "pointsSummary": {
+  "maxReflectionTris": {
+   "mid": 61072,
+   "high": 61072
+  },
+  "limit": 70000
+ }
+}

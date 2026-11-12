@@ -1,0 +1,109 @@
+{
+ "base": "http://127.0.0.1:8766",
+ "quality": "mid",
+ "viewport": [
+  1280,
+  720
+ ],
+ "rows": [
+  {
+   "region": 0,
+   "old": {
+    "calls": 100,
+    "triangles": 160427
+   },
+   "programs": 20,
+   "geometries": 148,
+   "textures": 2,
+   "point": "r0-harbor"
+  },
+  {
+   "region": 1,
+   "old": {
+    "calls": 78,
+    "triangles": 140720
+   },
+   "programs": 20,
+   "geometries": 148,
+   "textures": 2,
+   "point": "r1-arch"
+  },
+  {
+   "region": 2,
+   "old": {
+    "calls": 65,
+    "triangles": 140884
+   },
+   "programs": 20,
+   "geometries": 148,
+   "textures": 2,
+   "point": "r2-storm"
+  },
+  {
+   "region": 3,
+   "old": {
+    "calls": 54,
+    "triangles": 139132
+   },
+   "programs": 20,
+   "geometries": 151,
+   "textures": 2,
+   "point": "r3-canyon"
+  },
+  {
+   "region": 4,
+   "old": {
+    "calls": 50,
+    "triangles": 140592
+   },
+   "programs": 20,
+   "geometries": 153,
+   "textures": 2,
+   "point": "r4-islands"
+  },
+  {
+   "region": 5,
+   "old": {
+    "calls": 61,
+    "triangles": 158778
+   },
+   "programs": 20,
+   "geometries": 163,
+   "textures": 2,
+   "point": "r5-strait"
+  },
+  {
+   "region": 6,
+   "old": {
+    "calls": 66,
+    "triangles": 139610
+   },
+   "programs": 20,
+   "geometries": 163,
+   "textures": 2,
+   "point": "r6-coral"
+  },
+  {
+   "region": 7,
+   "old": {
+    "calls": 89,
+    "triangles": 163722
+   },
+   "programs": 20,
+   "geometries": 172,
+   "textures": 2,
+   "point": "r7-fifths"
+  },
+  {
+   "region": 8,
+   "old": {
+    "calls": 83,
+    "triangles": 149138
+   },
+   "programs": 20,
+   "geometries": 172,
+   "textures": 2,
+   "point": "r8-maelstrom"
+  }
+ ]
+}

@@ -1,0 +1,14 @@
+high/full#1    plan high/full/planar/full targets 7 → 손실 0 → 복구 7 programs 23 frames 45
+high/full#2    plan high/full/planar/full targets 7 → 손실 0 → 복구 7 programs 23 frames 56
+high/lite#1    plan high/lite/sky/composite targets 1 → 손실 0 → 복구 1 programs 20 frames 77
+high/lite#2    plan high/lite/sky/composite targets 1 → 손실 0 → 복구 1 programs 20 frames 88
+mid/full#1     plan mid/full/planar/full targets 7 → 손실 0 → 복구 7 programs 23 frames 109
+mid/full#2     plan mid/full/planar/full targets 7 → 손실 0 → 복구 7 programs 23 frames 120
+mid/off#1      plan mid/off/sky/none targets 0 → 손실 0 → 복구 0 programs 19 frames 141
+mid/off#2      plan mid/off/sky/none targets 0 → 손실 0 → 복구 0 programs 19 frames 152
+low/full#1     plan low/full/sky/css targets 0 → 손실 0 → 복구 0 programs 17 frames 174
+low/full#2     plan low/full/sky/css targets 0 → 손실 0 → 복구 0 programs 17 frames 186
+low/off#1      plan low/off/sky/none targets 0 → 손실 0 → 복구 0 programs 17 frames 208
+low/off#2      plan low/off/sky/none targets 0 → 손실 0 → 복구 0 programs 17 frames 221
+문제 0 오류 0 (무시한 정상 로그 86)
+CONTEXT PASS
