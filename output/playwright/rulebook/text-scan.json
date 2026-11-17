@@ -1,0 +1,15 @@
+{
+ "leftovers": [],
+ "serifChars": 646,
+ "missingChars": [],
+ "missing": [],
+ "time": {
+  "chapters": 23,
+  "figures": 89,
+  "totalMs": 5.3,
+  "worstChapter": "keys",
+  "worstFigures": 6,
+  "worstMs": 0.7
+ },
+ "consoleErrors": 0
+}

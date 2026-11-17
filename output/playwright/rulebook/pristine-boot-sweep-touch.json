@@ -1,0 +1,111 @@
+{
+ "rows": [
+  {
+   "W": 320,
+   "H": 480,
+   "touch": true,
+   "textScale": 1,
+   "productionStarts": true,
+   "productionStatus": "9개 해역 준비 완료 · 바람이 좋습니다",
+   "productionScale": "1",
+   "saveKept": false,
+   "scaleOk": true,
+   "productionErrors": [],
+   "qaStarts": true,
+   "failed": [
+    {
+     "name": "O-40 잠잠·떠오름 각각 중앙 안전영역 위반 0",
+     "error": "awake: objective-chip"
+    }
+   ],
+   "layoutFailed": [
+    "O-40 awake: objective-chip"
+   ],
+   "otherFailed": [],
+   "errors": [],
+   "ok": true
+  },
+  {
+   "W": 360,
+   "H": 360,
+   "touch": true,
+   "textScale": 1,
+   "productionStarts": true,
+   "productionStatus": "9개 해역 준비 완료 · 바람이 좋습니다",
+   "productionScale": "1",
+   "saveKept": false,
+   "scaleOk": true,
+   "productionErrors": [],
+   "qaStarts": true,
+   "failed": [
+    {
+     "name": "O-40 잠잠·떠오름 각각 중앙 안전영역 위반 0",
+     "error": "awake: objective-chip"
+    }
+   ],
+   "layoutFailed": [
+    "O-40 awake: objective-chip"
+   ],
+   "otherFailed": [],
+   "errors": [],
+   "ok": true
+  },
+  {
+   "W": 480,
+   "H": 320,
+   "touch": true,
+   "textScale": 1,
+   "productionStarts": true,
+   "productionStatus": "9개 해역 준비 완료 · 바람이 좋습니다",
+   "productionScale": "1",
+   "saveKept": false,
+   "scaleOk": true,
+   "productionErrors": [],
+   "qaStarts": true,
+   "failed": [
+    {
+     "name": "O-40 잠잠·떠오름 각각 중앙 안전영역 위반 0",
+     "error": "awake: action-cluster"
+    }
+   ],
+   "layoutFailed": [
+    "O-40 awake: action-cluster"
+   ],
+   "otherFailed": [],
+   "errors": [],
+   "ok": true
+  },
+  {
+   "W": 568,
+   "H": 320,
+   "touch": true,
+   "textScale": 1,
+   "productionStarts": true,
+   "productionStatus": "9개 해역 준비 완료 · 바람이 좋습니다",
+   "productionScale": "1",
+   "saveKept": false,
+   "scaleOk": true,
+   "productionErrors": [],
+   "qaStarts": true,
+   "failed": [
+    {
+     "name": "O-40 잠잠·떠오름 각각 중앙 안전영역 위반 0",
+     "error": "awake: action-cluster"
+    }
+   ],
+   "layoutFailed": [
+    "O-40 awake: action-cluster"
+   ],
+   "otherFailed": [],
+   "errors": [],
+   "ok": true
+  }
+ ],
+ "pass": true,
+ "layoutFailCells": [
+  "320x480",
+  "360x360",
+  "480x320",
+  "568x320"
+ ]
+}

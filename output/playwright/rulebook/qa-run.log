@@ -1,0 +1,518 @@
+start 20:36:25 build=1d63d0225acb227f norm=86008987adfb80e0
+보조 서버: 8771=200 8772=200
+== run-tests (?test=1) 20:36:26
+fixed          110/110
+dynamic        564/564
+dataset        10/10
+supplemental   8/8
+phase6         25/25
+phase7         48/48
+phase8         31/31
+ux             15/15
+remaster       46/46
+rulebook       11/11
+TOTAL 868/868
+console errors []
+exit 0
+== boot-sweep touch0,1 20:36:32
+비터치 280x653    실제 주소 시작됨 · ?qa=1 시작됨 · 배치 검사 실패 0
+비터치 320x480    실제 주소 시작됨 · ?qa=1 시작됨 · 배치 검사 실패 1 (O-40 awake: objective-chip)
+비터치 320x568    실제 주소 시작됨 · ?qa=1 시작됨 · 배치 검사 실패 0
+비터치 360x360    실제 주소 시작됨 · ?qa=1 시작됨 · 배치 검사 실패 1 (O-40 awake: objective-chip)
+비터치 360x640    실제 주소 시작됨 · ?qa=1 시작됨 · 배치 검사 실패 0
+비터치 360x800    실제 주소 시작됨 · ?qa=1 시작됨 · 배치 검사 실패 0
+비터치 375x667    실제 주소 시작됨 · ?qa=1 시작됨 · 배치 검사 실패 0
+비터치 390x844    실제 주소 시작됨 · ?qa=1 시작됨 · 배치 검사 실패 0
+비터치 412x915    실제 주소 시작됨 · ?qa=1 시작됨 · 배치 검사 실패 0
+비터치 480x320    실제 주소 시작됨 · ?qa=1 시작됨 · 배치 검사 실패 1 (O-40 awake: action-cluster)
+비터치 568x320    실제 주소 시작됨 · ?qa=1 시작됨 · 배치 검사 실패 1 (O-40 awake: action-cluster)
+비터치 600x400    실제 주소 시작됨 · ?qa=1 시작됨 · 배치 검사 실패 0
+비터치 640x360    실제 주소 시작됨 · ?qa=1 시작됨 · 배치 검사 실패 0
+비터치 640x400    실제 주소 시작됨 · ?qa=1 시작됨 · 배치 검사 실패 0
+비터치 700x500    실제 주소 시작됨 · ?qa=1 시작됨 · 배치 검사 실패 0
+비터치 740x360    실제 주소 시작됨 · ?qa=1 시작됨 · 배치 검사 실패 0
+비터치 768x1024   실제 주소 시작됨 · ?qa=1 시작됨 · 배치 검사 실패 0
+비터치 800x600    실제 주소 시작됨 · ?qa=1 시작됨 · 배치 검사 실패 0
+비터치 844x390    실제 주소 시작됨 · ?qa=1 시작됨 · 배치 검사 실패 0
+비터치 900x500    실제 주소 시작됨 · ?qa=1 시작됨 · 배치 검사 실패 0
+비터치 1024x600   실제 주소 시작됨 · ?qa=1 시작됨 · 배치 검사 실패 0
+비터치 1024x768   실제 주소 시작됨 · ?qa=1 시작됨 · 배치 검사 실패 0
+비터치 1180x820   실제 주소 시작됨 · ?qa=1 시작됨 · 배치 검사 실패 0
+비터치 1280x720   실제 주소 시작됨 · ?qa=1 시작됨 · 배치 검사 실패 0
+비터치 1280x800   실제 주소 시작됨 · ?qa=1 시작됨 · 배치 검사 실패 0
+비터치 1366x657   실제 주소 시작됨 · ?qa=1 시작됨 · 배치 검사 실패 0
+비터치 1440x900   실제 주소 시작됨 · ?qa=1 시작됨 · 배치 검사 실패 0
+비터치 1920x1080  실제 주소 시작됨 · ?qa=1 시작됨 · 배치 검사 실패 0
+비터치 2560x1440  실제 주소 시작됨 · ?qa=1 시작됨 · 배치 검사 실패 0
+터치   280x653    실제 주소 시작됨 · ?qa=1 시작됨 · 배치 검사 실패 0
+터치   320x480    실제 주소 시작됨 · ?qa=1 시작됨 · 배치 검사 실패 1 (O-40 awake: objective-chip)
+터치   320x568    실제 주소 시작됨 · ?qa=1 시작됨 · 배치 검사 실패 0
+터치   360x360    실제 주소 시작됨 · ?qa=1 시작됨 · 배치 검사 실패 1 (O-40 awake: objective-chip)
+터치   360x640    실제 주소 시작됨 · ?qa=1 시작됨 · 배치 검사 실패 0
+터치   360x800    실제 주소 시작됨 · ?qa=1 시작됨 · 배치 검사 실패 0
+터치   375x667    실제 주소 시작됨 · ?qa=1 시작됨 · 배치 검사 실패 0
+터치   390x844    실제 주소 시작됨 · ?qa=1 시작됨 · 배치 검사 실패 0
+터치   412x915    실제 주소 시작됨 · ?qa=1 시작됨 · 배치 검사 실패 0
+터치   480x320    실제 주소 시작됨 · ?qa=1 시작됨 · 배치 검사 실패 1 (O-40 awake: action-cluster)
+터치   568x320    실제 주소 시작됨 · ?qa=1 시작됨 · 배치 검사 실패 1 (O-40 awake: action-cluster)
+터치   600x400    실제 주소 시작됨 · ?qa=1 시작됨 · 배치 검사 실패 0
+터치   640x360    실제 주소 시작됨 · ?qa=1 시작됨 · 배치 검사 실패 0
+터치   640x400    실제 주소 시작됨 · ?qa=1 시작됨 · 배치 검사 실패 0
+터치   700x500    실제 주소 시작됨 · ?qa=1 시작됨 · 배치 검사 실패 0
+터치   740x360    실제 주소 시작됨 · ?qa=1 시작됨 · 배치 검사 실패 0
+터치   768x1024   실제 주소 시작됨 · ?qa=1 시작됨 · 배치 검사 실패 0
+터치   800x600    실제 주소 시작됨 · ?qa=1 시작됨 · 배치 검사 실패 0
+터치   844x390    실제 주소 시작됨 · ?qa=1 시작됨 · 배치 검사 실패 0
+터치   900x500    실제 주소 시작됨 · ?qa=1 시작됨 · 배치 검사 실패 0
+터치   1024x600   실제 주소 시작됨 · ?qa=1 시작됨 · 배치 검사 실패 0
+터치   1024x768   실제 주소 시작됨 · ?qa=1 시작됨 · 배치 검사 실패 0
+터치   1180x820   실제 주소 시작됨 · ?qa=1 시작됨 · 배치 검사 실패 0
+터치   1280x720   실제 주소 시작됨 · ?qa=1 시작됨 · 배치 검사 실패 0
+터치   1280x800   실제 주소 시작됨 · ?qa=1 시작됨 · 배치 검사 실패 0
+터치   1366x657   실제 주소 시작됨 · ?qa=1 시작됨 · 배치 검사 실패 0
+터치   1440x900   실제 주소 시작됨 · ?qa=1 시작됨 · 배치 검사 실패 0
+터치   1920x1080  실제 주소 시작됨 · ?qa=1 시작됨 · 배치 검사 실패 0
+터치   2560x1440  실제 주소 시작됨 · ?qa=1 시작됨 · 배치 검사 실패 0
+BOOT SWEEP PASS: 58/58곳 모두 시작됨 (배치 검사 실패 8곳은 시작을 막지 않음: 320x480, 360x360, 480x320, 568x320, 320x480, 360x360, 480x320, 568x320)
+exit 0
+== boot-sweep TEXT_SCALE=1.3 20:43:42
+비터치 280x653    실제 주소 시작됨 · ?qa=1 시작됨 · 배치 검사 실패 0 · 글자 배율 1.3 (저장 읽힘)
+비터치 320x480    실제 주소 시작됨 · ?qa=1 시작됨 · 배치 검사 실패 1 (O-40 awake: objective-chip) · 글자 배율 1.3 (저장 읽힘)
+비터치 320x568    실제 주소 시작됨 · ?qa=1 시작됨 · 배치 검사 실패 0 · 글자 배율 1.3 (저장 읽힘)
+비터치 360x360    실제 주소 시작됨 · ?qa=1 시작됨 · 배치 검사 실패 1 (O-40 awake: objective-chip) · 글자 배율 1.3 (저장 읽힘)
+비터치 360x640    실제 주소 시작됨 · ?qa=1 시작됨 · 배치 검사 실패 0 · 글자 배율 1.3 (저장 읽힘)
+비터치 360x800    실제 주소 시작됨 · ?qa=1 시작됨 · 배치 검사 실패 0 · 글자 배율 1.3 (저장 읽힘)
+비터치 375x667    실제 주소 시작됨 · ?qa=1 시작됨 · 배치 검사 실패 0 · 글자 배율 1.3 (저장 읽힘)
+비터치 390x844    실제 주소 시작됨 · ?qa=1 시작됨 · 배치 검사 실패 0 · 글자 배율 1.3 (저장 읽힘)
+비터치 412x915    실제 주소 시작됨 · ?qa=1 시작됨 · 배치 검사 실패 0 · 글자 배율 1.3 (저장 읽힘)
+비터치 480x320    실제 주소 시작됨 · ?qa=1 시작됨 · 배치 검사 실패 1 (O-40 awake: action-cluster) · 글자 배율 1.3 (저장 읽힘)
+비터치 568x320    실제 주소 시작됨 · ?qa=1 시작됨 · 배치 검사 실패 1 (O-40 awake: action-cluster) · 글자 배율 1.3 (저장 읽힘)
+비터치 600x400    실제 주소 시작됨 · ?qa=1 시작됨 · 배치 검사 실패 0 · 글자 배율 1.3 (저장 읽힘)
+비터치 640x360    실제 주소 시작됨 · ?qa=1 시작됨 · 배치 검사 실패 0 · 글자 배율 1.3 (저장 읽힘)
+비터치 640x400    실제 주소 시작됨 · ?qa=1 시작됨 · 배치 검사 실패 0 · 글자 배율 1.3 (저장 읽힘)
+비터치 700x500    실제 주소 시작됨 · ?qa=1 시작됨 · 배치 검사 실패 0 · 글자 배율 1.3 (저장 읽힘)
+비터치 740x360    실제 주소 시작됨 · ?qa=1 시작됨 · 배치 검사 실패 0 · 글자 배율 1.3 (저장 읽힘)
+비터치 768x1024   실제 주소 시작됨 · ?qa=1 시작됨 · 배치 검사 실패 0 · 글자 배율 1.3 (저장 읽힘)
+비터치 800x600    실제 주소 시작됨 · ?qa=1 시작됨 · 배치 검사 실패 0 · 글자 배율 1.3 (저장 읽힘)
+비터치 844x390    실제 주소 시작됨 · ?qa=1 시작됨 · 배치 검사 실패 0 · 글자 배율 1.3 (저장 읽힘)
+비터치 900x500    실제 주소 시작됨 · ?qa=1 시작됨 · 배치 검사 실패 0 · 글자 배율 1.3 (저장 읽힘)
+비터치 1024x600   실제 주소 시작됨 · ?qa=1 시작됨 · 배치 검사 실패 0 · 글자 배율 1.3 (저장 읽힘)
+비터치 1024x768   실제 주소 시작됨 · ?qa=1 시작됨 · 배치 검사 실패 0 · 글자 배율 1.3 (저장 읽힘)
+비터치 1180x820   실제 주소 시작됨 · ?qa=1 시작됨 · 배치 검사 실패 0 · 글자 배율 1.3 (저장 읽힘)
+비터치 1280x720   실제 주소 시작됨 · ?qa=1 시작됨 · 배치 검사 실패 0 · 글자 배율 1.3 (저장 읽힘)
+비터치 1280x800   실제 주소 시작됨 · ?qa=1 시작됨 · 배치 검사 실패 0 · 글자 배율 1.3 (저장 읽힘)
+비터치 1366x657   실제 주소 시작됨 · ?qa=1 시작됨 · 배치 검사 실패 0 · 글자 배율 1.3 (저장 읽힘)
+비터치 1440x900   실제 주소 시작됨 · ?qa=1 시작됨 · 배치 검사 실패 0 · 글자 배율 1.3 (저장 읽힘)
+비터치 1920x1080  실제 주소 시작됨 · ?qa=1 시작됨 · 배치 검사 실패 0 · 글자 배율 1.3 (저장 읽힘)
+비터치 2560x1440  실제 주소 시작됨 · ?qa=1 시작됨 · 배치 검사 실패 0 · 글자 배율 1.3 (저장 읽힘)
+BOOT SWEEP PASS: 29/29곳 모두 시작됨 (배치 검사 실패 4곳은 시작을 막지 않음: 320x480, 360x360, 480x320, 568x320)
+exit 0
+== boot-saves 20:47:13
+fresh         1440x900  시작됨 · 단추 "항해 시작" · 진행 줄 없음 · 저장 없음 · 재접속 "항해 시작"
+fresh         844x390   시작됨 · 단추 "항해 시작" · 진행 줄 없음 · 저장 없음 · 재접속 "항해 시작"
+fresh         375x667   시작됨 · 단추 "항해 시작" · 진행 줄 없음 · 저장 없음 · 재접속 "항해 시작"
+late          1440x900  시작됨 · 단추 "이어하기" · 진행 "도돌이 항구 · 도감 141/141 · 등대 7/7" · 저장 5088자(용어 141) · 재접속 "이어하기"
+late          844x390   시작됨 · 단추 "이어하기" · 진행 "도돌이 항구 · 도감 141/141 · 등대 7/7" · 저장 5088자(용어 141) · 재접속 "이어하기"
+late          375x667   시작됨 · 단추 "이어하기" · 진행 "도돌이 항구 · 도감 141/141 · 등대 7/7" · 저장 5088자(용어 141) · 재접속 "이어하기"
+settings-max  1440x900  시작됨 · 단추 "이어하기" · 진행 "도돌이 항구 · 도감 12/141 · 등대 0/7" · 저장 879자(용어 12) · 재접속 "이어하기"
+settings-max  844x390   시작됨 · 단추 "이어하기" · 진행 "도돌이 항구 · 도감 12/141 · 등대 0/7" · 저장 879자(용어 12) · 재접속 "이어하기"
+settings-max  375x667   시작됨 · 단추 "이어하기" · 진행 "도돌이 항구 · 도감 12/141 · 등대 0/7" · 저장 879자(용어 12) · 재접속 "이어하기"
+settings-off  1440x900  시작됨 · 단추 "이어하기" · 진행 "도돌이 항구 · 도감 12/141 · 등대 0/7" · 저장 878자(용어 12) · 재접속 "이어하기"
+settings-off  844x390   시작됨 · 단추 "이어하기" · 진행 "도돌이 항구 · 도감 12/141 · 등대 0/7" · 저장 878자(용어 12) · 재접속 "이어하기"
+settings-off  375x667   시작됨 · 단추 "이어하기" · 진행 "도돌이 항구 · 도감 12/141 · 등대 0/7" · 저장 878자(용어 12) · 재접속 "이어하기"
+partial       1440x900  시작됨 · 단추 "항해 시작" · 진행 줄 없음 · 저장 55자(용어 0) · 재접속 "항해 시작"
+partial       844x390   시작됨 · 단추 "항해 시작" · 진행 줄 없음 · 저장 55자(용어 0) · 재접속 "항해 시작"
+partial       375x667   시작됨 · 단추 "항해 시작" · 진행 줄 없음 · 저장 55자(용어 0) · 재접속 "항해 시작"
+unversioned   1440x900  시작됨 · 단추 "항해 시작" · 진행 줄 없음 · 저장 46자(용어 0) · 재접속 "항해 시작"
+unversioned   844x390   시작됨 · 단추 "항해 시작" · 진행 줄 없음 · 저장 46자(용어 0) · 재접속 "항해 시작"
+unversioned   375x667   시작됨 · 단추 "항해 시작" · 진행 줄 없음 · 저장 46자(용어 0) · 재접속 "항해 시작"
+corrupt       1440x900  시작됨 · 단추 "항해 시작" · 진행 줄 없음 · 저장 없음 · 배너 "이전 저장 기록을 안전한 새 항해로 복구했습…" · 토스트 "이전 저장 기록을 읽지 못해 새 항해로 시작했어요" · 재접속 "항해 시작"
+corrupt       844x390   시작됨 · 단추 "항해 시작" · 진행 줄 없음 · 저장 없음 · 배너 "이전 저장 기록을 안전한 새 항해로 복구했습…" · 토스트 "이전 저장 기록을 읽지 못해 새 항해로 시작했어요" · 재접속 "항해 시작"
+corrupt       375x667   시작됨 · 단추 "항해 시작" · 진행 줄 없음 · 저장 없음 · 배너 "이전 저장 기록을 안전한 새 항해로 복구했습…" · 토스트 "이전 저장 기록을 읽지 못해 새 항해로 시작했어요" · 재접속 "항해 시작"
+future        1440x900  시작됨 · 단추 "항해 시작" · 진행 줄 없음 · 저장 없음 · 배너 "이전 저장 기록을 안전한 새 항해로 복구했습…" · 토스트 "이전 저장 기록을 읽지 못해 새 항해로 시작했어요" · 재접속 "항해 시작"
+future        844x390   시작됨 · 단추 "항해 시작" · 진행 줄 없음 · 저장 없음 · 배너 "이전 저장 기록을 안전한 새 항해로 복구했습…" · 토스트 "이전 저장 기록을 읽지 못해 새 항해로 시작했어요" · 재접속 "항해 시작"
+future        375x667   시작됨 · 단추 "항해 시작" · 진행 줄 없음 · 저장 없음 · 배너 "이전 저장 기록을 안전한 새 항해로 복구했습…" · 토스트 "이전 저장 기록을 읽지 못해 새 항해로 시작했어요" · 재접속 "항해 시작"
+BOOT SAVES PASS: 24/24칸 — 저장이 읽히고, 설정이 화면에 반영되고, 게임이 쓴 저장을 다시 읽고, 읽지 못한 저장은 알리고 복구한다
+exit 0
+== survey-title 20:49:59
+저장 없음 320x568   s1    아래 여유  260px  h1 40px×2줄 카드폭 284  거울 
+저장 없음 320x568   s1.15 아래 여유  250px  h1 42px×2줄 카드폭 284  거울 
+저장 없음 320x568   s1.3  아래 여유  247px  h1 42px×2줄 카드폭 284  거울 
+저장 없음 360x640   s1    아래 여유  332px  h1 40px×2줄 카드폭 324  거울 
+저장 없음 360x640   s1.15 아래 여유  310px  h1 46px×2줄 카드폭 324  거울 
+저장 없음 360x640   s1.3  아래 여유  295px  h1 50px×2줄 카드폭 324  거울 
+저장 없음 375x667   s1    아래 여유  240px  h1 40px×2줄 카드폭 339  부제 물결 거울 
+저장 없음 375x667   s1.15 아래 여유  179px  h1 46px×2줄 카드폭 339  부제 물결 거울 
+저장 없음 375x667   s1.3  아래 여유  142px  h1 52px×2줄 카드폭 339  부제 물결 거울 
+저장 없음 375x812   s1    아래 여유  385px  h1 40px×2줄 카드폭 339  부제 물결 거울 
+저장 없음 375x812   s1.15 아래 여유  324px  h1 46px×2줄 카드폭 339  부제 물결 거울 
+저장 없음 375x812   s1.3  아래 여유  287px  h1 52px×2줄 카드폭 339  부제 물결 거울 
+저장 없음 390x844   s1    아래 여유  417px  h1 40px×2줄 카드폭 354  부제 물결 거울 
+저장 없음 390x844   s1.15 아래 여유  383px  h1 46px×2줄 카드폭 354  부제 물결 거울 
+저장 없음 390x844   s1.3  아래 여유  319px  h1 52px×2줄 카드폭 354  부제 물결 거울 
+저장 없음 412x915   s1    아래 여유  487px  h1 40px×2줄 카드폭 376  부제 물결 거울 
+저장 없음 412x915   s1.15 아래 여유  454px  h1 46px×2줄 카드폭 376  부제 물결 거울 
+저장 없음 412x915   s1.3  아래 여유  389px  h1 52px×2줄 카드폭 376  부제 물결 거울 
+저장 없음 768x1024  s1    아래 여유  504px  h1 61px×2줄 카드폭 540  부제 물결 거울 
+저장 없음 768x1024  s1.15 아래 여유  460px  h1 71px×2줄 카드폭 540  부제 물결 거울 
+저장 없음 768x1024  s1.3  아래 여유  416px  h1 80px×2줄 카드폭 540  부제 물결 거울 
+저장 없음 568x320   s1    아래 여유  110px  h1 45px×2줄 카드폭 341  
+저장 없음 568x320   s1.15 아래 여유   94px  h1 51px×2줄 카드폭 341  
+저장 없음 568x320   s1.3  아래 여유  107px  h1 45px×2줄 카드폭 341  
+저장 없음 640x360   s1    아래 여유  137px  h1 51px×2줄 카드폭 384  
+저장 없음 640x360   s1.15 아래 여유  118px  h1 59px×2줄 카드폭 384  
+저장 없음 640x360   s1.3  아래 여유  114px  h1 59px×2줄 카드폭 384  
+저장 없음 667x375   s1    아래 여유  148px  h1 53px×2줄 카드폭 400  
+저장 없음 667x375   s1.15 아래 여유  127px  h1 61px×2줄 카드폭 400  
+저장 없음 667x375   s1.3  아래 여유  124px  h1 62px×2줄 카드폭 400  
+저장 없음 740x360   s1    아래 여유  120px  h1 59px×2줄 카드폭 444  
+저장 없음 740x360   s1.15 아래 여유   98px  h1 68px×2줄 카드폭 444  
+저장 없음 740x360   s1.3  아래 여유  107px  h1 63px×2줄 카드폭 444  
+저장 없음 812x375   s1    아래 여유  122px  h1 65px×2줄 카드폭 487  
+저장 없음 812x375   s1.15 아래 여유   98px  h1 75px×2줄 카드폭 487  
+저장 없음 812x375   s1.3  아래 여유  107px  h1 70px×2줄 카드폭 487  
+저장 없음 844x390   s1    아래 여유  131px  h1 68px×2줄 카드폭 506  
+저장 없음 844x390   s1.15 아래 여유  107px  h1 78px×2줄 카드폭 506  
+저장 없음 844x390   s1.3  아래 여유  107px  h1 76px×2줄 카드폭 506  
+저장 없음 896x414   s1    아래 여유  146px  h1 72px×2줄 카드폭 538  
+저장 없음 896x414   s1.15 아래 여유  120px  h1 82px×2줄 카드폭 538  
+저장 없음 896x414   s1.3  아래 여유  116px  h1 83px×2줄 카드폭 538  
+저장 없음 926x428   s1    아래 여유  160px  h1 72px×2줄 카드폭 540  
+저장 없음 926x428   s1.15 아래 여유  133px  h1 83px×2줄 카드폭 540  
+저장 없음 926x428   s1.3  아래 여유  130px  h1 83px×2줄 카드폭 540  
+저장 없음 1024x600  s1    아래 여유  164px  h1 72px×2줄 카드폭 540  거울 
+저장 없음 1024x600  s1.15 아래 여유  220px  h1 81px×2줄 카드폭 540  
+저장 없음 1024x600  s1.3  아래 여유  218px  h1 81px×2줄 카드폭 540  
+저장 없음 1280x720  s1    아래 여유  152px  h1 72px×2줄 카드폭 540  부제 물결 거울 
+저장 없음 1280x720  s1.15 아래 여유  250px  h1 77px×2줄 카드폭 540  거울 
+저장 없음 1280x720  s1.3  아래 여유  248px  h1 77px×2줄 카드폭 540  거울 
+저장 없음 1440x900  s1    아래 여유  321px  h1 72px×2줄 카드폭 540  부제 물결 거울 
+저장 없음 1440x900  s1.15 아래 여유  293px  h1 76px×2줄 카드폭 540  부제 물결 거울 
+저장 없음 1440x900  s1.3  아래 여유  280px  h1 76px×2줄 카드폭 540  부제 물결 거울 
+저장 있음 320x568   s1    아래 여유  220px  h1 40px×2줄 카드폭 284  거울 
+저장 있음 320x568   s1.15 아래 여유  185px  h1 42px×2줄 카드폭 284  거울 
+저장 있음 320x568   s1.3  아래 여유  112px  h1 42px×2줄 카드폭 284  거울 
+저장 있음 360x640   s1    아래 여유  292px  h1 40px×2줄 카드폭 324  거울 
+저장 있음 360x640   s1.15 아래 여유  267px  h1 46px×2줄 카드폭 324  거울 
+저장 있음 360x640   s1.3  아래 여유  224px  h1 50px×2줄 카드폭 324  거울 
+저장 있음 375x667   s1    아래 여유  200px  h1 40px×2줄 카드폭 339  부제 물결 거울 
+저장 있음 375x667   s1.15 아래 여유  137px  h1 46px×2줄 카드폭 339  부제 물결 거울 
+저장 있음 375x667   s1.3  아래 여유   71px  h1 52px×2줄 카드폭 339  부제 물결 거울 
+저장 있음 375x812   s1    아래 여유  345px  h1 40px×2줄 카드폭 339  부제 물결 거울 
+저장 있음 375x812   s1.15 아래 여유  282px  h1 46px×2줄 카드폭 339  부제 물결 거울 
+저장 있음 375x812   s1.3  아래 여유  216px  h1 52px×2줄 카드폭 339  부제 물결 거울 
+저장 있음 390x844   s1    아래 여유  377px  h1 40px×2줄 카드폭 354  부제 물결 거울 
+저장 있음 390x844   s1.15 아래 여유  341px  h1 46px×2줄 카드폭 354  부제 물결 거울 
+저장 있음 390x844   s1.3  아래 여유  274px  h1 52px×2줄 카드폭 354  부제 물결 거울 
+저장 있음 412x915   s1    아래 여유  447px  h1 40px×2줄 카드폭 376  부제 물결 거울 
+저장 있음 412x915   s1.15 아래 여유  411px  h1 46px×2줄 카드폭 376  부제 물결 거울 
+저장 있음 412x915   s1.3  아래 여유  344px  h1 52px×2줄 카드폭 376  부제 물결 거울 
+저장 있음 768x1024  s1    아래 여유  465px  h1 61px×2줄 카드폭 540  부제 물결 거울 
+저장 있음 768x1024  s1.15 아래 여유  418px  h1 71px×2줄 카드폭 540  부제 물결 거울 
+저장 있음 768x1024  s1.3  아래 여유  371px  h1 80px×2줄 카드폭 540  부제 물결 거울 
+저장 있음 568x320   s1    아래 여유   70px  h1 45px×2줄 카드폭 341  
+저장 있음 568x320   s1.15 아래 여유   52px  h1 51px×2줄 카드폭 341  
+저장 있음 568x320   s1.3  아래 여유   36px  h1 45px×2줄 카드폭 341  
+저장 있음 640x360   s1    아래 여유   98px  h1 51px×2줄 카드폭 384  
+저장 있음 640x360   s1.15 아래 여유   75px  h1 59px×2줄 카드폭 384  
+저장 있음 640x360   s1.3  아래 여유   69px  h1 59px×2줄 카드폭 384  
+저장 있음 667x375   s1    아래 여유  108px  h1 53px×2줄 카드폭 400  
+저장 있음 667x375   s1.15 아래 여유   85px  h1 61px×2줄 카드폭 400  
+저장 있음 667x375   s1.3  아래 여유   78px  h1 62px×2줄 카드폭 400  
+저장 있음 740x360   s1    아래 여유   80px  h1 59px×2줄 카드폭 444  
+저장 있음 740x360   s1.15 아래 여유   55px  h1 68px×2줄 카드폭 444  
+저장 있음 740x360   s1.3  아래 여유   61px  h1 63px×2줄 카드폭 444  
+저장 있음 812x375   s1    아래 여유   83px  h1 65px×2줄 카드폭 487  
+저장 있음 812x375   s1.15 아래 여유   55px  h1 75px×2줄 카드폭 487  
+저장 있음 812x375   s1.3  아래 여유   61px  h1 70px×2줄 카드폭 487  
+저장 있음 844x390   s1    아래 여유   92px  h1 68px×2줄 카드폭 506  
+저장 있음 844x390   s1.15 아래 여유   64px  h1 78px×2줄 카드폭 506  
+저장 있음 844x390   s1.3  아래 여유   61px  h1 76px×2줄 카드폭 506  
+저장 있음 896x414   s1    아래 여유  107px  h1 72px×2줄 카드폭 538  
+저장 있음 896x414   s1.15 아래 여유   77px  h1 82px×2줄 카드폭 538  
+저장 있음 896x414   s1.3  아래 여유   71px  h1 83px×2줄 카드폭 538  
+저장 있음 926x428   s1    아래 여유  120px  h1 72px×2줄 카드폭 540  
+저장 있음 926x428   s1.15 아래 여유   91px  h1 83px×2줄 카드폭 540  
+저장 있음 926x428   s1.3  아래 여유   85px  h1 83px×2줄 카드폭 540  
+저장 있음 1024x600  s1    아래 여유  124px  h1 72px×2줄 카드폭 540  거울 
+저장 있음 1024x600  s1.15 아래 여유  178px  h1 81px×2줄 카드폭 540  
+저장 있음 1024x600  s1.3  아래 여유  172px  h1 81px×2줄 카드폭 540  
+저장 있음 1280x720  s1    아래 여유  112px  h1 72px×2줄 카드폭 540  부제 물결 거울 
+저장 있음 1280x720  s1.15 아래 여유  208px  h1 77px×2줄 카드폭 540  거울 
+저장 있음 1280x720  s1.3  아래 여유  202px  h1 77px×2줄 카드폭 540  거울 
+저장 있음 1440x900  s1    아래 여유  281px  h1 72px×2줄 카드폭 540  부제 물결 거울 
+저장 있음 1440x900  s1.15 아래 여유  251px  h1 76px×2줄 카드폭 540  부제 물결 거울 
+저장 있음 1440x900  s1.3  아래 여유  235px  h1 76px×2줄 카드폭 540  부제 물결 거울 
+TITLE SURVEY PASS: 위반 0 (108칸)
+exit 0
+== survey-hud 20:50:37
+비터치 320x568   s1    ✗ 겹침: collect-counter×action-cluster 28px
+비터치 320x568   s1.15 ✗ 겹침: collect-counter×action-cluster 28px
+비터치 320x568   s1.3  ✗ 겹침: collect-counter×action-cluster 30px
+비터치 568x320   s1    ✗ 안전영역: action-cluster
+비터치 568x320   s1.15 ✗ 안전영역: objective-chip+action-cluster
+비터치 568x320   s1.3  ✗ 안전영역: objective-chip+action-cluster
+터치 568x320   s1    ✗ 안전영역: action-cluster
+터치 568x320   s1.15 ✗ 안전영역: action-cluster
+터치 568x320   s1.3  ✗ 안전영역: objective-chip+action-cluster
+터치 640x360   s1    ✗ 안전영역: action-cluster
+터치 640x360   s1.15 ✗ 안전영역: action-cluster
+터치 640x360   s1.3  ✗ 안전영역: action-cluster
+터치 667x375   s1    ✗ 안전영역: action-cluster
+터치 667x375   s1.15 ✗ 안전영역: action-cluster
+터치 667x375   s1.3  ✗ 안전영역: action-cluster
+터치 700x500   s1    ✗ 안전영역: action-cluster
+터치 700x500   s1.15 ✗ 안전영역: action-cluster
+터치 700x500   s1.3  ✗ 안전영역: action-cluster
+터치 740x360   s1    ✗ 안전영역: action-cluster
+터치 740x360   s1.15 ✗ 안전영역: action-cluster
+터치 740x360   s1.3  ✗ 안전영역: action-cluster
+종류별 위반 칸 {"안전영역":18,"겹침":3,"화면 밖":0,"HUD가 켜지지 않음(측정 무효)":0}
+HUD SURVEY FAIL: 위반 21칸 / 204
+exit 1
+== rm9-network 20:54:11
+{"step":"raw index.html","absoluteStrings":1,"line":"\"https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js\";"}
+{"step":"(일반)","requests":18,"origins":{"http://127.0.0.1:8765":17,"https://cdnjs.cloudflare.com":1},"external":["https://cdnjs.cloudflare.com"],"domAbsoluteStrings":3,"domKinds":{"cdn":2,"sameOrigin":1,"other":0},"errors":0}
+{"step":"?qa=1","requests":18,"origins":{"http://127.0.0.1:8765":17,"https://cdnjs.cloudflare.com":1},"external":["https://cdnjs.cloudflare.com"],"domAbsoluteStrings":3,"domKinds":{"cdn":2,"sameOrigin":1,"other":0},"errors":0}
+{"step":"?test=1","requests":6,"origins":{"http://127.0.0.1:8765":6},"external":[],"domAbsoluteStrings":1,"domKinds":{"cdn":1,"sameOrigin":0,"other":0},"errors":0}
+NETWORK PASS
+exit 0
+== rm9-invariants 20:54:40
+{"makeStaticWorldColliders 함수":{"found":{"baseline":true,"game":true},"bytes":1860,"identical":true},"ALLOWED_TRANSITIONS 표":{"found":{"baseline":true,"game":true},"bytes":626,"identical":true},"saveKey":{"baseline":"lesson_designer_ocean_v1","game":"lesson_designer_ocean_v1"}}
+{"termCount":{"baseline":141,"game":141},"용어 데이터(141개 전부)":"identical","퀴즈 정의":"identical","spawnKinds":{"buoys":128,"bottleTerms":13,"none":0},"부표·유리병 자리(용어 141개의 x, z, 해역)":"identical","유리병 18개(id·해역·보상·x·z)":"identical","콘텐츠 감사표(용어·부표·유리병·퀴즈)":"identical","해역 중심·반경":"identical","해역 수업 규칙":"identical","시련 문항 집합(해역 0~7, 기본 시드)":"identical","최종 항로 명세":"identical","NPC 명부":"identical"}
+{"saves":6,"rows":[{"label":"항구(처음)","version":1,"banner":false,"newSettings":{"fx":"auto","hudQuiet":true,"scenicCam":true},"progress":"identical","position":"identical","session":"identical"},{"label":"1번 해역 준비","version":1,"banner":false,"newSettings":{"fx":"auto","hudQuiet":true,"scenicCam":true},"progress":"identical","position":"identical","session":"identical"},{"label":"4번 해역 준비","version":1,"banner":false,"newSettings":{"fx":"auto","hudQuiet":true,"scenicCam":true},"progress":"identical","position":"identical","session":"identical"},{"label":"7번 해역 준비","version":1,"banner":false,"newSettings":{"fx":"auto","hudQuiet":true,"scenicCam":true},"progress":"identical","position":"identical","session":"identical"},{"label":"일반 엔딩 직전","version":1,"banner":false,"newSettings":{"fx":"auto","hudQuiet":true,"scenicCam":true},"progress":"identical","position":"identical","session":"identical"},{"label":"히든 엔딩 직전(용어 141·병 18)","version":1,"banner":false,"newSettings":{"fx":"auto","hudQuiet":true,"scenicCam":true},"progress":"identical","position":"identical","session":"identical"}],"plain":{"clickedFx":true,"stored":true,"version":1,"fx":"lite"}}
+INVARIANTS PASS
+exit 0
+== rb-flow A 20:55:35
+
+[A. 타이틀(마우스, 1280×720)]
+  ✓ 타이틀 상태에서 시작
+  ✓ 타이틀 단추가 화면 안에 있다
+  ✓ 타이틀 단추가 시작 단추와 겹치지 않는다
+  ✓ 클릭하면 룰북이 열린다(타이틀 유지)
+  ✓ 열리면 포커스가 본문(#rb-pages)으로 간다
+  ✓ → 키로 다음 장
+  ✓ ← 키로 이전 장
+  ✓ 첫 장에서 ←는 그대로
+  ✓ 목차에서 현재 장(keys)이 보인다
+  ✓ 목차에서 현재 장(glossary)이 보인다
+  ✓ 목차에서 현재 장(tempo)이 보인다
+  ✓ → 키로 넘겨도 현재 장이 목차에서 보인다
+  ✓ Tab·Shift+Tab이 책 밖으로 나가지 않는다(72회, 목차·단추를 한 바퀴 이상)
+  ✓ 키보드 포커스 링이 보인다
+  ✓ 열린 동안 P·B·M·H·E·Space가 게임에 새지 않는다
+  ✓ Esc로 닫힌다
+  ✓ 닫으면 포커스가 타이틀 단추로 돌아온다
+  ✓ ? 키로 열린다(시작 단추에 포커스가 있어도)
+  ✓ 열린 상태에서 ? 키로 닫힌다
+  ✓ ? 키를 꾹 눌러도(키 반복) 열린 채로 있다
+  ✓ Esc를 꾹 눌러도 한 번만 닫힌다
+  ✓ 닫았다 다시 열면 읽던 자리로 돌아온다
+  ✓ 장을 넘기면 맨 위에서 시작한다
+  ✓ × 단추로 닫힌다
+  ✓ 바깥 어두운 곳을 누르면 닫힌다
+  ✓ 콘솔 오류 없음
+
+합계 26 항목 중 실패 0
+exit 0
+== rb-flow B 20:55:44
+
+[B. 항해(마우스, 1280×720)]
+  ✓ 항해 중
+  ✓ (기준) W를 누르면 배가 나아간다
+  ✓ HUD 단추를 누르면 룰북이 열린다
+  ✓ 열려 있는 동안 게임은 일시정지(PAUSE)다
+  ✓ 일시정지 메뉴 화면은 가려져 있다
+  ✓ 포커스가 본문으로 간다
+  ✓ 열려 있는 동안 W·↑를 눌러도 배가 움직이지 않는다
+  ✓ 눌린 키가 쌓이지 않는다
+  ✓ P·B·M·H가 게임에 새지 않는다
+  ✓ Esc로 닫으면 항해로 돌아온다
+  ✓ 메뉴 화면은 계속 가려져 있다
+    (닫은 뒤 포커스: rulebook-chip)
+  ✓ 포커스가 항해 화면의 단추로 돌아온다
+  ✓ 닫은 뒤 W로 다시 나아간다
+  ✓ W를 누른 채 ? 키로 열어도 열린다
+  ✓ 눌린 채 열었다 닫아도 배가 저절로 가속하지 않는다
+  ✓ 항해 중 ? 키로 열린다
+  ✓ ? 키로 닫으면 항해로 돌아온다
+  ✓ P로 메뉴가 열린다
+  ✓ 메뉴의 룰북 단추로 열린다(메뉴는 그대로 PAUSE)
+  ✓ 포커스가 본문으로 간다
+  ✓ 열린 동안 P가 메뉴를 닫지 않는다
+  ✓ Esc는 룰북만 닫고 메뉴는 남는다
+  ✓ 포커스가 메뉴의 룰북 단추로 돌아온다
+  ✓ 메뉴 위에서 Esc를 꾹 눌러도 메뉴까지 닫히지 않는다
+  ✓ 다음 Esc에 메뉴가 닫히고 항해로 돌아온다
+  ✓ H로 화면을 숨기면 룰북 단추도 숨는다
+  ✓ 다시 H를 누르면 돌아온다
+  ✓ 화면을 숨긴 상태에서도 ? 키로 열린다
+  ✓ 콘솔 오류 없음
+
+합계 29 항목 중 실패 0
+exit 0
+== rb-flow C 20:56:02
+
+[C. 좁은 화면(터치, 390×844)]
+  ✓ 탭하면 열린다
+  ✓ 좁은 화면에서는 목차 서랍이 닫혀 있다
+  ✓ 목차 단추: aria-expanded=false, 터치 크기 44px 이상
+  ✓ 목차 단추로 서랍이 열린다(본문은 비활성)
+  ✓ Esc는 서랍만 닫고 룰북은 남는다
+  ✓ 서랍을 열면 현재 장(19장)이 목차 안에 보인다
+  ✓ 목차 항목이 터치하기 충분히 크다(높이 44px 이상)
+  ✓ 목차 항목을 탭하면 그 장으로 가고 서랍이 닫힌다
+  ✓ 다음 단추로 한 장 넘어간다
+  ✓ 이전 단추로 되돌아온다
+  ✓ 닫기·이전·다음·목차 단추가 모두 44px 이상
+  ✓ 본문이 가로로 넘치지 않는다
+  ✓ 닫기 단추로 닫고 포커스가 타이틀 단추로
+  ✓ (터치) 항해 중
+  ✓ (터치) HUD 단추를 탭하면 열리고 일시정지
+  ✓ (터치) 닫으면 항해로 돌아온다
+  ✓ (터치) 닫은 뒤 큰 행동 단추를 누를 수 있다
+  ✓ 콘솔 오류 없음
+
+합계 18 항목 중 실패 0
+exit 0
+== rb-title-buttons none 20:56:08
+안전영역=none · 측정 156칸, 위반 0칸 · 두 단추 틈 8~8px
+카드 위끝 − 단추 아래끝(세로폰·낮은 화면에서 음수면 가로로 비킨 것): 최소 -130px
+세로로 쌓인 화면: 568x320, 640x360, 667x375, 740x360, 812x375, 844x390, 896x414, 926x428, 480x320, 700x500
+exit 0
+== rb-title-buttons portrait 20:56:17
+안전영역=portrait · 측정 156칸, 위반 0칸 · 두 단추 틈 8~8px
+카드 위끝 − 단추 아래끝(세로폰·낮은 화면에서 음수면 가로로 비킨 것): 최소 -130px
+세로로 쌓인 화면: 568x320, 640x360, 667x375, 740x360, 812x375, 844x390, 896x414, 926x428, 480x320, 700x500
+exit 0
+== rb-title-buttons landscape 20:56:25
+안전영역=landscape · 측정 156칸, 위반 0칸 · 두 단추 틈 8~8px
+카드 위끝 − 단추 아래끝(세로폰·낮은 화면에서 음수면 가로로 비킨 것): 최소 -130px
+세로로 쌓인 화면: 568x320, 640x360, 667x375, 740x360, 812x375, 844x390, 896x414, 926x428, 480x320, 700x500
+exit 0
+== rb-ingame-audit 20:56:33
+{"cfg":{"w":1280,"h":720,"touch":false,"scale":1},"paper":"day","attr":"day","chapters":23,"measured":3134,"minRatio":6.84,"violations":0,"copyHits":0,"below44":14,"maxTargets":28,"errors":0}
+   크기 harbor: {"id":null,"label":"5장 「용어 부표와 항해 도감」","width":193.81,"height":27,"major":false}
+   크기 harbor: {"id":null,"label":"7장 「등대와 시련」","width":130.56,"height":27,"major":false}
+   크기 controls: {"id":null,"label":"7장 「등대와 시련」","width":130.56,"height":27,"major":false}
+   크기 controls: {"id":null,"label":"8장 「음표 조개와 상점」","width":162.19,"height":27,"major":false}
+   크기 screen: {"id":null,"label":"10장 「저장·설정·접근성」","width":162.27,"height":23.8,"major":false}
+   크기 buoys: {"id":null,"label":"6장 「유리병 편지」","width":121.86,"height":23.8,"major":false}
+   크기 bottles: {"id":null,"label":"9장 「다 카포 소용돌이와 최종 항로」","width":223.3,"height":23.8,"major":false}
+   크기 final: {"id":null,"label":"19장 「반복과 형식」","width":130.91,"height":23.8,"major":false}
+{"cfg":{"w":1280,"h":720,"touch":false,"scale":1},"paper":"night","attr":"night","chapters":23,"measured":3134,"minRatio":7.62,"violations":0,"copyHits":0,"below44":14,"maxTargets":28,"errors":0}
+   크기 harbor: {"id":null,"label":"5장 「용어 부표와 항해 도감」","width":193.81,"height":27,"major":false}
+   크기 harbor: {"id":null,"label":"7장 「등대와 시련」","width":130.56,"height":27,"major":false}
+   크기 controls: {"id":null,"label":"7장 「등대와 시련」","width":130.56,"height":27,"major":false}
+   크기 controls: {"id":null,"label":"8장 「음표 조개와 상점」","width":162.19,"height":27,"major":false}
+   크기 screen: {"id":null,"label":"10장 「저장·설정·접근성」","width":162.27,"height":23.8,"major":false}
+   크기 buoys: {"id":null,"label":"6장 「유리병 편지」","width":121.86,"height":23.8,"major":false}
+   크기 bottles: {"id":null,"label":"9장 「다 카포 소용돌이와 최종 항로」","width":223.3,"height":23.8,"major":false}
+   크기 final: {"id":null,"label":"19장 「반복과 형식」","width":130.91,"height":23.8,"major":false}
+{"cfg":{"w":390,"h":844,"touch":true,"scale":1},"paper":"day","attr":"day","chapters":23,"measured":2007,"minRatio":6.84,"violations":0,"copyHits":0,"below44":14,"maxTargets":6,"errors":0}
+   크기 harbor: {"id":null,"label":"5장 「용어 부표와 항해 도감」","width":193.81,"height":27,"major":false}
+   크기 harbor: {"id":null,"label":"7장 「등대와 시련」","width":130.56,"height":27,"major":false}
+   크기 controls: {"id":null,"label":"7장 「등대와 시련」","width":130.56,"height":27,"major":false}
+   크기 controls: {"id":null,"label":"8장 「음표 조개와 상점」","width":162.19,"height":27,"major":false}
+   크기 screen: {"id":null,"label":"10장 「저장·설정·접근성」","width":162.27,"height":23.8,"major":false}
+   크기 buoys: {"id":null,"label":"6장 「유리병 편지」","width":121.86,"height":23.8,"major":false}
+   크기 bottles: {"id":null,"label":"9장 「다 카포 소용돌이와 최종 항로」","width":223.3,"height":23.8,"major":false}
+   크기 final: {"id":null,"label":"19장 「반복과 형식」","width":130.91,"height":23.8,"major":false}
+{"cfg":{"w":390,"h":844,"touch":true,"scale":1},"paper":"night","attr":"night","chapters":23,"measured":2007,"minRatio":7.62,"violations":0,"copyHits":0,"below44":14,"maxTargets":6,"errors":0}
+   크기 harbor: {"id":null,"label":"5장 「용어 부표와 항해 도감」","width":193.81,"height":27,"major":false}
+   크기 harbor: {"id":null,"label":"7장 「등대와 시련」","width":130.56,"height":27,"major":false}
+   크기 controls: {"id":null,"label":"7장 「등대와 시련」","width":130.56,"height":27,"major":false}
+   크기 controls: {"id":null,"label":"8장 「음표 조개와 상점」","width":162.19,"height":27,"major":false}
+   크기 screen: {"id":null,"label":"10장 「저장·설정·접근성」","width":162.27,"height":23.8,"major":false}
+   크기 buoys: {"id":null,"label":"6장 「유리병 편지」","width":121.86,"height":23.8,"major":false}
+   크기 bottles: {"id":null,"label":"9장 「다 카포 소용돌이와 최종 항로」","width":223.3,"height":23.8,"major":false}
+   크기 final: {"id":null,"label":"19장 「반복과 형식」","width":130.91,"height":23.8,"major":false}
+{"cfg":{"w":390,"h":844,"touch":true,"scale":1.3},"paper":"day","attr":"day","chapters":23,"measured":2007,"minRatio":6.84,"violations":0,"copyHits":0,"below44":14,"maxTargets":6,"errors":0}
+   크기 harbor: {"id":null,"label":"5장 「용어 부표와 항해 도감」","width":251.97,"height":35.09,"major":false}
+   크기 harbor: {"id":null,"label":"7장 「등대와 시련」","width":169.73,"height":35.09,"major":false}
+   크기 controls: {"id":null,"label":"7장 「등대와 시련」","width":169.73,"height":35.09,"major":false}
+   크기 controls: {"id":null,"label":"8장 「음표 조개와 상점」","width":210.84,"height":35.09,"major":false}
+   크기 screen: {"id":null,"label":"10장 「저장·설정·접근성」","width":210.8,"height":30.94,"major":false}
+   크기 buoys: {"id":null,"label":"6장 「유리병 편지」","width":158.3,"height":30.94,"major":false}
+   크기 bottles: {"id":null,"label":"9장 「다 카포 소용돌이와 최종 항로」","width":290.08,"height":30.94,"major":false}
+   크기 final: {"id":null,"label":"19장 「반복과 형식」","width":170.06,"height":30.94,"major":false}
+{"cfg":{"w":390,"h":844,"touch":true,"scale":1.3},"paper":"night","attr":"night","chapters":23,"measured":2007,"minRatio":7.62,"violations":0,"copyHits":0,"below44":14,"maxTargets":6,"errors":0}
+   크기 harbor: {"id":null,"label":"5장 「용어 부표와 항해 도감」","width":251.97,"height":35.09,"major":false}
+   크기 harbor: {"id":null,"label":"7장 「등대와 시련」","width":169.73,"height":35.09,"major":false}
+   크기 controls: {"id":null,"label":"7장 「등대와 시련」","width":169.73,"height":35.09,"major":false}
+   크기 controls: {"id":null,"label":"8장 「음표 조개와 상점」","width":210.84,"height":35.09,"major":false}
+   크기 screen: {"id":null,"label":"10장 「저장·설정·접근성」","width":210.8,"height":30.94,"major":false}
+   크기 buoys: {"id":null,"label":"6장 「유리병 편지」","width":158.3,"height":30.94,"major":false}
+   크기 bottles: {"id":null,"label":"9장 「다 카포 소용돌이와 최종 항로」","width":290.08,"height":30.94,"major":false}
+   크기 final: {"id":null,"label":"19장 「반복과 형식」","width":170.06,"height":30.94,"major":false}
+
+구성 6 개 중 문제 있는 구성 6
+exit 0
+== rb-hud-chip (prepare) 20:56:50
+측정 112 칸, 문제 0 칸
+칩 크기 분포 {"80x44":16,"44x44":80,"88x44":16}
+exit 0
+== rb-link-hit 20:58:56
+링크 {"n":2,"go":"final","rect":[38.6,410.8,277.8,437.8],"text":"9장 「다 카포 소용돌이와 최종 항로」"} 현재 rect [39,411,278,438]
+위로 5px: rb-link|final  아래로 5px: rb-link|final  위로 14px(밖이어야): P
+위쪽 5px을 탭한 뒤 장: final (링크 목적지: final)
+exit 0
+== rb-text-scan 20:59:00
+① 남은 표시 조각: 0곳
+② 명조로 그려지는 한글 646자(겹침 포함) 가운데 서브셋에 없는 글자 0종: 없음
+③ 삽화 89점(23장)을 기억 없이 새로 그리는 데 5.3ms · 가장 오래 걸리는 장 keys(삽화 6점) 0.7ms
+콘솔 오류: 0
+exit 0
+== rb-fig-contrast 20:59:07
+{"cfg":{"w":1280,"h":720,"touch":false,"scale":1},"paper":"day","texts":1715,"unresolved":0,"minRatio":7.47,"below":0,"smallest":17.3,"largest":43.3,"errors":0}
+{"cfg":{"w":1280,"h":720,"touch":false,"scale":1},"paper":"night","texts":1715,"unresolved":0,"minRatio":7.39,"below":0,"smallest":17.3,"largest":43.3,"errors":0}
+{"cfg":{"w":390,"h":844,"touch":true,"scale":1},"paper":"day","texts":1715,"unresolved":0,"minRatio":7.47,"below":0,"smallest":10.7,"largest":26.7,"errors":0}
+{"cfg":{"w":390,"h":844,"touch":true,"scale":1},"paper":"night","texts":1715,"unresolved":0,"minRatio":7.39,"below":0,"smallest":10.7,"largest":26.7,"errors":0}
+{"cfg":{"w":390,"h":844,"touch":true,"scale":1.3},"paper":"day","texts":1715,"unresolved":0,"minRatio":7.47,"below":0,"smallest":10.7,"largest":26.7,"errors":0}
+{"cfg":{"w":390,"h":844,"touch":true,"scale":1.3},"paper":"night","texts":1715,"unresolved":0,"minRatio":7.39,"below":0,"smallest":10.7,"largest":26.7,"errors":0}
+
+구성 6개 중 기준 미달·오류가 있는 구성 0
+exit 0
+== rb-audit figures 720 20:59:28
+쓴 곳: /tmp/rulebook-audit/rbp/index.html (38783줄)
+삽화 89 장 · 문제 0 {}
+exit 0
+== rb-audit figures 390 night 20:59:33
+쓴 곳: /tmp/rulebook-audit/rbp/index.html (38783줄)
+삽화 89 장 · 문제 0 {}
+exit 0
+== boot-sweep 원본(룰북 전) 터치 20:59:37
+터치   320x480    실제 주소 시작됨 · ?qa=1 시작됨 · 배치 검사 실패 1 (O-40 awake: objective-chip)
+터치   360x360    실제 주소 시작됨 · ?qa=1 시작됨 · 배치 검사 실패 1 (O-40 awake: objective-chip)
+터치   480x320    실제 주소 시작됨 · ?qa=1 시작됨 · 배치 검사 실패 1 (O-40 awake: action-cluster)
+터치   568x320    실제 주소 시작됨 · ?qa=1 시작됨 · 배치 검사 실패 1 (O-40 awake: action-cluster)
+BOOT SWEEP PASS: 4/4곳 모두 시작됨 (배치 검사 실패 4곳은 시작을 막지 않음: 320x480, 360x360, 480x320, 568x320)
+exit 0
+== rb-shots world 21:00:00
+title desk
+hud awake desk
+hud quiet desk
+title phone
+hud awake phone
+hud quiet phone
+exit 0
+== rb-shots book 21:00:54
+desk-intro
+desk-controls
+desk-screen
+desk-buoys
+desk-scales
+desk-chords
+desk-keys
+desk-form-night
+desk-worldmap-night
+phone-intro
+phone-controls
+phone-keys
+phone-scales-night
+phone-chromatic-night
+phone-syncopation-night
+exit 0
+build at end=1d63d0225acb227f (start 1d63d0225acb227f) same=yes
+git status:  M assets/remaster/asset-manifest.json  M assets/remaster/fonts/README.md  M assets/remaster/fonts/ld-myeongjo-400.woff2  M assets/remaster/fonts/ld-myeongjo-700.woff2  M assets/remaster/fonts/ld-score-500i.woff2  M assets/remaster/fonts/ld-score-600.woff2  M index.html 
+== done 21:01:11

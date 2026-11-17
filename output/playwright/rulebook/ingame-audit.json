@@ -1,0 +1,194 @@
+[
+ {
+  "cfg": {
+   "w": 1280,
+   "h": 720,
+   "touch": false,
+   "scale": 1
+  },
+  "paper": "day",
+  "attr": "day",
+  "chapters": 23,
+  "measured": 3134,
+  "minRatio": 6.84,
+  "violations": 0,
+  "copyHits": 0,
+  "below44": 14,
+  "maxTargets": 28,
+  "errors": 0,
+  "viol": [],
+  "copy": [],
+  "touch": [
+   "harbor: {\"id\":null,\"label\":\"5장 「용어 부표와 항해 도감」\",\"width\":193.81,\"height\":27,\"major\":false}",
+   "harbor: {\"id\":null,\"label\":\"7장 「등대와 시련」\",\"width\":130.56,\"height\":27,\"major\":false}",
+   "controls: {\"id\":null,\"label\":\"7장 「등대와 시련」\",\"width\":130.56,\"height\":27,\"major\":false}",
+   "controls: {\"id\":null,\"label\":\"8장 「음표 조개와 상점」\",\"width\":162.19,\"height\":27,\"major\":false}",
+   "screen: {\"id\":null,\"label\":\"10장 「저장·설정·접근성」\",\"width\":162.27,\"height\":23.8,\"major\":false}",
+   "buoys: {\"id\":null,\"label\":\"6장 「유리병 편지」\",\"width\":121.86,\"height\":23.8,\"major\":false}",
+   "bottles: {\"id\":null,\"label\":\"9장 「다 카포 소용돌이와 최종 항로」\",\"width\":223.3,\"height\":23.8,\"major\":false}",
+   "final: {\"id\":null,\"label\":\"19장 「반복과 형식」\",\"width\":130.91,\"height\":23.8,\"major\":false}",
+   "save: {\"id\":null,\"label\":\"부록 A 「자주 묻는 질문」\",\"width\":156.53,\"height\":23.8,\"major\":false}",
+   "scales: {\"id\":null,\"label\":\"17장 「화음」\",\"width\":94.83,\"height\":27,\"major\":false}"
+  ]
+ },
+ {
+  "cfg": {
+   "w": 1280,
+   "h": 720,
+   "touch": false,
+   "scale": 1
+  },
+  "paper": "night",
+  "attr": "night",
+  "chapters": 23,
+  "measured": 3134,
+  "minRatio": 7.62,
+  "violations": 0,
+  "copyHits": 0,
+  "below44": 14,
+  "maxTargets": 28,
+  "errors": 0,
+  "viol": [],
+  "copy": [],
+  "touch": [
+   "harbor: {\"id\":null,\"label\":\"5장 「용어 부표와 항해 도감」\",\"width\":193.81,\"height\":27,\"major\":false}",
+   "harbor: {\"id\":null,\"label\":\"7장 「등대와 시련」\",\"width\":130.56,\"height\":27,\"major\":false}",
+   "controls: {\"id\":null,\"label\":\"7장 「등대와 시련」\",\"width\":130.56,\"height\":27,\"major\":false}",
+   "controls: {\"id\":null,\"label\":\"8장 「음표 조개와 상점」\",\"width\":162.19,\"height\":27,\"major\":false}",
+   "screen: {\"id\":null,\"label\":\"10장 「저장·설정·접근성」\",\"width\":162.27,\"height\":23.8,\"major\":false}",
+   "buoys: {\"id\":null,\"label\":\"6장 「유리병 편지」\",\"width\":121.86,\"height\":23.8,\"major\":false}",
+   "bottles: {\"id\":null,\"label\":\"9장 「다 카포 소용돌이와 최종 항로」\",\"width\":223.3,\"height\":23.8,\"major\":false}",
+   "final: {\"id\":null,\"label\":\"19장 「반복과 형식」\",\"width\":130.91,\"height\":23.8,\"major\":false}",
+   "save: {\"id\":null,\"label\":\"부록 A 「자주 묻는 질문」\",\"width\":156.53,\"height\":23.8,\"major\":false}",
+   "scales: {\"id\":null,\"label\":\"17장 「화음」\",\"width\":94.83,\"height\":27,\"major\":false}"
+  ]
+ },
+ {
+  "cfg": {
+   "w": 390,
+   "h": 844,
+   "touch": true,
+   "scale": 1
+  },
+  "paper": "day",
+  "attr": "day",
+  "chapters": 23,
+  "measured": 2007,
+  "minRatio": 6.84,
+  "violations": 0,
+  "copyHits": 0,
+  "below44": 14,
+  "maxTargets": 6,
+  "errors": 0,
+  "viol": [],
+  "copy": [],
+  "touch": [
+   "harbor: {\"id\":null,\"label\":\"5장 「용어 부표와 항해 도감」\",\"width\":193.81,\"height\":27,\"major\":false}",
+   "harbor: {\"id\":null,\"label\":\"7장 「등대와 시련」\",\"width\":130.56,\"height\":27,\"major\":false}",
+   "controls: {\"id\":null,\"label\":\"7장 「등대와 시련」\",\"width\":130.56,\"height\":27,\"major\":false}",
+   "controls: {\"id\":null,\"label\":\"8장 「음표 조개와 상점」\",\"width\":162.19,\"height\":27,\"major\":false}",
+   "screen: {\"id\":null,\"label\":\"10장 「저장·설정·접근성」\",\"width\":162.27,\"height\":23.8,\"major\":false}",
+   "buoys: {\"id\":null,\"label\":\"6장 「유리병 편지」\",\"width\":121.86,\"height\":23.8,\"major\":false}",
+   "bottles: {\"id\":null,\"label\":\"9장 「다 카포 소용돌이와 최종 항로」\",\"width\":223.3,\"height\":23.8,\"major\":false}",
+   "final: {\"id\":null,\"label\":\"19장 「반복과 형식」\",\"width\":130.91,\"height\":23.8,\"major\":false}",
+   "save: {\"id\":null,\"label\":\"부록 A 「자주 묻는 질문」\",\"width\":156.53,\"height\":23.8,\"major\":false}",
+   "scales: {\"id\":null,\"label\":\"17장 「화음」\",\"width\":94.83,\"height\":27,\"major\":false}"
+  ]
+ },
+ {
+  "cfg": {
+   "w": 390,
+   "h": 844,
+   "touch": true,
+   "scale": 1
+  },
+  "paper": "night",
+  "attr": "night",
+  "chapters": 23,
+  "measured": 2007,
+  "minRatio": 7.62,
+  "violations": 0,
+  "copyHits": 0,
+  "below44": 14,
+  "maxTargets": 6,
+  "errors": 0,
+  "viol": [],
+  "copy": [],
+  "touch": [
+   "harbor: {\"id\":null,\"label\":\"5장 「용어 부표와 항해 도감」\",\"width\":193.81,\"height\":27,\"major\":false}",
+   "harbor: {\"id\":null,\"label\":\"7장 「등대와 시련」\",\"width\":130.56,\"height\":27,\"major\":false}",
+   "controls: {\"id\":null,\"label\":\"7장 「등대와 시련」\",\"width\":130.56,\"height\":27,\"major\":false}",
+   "controls: {\"id\":null,\"label\":\"8장 「음표 조개와 상점」\",\"width\":162.19,\"height\":27,\"major\":false}",
+   "screen: {\"id\":null,\"label\":\"10장 「저장·설정·접근성」\",\"width\":162.27,\"height\":23.8,\"major\":false}",
+   "buoys: {\"id\":null,\"label\":\"6장 「유리병 편지」\",\"width\":121.86,\"height\":23.8,\"major\":false}",
+   "bottles: {\"id\":null,\"label\":\"9장 「다 카포 소용돌이와 최종 항로」\",\"width\":223.3,\"height\":23.8,\"major\":false}",
+   "final: {\"id\":null,\"label\":\"19장 「반복과 형식」\",\"width\":130.91,\"height\":23.8,\"major\":false}",
+   "save: {\"id\":null,\"label\":\"부록 A 「자주 묻는 질문」\",\"width\":156.53,\"height\":23.8,\"major\":false}",
+   "scales: {\"id\":null,\"label\":\"17장 「화음」\",\"width\":94.83,\"height\":27,\"major\":false}"
+  ]
+ },
+ {
+  "cfg": {
+   "w": 390,
+   "h": 844,
+   "touch": true,
+   "scale": 1.3
+  },
+  "paper": "day",
+  "attr": "day",
+  "chapters": 23,
+  "measured": 2007,
+  "minRatio": 6.84,
+  "violations": 0,
+  "copyHits": 0,
+  "below44": 14,
+  "maxTargets": 6,
+  "errors": 0,
+  "viol": [],
+  "copy": [],
+  "touch": [
+   "harbor: {\"id\":null,\"label\":\"5장 「용어 부표와 항해 도감」\",\"width\":251.97,\"height\":35.09,\"major\":false}",
+   "harbor: {\"id\":null,\"label\":\"7장 「등대와 시련」\",\"width\":169.73,\"height\":35.09,\"major\":false}",
+   "controls: {\"id\":null,\"label\":\"7장 「등대와 시련」\",\"width\":169.73,\"height\":35.09,\"major\":false}",
+   "controls: {\"id\":null,\"label\":\"8장 「음표 조개와 상점」\",\"width\":210.84,\"height\":35.09,\"major\":false}",
+   "screen: {\"id\":null,\"label\":\"10장 「저장·설정·접근성」\",\"width\":210.8,\"height\":30.94,\"major\":false}",
+   "buoys: {\"id\":null,\"label\":\"6장 「유리병 편지」\",\"width\":158.3,\"height\":30.94,\"major\":false}",
+   "bottles: {\"id\":null,\"label\":\"9장 「다 카포 소용돌이와 최종 항로」\",\"width\":290.08,\"height\":30.94,\"major\":false}",
+   "final: {\"id\":null,\"label\":\"19장 「반복과 형식」\",\"width\":170.06,\"height\":30.94,\"major\":false}",
+   "save: {\"id\":null,\"label\":\"부록 A 「자주 묻는 질문」\",\"width\":203.36,\"height\":30.94,\"major\":false}",
+   "scales: {\"id\":null,\"label\":\"17장 「화음」\",\"width\":123.28,\"height\":35.09,\"major\":false}"
+  ]
+ },
+ {
+  "cfg": {
+   "w": 390,
+   "h": 844,
+   "touch": true,
+   "scale": 1.3
+  },
+  "paper": "night",
+  "attr": "night",
+  "chapters": 23,
+  "measured": 2007,
+  "minRatio": 7.62,
+  "violations": 0,
+  "copyHits": 0,
+  "below44": 14,
+  "maxTargets": 6,
+  "errors": 0,
+  "viol": [],
+  "copy": [],
+  "touch": [
+   "harbor: {\"id\":null,\"label\":\"5장 「용어 부표와 항해 도감」\",\"width\":251.97,\"height\":35.09,\"major\":false}",
+   "harbor: {\"id\":null,\"label\":\"7장 「등대와 시련」\",\"width\":169.73,\"height\":35.09,\"major\":false}",
+   "controls: {\"id\":null,\"label\":\"7장 「등대와 시련」\",\"width\":169.73,\"height\":35.09,\"major\":false}",
+   "controls: {\"id\":null,\"label\":\"8장 「음표 조개와 상점」\",\"width\":210.84,\"height\":35.09,\"major\":false}",
+   "screen: {\"id\":null,\"label\":\"10장 「저장·설정·접근성」\",\"width\":210.8,\"height\":30.94,\"major\":false}",
+   "buoys: {\"id\":null,\"label\":\"6장 「유리병 편지」\",\"width\":158.3,\"height\":30.94,\"major\":false}",
+   "bottles: {\"id\":null,\"label\":\"9장 「다 카포 소용돌이와 최종 항로」\",\"width\":290.08,\"height\":30.94,\"major\":false}",
+   "final: {\"id\":null,\"label\":\"19장 「반복과 형식」\",\"width\":170.06,\"height\":30.94,\"major\":false}",
+   "save: {\"id\":null,\"label\":\"부록 A 「자주 묻는 질문」\",\"width\":203.36,\"height\":30.94,\"major\":false}",
+   "scales: {\"id\":null,\"label\":\"17장 「화음」\",\"width\":123.28,\"height\":35.09,\"major\":false}"
+  ]
+ }
+]

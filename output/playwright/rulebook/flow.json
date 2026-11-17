@@ -1,0 +1,110 @@
+[
+ {
+  "section": "C. 좁은 화면(터치, 390×844)",
+  "name": "탭하면 열린다",
+  "ok": true,
+  "detail": "{\"mode\":\"TITLE\",\"rbOpen\":true,\"rbHidden\":false,\"pauseHidden\":true,\"chapter\":\"intro\",\"active\":\"rb-pages\",\"activeInPanel\":true,\"x\":0,\"z\":-430,\"speed\":0,\"keys\":[],\"tocOpen\":\"false\",\"pagesInert\":false,\"scroll\":0,\"hud\":\"awake\"}"
+ },
+ {
+  "section": "C. 좁은 화면(터치, 390×844)",
+  "name": "좁은 화면에서는 목차 서랍이 닫혀 있다",
+  "ok": true,
+  "detail": "false"
+ },
+ {
+  "section": "C. 좁은 화면(터치, 390×844)",
+  "name": "목차 단추: aria-expanded=false, 터치 크기 44px 이상",
+  "ok": true,
+  "detail": "{\"exp\":\"false\",\"w\":218,\"h\":44}"
+ },
+ {
+  "section": "C. 좁은 화면(터치, 390×844)",
+  "name": "목차 단추로 서랍이 열린다(본문은 비활성)",
+  "ok": true,
+  "detail": "{\"toc\":\"true\",\"inert\":true}"
+ },
+ {
+  "section": "C. 좁은 화면(터치, 390×844)",
+  "name": "Esc는 서랍만 닫고 룰북은 남는다",
+  "ok": true,
+  "detail": "{\"toc\":\"false\",\"open\":true,\"inert\":false}"
+ },
+ {
+  "section": "C. 좁은 화면(터치, 390×844)",
+  "name": "서랍을 열면 현재 장(19장)이 목차 안에 보인다",
+  "ok": true,
+  "detail": "{\"ok\":true,\"item\":[717,761],\"toc\":[75,773],\"scroll\":210}"
+ },
+ {
+  "section": "C. 좁은 화면(터치, 390×844)",
+  "name": "목차 항목이 터치하기 충분히 크다(높이 44px 이상)",
+  "ok": true,
+  "detail": "{\"go\":\"buoys\",\"n\":23,\"h\":44}"
+ },
+ {
+  "section": "C. 좁은 화면(터치, 390×844)",
+  "name": "목차 항목을 탭하면 그 장으로 가고 서랍이 닫힌다",
+  "ok": true,
+  "detail": "{\"ch\":\"buoys\",\"want\":\"buoys\",\"toc\":\"false\"}"
+ },
+ {
+  "section": "C. 좁은 화면(터치, 390×844)",
+  "name": "다음 단추로 한 장 넘어간다",
+  "ok": true,
+  "detail": "bottles"
+ },
+ {
+  "section": "C. 좁은 화면(터치, 390×844)",
+  "name": "이전 단추로 되돌아온다",
+  "ok": true,
+  "detail": "buoys"
+ },
+ {
+  "section": "C. 좁은 화면(터치, 390×844)",
+  "name": "닫기·이전·다음·목차 단추가 모두 44px 이상",
+  "ok": true,
+  "detail": "rb-close:44x44 rb-prev:93x44 rb-next:89x44 rb-toc-toggle:206x44"
+ },
+ {
+  "section": "C. 좁은 화면(터치, 390×844)",
+  "name": "본문이 가로로 넘치지 않는다",
+  "ok": true,
+  "detail": "{\"sw\":371,\"cw\":371}"
+ },
+ {
+  "section": "C. 좁은 화면(터치, 390×844)",
+  "name": "닫기 단추로 닫고 포커스가 타이틀 단추로",
+  "ok": true,
+  "detail": "{\"mode\":\"TITLE\",\"rbOpen\":false,\"rbHidden\":true,\"pauseHidden\":true,\"chapter\":\"buoys\",\"active\":\"title-rulebook\",\"activeInPanel\":false,\"x\":0,\"z\":-430,\"speed\":0,\"keys\":[],\"tocOpen\":\"false\",\"pagesInert\":false,\"scroll\":0,\"hud\":\"awake\"}"
+ },
+ {
+  "section": "C. 좁은 화면(터치, 390×844)",
+  "name": "(터치) 항해 중",
+  "ok": true,
+  "detail": "SAILING"
+ },
+ {
+  "section": "C. 좁은 화면(터치, 390×844)",
+  "name": "(터치) HUD 단추를 탭하면 열리고 일시정지",
+  "ok": true,
+  "detail": "{\"mode\":\"PAUSE\",\"rbOpen\":true,\"rbHidden\":false,\"pauseHidden\":true,\"chapter\":\"buoys\",\"active\":\"rb-pages\",\"activeInPanel\":true,\"x\":72,\"z\":-266.1683952471984,\"speed\":0,\"keys\":[],\"tocOpen\":\"false\",\"pagesInert\":false,\"scroll\":0,\"hud\":\"awake\"}"
+ },
+ {
+  "section": "C. 좁은 화면(터치, 390×844)",
+  "name": "(터치) 닫으면 항해로 돌아온다",
+  "ok": true,
+  "detail": "{\"mode\":\"SAILING\",\"rbOpen\":false,\"rbHidden\":true,\"pauseHidden\":true,\"chapter\":\"buoys\",\"active\":\"rulebook-chip\",\"activeInPanel\":false,\"x\":72,\"z\":-266.7755419863198,\"speed\":0,\"keys\":[],\"tocOpen\":\"false\",\"pagesInert\":false,\"scroll\":0,\"hud\":\"awake\"}"
+ },
+ {
+  "section": "C. 좁은 화면(터치, 390×844)",
+  "name": "(터치) 닫은 뒤 큰 행동 단추를 누를 수 있다",
+  "ok": true,
+  "detail": "horn fn=true"
+ },
+ {
+  "section": "C. 좁은 화면(터치, 390×844)",
+  "name": "콘솔 오류 없음",
+  "ok": true,
+  "detail": ""
+ }
+]

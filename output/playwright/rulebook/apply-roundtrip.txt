@@ -1,0 +1,6 @@
+룰북 다시 만들기·걷기 왕복 확인 (tools/rulebook/apply.py) 2026-11-17
+룰북 전 파일: backups/index.before-rulebook.html  sha256 981884981f844ed030e8278590885d68a3c6559586b5319813e0f003b1ca5eac
+지금 파일   : game/index.html                     sha256 b07f02fd612c134271202070d6612e61d7d39720097cef0bfdf2f324ce680f4f
+[1] 룰북 전 파일에 소스로 새로 만든 결과 == 지금 game/index.html : 바이트까지 같다
+[2] game/index.html에서 --remove 한 결과 == 룰북 전 파일 : 바이트까지 같다
+[3] 이미 넣은 파일에 다시 넣은 결과 == 그 파일 : 바이트까지 같다(여러 번 돌려도 같은 결과)

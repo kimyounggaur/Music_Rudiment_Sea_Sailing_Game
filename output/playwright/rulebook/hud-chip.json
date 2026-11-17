@@ -1,0 +1,2578 @@
+[
+ {
+  "touch": false,
+  "W": 1280,
+  "H": 720,
+  "scale": 1,
+  "state": "awake",
+  "hud": "awake",
+  "mode": "SAILING",
+  "chip": [
+   1119.7,
+   22,
+   1200,
+   66
+  ],
+  "overlaps": [],
+  "off": false,
+  "center": false,
+  "label": 26,
+  "size": [
+   80,
+   44
+  ]
+ },
+ {
+  "touch": false,
+  "W": 1280,
+  "H": 720,
+  "scale": 1,
+  "state": "quiet",
+  "hud": "quiet",
+  "mode": "SAILING",
+  "chip": [
+   1156,
+   22,
+   1200,
+   66
+  ],
+  "overlaps": [],
+  "off": false,
+  "center": false,
+  "label": 1,
+  "size": [
+   44,
+   44
+  ]
+ },
+ {
+  "touch": false,
+  "W": 1280,
+  "H": 720,
+  "scale": 1.3,
+  "state": "awake",
+  "hud": "awake",
+  "mode": "SAILING",
+  "chip": [
+   1111.8,
+   22,
+   1200,
+   66
+  ],
+  "overlaps": [],
+  "off": false,
+  "center": false,
+  "label": 34,
+  "size": [
+   88,
+   44
+  ]
+ },
+ {
+  "touch": false,
+  "W": 1280,
+  "H": 720,
+  "scale": 1.3,
+  "state": "quiet",
+  "hud": "quiet",
+  "mode": "SAILING",
+  "chip": [
+   1156,
+   22,
+   1200,
+   66
+  ],
+  "overlaps": [],
+  "off": false,
+  "center": false,
+  "label": 1,
+  "size": [
+   44,
+   44
+  ]
+ },
+ {
+  "touch": false,
+  "W": 1024,
+  "H": 768,
+  "scale": 1,
+  "state": "awake",
+  "hud": "awake",
+  "mode": "SAILING",
+  "chip": [
+   863.7,
+   22,
+   944,
+   66
+  ],
+  "overlaps": [],
+  "off": false,
+  "center": false,
+  "label": 26,
+  "size": [
+   80,
+   44
+  ]
+ },
+ {
+  "touch": false,
+  "W": 1024,
+  "H": 768,
+  "scale": 1,
+  "state": "quiet",
+  "hud": "quiet",
+  "mode": "SAILING",
+  "chip": [
+   900,
+   22,
+   944,
+   66
+  ],
+  "overlaps": [],
+  "off": false,
+  "center": false,
+  "label": 1,
+  "size": [
+   44,
+   44
+  ]
+ },
+ {
+  "touch": false,
+  "W": 1024,
+  "H": 768,
+  "scale": 1.3,
+  "state": "awake",
+  "hud": "awake",
+  "mode": "SAILING",
+  "chip": [
+   855.8,
+   22,
+   944,
+   66
+  ],
+  "overlaps": [],
+  "off": false,
+  "center": false,
+  "label": 34,
+  "size": [
+   88,
+   44
+  ]
+ },
+ {
+  "touch": false,
+  "W": 1024,
+  "H": 768,
+  "scale": 1.3,
+  "state": "quiet",
+  "hud": "quiet",
+  "mode": "SAILING",
+  "chip": [
+   900,
+   22,
+   944,
+   66
+  ],
+  "overlaps": [],
+  "off": false,
+  "center": false,
+  "label": 1,
+  "size": [
+   44,
+   44
+  ]
+ },
+ {
+  "touch": false,
+  "W": 1366,
+  "H": 657,
+  "scale": 1,
+  "state": "awake",
+  "hud": "awake",
+  "mode": "SAILING",
+  "chip": [
+   1205.7,
+   22,
+   1286,
+   66
+  ],
+  "overlaps": [],
+  "off": false,
+  "center": false,
+  "label": 26,
+  "size": [
+   80,
+   44
+  ]
+ },
+ {
+  "touch": false,
+  "W": 1366,
+  "H": 657,
+  "scale": 1,
+  "state": "quiet",
+  "hud": "quiet",
+  "mode": "SAILING",
+  "chip": [
+   1242,
+   22,
+   1286,
+   66
+  ],
+  "overlaps": [],
+  "off": false,
+  "center": false,
+  "label": 1,
+  "size": [
+   44,
+   44
+  ]
+ },
+ {
+  "touch": false,
+  "W": 1366,
+  "H": 657,
+  "scale": 1.3,
+  "state": "awake",
+  "hud": "awake",
+  "mode": "SAILING",
+  "chip": [
+   1197.8,
+   22,
+   1286,
+   66
+  ],
+  "overlaps": [],
+  "off": false,
+  "center": false,
+  "label": 34,
+  "size": [
+   88,
+   44
+  ]
+ },
+ {
+  "touch": false,
+  "W": 1366,
+  "H": 657,
+  "scale": 1.3,
+  "state": "quiet",
+  "hud": "quiet",
+  "mode": "SAILING",
+  "chip": [
+   1242,
+   22,
+   1286,
+   66
+  ],
+  "overlaps": [],
+  "off": false,
+  "center": false,
+  "label": 1,
+  "size": [
+   44,
+   44
+  ]
+ },
+ {
+  "touch": false,
+  "W": 1920,
+  "H": 1080,
+  "scale": 1,
+  "state": "awake",
+  "hud": "awake",
+  "mode": "SAILING",
+  "chip": [
+   1759.7,
+   22,
+   1840,
+   66
+  ],
+  "overlaps": [],
+  "off": false,
+  "center": false,
+  "label": 26,
+  "size": [
+   80,
+   44
+  ]
+ },
+ {
+  "touch": false,
+  "W": 1920,
+  "H": 1080,
+  "scale": 1,
+  "state": "quiet",
+  "hud": "quiet",
+  "mode": "SAILING",
+  "chip": [
+   1796,
+   22,
+   1840,
+   66
+  ],
+  "overlaps": [],
+  "off": false,
+  "center": false,
+  "label": 1,
+  "size": [
+   44,
+   44
+  ]
+ },
+ {
+  "touch": false,
+  "W": 1920,
+  "H": 1080,
+  "scale": 1.3,
+  "state": "awake",
+  "hud": "awake",
+  "mode": "SAILING",
+  "chip": [
+   1751.8,
+   22,
+   1840,
+   66
+  ],
+  "overlaps": [],
+  "off": false,
+  "center": false,
+  "label": 34,
+  "size": [
+   88,
+   44
+  ]
+ },
+ {
+  "touch": false,
+  "W": 1920,
+  "H": 1080,
+  "scale": 1.3,
+  "state": "quiet",
+  "hud": "quiet",
+  "mode": "SAILING",
+  "chip": [
+   1796,
+   22,
+   1840,
+   66
+  ],
+  "overlaps": [],
+  "off": false,
+  "center": false,
+  "label": 1,
+  "size": [
+   44,
+   44
+  ]
+ },
+ {
+  "touch": false,
+  "W": 900,
+  "H": 500,
+  "scale": 1,
+  "state": "awake",
+  "hud": "awake",
+  "mode": "SAILING",
+  "chip": [
+   739.7,
+   22,
+   820,
+   66
+  ],
+  "overlaps": [],
+  "off": false,
+  "center": false,
+  "label": 26,
+  "size": [
+   80,
+   44
+  ]
+ },
+ {
+  "touch": false,
+  "W": 900,
+  "H": 500,
+  "scale": 1,
+  "state": "quiet",
+  "hud": "quiet",
+  "mode": "SAILING",
+  "chip": [
+   776,
+   22,
+   820,
+   66
+  ],
+  "overlaps": [],
+  "off": false,
+  "center": false,
+  "label": 1,
+  "size": [
+   44,
+   44
+  ]
+ },
+ {
+  "touch": false,
+  "W": 900,
+  "H": 500,
+  "scale": 1.3,
+  "state": "awake",
+  "hud": "awake",
+  "mode": "SAILING",
+  "chip": [
+   731.8,
+   22,
+   820,
+   66
+  ],
+  "overlaps": [],
+  "off": false,
+  "center": false,
+  "label": 34,
+  "size": [
+   88,
+   44
+  ]
+ },
+ {
+  "touch": false,
+  "W": 900,
+  "H": 500,
+  "scale": 1.3,
+  "state": "quiet",
+  "hud": "quiet",
+  "mode": "SAILING",
+  "chip": [
+   776,
+   22,
+   820,
+   66
+  ],
+  "overlaps": [],
+  "off": false,
+  "center": false,
+  "label": 1,
+  "size": [
+   44,
+   44
+  ]
+ },
+ {
+  "touch": false,
+  "W": 844,
+  "H": 390,
+  "scale": 1,
+  "state": "awake",
+  "hud": "awake",
+  "mode": "SAILING",
+  "chip": [
+   683.7,
+   22,
+   764,
+   66
+  ],
+  "overlaps": [],
+  "off": false,
+  "center": false,
+  "label": 26,
+  "size": [
+   80,
+   44
+  ]
+ },
+ {
+  "touch": false,
+  "W": 844,
+  "H": 390,
+  "scale": 1,
+  "state": "quiet",
+  "hud": "quiet",
+  "mode": "SAILING",
+  "chip": [
+   720,
+   22,
+   764,
+   66
+  ],
+  "overlaps": [],
+  "off": false,
+  "center": false,
+  "label": 1,
+  "size": [
+   44,
+   44
+  ]
+ },
+ {
+  "touch": false,
+  "W": 844,
+  "H": 390,
+  "scale": 1.3,
+  "state": "awake",
+  "hud": "awake",
+  "mode": "SAILING",
+  "chip": [
+   675.8,
+   22,
+   764,
+   66
+  ],
+  "overlaps": [],
+  "off": false,
+  "center": false,
+  "label": 34,
+  "size": [
+   88,
+   44
+  ]
+ },
+ {
+  "touch": false,
+  "W": 844,
+  "H": 390,
+  "scale": 1.3,
+  "state": "quiet",
+  "hud": "quiet",
+  "mode": "SAILING",
+  "chip": [
+   720,
+   22,
+   764,
+   66
+  ],
+  "overlaps": [],
+  "off": false,
+  "center": false,
+  "label": 1,
+  "size": [
+   44,
+   44
+  ]
+ },
+ {
+  "touch": false,
+  "W": 740,
+  "H": 360,
+  "scale": 1,
+  "state": "awake",
+  "hud": "awake",
+  "mode": "SAILING",
+  "chip": [
+   579.7,
+   22,
+   660,
+   66
+  ],
+  "overlaps": [],
+  "off": false,
+  "center": false,
+  "label": 26,
+  "size": [
+   80,
+   44
+  ]
+ },
+ {
+  "touch": false,
+  "W": 740,
+  "H": 360,
+  "scale": 1,
+  "state": "quiet",
+  "hud": "quiet",
+  "mode": "SAILING",
+  "chip": [
+   616,
+   22,
+   660,
+   66
+  ],
+  "overlaps": [],
+  "off": false,
+  "center": false,
+  "label": 1,
+  "size": [
+   44,
+   44
+  ]
+ },
+ {
+  "touch": false,
+  "W": 740,
+  "H": 360,
+  "scale": 1.3,
+  "state": "awake",
+  "hud": "awake",
+  "mode": "SAILING",
+  "chip": [
+   571.8,
+   22,
+   660,
+   66
+  ],
+  "overlaps": [],
+  "off": false,
+  "center": false,
+  "label": 34,
+  "size": [
+   88,
+   44
+  ]
+ },
+ {
+  "touch": false,
+  "W": 740,
+  "H": 360,
+  "scale": 1.3,
+  "state": "quiet",
+  "hud": "quiet",
+  "mode": "SAILING",
+  "chip": [
+   616,
+   22,
+   660,
+   66
+  ],
+  "overlaps": [],
+  "off": false,
+  "center": false,
+  "label": 1,
+  "size": [
+   44,
+   44
+  ]
+ },
+ {
+  "touch": false,
+  "W": 667,
+  "H": 375,
+  "scale": 1,
+  "state": "awake",
+  "hud": "awake",
+  "mode": "SAILING",
+  "chip": [
+   601,
+   80,
+   645,
+   124
+  ],
+  "overlaps": [],
+  "off": false,
+  "center": false,
+  "label": 1,
+  "size": [
+   44,
+   44
+  ]
+ },
+ {
+  "touch": false,
+  "W": 667,
+  "H": 375,
+  "scale": 1,
+  "state": "quiet",
+  "hud": "quiet",
+  "mode": "SAILING",
+  "chip": [
+   601,
+   80,
+   645,
+   124
+  ],
+  "overlaps": [],
+  "off": false,
+  "center": false,
+  "label": 1,
+  "size": [
+   44,
+   44
+  ]
+ },
+ {
+  "touch": false,
+  "W": 667,
+  "H": 375,
+  "scale": 1.3,
+  "state": "awake",
+  "hud": "awake",
+  "mode": "SAILING",
+  "chip": [
+   601,
+   80,
+   645,
+   124
+  ],
+  "overlaps": [],
+  "off": false,
+  "center": false,
+  "label": 1,
+  "size": [
+   44,
+   44
+  ]
+ },
+ {
+  "touch": false,
+  "W": 667,
+  "H": 375,
+  "scale": 1.3,
+  "state": "quiet",
+  "hud": "quiet",
+  "mode": "SAILING",
+  "chip": [
+   601,
+   80,
+   645,
+   124
+  ],
+  "overlaps": [],
+  "off": false,
+  "center": false,
+  "label": 1,
+  "size": [
+   44,
+   44
+  ]
+ },
+ {
+  "touch": false,
+  "W": 568,
+  "H": 320,
+  "scale": 1,
+  "state": "awake",
+  "hud": "awake",
+  "mode": "SAILING",
+  "chip": [
+   506,
+   76,
+   550,
+   120
+  ],
+  "overlaps": [],
+  "off": false,
+  "center": false,
+  "label": 1,
+  "size": [
+   44,
+   44
+  ]
+ },
+ {
+  "touch": false,
+  "W": 568,
+  "H": 320,
+  "scale": 1,
+  "state": "quiet",
+  "hud": "quiet",
+  "mode": "SAILING",
+  "chip": [
+   506,
+   76,
+   550,
+   120
+  ],
+  "overlaps": [],
+  "off": false,
+  "center": false,
+  "label": 1,
+  "size": [
+   44,
+   44
+  ]
+ },
+ {
+  "touch": false,
+  "W": 568,
+  "H": 320,
+  "scale": 1.3,
+  "state": "awake",
+  "hud": "awake",
+  "mode": "SAILING",
+  "chip": [
+   506,
+   76,
+   550,
+   120
+  ],
+  "overlaps": [],
+  "off": false,
+  "center": false,
+  "label": 1,
+  "size": [
+   44,
+   44
+  ]
+ },
+ {
+  "touch": false,
+  "W": 568,
+  "H": 320,
+  "scale": 1.3,
+  "state": "quiet",
+  "hud": "quiet",
+  "mode": "SAILING",
+  "chip": [
+   506,
+   76,
+   550,
+   120
+  ],
+  "overlaps": [],
+  "off": false,
+  "center": false,
+  "label": 1,
+  "size": [
+   44,
+   44
+  ]
+ },
+ {
+  "touch": false,
+  "W": 390,
+  "H": 844,
+  "scale": 1,
+  "state": "awake",
+  "hud": "awake",
+  "mode": "SAILING",
+  "chip": [
+   328,
+   76,
+   372,
+   120
+  ],
+  "overlaps": [],
+  "off": false,
+  "center": false,
+  "label": 1,
+  "size": [
+   44,
+   44
+  ]
+ },
+ {
+  "touch": false,
+  "W": 390,
+  "H": 844,
+  "scale": 1,
+  "state": "quiet",
+  "hud": "quiet",
+  "mode": "SAILING",
+  "chip": [
+   328,
+   76,
+   372,
+   120
+  ],
+  "overlaps": [],
+  "off": false,
+  "center": false,
+  "label": 1,
+  "size": [
+   44,
+   44
+  ]
+ },
+ {
+  "touch": false,
+  "W": 390,
+  "H": 844,
+  "scale": 1.3,
+  "state": "awake",
+  "hud": "awake",
+  "mode": "SAILING",
+  "chip": [
+   328,
+   76,
+   372,
+   120
+  ],
+  "overlaps": [],
+  "off": false,
+  "center": false,
+  "label": 1,
+  "size": [
+   44,
+   44
+  ]
+ },
+ {
+  "touch": false,
+  "W": 390,
+  "H": 844,
+  "scale": 1.3,
+  "state": "quiet",
+  "hud": "quiet",
+  "mode": "SAILING",
+  "chip": [
+   328,
+   76,
+   372,
+   120
+  ],
+  "overlaps": [],
+  "off": false,
+  "center": false,
+  "label": 1,
+  "size": [
+   44,
+   44
+  ]
+ },
+ {
+  "touch": false,
+  "W": 375,
+  "H": 667,
+  "scale": 1,
+  "state": "awake",
+  "hud": "awake",
+  "mode": "SAILING",
+  "chip": [
+   313,
+   76,
+   357,
+   120
+  ],
+  "overlaps": [],
+  "off": false,
+  "center": false,
+  "label": 1,
+  "size": [
+   44,
+   44
+  ]
+ },
+ {
+  "touch": false,
+  "W": 375,
+  "H": 667,
+  "scale": 1,
+  "state": "quiet",
+  "hud": "quiet",
+  "mode": "SAILING",
+  "chip": [
+   313,
+   76,
+   357,
+   120
+  ],
+  "overlaps": [],
+  "off": false,
+  "center": false,
+  "label": 1,
+  "size": [
+   44,
+   44
+  ]
+ },
+ {
+  "touch": false,
+  "W": 375,
+  "H": 667,
+  "scale": 1.3,
+  "state": "awake",
+  "hud": "awake",
+  "mode": "SAILING",
+  "chip": [
+   313,
+   76,
+   357,
+   120
+  ],
+  "overlaps": [],
+  "off": false,
+  "center": false,
+  "label": 1,
+  "size": [
+   44,
+   44
+  ]
+ },
+ {
+  "touch": false,
+  "W": 375,
+  "H": 667,
+  "scale": 1.3,
+  "state": "quiet",
+  "hud": "quiet",
+  "mode": "SAILING",
+  "chip": [
+   313,
+   76,
+   357,
+   120
+  ],
+  "overlaps": [],
+  "off": false,
+  "center": false,
+  "label": 1,
+  "size": [
+   44,
+   44
+  ]
+ },
+ {
+  "touch": false,
+  "W": 360,
+  "H": 640,
+  "scale": 1,
+  "state": "awake",
+  "hud": "awake",
+  "mode": "SAILING",
+  "chip": [
+   298,
+   76,
+   342,
+   120
+  ],
+  "overlaps": [],
+  "off": false,
+  "center": false,
+  "label": 1,
+  "size": [
+   44,
+   44
+  ]
+ },
+ {
+  "touch": false,
+  "W": 360,
+  "H": 640,
+  "scale": 1,
+  "state": "quiet",
+  "hud": "quiet",
+  "mode": "SAILING",
+  "chip": [
+   298,
+   76,
+   342,
+   120
+  ],
+  "overlaps": [],
+  "off": false,
+  "center": false,
+  "label": 1,
+  "size": [
+   44,
+   44
+  ]
+ },
+ {
+  "touch": false,
+  "W": 360,
+  "H": 640,
+  "scale": 1.3,
+  "state": "awake",
+  "hud": "awake",
+  "mode": "SAILING",
+  "chip": [
+   298,
+   76,
+   342,
+   120
+  ],
+  "overlaps": [],
+  "off": false,
+  "center": false,
+  "label": 1,
+  "size": [
+   44,
+   44
+  ]
+ },
+ {
+  "touch": false,
+  "W": 360,
+  "H": 640,
+  "scale": 1.3,
+  "state": "quiet",
+  "hud": "quiet",
+  "mode": "SAILING",
+  "chip": [
+   298,
+   76,
+   342,
+   120
+  ],
+  "overlaps": [],
+  "off": false,
+  "center": false,
+  "label": 1,
+  "size": [
+   44,
+   44
+  ]
+ },
+ {
+  "touch": false,
+  "W": 320,
+  "H": 568,
+  "scale": 1,
+  "state": "awake",
+  "hud": "awake",
+  "mode": "SAILING",
+  "chip": [
+   258,
+   76,
+   302,
+   120
+  ],
+  "overlaps": [],
+  "off": false,
+  "center": false,
+  "label": 1,
+  "size": [
+   44,
+   44
+  ]
+ },
+ {
+  "touch": false,
+  "W": 320,
+  "H": 568,
+  "scale": 1,
+  "state": "quiet",
+  "hud": "quiet",
+  "mode": "SAILING",
+  "chip": [
+   258,
+   76,
+   302,
+   120
+  ],
+  "overlaps": [],
+  "off": false,
+  "center": false,
+  "label": 1,
+  "size": [
+   44,
+   44
+  ]
+ },
+ {
+  "touch": false,
+  "W": 320,
+  "H": 568,
+  "scale": 1.3,
+  "state": "awake",
+  "hud": "awake",
+  "mode": "SAILING",
+  "chip": [
+   258,
+   76,
+   302,
+   120
+  ],
+  "overlaps": [],
+  "off": false,
+  "center": false,
+  "label": 1,
+  "size": [
+   44,
+   44
+  ]
+ },
+ {
+  "touch": false,
+  "W": 320,
+  "H": 568,
+  "scale": 1.3,
+  "state": "quiet",
+  "hud": "quiet",
+  "mode": "SAILING",
+  "chip": [
+   258,
+   76,
+   302,
+   120
+  ],
+  "overlaps": [],
+  "off": false,
+  "center": false,
+  "label": 1,
+  "size": [
+   44,
+   44
+  ]
+ },
+ {
+  "touch": false,
+  "W": 768,
+  "H": 1024,
+  "scale": 1,
+  "state": "awake",
+  "hud": "awake",
+  "mode": "SAILING",
+  "chip": [
+   607.7,
+   22,
+   688,
+   66
+  ],
+  "overlaps": [],
+  "off": false,
+  "center": false,
+  "label": 26,
+  "size": [
+   80,
+   44
+  ]
+ },
+ {
+  "touch": false,
+  "W": 768,
+  "H": 1024,
+  "scale": 1,
+  "state": "quiet",
+  "hud": "quiet",
+  "mode": "SAILING",
+  "chip": [
+   644,
+   22,
+   688,
+   66
+  ],
+  "overlaps": [],
+  "off": false,
+  "center": false,
+  "label": 1,
+  "size": [
+   44,
+   44
+  ]
+ },
+ {
+  "touch": false,
+  "W": 768,
+  "H": 1024,
+  "scale": 1.3,
+  "state": "awake",
+  "hud": "awake",
+  "mode": "SAILING",
+  "chip": [
+   599.8,
+   22,
+   688,
+   66
+  ],
+  "overlaps": [],
+  "off": false,
+  "center": false,
+  "label": 34,
+  "size": [
+   88,
+   44
+  ]
+ },
+ {
+  "touch": false,
+  "W": 768,
+  "H": 1024,
+  "scale": 1.3,
+  "state": "quiet",
+  "hud": "quiet",
+  "mode": "SAILING",
+  "chip": [
+   644,
+   22,
+   688,
+   66
+  ],
+  "overlaps": [],
+  "off": false,
+  "center": false,
+  "label": 1,
+  "size": [
+   44,
+   44
+  ]
+ },
+ {
+  "touch": true,
+  "W": 1280,
+  "H": 720,
+  "scale": 1,
+  "state": "awake",
+  "hud": "awake",
+  "mode": "SAILING",
+  "chip": [
+   1119.7,
+   22,
+   1200,
+   66
+  ],
+  "overlaps": [],
+  "off": false,
+  "center": false,
+  "label": 26,
+  "size": [
+   80,
+   44
+  ]
+ },
+ {
+  "touch": true,
+  "W": 1280,
+  "H": 720,
+  "scale": 1,
+  "state": "quiet",
+  "hud": "quiet",
+  "mode": "SAILING",
+  "chip": [
+   1156,
+   22,
+   1200,
+   66
+  ],
+  "overlaps": [],
+  "off": false,
+  "center": false,
+  "label": 1,
+  "size": [
+   44,
+   44
+  ]
+ },
+ {
+  "touch": true,
+  "W": 1280,
+  "H": 720,
+  "scale": 1.3,
+  "state": "awake",
+  "hud": "awake",
+  "mode": "SAILING",
+  "chip": [
+   1111.8,
+   22,
+   1200,
+   66
+  ],
+  "overlaps": [],
+  "off": false,
+  "center": false,
+  "label": 34,
+  "size": [
+   88,
+   44
+  ]
+ },
+ {
+  "touch": true,
+  "W": 1280,
+  "H": 720,
+  "scale": 1.3,
+  "state": "quiet",
+  "hud": "quiet",
+  "mode": "SAILING",
+  "chip": [
+   1156,
+   22,
+   1200,
+   66
+  ],
+  "overlaps": [],
+  "off": false,
+  "center": false,
+  "label": 1,
+  "size": [
+   44,
+   44
+  ]
+ },
+ {
+  "touch": true,
+  "W": 1024,
+  "H": 768,
+  "scale": 1,
+  "state": "awake",
+  "hud": "awake",
+  "mode": "SAILING",
+  "chip": [
+   863.7,
+   22,
+   944,
+   66
+  ],
+  "overlaps": [],
+  "off": false,
+  "center": false,
+  "label": 26,
+  "size": [
+   80,
+   44
+  ]
+ },
+ {
+  "touch": true,
+  "W": 1024,
+  "H": 768,
+  "scale": 1,
+  "state": "quiet",
+  "hud": "quiet",
+  "mode": "SAILING",
+  "chip": [
+   900,
+   22,
+   944,
+   66
+  ],
+  "overlaps": [],
+  "off": false,
+  "center": false,
+  "label": 1,
+  "size": [
+   44,
+   44
+  ]
+ },
+ {
+  "touch": true,
+  "W": 1024,
+  "H": 768,
+  "scale": 1.3,
+  "state": "awake",
+  "hud": "awake",
+  "mode": "SAILING",
+  "chip": [
+   855.8,
+   22,
+   944,
+   66
+  ],
+  "overlaps": [],
+  "off": false,
+  "center": false,
+  "label": 34,
+  "size": [
+   88,
+   44
+  ]
+ },
+ {
+  "touch": true,
+  "W": 1024,
+  "H": 768,
+  "scale": 1.3,
+  "state": "quiet",
+  "hud": "quiet",
+  "mode": "SAILING",
+  "chip": [
+   900,
+   22,
+   944,
+   66
+  ],
+  "overlaps": [],
+  "off": false,
+  "center": false,
+  "label": 1,
+  "size": [
+   44,
+   44
+  ]
+ },
+ {
+  "touch": true,
+  "W": 1366,
+  "H": 657,
+  "scale": 1,
+  "state": "awake",
+  "hud": "awake",
+  "mode": "SAILING",
+  "chip": [
+   1205.7,
+   22,
+   1286,
+   66
+  ],
+  "overlaps": [],
+  "off": false,
+  "center": false,
+  "label": 26,
+  "size": [
+   80,
+   44
+  ]
+ },
+ {
+  "touch": true,
+  "W": 1366,
+  "H": 657,
+  "scale": 1,
+  "state": "quiet",
+  "hud": "quiet",
+  "mode": "SAILING",
+  "chip": [
+   1242,
+   22,
+   1286,
+   66
+  ],
+  "overlaps": [],
+  "off": false,
+  "center": false,
+  "label": 1,
+  "size": [
+   44,
+   44
+  ]
+ },
+ {
+  "touch": true,
+  "W": 1366,
+  "H": 657,
+  "scale": 1.3,
+  "state": "awake",
+  "hud": "awake",
+  "mode": "SAILING",
+  "chip": [
+   1197.8,
+   22,
+   1286,
+   66
+  ],
+  "overlaps": [],
+  "off": false,
+  "center": false,
+  "label": 34,
+  "size": [
+   88,
+   44
+  ]
+ },
+ {
+  "touch": true,
+  "W": 1366,
+  "H": 657,
+  "scale": 1.3,
+  "state": "quiet",
+  "hud": "quiet",
+  "mode": "SAILING",
+  "chip": [
+   1242,
+   22,
+   1286,
+   66
+  ],
+  "overlaps": [],
+  "off": false,
+  "center": false,
+  "label": 1,
+  "size": [
+   44,
+   44
+  ]
+ },
+ {
+  "touch": true,
+  "W": 1920,
+  "H": 1080,
+  "scale": 1,
+  "state": "awake",
+  "hud": "awake",
+  "mode": "SAILING",
+  "chip": [
+   1759.7,
+   22,
+   1840,
+   66
+  ],
+  "overlaps": [],
+  "off": false,
+  "center": false,
+  "label": 26,
+  "size": [
+   80,
+   44
+  ]
+ },
+ {
+  "touch": true,
+  "W": 1920,
+  "H": 1080,
+  "scale": 1,
+  "state": "quiet",
+  "hud": "quiet",
+  "mode": "SAILING",
+  "chip": [
+   1796,
+   22,
+   1840,
+   66
+  ],
+  "overlaps": [],
+  "off": false,
+  "center": false,
+  "label": 1,
+  "size": [
+   44,
+   44
+  ]
+ },
+ {
+  "touch": true,
+  "W": 1920,
+  "H": 1080,
+  "scale": 1.3,
+  "state": "awake",
+  "hud": "awake",
+  "mode": "SAILING",
+  "chip": [
+   1751.8,
+   22,
+   1840,
+   66
+  ],
+  "overlaps": [],
+  "off": false,
+  "center": false,
+  "label": 34,
+  "size": [
+   88,
+   44
+  ]
+ },
+ {
+  "touch": true,
+  "W": 1920,
+  "H": 1080,
+  "scale": 1.3,
+  "state": "quiet",
+  "hud": "quiet",
+  "mode": "SAILING",
+  "chip": [
+   1796,
+   22,
+   1840,
+   66
+  ],
+  "overlaps": [],
+  "off": false,
+  "center": false,
+  "label": 1,
+  "size": [
+   44,
+   44
+  ]
+ },
+ {
+  "touch": true,
+  "W": 900,
+  "H": 500,
+  "scale": 1,
+  "state": "awake",
+  "hud": "awake",
+  "mode": "SAILING",
+  "chip": [
+   739.7,
+   22,
+   820,
+   66
+  ],
+  "overlaps": [],
+  "off": false,
+  "center": false,
+  "label": 26,
+  "size": [
+   80,
+   44
+  ]
+ },
+ {
+  "touch": true,
+  "W": 900,
+  "H": 500,
+  "scale": 1,
+  "state": "quiet",
+  "hud": "quiet",
+  "mode": "SAILING",
+  "chip": [
+   776,
+   22,
+   820,
+   66
+  ],
+  "overlaps": [],
+  "off": false,
+  "center": false,
+  "label": 1,
+  "size": [
+   44,
+   44
+  ]
+ },
+ {
+  "touch": true,
+  "W": 900,
+  "H": 500,
+  "scale": 1.3,
+  "state": "awake",
+  "hud": "awake",
+  "mode": "SAILING",
+  "chip": [
+   731.8,
+   22,
+   820,
+   66
+  ],
+  "overlaps": [],
+  "off": false,
+  "center": false,
+  "label": 34,
+  "size": [
+   88,
+   44
+  ]
+ },
+ {
+  "touch": true,
+  "W": 900,
+  "H": 500,
+  "scale": 1.3,
+  "state": "quiet",
+  "hud": "quiet",
+  "mode": "SAILING",
+  "chip": [
+   776,
+   22,
+   820,
+   66
+  ],
+  "overlaps": [],
+  "off": false,
+  "center": false,
+  "label": 1,
+  "size": [
+   44,
+   44
+  ]
+ },
+ {
+  "touch": true,
+  "W": 844,
+  "H": 390,
+  "scale": 1,
+  "state": "awake",
+  "hud": "awake",
+  "mode": "SAILING",
+  "chip": [
+   683.7,
+   22,
+   764,
+   66
+  ],
+  "overlaps": [],
+  "off": false,
+  "center": false,
+  "label": 26,
+  "size": [
+   80,
+   44
+  ]
+ },
+ {
+  "touch": true,
+  "W": 844,
+  "H": 390,
+  "scale": 1,
+  "state": "quiet",
+  "hud": "quiet",
+  "mode": "SAILING",
+  "chip": [
+   720,
+   22,
+   764,
+   66
+  ],
+  "overlaps": [],
+  "off": false,
+  "center": false,
+  "label": 1,
+  "size": [
+   44,
+   44
+  ]
+ },
+ {
+  "touch": true,
+  "W": 844,
+  "H": 390,
+  "scale": 1.3,
+  "state": "awake",
+  "hud": "awake",
+  "mode": "SAILING",
+  "chip": [
+   675.8,
+   22,
+   764,
+   66
+  ],
+  "overlaps": [],
+  "off": false,
+  "center": false,
+  "label": 34,
+  "size": [
+   88,
+   44
+  ]
+ },
+ {
+  "touch": true,
+  "W": 844,
+  "H": 390,
+  "scale": 1.3,
+  "state": "quiet",
+  "hud": "quiet",
+  "mode": "SAILING",
+  "chip": [
+   720,
+   22,
+   764,
+   66
+  ],
+  "overlaps": [],
+  "off": false,
+  "center": false,
+  "label": 1,
+  "size": [
+   44,
+   44
+  ]
+ },
+ {
+  "touch": true,
+  "W": 740,
+  "H": 360,
+  "scale": 1,
+  "state": "awake",
+  "hud": "awake",
+  "mode": "SAILING",
+  "chip": [
+   579.7,
+   22,
+   660,
+   66
+  ],
+  "overlaps": [],
+  "off": false,
+  "center": false,
+  "label": 26,
+  "size": [
+   80,
+   44
+  ]
+ },
+ {
+  "touch": true,
+  "W": 740,
+  "H": 360,
+  "scale": 1,
+  "state": "quiet",
+  "hud": "quiet",
+  "mode": "SAILING",
+  "chip": [
+   616,
+   22,
+   660,
+   66
+  ],
+  "overlaps": [],
+  "off": false,
+  "center": false,
+  "label": 1,
+  "size": [
+   44,
+   44
+  ]
+ },
+ {
+  "touch": true,
+  "W": 740,
+  "H": 360,
+  "scale": 1.3,
+  "state": "awake",
+  "hud": "awake",
+  "mode": "SAILING",
+  "chip": [
+   571.8,
+   22,
+   660,
+   66
+  ],
+  "overlaps": [],
+  "off": false,
+  "center": false,
+  "label": 34,
+  "size": [
+   88,
+   44
+  ]
+ },
+ {
+  "touch": true,
+  "W": 740,
+  "H": 360,
+  "scale": 1.3,
+  "state": "quiet",
+  "hud": "quiet",
+  "mode": "SAILING",
+  "chip": [
+   616,
+   22,
+   660,
+   66
+  ],
+  "overlaps": [],
+  "off": false,
+  "center": false,
+  "label": 1,
+  "size": [
+   44,
+   44
+  ]
+ },
+ {
+  "touch": true,
+  "W": 667,
+  "H": 375,
+  "scale": 1,
+  "state": "awake",
+  "hud": "awake",
+  "mode": "SAILING",
+  "chip": [
+   601,
+   80,
+   645,
+   124
+  ],
+  "overlaps": [],
+  "off": false,
+  "center": false,
+  "label": 1,
+  "size": [
+   44,
+   44
+  ]
+ },
+ {
+  "touch": true,
+  "W": 667,
+  "H": 375,
+  "scale": 1,
+  "state": "quiet",
+  "hud": "quiet",
+  "mode": "SAILING",
+  "chip": [
+   601,
+   80,
+   645,
+   124
+  ],
+  "overlaps": [],
+  "off": false,
+  "center": false,
+  "label": 1,
+  "size": [
+   44,
+   44
+  ]
+ },
+ {
+  "touch": true,
+  "W": 667,
+  "H": 375,
+  "scale": 1.3,
+  "state": "awake",
+  "hud": "awake",
+  "mode": "SAILING",
+  "chip": [
+   601,
+   80,
+   645,
+   124
+  ],
+  "overlaps": [],
+  "off": false,
+  "center": false,
+  "label": 1,
+  "size": [
+   44,
+   44
+  ]
+ },
+ {
+  "touch": true,
+  "W": 667,
+  "H": 375,
+  "scale": 1.3,
+  "state": "quiet",
+  "hud": "quiet",
+  "mode": "SAILING",
+  "chip": [
+   601,
+   80,
+   645,
+   124
+  ],
+  "overlaps": [],
+  "off": false,
+  "center": false,
+  "label": 1,
+  "size": [
+   44,
+   44
+  ]
+ },
+ {
+  "touch": true,
+  "W": 568,
+  "H": 320,
+  "scale": 1,
+  "state": "awake",
+  "hud": "awake",
+  "mode": "SAILING",
+  "chip": [
+   506,
+   76,
+   550,
+   120
+  ],
+  "overlaps": [],
+  "off": false,
+  "center": false,
+  "label": 1,
+  "size": [
+   44,
+   44
+  ]
+ },
+ {
+  "touch": true,
+  "W": 568,
+  "H": 320,
+  "scale": 1,
+  "state": "quiet",
+  "hud": "quiet",
+  "mode": "SAILING",
+  "chip": [
+   506,
+   76,
+   550,
+   120
+  ],
+  "overlaps": [],
+  "off": false,
+  "center": false,
+  "label": 1,
+  "size": [
+   44,
+   44
+  ]
+ },
+ {
+  "touch": true,
+  "W": 568,
+  "H": 320,
+  "scale": 1.3,
+  "state": "awake",
+  "hud": "awake",
+  "mode": "SAILING",
+  "chip": [
+   506,
+   76,
+   550,
+   120
+  ],
+  "overlaps": [],
+  "off": false,
+  "center": false,
+  "label": 1,
+  "size": [
+   44,
+   44
+  ]
+ },
+ {
+  "touch": true,
+  "W": 568,
+  "H": 320,
+  "scale": 1.3,
+  "state": "quiet",
+  "hud": "quiet",
+  "mode": "SAILING",
+  "chip": [
+   506,
+   76,
+   550,
+   120
+  ],
+  "overlaps": [],
+  "off": false,
+  "center": false,
+  "label": 1,
+  "size": [
+   44,
+   44
+  ]
+ },
+ {
+  "touch": true,
+  "W": 390,
+  "H": 844,
+  "scale": 1,
+  "state": "awake",
+  "hud": "awake",
+  "mode": "SAILING",
+  "chip": [
+   328,
+   76,
+   372,
+   120
+  ],
+  "overlaps": [],
+  "off": false,
+  "center": false,
+  "label": 1,
+  "size": [
+   44,
+   44
+  ]
+ },
+ {
+  "touch": true,
+  "W": 390,
+  "H": 844,
+  "scale": 1,
+  "state": "quiet",
+  "hud": "quiet",
+  "mode": "SAILING",
+  "chip": [
+   328,
+   76,
+   372,
+   120
+  ],
+  "overlaps": [],
+  "off": false,
+  "center": false,
+  "label": 1,
+  "size": [
+   44,
+   44
+  ]
+ },
+ {
+  "touch": true,
+  "W": 390,
+  "H": 844,
+  "scale": 1.3,
+  "state": "awake",
+  "hud": "awake",
+  "mode": "SAILING",
+  "chip": [
+   328,
+   76,
+   372,
+   120
+  ],
+  "overlaps": [],
+  "off": false,
+  "center": false,
+  "label": 1,
+  "size": [
+   44,
+   44
+  ]
+ },
+ {
+  "touch": true,
+  "W": 390,
+  "H": 844,
+  "scale": 1.3,
+  "state": "quiet",
+  "hud": "quiet",
+  "mode": "SAILING",
+  "chip": [
+   328,
+   76,
+   372,
+   120
+  ],
+  "overlaps": [],
+  "off": false,
+  "center": false,
+  "label": 1,
+  "size": [
+   44,
+   44
+  ]
+ },
+ {
+  "touch": true,
+  "W": 375,
+  "H": 667,
+  "scale": 1,
+  "state": "awake",
+  "hud": "awake",
+  "mode": "SAILING",
+  "chip": [
+   313,
+   76,
+   357,
+   120
+  ],
+  "overlaps": [],
+  "off": false,
+  "center": false,
+  "label": 1,
+  "size": [
+   44,
+   44
+  ]
+ },
+ {
+  "touch": true,
+  "W": 375,
+  "H": 667,
+  "scale": 1,
+  "state": "quiet",
+  "hud": "quiet",
+  "mode": "SAILING",
+  "chip": [
+   313,
+   76,
+   357,
+   120
+  ],
+  "overlaps": [],
+  "off": false,
+  "center": false,
+  "label": 1,
+  "size": [
+   44,
+   44
+  ]
+ },
+ {
+  "touch": true,
+  "W": 375,
+  "H": 667,
+  "scale": 1.3,
+  "state": "awake",
+  "hud": "awake",
+  "mode": "SAILING",
+  "chip": [
+   313,
+   76,
+   357,
+   120
+  ],
+  "overlaps": [],
+  "off": false,
+  "center": false,
+  "label": 1,
+  "size": [
+   44,
+   44
+  ]
+ },
+ {
+  "touch": true,
+  "W": 375,
+  "H": 667,
+  "scale": 1.3,
+  "state": "quiet",
+  "hud": "quiet",
+  "mode": "SAILING",
+  "chip": [
+   313,
+   76,
+   357,
+   120
+  ],
+  "overlaps": [],
+  "off": false,
+  "center": false,
+  "label": 1,
+  "size": [
+   44,
+   44
+  ]
+ },
+ {
+  "touch": true,
+  "W": 360,
+  "H": 640,
+  "scale": 1,
+  "state": "awake",
+  "hud": "awake",
+  "mode": "SAILING",
+  "chip": [
+   298,
+   76,
+   342,
+   120
+  ],
+  "overlaps": [],
+  "off": false,
+  "center": false,
+  "label": 1,
+  "size": [
+   44,
+   44
+  ]
+ },
+ {
+  "touch": true,
+  "W": 360,
+  "H": 640,
+  "scale": 1,
+  "state": "quiet",
+  "hud": "quiet",
+  "mode": "SAILING",
+  "chip": [
+   298,
+   76,
+   342,
+   120
+  ],
+  "overlaps": [],
+  "off": false,
+  "center": false,
+  "label": 1,
+  "size": [
+   44,
+   44
+  ]
+ },
+ {
+  "touch": true,
+  "W": 360,
+  "H": 640,
+  "scale": 1.3,
+  "state": "awake",
+  "hud": "awake",
+  "mode": "SAILING",
+  "chip": [
+   298,
+   76,
+   342,
+   120
+  ],
+  "overlaps": [],
+  "off": false,
+  "center": false,
+  "label": 1,
+  "size": [
+   44,
+   44
+  ]
+ },
+ {
+  "touch": true,
+  "W": 360,
+  "H": 640,
+  "scale": 1.3,
+  "state": "quiet",
+  "hud": "quiet",
+  "mode": "SAILING",
+  "chip": [
+   298,
+   76,
+   342,
+   120
+  ],
+  "overlaps": [],
+  "off": false,
+  "center": false,
+  "label": 1,
+  "size": [
+   44,
+   44
+  ]
+ },
+ {
+  "touch": true,
+  "W": 320,
+  "H": 568,
+  "scale": 1,
+  "state": "awake",
+  "hud": "awake",
+  "mode": "SAILING",
+  "chip": [
+   258,
+   76,
+   302,
+   120
+  ],
+  "overlaps": [],
+  "off": false,
+  "center": false,
+  "label": 1,
+  "size": [
+   44,
+   44
+  ]
+ },
+ {
+  "touch": true,
+  "W": 320,
+  "H": 568,
+  "scale": 1,
+  "state": "quiet",
+  "hud": "quiet",
+  "mode": "SAILING",
+  "chip": [
+   258,
+   76,
+   302,
+   120
+  ],
+  "overlaps": [],
+  "off": false,
+  "center": false,
+  "label": 1,
+  "size": [
+   44,
+   44
+  ]
+ },
+ {
+  "touch": true,
+  "W": 320,
+  "H": 568,
+  "scale": 1.3,
+  "state": "awake",
+  "hud": "awake",
+  "mode": "SAILING",
+  "chip": [
+   258,
+   76,
+   302,
+   120
+  ],
+  "overlaps": [],
+  "off": false,
+  "center": false,
+  "label": 1,
+  "size": [
+   44,
+   44
+  ]
+ },
+ {
+  "touch": true,
+  "W": 320,
+  "H": 568,
+  "scale": 1.3,
+  "state": "quiet",
+  "hud": "quiet",
+  "mode": "SAILING",
+  "chip": [
+   258,
+   76,
+   302,
+   120
+  ],
+  "overlaps": [],
+  "off": false,
+  "center": false,
+  "label": 1,
+  "size": [
+   44,
+   44
+  ]
+ },
+ {
+  "touch": true,
+  "W": 768,
+  "H": 1024,
+  "scale": 1,
+  "state": "awake",
+  "hud": "awake",
+  "mode": "SAILING",
+  "chip": [
+   607.7,
+   22,
+   688,
+   66
+  ],
+  "overlaps": [],
+  "off": false,
+  "center": false,
+  "label": 26,
+  "size": [
+   80,
+   44
+  ]
+ },
+ {
+  "touch": true,
+  "W": 768,
+  "H": 1024,
+  "scale": 1,
+  "state": "quiet",
+  "hud": "quiet",
+  "mode": "SAILING",
+  "chip": [
+   644,
+   22,
+   688,
+   66
+  ],
+  "overlaps": [],
+  "off": false,
+  "center": false,
+  "label": 1,
+  "size": [
+   44,
+   44
+  ]
+ },
+ {
+  "touch": true,
+  "W": 768,
+  "H": 1024,
+  "scale": 1.3,
+  "state": "awake",
+  "hud": "awake",
+  "mode": "SAILING",
+  "chip": [
+   599.8,
+   22,
+   688,
+   66
+  ],
+  "overlaps": [],
+  "off": false,
+  "center": false,
+  "label": 34,
+  "size": [
+   88,
+   44
+  ]
+ },
+ {
+  "touch": true,
+  "W": 768,
+  "H": 1024,
+  "scale": 1.3,
+  "state": "quiet",
+  "hud": "quiet",
+  "mode": "SAILING",
+  "chip": [
+   644,
+   22,
+   688,
+   66
+  ],
+  "overlaps": [],
+  "off": false,
+  "center": false,
+  "label": 1,
+  "size": [
+   44,
+   44
+  ]
+ }
+]
