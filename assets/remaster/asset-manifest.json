@@ -423,17 +423,17 @@
       },
       "output": "assets/remaster/fonts/ld-myeongjo-400.woff2",
       "mime": "font/woff2",
-      "bytes": 96808,
-      "sha256": "9a65412b5c6acc62653f2c15d5bda5da3c7b6bd6e23e663ecd2f07a9ef39e63d",
+      "bytes": 100960,
+      "sha256": "8b6c6aece2692cde340cd8c5622722f0b388f05979864a163685c7f32b256d15",
       "source": "Gowun Batang 400",
       "package": "@expo-google-fonts/gowun-batang",
       "license": "OFL-1.1",
       "subset": {
-        "hangulSyllables": 795,
+        "hangulSyllables": 849,
         "jamo": 0,
-        "otherSymbols": 58,
+        "otherSymbols": 65,
         "ascii": 95,
-        "glyphsKept": 922
+        "glyphsKept": 983
       }
     },
     {
@@ -445,17 +445,17 @@
       },
       "output": "assets/remaster/fonts/ld-myeongjo-700.woff2",
       "mime": "font/woff2",
-      "bytes": 82976,
-      "sha256": "23e173234706c388862eba6a8458fff0e5e46e79e76346cb702b2ee7c8504aa2",
+      "bytes": 86780,
+      "sha256": "a41429b979499b94795a583536f2ab5f63a2e2562afaf8ff7d3bf9a74dad842b",
       "source": "Gowun Batang 700",
       "package": "@expo-google-fonts/gowun-batang",
       "license": "OFL-1.1",
       "subset": {
-        "hangulSyllables": 795,
+        "hangulSyllables": 849,
         "jamo": 0,
-        "otherSymbols": 58,
+        "otherSymbols": 65,
         "ascii": 95,
-        "glyphsKept": 922
+        "glyphsKept": 983
       }
     },
     {
@@ -467,17 +467,17 @@
       },
       "output": "assets/remaster/fonts/ld-score-500i.woff2",
       "mime": "font/woff2",
-      "bytes": 20308,
-      "sha256": "ef56f627787a2f164a7aa6ce3a5384cc0e9c87cfebf3813d1369645b008c3031",
+      "bytes": 20312,
+      "sha256": "85ddb80175515d6c125c1dfe85d010f97252c9b4483dd92f96332c34281330af",
       "source": "Cormorant Garamond 500 Italic",
       "package": "@expo-google-fonts/cormorant-garamond",
       "license": "OFL-1.1",
       "subset": {
-        "hangulSyllables": 795,
+        "hangulSyllables": 849,
         "jamo": 0,
-        "otherSymbols": 58,
+        "otherSymbols": 65,
         "ascii": 95,
-        "glyphsKept": 119
+        "glyphsKept": 123
       }
     },
     {
@@ -489,17 +489,17 @@
       },
       "output": "assets/remaster/fonts/ld-score-600.woff2",
       "mime": "font/woff2",
-      "bytes": 26564,
-      "sha256": "ee6469b4cf86b81227d8a0916033ed3bce6989db55e797dd278b1a0941b42824",
+      "bytes": 26672,
+      "sha256": "e91c533b4565573bde1728af3c8f8ec13f2716d58a4c3ee533986a636336d0a8",
       "source": "Cormorant Garamond 600",
       "package": "@expo-google-fonts/cormorant-garamond",
       "license": "OFL-1.1",
       "subset": {
-        "hangulSyllables": 795,
+        "hangulSyllables": 849,
         "jamo": 0,
-        "otherSymbols": 58,
+        "otherSymbols": 65,
         "ascii": 95,
-        "glyphsKept": 119
+        "glyphsKept": 123
       }
     }
   ],
@@ -632,8 +632,8 @@
     },
     {
       "path": "assets/remaster/fonts/README.md",
-      "bytes": 859,
-      "sha256": "ca3ed282627368f8d53964f29ca55ef76cfba9e9f8e235dad2b9535231636427",
+      "bytes": 860,
+      "sha256": "35e5f23900ebee7c16669795ef565dff85e9cbcc918aefaa2ce787f304e8795f",
       "triangles": null,
       "source": "tools/build-fonts.py 가 쓴 서체 안내",
       "license": "CC0-1.0",
@@ -641,66 +641,66 @@
     },
     {
       "path": "assets/remaster/fonts/ld-myeongjo-400.woff2",
-      "bytes": 96808,
-      "sha256": "9a65412b5c6acc62653f2c15d5bda5da3c7b6bd6e23e663ecd2f07a9ef39e63d",
+      "bytes": 100960,
+      "sha256": "8b6c6aece2692cde340cd8c5622722f0b388f05979864a163685c7f32b256d15",
       "triangles": null,
       "source": "서브셋: tools/build-fonts.py · 원본 Gowun Batang 400 (패키지 @expo-google-fonts/gowun-batang)",
       "license": "OFL-1.1",
       "kind": "font",
       "subset": {
-        "hangulSyllables": 795,
+        "hangulSyllables": 849,
         "jamo": 0,
-        "otherSymbols": 58,
+        "otherSymbols": 65,
         "ascii": 95,
-        "glyphsKept": 922
+        "glyphsKept": 983
       }
     },
     {
       "path": "assets/remaster/fonts/ld-myeongjo-700.woff2",
-      "bytes": 82976,
-      "sha256": "23e173234706c388862eba6a8458fff0e5e46e79e76346cb702b2ee7c8504aa2",
+      "bytes": 86780,
+      "sha256": "a41429b979499b94795a583536f2ab5f63a2e2562afaf8ff7d3bf9a74dad842b",
       "triangles": null,
       "source": "서브셋: tools/build-fonts.py · 원본 Gowun Batang 700 (패키지 @expo-google-fonts/gowun-batang)",
       "license": "OFL-1.1",
       "kind": "font",
       "subset": {
-        "hangulSyllables": 795,
+        "hangulSyllables": 849,
         "jamo": 0,
-        "otherSymbols": 58,
+        "otherSymbols": 65,
         "ascii": 95,
-        "glyphsKept": 922
+        "glyphsKept": 983
       }
     },
     {
       "path": "assets/remaster/fonts/ld-score-500i.woff2",
-      "bytes": 20308,
-      "sha256": "ef56f627787a2f164a7aa6ce3a5384cc0e9c87cfebf3813d1369645b008c3031",
+      "bytes": 20312,
+      "sha256": "85ddb80175515d6c125c1dfe85d010f97252c9b4483dd92f96332c34281330af",
       "triangles": null,
       "source": "서브셋: tools/build-fonts.py · 원본 Cormorant Garamond 500 Italic (패키지 @expo-google-fonts/cormorant-garamond)",
       "license": "OFL-1.1",
       "kind": "font",
       "subset": {
-        "hangulSyllables": 795,
+        "hangulSyllables": 849,
         "jamo": 0,
-        "otherSymbols": 58,
+        "otherSymbols": 65,
         "ascii": 95,
-        "glyphsKept": 119
+        "glyphsKept": 123
       }
     },
     {
       "path": "assets/remaster/fonts/ld-score-600.woff2",
-      "bytes": 26564,
-      "sha256": "ee6469b4cf86b81227d8a0916033ed3bce6989db55e797dd278b1a0941b42824",
+      "bytes": 26672,
+      "sha256": "e91c533b4565573bde1728af3c8f8ec13f2716d58a4c3ee533986a636336d0a8",
       "triangles": null,
       "source": "서브셋: tools/build-fonts.py · 원본 Cormorant Garamond 600 (패키지 @expo-google-fonts/cormorant-garamond)",
       "license": "OFL-1.1",
       "kind": "font",
       "subset": {
-        "hangulSyllables": 795,
+        "hangulSyllables": 849,
         "jamo": 0,
-        "otherSymbols": 58,
+        "otherSymbols": 65,
         "ascii": 95,
-        "glyphsKept": 119
+        "glyphsKept": 123
       }
     },
     {
@@ -1000,7 +1000,7 @@
   ],
   "summary": {
     "files": 40,
-    "total_bytes": 7406320,
+    "total_bytes": 7414389,
     "by_kind": {
       "art": {
         "files": 8,
@@ -1012,11 +1012,11 @@
       },
       "doc": {
         "files": 1,
-        "bytes": 859
+        "bytes": 860
       },
       "font": {
         "files": 4,
-        "bytes": 226656
+        "bytes": 234724
       },
       "model": {
         "files": 23,
